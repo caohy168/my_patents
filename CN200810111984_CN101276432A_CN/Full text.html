@@ -1,0 +1,945 @@
+<html><head><title>全文文本(Fulltext)</title><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><style>div.fullText table {width: 100%;text-indent: 1px;} 
+ div.fullText table td.header {font-weight: bold;text-align: center;font-family: '宋体';font-size: 16px;line-height:20px;color: #000000;padding: 5px;}div.fullText table td.content {padding: 1px;text-align: left;vertical-align: top;width: 100%;font-family: '宋体';font-size: 14px;line-height:20px;color: #000000;}</style></head><body><?xml version="1.0" encoding="UTF-8"?><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table class="fullText"><tr><td id="claim_title" class="header">权利要求书</td></tr><tr><td class="content" id="claim_1">1.一种存储卡实现数字内容保护的方法，其特征在于，该方法包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_2">将存储卡划分为包括有安全区的不同安全级别的不同区域；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_3">在用户需要访问安全区时，存储卡通过终端对用户进行认证，在存储卡
+      <br/>对用户身份认证成功后，建立用户安全访问通道，以便用户访问用户存储区。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_4">2.根据权利要求1所述的方法，其特征在于，所述存储卡对用户身份
+      <br/>认证的方法为：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_5">A.用户通过终端向存储卡发送携带有终端产生的随机数A的用户认证
+      <br/>请求；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_6">B.存储卡利用卡密钥加密接收到的随机数A，得到A’，并将A’和存储
+      <br/>卡产生的随机数B携带在用户认证请求应答中返回给终端；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_7">C.终端验证存储卡合法后，利用随机数A对用户密钥，以及接收到的
+      <br/>随机数B进行加密处理得到B’
+      <br/>
+				</td></tr><tr><td class="content" id="claim_8">D.终端将获得的B’携带在用户认证请求应答响应中发送给存储卡，存
+      <br/>储卡验证用户合法后，存储卡对用户身份认证成功。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_9">3.根据权利要求2所述的方法，其特征在于，所述步骤C中终端验证
+      <br/>存储卡的合法性方法为：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_10">所述终端利用已获知的卡密钥解密A’，比较解密后的结果是否与自身
+      <br/>产生的随机数A相同，如果相同，则验证存储卡是合法的；如果不相同，
+      <br/>则存储卡是不合法的，结束本流程。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_11">4.根据权利要求2所述的方法，其特征在于，所述步骤C中的加密处
+      <br/>理方法为：所述终端先利用随机数A加密用户密钥，再用接收到的随机数B
+      <br/>加密加密后的用户密钥，得到B’。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_12">5.根据权利要求2所述的方法，其特征在于，所述步骤D中存储卡验
+      <br/>证终端的合法性方法为：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_13">所述存储卡用自身存储的随机数B解密B’得到结果一，再用接收到的
+      <br/>
+					随机数A解密结果一得到结果二，比较解密后的结果二是否与自身获知的
+      <br/>User key相同，如果相同，则验证用户是合法的；如果不相同，则用户是非
+      <br/>法的，结束本流程。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_14">6.根据权利要求1所述的方法，其特征在于，所述建立用户安全访问
+      <br/>通道的方法为：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_15">用户通过存储卡预先设置好的安全内容索引表，选择用户要访问的内
+      <br/>容，如果该内容是允许该用户访问的，则存储卡根据该安全区域信息生成用
+      <br/>户属性访问地址映射，以对应安全区中的地址，从而建立起用户安全访问通
+      <br/>道。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_16">7.根据权利要求1所述的方法，其特征在于，该方法还包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_17">a.存储卡接收到终端请求卡ID后，向终端发送携带有卡ID和卡证书
+      <br/>的卡认证请求；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_18">b.终端用自身存储有的CRL验证卡证书的有效性，并在CRL中不存在
+      <br/>卡证书时，用卡证书中的卡公钥加密自身产生的随机数RH；终端向存储卡
+      <br/>返回携带有终端ID、终端证书、CRL和加密后的RH的卡认证请求应答；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_19">c.存储卡利用接收到的CRL，验证终端证书的有效性，并在CRL中不
+      <br/>存在终端证书时，利用卡私钥解密RH；存储卡产生随机数RS并用终端证
+      <br/>书中的公钥加密随机数RS；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_20">d.存储卡向终端发送携带有加密后的RS的终止卡认证请求；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_21">e.终端接收到终止卡认证请求后，利用终端私钥解密其中携带的RS，
+      <br/>终端解密后得到的存储卡产生的随机数RS和自身生成的随机数RH生成会
+      <br/>话密钥，并用该会话密钥加密来自存储卡的随机数RS；同时，存储卡也利
+      <br/>用获得的终端产生的随机数RH和自身生成的随机数RS生成会话密钥；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_22">f.终端将用会话密钥加密后的RS携带在终止卡认证请求应答中返回给
+      <br/>存储卡；存储卡用自身产生的会话密钥解密获得的加密后的RS，以验证自
+      <br/>身生成的会话密钥与终端生成的会话密钥的一致性。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_23">8.根据权利要求7所述的方法，其特征在于，所述步骤b中终端用自
+      <br/>
+					身存储有的CRL验证卡证书的有效性，并在CRL中不存在卡证书时，用卡
+      <br/>证书中的卡公钥加密自身产生的随机数RH具体包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_24">b1.所述终端获得存储卡的卡认证请求，查询CRL中是否存在接收到的
+      <br/>卡证书，如果存在，则进入步骤b3；如果不存在，则进入步骤b2；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_25">b2.所述终端产生随机数RH，并用接收到的卡证书中的公钥加密随机数
+      <br/>RH，之后进入步骤c；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_26">b3.退出本流程。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_27">9.根据权利要求7所述的方法，其特征在于，所述步骤c具体包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_28">c1.所述存储卡获得终端的卡认证请求应答，查询接收到的CRL中是否
+      <br/>存在终端证书，如果存在，则进入步骤c3；如果不存在，则进入步骤c2；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_29">c2.所述存储卡利用卡私钥解密接收到的随机数RH，产生随机数RS，
+      <br/>并用接收到的终端证书加密随机数RS，之后进入步骤d；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_30">c3.退出本流程。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_31">10.根据权利要求7所述的方法，其特征在于，所述步骤f中的存储卡
+      <br/>用自身产生的会话密钥解密获得的加密后的RS，以验证自身生成的会话密
+      <br/>钥与终端生成的会话密钥的一致性，具体包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_32">f1.所述存储卡获得来自终端的终止卡认证请求应答，利用自身生成的
+      <br/>会话密钥解密接收到的加密后的RS，判断解密后得到的RS是否与自身产生
+      <br/>的随机数RS相同，如果不相同，则进入步骤f3；如果相同，则进入步骤f2。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_33">f2.所述存储卡与终端间认证成功。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_34">f3.所述存储卡与终端间认证失败。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_35">11.一种存储卡，其特征在于，包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_36">存储卡控制器，用于控制存储卡与终端间的信息交互，对存储区模块进行
+      <br/>管理，以及存储卡中各单元的协调工作；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_37">安全算法模块，用于提供双层认证时所需要的安全算法，安全算法模块
+      <br/>与存储卡控制器相连；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_38">存储区模块，用于存放密钥、安全数据和普通数据；
+      <br/>
+					
+				</td></tr><tr><td class="content" id="claim_39">用户属性信息存储模块：用于存储用户密钥列表、用户属性信息；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_40">用户身份认证模块，用于通过存储卡控制器接收用户通过终端发送的用
+      <br/>户认证请求，并在存储卡控制器的控制下，实现用户身份的认证，并在用户
+      <br/>身份认证成功后，用户可通过终端并在存储卡控制器的控制下实现对存储区
+      <br/>模块中安全数据的访问。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_41">12.根据权利要求11所述的存储卡，其特征在于，还包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_42">终端与存储卡间认证模块，用于通过存储卡控制器向终端发送卡认证请
+      <br/>求，并在存储卡控制器的控制下，实现存储卡与终端间的认证，在认证过程
+      <br/>中，通过存储卡控制器从安全算法模块中获取安全算法进行相应计算，在终
+      <br/>端与存储卡间认证成功后，管理员或具有管理员身份的用户可通过终端并在
+      <br/>存储卡控制器的控制下，实现对用户属性信息存储模块的访问，完成修改用
+      <br/>户密钥列表和/或用户属性信息。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_43">13.根据权利要求11所述的存储卡，其特征在于，所述存储卡控制器
+      <br/>与安全算法模块之间通过数据线，请求发送数据信号、准备好接收/发送数据
+      <br/>信号、请求接收数据信号和数据锁存时钟信号连接。
+      <br/>
+					
+				</td></tr></table></div><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table><tr><td id="description_title" class="header">说明书</td></tr><tr><td class="content" id="description_invention_title">一种存储卡及其实现数字内容保护的方法
+  </td></tr><tr><td class="content" id="description_1">技术领域
+    
+				</td></tr><tr><td class="content" id="description_2">本发明涉及存储卡技术，尤指一种存储卡及其实现数字内容保护的方
+    法。
+    
+				</td></tr><tr><td class="content" id="description_3">背景技术
+    
+				</td></tr><tr><td class="content" id="description_4">随着数字信息化的飞速发展，存储卡的应用日趋广泛。存储卡可以用来
+    存储普通的用户信息、机密信息，以及受版权保护的高价值的数字内容，比
+    如数字地图、电子书、各类应用软件等等。移动存储卡具有容量大、读写速
+    度快、体积小、便于携带等优点，越来越受到用户的青睐。
+    
+				</td></tr><tr><td class="content" id="description_5">目前市场上流行的移动存储卡包括：安全数字存储卡(SD，Secure Digital
+    Memory Card)、记忆棒(Memory Stick)，多媒体卡(MMC，Multi Media Card)
+    等。本文以SD卡为例进行描述，但本文描述的方法并不仅限制于SD卡。
+    SD卡是一种基于半导体快闪记忆器的新一代记忆设备，体积小，重量轻，
+    但却拥有高记忆容量、快速数据传输率和极大的移动灵活性。
+    
+				</td></tr><tr><td class="content" id="description_6">目前，市场上的SD卡与一般的存储卡相比，对数据的安全性保护有了
+    一定的改善。终端和SD卡交互数据之前，会先发送一些控制信息指令
+    (CMD)更改SD卡的状态，使SD卡处于数据传输状态，然后通过对SD
+    卡的正确鉴权后，进行终端与SD卡间的数据传输。换句话说，就是通过终
+    端先向SD卡发指令，终端通过改变SD卡的状态来对SD卡内部数据进行
+    读写等操作。
+    
+				</td></tr><tr><td class="content" id="description_7">从上述描述可见，现有的SD卡只提供了物理层的安全机制，没有对于
+    用户级安全管理的概念，即只要SD卡通过简单的认证鉴权，其内部存储的
+    数据均可被用户通过终端访问到，而且持有该终端的任何一个用户均可对
+    
+					SD卡内的数据进行访问，没有对每个用户的访问控制。这样对于一般的数
+    据存储很方便，但是，对于机密信息、受版权保护的高价值的数字内容不能
+    起到保护作用。
+    
+				</td></tr><tr><td class="content" id="description_8">发明内容
+    
+				</td></tr><tr><td class="content" id="description_9">有鉴于此，本发明的主要目的在于提供一种存储卡，该存储卡被划分为
+    不同安全级别的存储区域，实现了对不同存储区域的信息进行不同级别的保
+    护，实现了对受保护信息的有效保护。
+    
+				</td></tr><tr><td class="content" id="description_10">本发明的另一目的在于提供一种存储卡实现数字内容保护的方法，针对
+    不同用户进行访问控制，对存储卡内存储的受保护信息实现了很好的保护作
+    用。
+    
+				</td></tr><tr><td class="content" id="description_11">为达到上述目的，本发明的技术方案具体是这样实现的：
+    
+				</td></tr><tr><td class="content" id="description_12">一种存储卡实现数字内容保护的方法，该方法包括：
+    
+				</td></tr><tr><td class="content" id="description_13">将存储卡划分为包括有安全区的不同安全级别的不同区域；
+    
+				</td></tr><tr><td class="content" id="description_14">在用户需要访问安全区时，存储卡通过终端对用户进行认证，在存储卡
+    对用户身份认证成功后，建立用户安全访问通道，以便用户访问用户存储区。
+    
+				</td></tr><tr><td class="content" id="description_15">所述存储卡对用户身份认证的方法为：
+    
+				</td></tr><tr><td class="content" id="description_16">A.用户通过终端向存储卡发送携带有终端产生的随机数A的用户认证
+    请求；
+    
+				</td></tr><tr><td class="content" id="description_17">B.存储卡利用卡密钥加密接收到的随机数A，得到A’，并将A’和存储
+    卡产生的随机数B携带在用户认证请求应答中返回给终端；
+    
+				</td></tr><tr><td class="content" id="description_18">C.终端验证存储卡合法后，利用随机数A对用户密钥，以及接收到的
+    随机数B进行加密处理得到B’
+    
+				</td></tr><tr><td class="content" id="description_19">D.终端将获得的B’携带在用户认证请求应答响应中发送给存储卡，存
+    储卡验证用户合法后，存储卡对用户身份认证成功。
+    
+				</td></tr><tr><td class="content" id="description_20">所述步骤C中终端验证存储卡的合法性方法为：
+    
+				</td></tr><tr><td class="content" id="description_21">所述终端利用已获知的卡密钥解密A’，比较解密后的结果是否与自身
+    
+					产生的随机数A相同，如果相同，则验证存储卡是合法的；如果不相同，
+    则存储卡是不合法的，结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_22">所述步骤C中的加密处理方法为：所述终端先利用随机数A加密用户
+    密钥，再用接收到的随机数B加密加密后的用户密钥，得到B’。
+    
+				</td></tr><tr><td class="content" id="description_23">所述步骤D中存储卡验证终端的合法性方法为：
+    
+				</td></tr><tr><td class="content" id="description_24">所述存储卡用自身存储的随机数B解密B’得到结果一，再用接收到的
+    随机数A解密结果一得到结果二，比较解密后的结果二是否与自身获知的
+    User key相同，如果相同，则验证用户是合法的；如果不相同，则用户是非
+    法的，结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_25">所述建立用户安全访问通道的方法为：
+    
+				</td></tr><tr><td class="content" id="description_26">用户通过存储卡预先设置好的安全内容索引表，选择用户要访问的内
+    容，如果该内容是允许该用户访问的，则存储卡根据该安全区域信息生成用
+    户属性访问地址映射，以对应安全区中的地址，从而建立起用户安全访问通
+    道。
+    
+				</td></tr><tr><td class="content" id="description_27">该方法还包括：
+    
+				</td></tr><tr><td class="content" id="description_28">a.存储卡接收到终端请求卡ID后，向终端发送携带有卡ID和卡证书
+    的卡认证请求；
+    
+				</td></tr><tr><td class="content" id="description_29">b.终端用自身存储有的CRL验证卡证书的有效性，并在CRL中不存在
+    卡证书时，用卡证书中的卡公钥加密自身产生的随机数RH；终端向存储卡
+    返回携带有终端ID、终端证书、CRL和加密后的RH的卡认证请求应答；
+    
+				</td></tr><tr><td class="content" id="description_30">c.存储卡利用接收到的CRL，验证终端证书的有效性，并在CRL中不
+    存在终端证书时，利用卡私钥解密RH；存储卡产生随机数RS并用终端证
+    书中的公钥加密随机数RS；
+    
+				</td></tr><tr><td class="content" id="description_31">d.存储卡向终端发送携带有加密后的RS的终止卡认证请求；
+    
+				</td></tr><tr><td class="content" id="description_32">e.终端接收到终止卡认证请求后，利用终端私钥解密其中携带的RS，
+    终端解密后得到的存储卡产生的随机数RS和自身生成的随机数RH生成会
+    话密钥，并用该会话密钥加密来自存储卡的随机数RS；同时，存储卡也利
+    
+					用获得的终端产生的随机数RH和自身生成的随机数RS生成会话密钥；
+    
+				</td></tr><tr><td class="content" id="description_33">f.终端将用会话密钥加密后的RS携带在终止卡认证请求应答中返回给
+    存储卡；存储卡用自身产生的会话密钥解密获得的加密后的RS，以验证自
+    身生成的会话密钥与终端生成的会话密钥的一致性。
+    
+				</td></tr><tr><td class="content" id="description_34">所述步骤b中终端用自身存储有的CRL验证卡证书的有效性，并在CRL
+    中不存在卡证书时，用卡证书中的卡公钥加密自身产生的随机数RH具体包
+    括：
+    
+				</td></tr><tr><td class="content" id="description_35">b1.所述终端获得存储卡的卡认证请求，查询CRL中是否存在接收到的
+    卡证书，如果存在，则进入步骤b3；如果不存在，则进入步骤b2；
+    
+				</td></tr><tr><td class="content" id="description_36">b2.所述终端产生随机数RH，并用接收到的卡证书中的公钥加密随机数
+    RH，之后进入步骤c；
+    
+				</td></tr><tr><td class="content" id="description_37">b3.退出本流程。
+    
+				</td></tr><tr><td class="content" id="description_38">所述步骤c具体包括：
+    
+				</td></tr><tr><td class="content" id="description_39">c1.所述存储卡获得终端的卡认证请求应答，查询接收到的CRL中是否
+    存在终端证书，如果存在，则进入步骤c3；如果不存在，则进入步骤c2；
+    
+				</td></tr><tr><td class="content" id="description_40">c2.所述存储卡利用卡私钥解密接收到的随机数RH，产生随机数RS，
+    并用接收到的终端证书加密随机数RS，之后进入步骤d；
+    
+				</td></tr><tr><td class="content" id="description_41">c3.退出本流程。
+    
+				</td></tr><tr><td class="content" id="description_42">所述步骤f中的存储卡用自身产生的会话密钥解密获得的加密后的RS，
+    以验证自身生成的会话密钥与终端生成的会话密钥的一致性，具体包括：
+    
+				</td></tr><tr><td class="content" id="description_43">f1.所述存储卡获得来自终端的终止卡认证请求应答，利用自身生成的
+    会话密钥解密接收到的加密后的RS，判断解密后得到的RS是否与自身产生
+    的随机数RS相同，如果不相同，则进入步骤f3；如果相同，则进入步骤f2。
+    
+				</td></tr><tr><td class="content" id="description_44">f2.所述存储卡与终端间认证成功。
+    
+				</td></tr><tr><td class="content" id="description_45">f3.所述存储卡与终端间认证失败。
+    
+				</td></tr><tr><td class="content" id="description_46">一种存储卡，包括：
+    
+				</td></tr><tr><td class="content" id="description_47">存储卡控制器，用于控制存储卡与终端间的信息交互，对存储区模块进行
+    
+					管理，以及存储卡中各单元的协调工作；
+    
+				</td></tr><tr><td class="content" id="description_48">安全算法模块，用于提供双层认证时所需要的安全算法，安全算法模块
+    与存储卡控制器相连；
+    
+				</td></tr><tr><td class="content" id="description_49">存储区模块，用于存放密钥、安全数据和普通数据；
+    
+				</td></tr><tr><td class="content" id="description_50">用户属性信息存储模块：用于存储用户密钥列表、用户属性信息；
+    
+				</td></tr><tr><td class="content" id="description_51">用户身份认证模块，用于通过存储卡控制器接收用户通过终端发送的用
+    户认证请求，并在存储卡控制器的控制下，实现用户身份的认证，并在用户
+    身份认证成功后，用户可通过终端并在存储卡控制器的控制下实现对存储区
+    模块中安全数据的访问。
+    
+				</td></tr><tr><td class="content" id="description_52">所述存储卡还包括：
+    
+				</td></tr><tr><td class="content" id="description_53">终端与存储卡间认证模块，用于通过存储卡控制器向终端发送卡认证请
+    求，并在存储卡控制器的控制下，实现存储卡与终端间的认证，在认证过程
+    中，通过存储卡控制器从安全算法模块中获取安全算法进行相应计算，在终
+    端与存储卡间认证成功后，管理员或具有管理员身份的用户可通过终端并在
+    存储卡控制器的控制下，实现对用户属性信息存储模块的访问，完成修改用
+    户密钥列表和/或用户属性信息。
+    
+				</td></tr><tr><td class="content" id="description_54">所述存储卡控制器与安全算法模块之间通过数据线，请求发送数据信号、
+    准备好接收/发送数据信号、请求接收数据信号和数据锁存时钟信号连接。
+    
+				</td></tr><tr><td class="content" id="description_55">由上述技术方案可见，本发明这种本发明将存储卡划分为包括有安全区的
+    不同安全级别的不同区域；在用户需要访问安全区时，存储卡通过终端对用
+    户进行认证，在存储卡对用户身份认证成功后，建立用户安全访问通道，以
+    便用户访问用户存储区。本发明对用户适应存储卡而言比较灵活，即一张存
+    储卡可以存放不同需求、不同安全级别的数据，而且对存储卡内的数据也按
+    照相应的等级进行了保护。
+    
+				</td></tr><tr><td class="content" id="description_56">附图说明
+    
+				</td></tr><tr><td class="content" id="description_57">图1是本发明存储卡双层认证模式示意图；
+    
+				</td></tr><tr><td class="content" id="description_58">图2是本发明用户访问存储卡的流程图；
+    
+				</td></tr><tr><td class="content" id="description_59">图3是本发明用户身份认证流程图；
+    
+				</td></tr><tr><td class="content" id="description_60">图4是本发明存储卡与终端间认证总体流程图；
+    
+				</td></tr><tr><td class="content" id="description_61">图5是本发明存储卡认证中终端接收到存储卡认证请求后的处理流程
+    图；
+    
+				</td></tr><tr><td class="content" id="description_62">图6是本发明存储卡认证中存储卡接收到存储卡认证请求应答后的处
+    理流程图；
+    
+				</td></tr><tr><td class="content" id="description_63">图7是本发明存储卡认证中会话密钥一致性验证流程图；
+    
+				</td></tr><tr><td class="content" id="description_64">图8是本发明存储卡组成结构示意图；
+    
+				</td></tr><tr><td class="content" id="description_65">图9是本发明安全算法模块与存储卡控制器连接实施例示意图；
+    
+				</td></tr><tr><td class="content" id="description_66">图10a是本发明存储卡控制器向安全算法模块发送数据的时序图；
+    
+				</td></tr><tr><td class="content" id="description_67">图10b是存储卡控制器接收来自安全算法模块的数据的时序图。
+    
+				</td></tr><tr><td class="content" id="description_68">具体实施方式
+    
+				</td></tr><tr><td class="content" id="description_69">为使本发明的目的、技术方案及优点更加清楚明白，以下参照附图并举
+    较佳实施例，对本发明进一步详细说明。
+    
+				</td></tr><tr><td class="content" id="description_70">存储卡被划分为多个不同安全级别的区域：如密钥区、安全区、普通存
+    储区等等。其中，
+    
+				</td></tr><tr><td class="content" id="description_71">密钥区用于存放卡密钥、卡证书等机密信息。用户无权访问密钥区，只
+    有设置卡密钥和卡证书的发卡机构有权访问，而且是认证通过后才能访问；
+    
+				</td></tr><tr><td class="content" id="description_72">安全区用于存储用户密钥、用户证书、用户属性信息如用户的个人信息、
+    卡的ID号等、受保护的数字内容和读/写等使用权限等信息，用户必须经过
+    用户身份认证后才能访问安全区，而且只能访问其中符合用户访问权限的内
+    容，并按照给定的使用权限使用该内容；其中，用户密钥可以存储在用户密
+    钥列表中。
+    
+				</td></tr><tr><td class="content" id="description_73">普通存储区用于存储一般信息，用户可以直接访问。在普通存储区中，
+    安全区中的文件可以被用户查询到基本的文件属性，比如文件名、文件大小、
+    
+					文件创建时间等，但未经认证的用户是无法打开文件，也不能阅读或播放被
+    保护的内容的。
+    
+				</td></tr><tr><td class="content" id="description_74">以下提到的用户访问存储区，实际上是指用户访问安全区，因为只有访
+    问安全区才需要对用户进行认证。
+    
+				</td></tr><tr><td class="content" id="description_75">图1是本发明存储卡双层认证模式示意图，如图1所示，认证模式分成
+    两个层次：点划线之上是用户访问存储区时对用户身份进行认证的过程；点
+    划线之下是修改用户信息时存储卡与终端间的认证过程。
+    
+				</td></tr><tr><td class="content" id="description_76">其中，用户访问存储区时的认证，即是当用户需要访问用户存储区中的
+    安全区时，进行的存储卡对用户身份的认证，如图2所示，图2是本发明用户
+    访问存储卡的流程图，在存储卡插入终端，用户需要访问用户存储区时，包
+    括：存储卡通过终端对用户进行认证(步骤200)，在存储卡对用户身份认证
+    成功后，建立用户安全访问通道，以便用户访问用户存储区(步骤201)。此
+    时，用户只能访问用户存储区，不能修改用户信息。如果存储卡对用户身份
+    认证失败，则退出本流程(步骤202)；
+    
+				</td></tr><tr><td class="content" id="description_77">修改用户信息时的认证，即是当管理员或具有管理员身份的用户需要修
+    改用户信息时，进行的存储卡和终端间的认证：在用户以管理员的身份对用
+    户信息进行修改时，需要先通过存储卡与终端间的相互认证，才可以修改用
+    户密钥列表和/或用户属性信息。
+    
+				</td></tr><tr><td class="content" id="description_78">若存储卡与终端间的相互认证失败则退出。需要说明的是，如果用户密
+    钥列表和/或用户属性信息修改成功，存储卡需要重新对用户认证后，用户
+    才能访问用户存储区的内容。
+    
+				</td></tr><tr><td class="content" id="description_79">在存储卡对用户认证通过后，对用户存储区的访问方式大致如下：
+    
+				</td></tr><tr><td class="content" id="description_80">用户通过存储卡提供的安全内容索引表，选择用户要访问的内容，如果
+    该内容是允许该用户访问的，即对于该内容所在的存储区域在该用户通过认
+    证后可以访问的，则存储卡根据该安全区域信息生成用户属性访问地址映
+    射，该地址对应安全区中的地址，地址和数据采用一一对应的方式，这样，
+    用户就能访问到该区域内的安全信息了，而对于该地址以外其他数据区域，
+    
+					该用户是无权访问。
+    
+				</td></tr><tr><td class="content" id="description_81">安全内容索引表用于存储安全内容区域的相应内容索引，终端通过安全
+    内容索引表中的索引信息来了知安全区域的存储内容，表征和管理安全内容
+    区域所存储的内容。
+    
+				</td></tr><tr><td class="content" id="description_82">下面详细描述用户身份认证，以及存储卡与终端间的认证的实现。
+    
+				</td></tr><tr><td class="content" id="description_83">图3是本发明用户身份认证流程图，如图3所示，包括以下步骤：
+    
+				</td></tr><tr><td class="content" id="description_84">步骤300：用户通过终端向存储卡发送用户认证请求，该用户认证请求
+    中携带有终端产生的随机数A。
+    
+				</td></tr><tr><td class="content" id="description_85">随机数A同时存储在终端。
+    
+				</td></tr><tr><td class="content" id="description_86">步骤301～步骤302：存储卡利用卡密钥加密接收到的随机数A，得到A’，
+    并将A’和存储卡产生的随机数B携带在用户认证请求应答中返回给终端。
+    
+				</td></tr><tr><td class="content" id="description_87">其中，卡密钥是在发卡机构发卡时已经存储在存储卡中的，存储卡和终
+    端都能获知，这是公知技术。
+    
+				</td></tr><tr><td class="content" id="description_88">随机数B同时存储在存储卡中。
+    
+				</td></tr><tr><td class="content" id="description_89">步骤303：终端验证存储卡的合法性。
+    
+				</td></tr><tr><td class="content" id="description_90">终端利用已获知的卡密钥解密A’，比较解密后的结果是否与自身产生的
+    随机数A相同，如果相同，则验证存储卡是合法的，进入步骤304；如果不
+    相同，则存储卡是不合法的，结束本流程，禁止用户对该存储卡的访问。
+    
+				</td></tr><tr><td class="content" id="description_91">步骤304：终端利用随机数A对用户密钥(User key)，以及接收到的随
+    机数B进行加密处理得到B’。
+    
+				</td></tr><tr><td class="content" id="description_92">本步骤具体加密处理过程包括：终端先利用随机数A加密User key，再
+    用接收到的随机数B加密加密后的User key，得到B’。
+    
+				</td></tr><tr><td class="content" id="description_93">User key是在发卡机构发卡时已经存储在存储卡中的，存储卡和终端都
+    能获知，这是公知的。
+    
+				</td></tr><tr><td class="content" id="description_94">步骤305：终端将获得的B’携带在用户认证请求应答响应中发送给存储
+    卡。
+    
+				</td></tr><tr><td class="content" id="description_95">步骤306：存储卡验证用户的合法性。
+    
+				</td></tr><tr><td class="content" id="description_96">本步骤中，存储卡用自身存储的随机数B解密B’得到结果一，再用接收
+    到的随机数A解密结果一得到结果二，比较解密后的结果二是否与自身获知
+    的User key相同，如果相同，则验证用户是合法的，进入步骤307；如果不相
+    同，则用户是非法的，结束本流程，禁止用户对该存储卡的访问。
+    
+				</td></tr><tr><td class="content" id="description_97">步骤307：建立用户安全访问通道。
+    
+				</td></tr><tr><td class="content" id="description_98">本步骤具体实现为：用户通过存储卡提供的安全内容索引表，选择用户
+    要访问的内容，如果该内容是允许该用户访问的，即对于该内容所在的存储
+    区域，该用户是通过认证的，则存储卡根据该安全区域信息生成用户属性访
+    问地址映射，该地址对应安全区中的地址，从而建立起用户安全访问通道。
+    地址和数据采用一一对应的方式，这样，用户就能访问到该区域内的安全信
+    息了，而对于该地址以外其他数据区域，该用户是无权访问。
+    
+				</td></tr><tr><td class="content" id="description_99">安全内容索引表用于存储安全内容区域的相应内容索引，终端通过安全
+    内容索引表中的索引信息来了知安全区域的存储内容，表征和管理安全内容
+    区域所存储的内容。
+    
+				</td></tr><tr><td class="content" id="description_100">从图3所示的流程可见，本发明在用户访问存储卡时，用户需要进行严
+    格的用户身份认证之后，才能访问存储卡。
+    
+				</td></tr><tr><td class="content" id="description_101">图4是本发明存储卡与终端间认证总体流程图，预先设置相互传输身份
+    认证数据的存储卡和终端设备，其中，存储卡中设置有卡证书等；终端中设
+    置有终端证书、证书吊销列表(CRL)等。如图4所示，存储卡与终端间认
+    证包括以下步骤：
+    
+				</td></tr><tr><td class="content" id="description_102">步骤400：存储卡接收到终端请求卡ID后，向终端发送携带有卡ID和卡
+    证书的卡认证请求。卡证书中包含有卡的公钥。
+    
+				</td></tr><tr><td class="content" id="description_103">步骤401：终端用CRL验证卡证书的有效性，并在CRL中不存在卡证书
+    时，用卡证书中的卡公钥加密自身产生的随机数RH。
+    
+				</td></tr><tr><td class="content" id="description_104">本步骤具体实现如下文对图5的描述。
+    
+				</td></tr><tr><td class="content" id="description_105">步骤402：终端向存储卡返回卡认证请求应答，在卡认证请求应答中携
+    带有终端ID、终端证书、CRL和加密后的RH。终端证书中包含有终端的公
+    
+					钥。
+    
+				</td></tr><tr><td class="content" id="description_106">步骤403：存储卡利用接收到的CRL，验证终端证书的有效性，并在CRL
+    中不存在终端证书时，利用卡私钥解密RH。
+    
+				</td></tr><tr><td class="content" id="description_107">其中，卡私钥是在初始化卡时写进入卡中的。一般初始化卡是在买卡时
+    就写好的。
+    
+				</td></tr><tr><td class="content" id="description_108">步骤404：存储卡产生随机数RS并用终端证书中的公钥加密随机数RS。
+    本步骤所述加密算法可以采用非对称算法，如RSA等。
+    
+				</td></tr><tr><td class="content" id="description_109">步骤403～步骤404具体实现如下文对图6的描述。
+    
+				</td></tr><tr><td class="content" id="description_110">步骤405：存储卡向终端发送终止卡认证请求，并将加密后的RS携带在
+    终止卡认证请求中。
+    
+				</td></tr><tr><td class="content" id="description_111">步骤406：终端接收到终止卡认证请求后，利用终端私钥解密其中携带
+    的RS，终端解密后得到的存储卡产生的随机数RS和自身生成的随机数RH生
+    成会话密钥，并用该会话密钥加密来自存储卡的随机数RS。本步骤所述加
+    密算法采用对称加密算法，如AES、DES等。
+    
+				</td></tr><tr><td class="content" id="description_112">同时，存储卡也利用获得的终端产生的随机数RH和自身生成的随机数
+    RS生成会话密钥。
+    
+				</td></tr><tr><td class="content" id="description_113">本步骤中生成会话密钥的方法可以按照一定的运算规则产生，比如：将
+    两个值异或，或者按位加减等方法，具体实现属于本领域技术人员惯用技术
+    手段，这里不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_114">步骤407：终端将用会话密钥加密后的RS携带在终止卡认证请求应答中
+    返回给存储卡。
+    
+				</td></tr><tr><td class="content" id="description_115">步骤408：存储卡用自身产生的会话密钥解密获得的加密后的RS，以验
+    证自身生成的会话密钥与终端生成的会话密钥的一致性。
+    
+				</td></tr><tr><td class="content" id="description_116">本步骤具体实现如现文中对图7的描述。
+    
+				</td></tr><tr><td class="content" id="description_117">图5是本发明存储卡认证中终端接收到存储卡认证请求后的处理流程
+    图，如图5所示，包括：
+    
+				</td></tr><tr><td class="content" id="description_118">步骤500～步骤501：终端获得存储卡的卡认证请求，查询CRL中是否存
+    
+					在接收到的卡证书，如果存在，则进入步骤505；如果不存在，则进入步骤
+    502。
+    
+				</td></tr><tr><td class="content" id="description_119">步骤502～步骤503：终端产生随机数RH，并用接收到的卡证书中的公钥
+    加密随机数RH，之后进入步骤402。
+    
+				</td></tr><tr><td class="content" id="description_120">步骤505：终止存储卡与终端间认证过程，退出存储卡与终端间认证。
+    
+				</td></tr><tr><td class="content" id="description_121">图6是本发明存储卡认证中存储卡接收到存储卡认证请求应答后的处理
+    流程图，如图6所示，包括：
+    
+				</td></tr><tr><td class="content" id="description_122">步骤600～步骤601：存储卡获得终端的卡认证请求应答，查询接收到的
+    CRL中是否存在终端证书，如果存在，则进入步骤605；如果不存在，则进
+    入步骤602。
+    
+				</td></tr><tr><td class="content" id="description_123">步骤602～步骤604：存储卡利用卡私钥解密接收到的随机数RH，产生随
+    机数RS，并用接收到的终端证书加密随机数RS，之后进入步骤405。
+    
+				</td></tr><tr><td class="content" id="description_124">步骤605：终止存储卡与终端间认证过程，退出存储卡与终端间认证。
+    
+				</td></tr><tr><td class="content" id="description_125">图7是本发明存储卡认证中会话密钥一致性验证流程图，如图7所示，包
+    括：
+    
+				</td></tr><tr><td class="content" id="description_126">步骤700～步骤702：存储卡获得来自终端的终止卡认证请求应答，利用
+    自身生成的会话密钥解密接收到的加密后的RS，判断解密后得到的RS是否
+    与自身产生的随机数RS相同，如果不相同，则进入步骤704；如果相同，则
+    进入步骤703。
+    
+				</td></tr><tr><td class="content" id="description_127">步骤703：存储卡与终端间认证成功，管理员或有管理员身份的用户有
+    权修改用户信息。结束存储卡与终端间认证。
+    
+				</td></tr><tr><td class="content" id="description_128">步骤704：存储卡与终端间认证失败，管理员或有管理员身份的用户无
+    权修改用户信息。
+    
+				</td></tr><tr><td class="content" id="description_129">图8是本发明存储卡组成结构示意图，如图8所示，本发明存储卡主要包
+    括：存储卡控制器、安全算法模块、存储区模块、用户属性信息存储模块、
+    用户身份认证模块和终端与存储卡间认证模块，需要说明的是，图8所示的
+    存储卡组成结构只是简单示意，其它现有模块没有全部示出，图8并不用于
+    
+					限定本发明存储卡的组成，这里只是为了描述方便。本发明存储卡各组成模
+    块的功能如下：
+    
+				</td></tr><tr><td class="content" id="description_130">存储卡控制器，用于控制存储卡与终端间的信息交互，对存储区模块进行
+    管理，以及存储卡中各单元的协调工作。实际应用中，终端与存储卡之间的连
+    接是通过硬件接口，如对于SD卡就是通过现有SD接口连接的，图8中未示出。
+    
+				</td></tr><tr><td class="content" id="description_131">安全算法模块，用于提供双层认证时所需要的安全算法如RSA、AES算
+    法等。安全算法模块与存储卡控制器之间可以通过预留的I/O接口连接，如
+    图9所示。对图9的具体描述请参见下文。
+    
+				</td></tr><tr><td class="content" id="description_132">存储区模块，包括密钥区、安全区和普通存储区等，分别用于存放密钥、
+    安全数据和普通数据等。
+    
+				</td></tr><tr><td class="content" id="description_133">用户属性信息存储模块：用于存储用户密钥列表、用户属性信息等，具
+    体来讲可以存储用户操作区域范围、用户内容索引读权限、用户内容索引写
+    权限、用户存储区域读权限、用户存储区域读权限、用户操作时限和用户操
+    作次数等。
+    
+				</td></tr><tr><td class="content" id="description_134">对存储区模块的访问，是在存储卡控制器的控制下，通过用户属性信息
+    存储模块内的地址映射来实现的：
+    
+				</td></tr><tr><td class="content" id="description_135">用户通过存储卡提供的安全内容索引表，选择用户要访问的内容，如果
+    该内容是允许该用户访问的，即对于该内容所在的存储区域，该用户是通过
+    认证的，则存储卡根据该安全区域信息生成用户属性访问地址映射，该地址
+    对应安全区中的地址，从而建立起用户安全访问通道。地址和数据采用一一
+    对应的方式，这样，用户就能访问到该区域内的安全信息了，而对于该地址
+    以外其他数据区域，该用户是无权访问。
+    
+				</td></tr><tr><td class="content" id="description_136">安全内容索引表用于存储安全内容区域的相应内容索引，终端通过安全
+    内容索引表中的索引信息来了知安全区域的存储内容，表征和管理安全内容
+    区域所存储的内容。
+    
+				</td></tr><tr><td class="content" id="description_137">存储区模块和用户属性信息存储模块采用的存储机制为EEPROM、
+    FLASH等，可以稳定保存数据。以SD卡为例，存储区内文件存储形式采用
+    
+					SD卡的文件系统方式存储，如12bit-FAT或16bit-FAT，具体存储原理可
+    参考SD文件系统相关文档，属于现有公知技术，这里不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_138">用户身份认证模块，用于通过存储卡控制器接收用户通过终端发送的用
+    户认证请求，并在存储卡控制器的控制下，实现用户身份的认证，并在用户
+    身份认证成功后，用户可通过终端并在存储卡控制器的控制下实现对存储区
+    模块中安全数据的访问。这里，存储卡控制器实现的控制方法属于本领域技
+    术人员惯用技术手段，这里不再详述。
+    
+				</td></tr><tr><td class="content" id="description_139">终端与存储卡间认证模块，用于通过存储卡控制器向终端发送卡认证请
+    求，并在存储卡控制器的控制下，实现存储卡与终端间的认证，在认证过程
+    中，通过存储卡控制器从安全算法模块中获取安全算法进行相应计算，在终
+    端与存储卡间认证成功后，管理员或具有管理员身份的用户可通过终端并在
+    存储卡控制器的控制下，实现对用户属性信息存储模块的访问，完成修改用
+    户密钥列表和/或用户属性信息。需要说明的是，如果用户密钥列表和/或用
+    户属性信息修改成功，存储卡需要重新对用户认证后，用户才能访问用户存
+    储区的内容。
+    
+				</td></tr><tr><td class="content" id="description_140">终端与存储卡间认证模块相当于一道防火墙，保护了用户属性信息存储
+    模块中的数据不被非法读写，因为只有终端和卡认证通过后，防火墙才打开，
+    用户属性信息存储模块才可被访问；访问完成后，防火墙关闭，此次访问权
+    限终止。
+    
+				</td></tr><tr><td class="content" id="description_141">图9是本发明安全算法模块与存储卡控制器连接实施例示意图，如图9
+    所示，安全算法模块与存储卡控制器之间通过8根数据线(DB0～DB8)，
+    以及四根控制信号即请求发送数据信号(nInIntQ)、准备好接收/发送数据
+    信号(nInReady/nOutReady)、请求接收数据信号(nOutIntQ)和数据锁存
+    时钟信号(nLE)。从安全算法模块来看各控制信号的功能如表1所示：
+    
+				</td></tr><tr><td class="content" id="description_142">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  控制信号
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  输入/输出
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  功能说明
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 使用方法
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  准备好接收信号
+    
+											
+  (nInReady)
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+  输出
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  安全算法模块内输入缓
+    
+											
+  冲器状态标志位；与
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ nInReady＝1时，输入缓冲器忙，不接收
+    
+											
+ 数据；nInReady＝0时，输入缓冲器可以
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_143">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ nInIntQ构成一对握手
+    
+ 信号
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 接收数据。
+    
+											
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+ 请求发送数据信
+    
+											
+ 号(nInIntQ)
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+  输入
+    
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 向安全算法模块输入数
+    
+ 据请求信号；与
+    
+											
+ nInReady构成一对握手
+    
+ 信号
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+ 如设置为低电平有效
+    
+											
+											
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+ 准备好发送数据
+    
+											
+ 信号(nOutReady)
+    
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+  输出
+    
+											
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 安全算法模块内输出缓
+    
+ 冲器状态标志位；与
+    
+											
+ nOutIntQ构成一对握手
+    
+											
+ 信号
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+ nOutReady＝1时，输出缓冲器中无数据
+    
+ 可以输出；nOutReady＝0时，输出缓冲
+    
+											
+ 器中有数据可以输出。
+    
+											
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 请求接收数据信
+    
+											
+ 号(nOutIntQ)
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+  输入
+    
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 从安全算法模块输出数
+    
+ 据信号；与nOutReady
+    
+											
+ 构成一对握手信号
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+ 如设置为低电平有效
+    
+											
+											
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+ 数据锁存时钟信
+    
+											
+ 号(nLE)
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+  输入
+    
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+ 输入/输出数据锁存时
+    
+											
+ 钟
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ nInReady＝0，nInIntQ＝0且nLE＝0时，
+    
+ DB0～DB8数据被条件接收单元锁存；
+    
+											
+ nOutReady＝0，nOutIntQ＝0且nLE＝0时，
+    
+ DB0～DB8输出数据。
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+ DB&lt;7:0&gt;
+    
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+  双向
+    
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+ 双向数据总线
+    
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ nInReady＝0，nInIntQ＝0且nLE＝0时，
+    
+ DB0～DB8为输入状态；
+    
+											
+ nOutReady＝0，nOutIntQ＝0且nLE＝0时，
+    
+ DB0～DB8为输出状态；其它为高阻态
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_144">下面具体描述安全算法模块与存储卡控制器之间进行数据交互的过程。
+    
+				</td></tr><tr><td class="content" id="description_145">图10a是本发明存储卡控制器向安全算法模块发送数据的时序图，发送
+    过程大致如下：
+    
+				</td></tr><tr><td class="content" id="description_146">存储卡控制器上电自检后，向安全算法模块发送nInIntQ低脉冲信号，
+    请求发送数据；安全算法模块准备好后，向存储卡控制器返回nInReady低
+    脉冲信号，双方握手成功；存储卡控制器产生发送数据的时序即nLE信号
+    给安全算法模块，并按此时序发送数据给安全算法模块。
+    
+				</td></tr><tr><td class="content" id="description_147">图10b是存储卡控制器接收来自安全算法模块的数据的时序图，接收过
+    程大致如下：
+    
+				</td></tr><tr><td class="content" id="description_148">存储卡控制器发送nOutIntQ低脉冲，等待接收安全算法模块处理后的
+    
+					数据；安全算法模块准备好后，向存储卡控制器返回nOutReady低脉冲信号，
+    双方握手成功；存储卡控制器产生接收数据的时序即nLE信号给安全算法
+    模块，并按此时序接收数据。
+    
+				</td></tr><tr><td class="content" id="description_149">图10a和图10b是存储卡控制器与安全算法模块实现数据传输的一种总
+    线方式的实施例，也可以采用现有的总线，如I2C、SPI等进行传输，这里不
+    做限制。
+    
+				</td></tr><tr><td class="content" id="description_150">以上所述，仅为本发明的较佳实施例而已，并非用于限定本发明的保护
+    范围，凡在本发明的精神和原则之内所做的任何修改、等同替换、改进等，
+    均应包含在本发明的保护范围之内。
+    
+				</td></tr></table></div></body></html>

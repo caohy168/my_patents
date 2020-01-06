@@ -1,0 +1,502 @@
+<html><head><title>全文文本(Fulltext)</title><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><style>div.fullText table {width: 100%;text-indent: 1px;} 
+ div.fullText table td.header {font-weight: bold;text-align: center;font-family: '宋体';font-size: 16px;line-height:20px;color: #000000;padding: 5px;}div.fullText table td.content {padding: 1px;text-align: left;vertical-align: top;width: 100%;font-family: '宋体';font-size: 14px;line-height:20px;color: #000000;}</style></head><body><?xml version="1.0" encoding="UTF-8"?><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table class="fullText"><tr><td id="claim_title" class="header">权利要求书</td></tr><tr><td class="content" id="claim_1">1、一种智能卡操作方法，其特征在于，该方法包括:
+      <br/>
+				</td></tr><tr><td class="content" id="claim_2">A、在执行一事务的过程中，每执行完一个关键节点，则将所述关键节点
+      <br/>对应的执行结果进行备份，并通过对预先设定的更新标志位进行设置，来记录
+      <br/>所述事务的执行进程；所述关键节点为从完成所述事务所需的所有操作中预先
+      <br/>选定的一个以上重要操作；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_3">B、如果在执行所述事务的过程中发生中断，则在中断恢复后，通过查询
+      <br/>所述更新标志位，确定出下一步将要执行的操作，并依据所述备份的信息执行
+      <br/>所述确定出的操作。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_4">2、根据权利要求1所述的方法，其特征在于，所述步骤A之前，进一步
+      <br/>包括:
+      <br/>
+				</td></tr><tr><td class="content" id="claim_5">接收来自终端的通知指令，根据所述通知指令确定执行所述事务所需采用
+      <br/>的操作模式，如果确定出的操作模式为完整性操作，则执行所述步骤A；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_6">或者，根据预先保存的不同事务分别对应的操作模式信息，确定执行所述
+      <br/>事务所需采用的操作模式，如果确定出的操作模式为完整性操作，则执行所述
+      <br/>步骤A。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_7">3、根据权利要求2所述的方法，其特征在于，所述通知指令为应用协议数
+      <br/>据单元APDU指令；所述根据通知指令确定执行所述事务所需采用的操作模式
+      <br/>包括:
+      <br/>
+				</td></tr><tr><td class="content" id="claim_8">读取所述APDU指令中的操作模式标志位中携带的操作模式指示信息，根
+      <br/>据所述操作模式指示信息确定执行所述事务所需采用的操作模式。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_9">4、根据权利要求2所述的方法，其特征在于，如果确定出的操作模式为原
+      <br/>子性操作，则在执行所述事务的过程中，当发生中断后，将所述事务的状态回
+      <br/>滚到所述事务开始执行之前的状态。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_10">5、根据权利要求1所述的方法，其特征在于，所述事务为智能卡内部的事
+      <br/>务，或者为需要智能卡与终端之间进行信息交互的事务。
+      <br/>
+					
+				</td></tr><tr><td class="content" id="claim_11">6、根据权利要求1所述的方法，其特征在于，所述依据所述备份的信息执
+      <br/>行所述确定出的操作之前，进一步包括:
+      <br/>
+				</td></tr><tr><td class="content" id="claim_12">判断所述事务被中断的次数是否已经达到预先设定的最大中断次数阈值，
+      <br/>如果不是，则依据所述备份的信息执行所述确定出的操作；如果是，则进行身
+      <br/>份认证，并在认证通过后，依据所述备份的信息执行所述确定出的操作。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_13">7、一种智能卡，其特征在于，包括:
+      <br/>
+				</td></tr><tr><td class="content" id="claim_14">备份单元，用于在执行一事务的过程中，每执行完一个关键节点，则将所
+      <br/>述关键节点对应的执行结果进行备份，并通过对预先设定的更新标志位进行设
+      <br/>置，来记录所述事务的执行进程；所述关键节点为从完成所述事务所需的所有
+      <br/>操作中预先选定的一个以上重要操作；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_15">执行单元，用于当执行所述事务的过程中出现的中断恢复后，通过查询所
+      <br/>述更新标志位，确定出下一步将要执行的操作，并依据所述备份的信息执行所
+      <br/>述确定出的操作。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_16">8、根据权利要求7所述的智能卡，其特征在于，所述智能卡中进一步包括:
+      <br/>
+				</td></tr><tr><td class="content" id="claim_17">模式选择单元，用于接收来自终端的通知指令，根据所述通知指令确定执
+      <br/>行所述事务所需采用的操作模式，如果确定出的操作模式为完整性操作，则通
+      <br/>知所述备份单元执行自身功能；或者，用于根据预先保存的不同事务分别对应
+      <br/>的操作模式信息，确定执行所述事务所需采用的操作模式，如果确定出的操作
+      <br/>模式为完整性操作，则通知所述备份单元执行自身功能。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_18">9、根据权利要求8所述的智能卡，其特征在于，所述模式选择单元进一步
+      <br/>用于，如果确定出的操作模式为原子性操作，则在执行所述事务的过程中，当
+      <br/>发生中断后，将所述事务的状态回滚到所述事务开始执行之前的状态。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_19">10、根据权利要求7所述的智能卡，其特征在于，所述事务为所述智能卡
+      <br/>内部的事务，或者为需要所述智能卡与终端之间进行信息交互的事务。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_20">11、根据权利要求7所述的智能卡，其特征在于，所述执行单元包括:确
+      <br/>定子单元以及执行子单元；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_21">所述确定子单元，用于当执行所述事务的过程中出现的中断恢复后，通过
+      <br/>
+					查询所述更新标志位，确定出下一步将要执行的操作；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_22">所述执行子单元，用于依据所述备份的信息执行所述确定出的操作。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_23">12、根据权利要求11所述的智能卡，其特征在于，所述执行单元中进一步
+      <br/>包括:
+      <br/>
+				</td></tr><tr><td class="content" id="claim_24">计数子单元，用于统计所述事务被中断的次数；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_25">判断子单元，用于判断所述事务被中断的次数是否已经达到预先设定的最
+      <br/>大中断次数阈值，如果不是，则通知所述执行子单元执行自身功能；如果是，
+      <br/>则进行身份认证，并在认证通过后，通知所述执行子单元执行自身功能。
+      <br/>
+					
+				</td></tr></table></div><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table><tr><td id="description_title" class="header">说明书</td></tr><tr><td class="content" id="description_invention_title">一种智能卡操作方法以及一种智能卡
+  </td></tr><tr><td class="content" id="description_1">技术领域
+  </td></tr><tr><td class="content" id="description_2">本发明涉及智能卡技术，特别涉及一种能够满足实时以及非实时等各种
+    业务需求的智能卡操作方法以及一种智能卡。
+    
+				</td></tr><tr><td class="content" id="description_3">背景技术
+  </td></tr><tr><td class="content" id="description_4">随着国家对智能卡行业的支持，智能卡在企业、银行、学校、通信、交
+    通、工商、税务以及公安等领域得到了广泛地应用，相应地，对智能卡中的
+    数据可靠性也提出了更高的要求。
+    
+				</td></tr><tr><td class="content" id="description_5">目前，保证智能卡中的数据可靠性的操作被称之为原子性操作。原子性
+    操作是将一个事务看成一个完整的操作集合(事务是指完成一个应用或业务
+    所需的所有操作的集合)，事务中的各操作是不可分的，事务的所有操作必
+    须被整体提交或回滚，如果在完成事务的过程中，当执行任何一个操作时发
+    生中断，则整个事务将回滚到事务开始之前的状态。
+    
+				</td></tr><tr><td class="content" id="description_6">例如，对于将多块数据连续写入智能卡这一事务，如果在写入数据的过
+    程中发生中断，则当中断恢复后，如果还要执行该事务，则需要从头开始重
+    新写入所有数据。另外，可以采用旧数据备份或新数据备份的方式，来避免
+    中断对智能卡中原有数据可能造成的影响。其中，旧数据备份方式是指将智
+    能卡中的原有数据进行备份，这样，如果在写入新数据的过程中发生中断，
+    则可通过所作备份将智能卡中的数据恢复为原有数据；新数据备份方式是指
+    将新数据写入到备份区，这样，如果在写入新数据的过程中发生中断，则不
+    会对智能卡中的原有数据造成影响。
+    
+				</td></tr><tr><td class="content" id="description_7">上述原子性操作虽然能够在一定程度上保证智能卡中的数据的可靠性，
+    但是这种操作模式却无法满足对于实时性要求较高的业务的需求。比如，对
+    
+					于手机付费电视业务，如果用户选择实时缴费方式，即根据观看节目的时长
+    进行缴费，那么，当用户观看完一段节目，开始通过智能卡进行缴费操作时，
+    如果手机突然发生掉电，那么当手机重新上电之后，智能卡中的数据将恢复
+    到缴费操作之前的状态，也就是说，将无法继续进行缴费操作，从而使运营
+    商的利益受到损害。
+    
+				</td></tr><tr><td class="content" id="description_8">发明内容
+  </td></tr><tr><td class="content" id="description_9">有鉴于此，本发明的主要目的在于提供一种智能卡操作方法，能够满足
+    实时以及非实时等各种业务的需求。
+    
+				</td></tr><tr><td class="content" id="description_10">本发明的另一目的在于提供一种智能卡，能够满足实时以及非实时等各
+    种业务的需求。
+    
+				</td></tr><tr><td class="content" id="description_11">为达到上述目的，本发明的技术方案是这样实现的：
+    
+				</td></tr><tr><td class="content" id="description_12">一种智能卡操作方法，该方法包括：
+    
+				</td></tr><tr><td class="content" id="description_13">A、在执行一事务的过程中，每执行完一个关键节点，则将所述关键节点
+    对应的执行结果进行备份，并通过对预先设定的更新标志位进行设置，来记录
+    所述事务的执行进程；所述关键节点为从完成所述事务所需的所有操作中预先
+    选定的一个以上重要操作；
+    
+				</td></tr><tr><td class="content" id="description_14">B、如果在执行所述事务的过程中发生中断，则在中断恢复后，通过查询
+    所述更新标志位，确定出下一步将要执行的操作，并依据所述备份的信息执行
+    所述确定出的操作。
+    
+				</td></tr><tr><td class="content" id="description_15">所述步骤A之前，进一步包括：
+    
+				</td></tr><tr><td class="content" id="description_16">接收来自终端的通知指令，根据所述通知指令确定执行所述事务所需采用
+    的操作模式，如果确定出的操作模式为完整性操作，则执行所述步骤A；
+    
+				</td></tr><tr><td class="content" id="description_17">或者，根据预先保存的不同事务分别对应的操作模式信息，确定执行所述
+    事务所需采用的操作模式，如果确定出的操作模式为完整性操作，则执行所述
+    步骤A。
+    
+				</td></tr><tr><td class="content" id="description_18">较佳地，所述通知指令为应用协议数据单元APDU指令；所述根据通知指
+    
+					令确定执行所述事务所需采用的操作模式包括：
+    
+				</td></tr><tr><td class="content" id="description_19">读取所述APDU指令中的操作模式标志位中携带的操作模式指示信息，根
+    据所述操作模式指示信息确定执行所述事务所需采用的操作模式。
+    
+				</td></tr><tr><td class="content" id="description_20">如果确定出的操作模式为原子性操作，则在执行所述事务的过程中，当发
+    生中断后，将所述事务的状态回滚到所述事务开始执行之前的状态。
+    
+				</td></tr><tr><td class="content" id="description_21">所述事务为智能卡内部的事务，或者为需要智能卡与终端之间进行信息交
+    互的事务。
+    
+				</td></tr><tr><td class="content" id="description_22">所述依据所述备份的信息执行所述确定出的操作之前，进一步包括：
+    
+				</td></tr><tr><td class="content" id="description_23">判断所述事务被中断的次数是否已经达到预先设定的最大中断次数阈值，
+    如果不是，则依据所述备份的信息执行所述确定出的操作；如果是，则进行身
+    份认证，并在认证通过后，依据所述备份的信息执行所述确定出的操作。
+    
+				</td></tr><tr><td class="content" id="description_24">一种智能卡，包括：
+    
+				</td></tr><tr><td class="content" id="description_25">备份单元，用于在执行一事务的过程中，每执行完一个关键节点，则将所
+    述关键节点对应的执行结果进行备份，并通过对预先设定的更新标志位进行设
+    置，来记录所述事务的执行进程；所述关键节点为从完成所述事务所需的所有
+    操作中预先选定的一个以上重要操作；
+    
+				</td></tr><tr><td class="content" id="description_26">执行单元，用于当执行所述事务的过程中出现的中断恢复后，通过查询所
+    述更新标志位，确定出下一步将要执行的操作，并依据所述备份的信息执行所
+    述确定出的操作。
+    
+				</td></tr><tr><td class="content" id="description_27">较佳地，所述智能卡中进一步包括：
+    
+				</td></tr><tr><td class="content" id="description_28">模式选择单元，用于接收来自终端的通知指令，根据所述通知指令确定执
+    行所述事务所需采用的操作模式，如果确定出的操作模式为完整性操作，则通
+    知所述备份单元执行自身功能；或者，用于根据预先保存的不同事务分别对应
+    的操作模式信息，确定执行所述事务所需采用的操作模式，如果确定出的操作
+    模式为完整性操作，则通知所述备份单元执行自身功能。
+    
+				</td></tr><tr><td class="content" id="description_29">所述模式选择单元进一步用于，如果确定出的操作模式为原子性操作，则
+    在执行所述事务的过程中，当发生中断后，将所述事务的状态回滚到所述事务
+    
+					开始执行之前的状态。
+    
+				</td></tr><tr><td class="content" id="description_30">所述事务为所述智能卡内部的事务，或者为需要所述智能卡与终端之间进
+    行信息交互的事务。
+    
+				</td></tr><tr><td class="content" id="description_31">其中，所述执行单元包括：确定子单元以及执行子单元；
+    
+				</td></tr><tr><td class="content" id="description_32">所述确定子单元，用于当执行所述事务的过程中出现的中断恢复后，通过
+    查询所述更新标志位，确定出下一步将要执行的操作；
+    
+				</td></tr><tr><td class="content" id="description_33">所述执行子单元，用于依据所述备份的信息执行所述确定出的操作。
+    
+				</td></tr><tr><td class="content" id="description_34">较佳地，所述执行单元中进一步包括：
+    
+				</td></tr><tr><td class="content" id="description_35">计数子单元，用于统计所述事务被中断的次数；
+    
+				</td></tr><tr><td class="content" id="description_36">判断子单元，用于判断所述事务被中断的次数是否已经达到预先设定的最
+    大中断次数阈值，如果不是，则通知所述执行子单元执行自身功能；如果是，
+    则进行身份认证，并在认证通过后，通知所述执行子单元执行自身功能。
+    
+				</td></tr><tr><td class="content" id="description_37">可见，采用本发明的技术方案，智能卡在执行某一事务的过程中，每执行
+    完一个关键节点后，则将该关键节点对应的执行结果进行备份，并通过设置更
+    新标志位来记录该事务的执行进程，这样，一旦在执行该事务的过程中发生中
+    断，待中断恢复后，即可根据更新标志位来确定出下一步将要执行的操作，并
+    可根据备份的信息执行该确定出的操作。与现有原子性操作模式相比，本发明
+    所提供的这种操作模式不会因为中断而造成数据丢失，所以能够满足实时以及
+    非实时等各种业务的需求。
+    
+				</td></tr><tr><td class="content" id="description_38">附图说明
+  </td></tr><tr><td class="content" id="description_39">图1为本发明方法实施例的流程图。
+    
+				</td></tr><tr><td class="content" id="description_40">图2为本发明方法实施例中一事务示例的执行过程示意图。
+    
+				</td></tr><tr><td class="content" id="description_41">图3为本发明方法实施例中另一事务示例的执行过程示意图。
+    
+				</td></tr><tr><td class="content" id="description_42">图4为本发明方法实施例中的操作恢复保护机制的实现流程图。
+    
+				</td></tr><tr><td class="content" id="description_43">图5为本发明装置实施例的组成结构示意图。
+    
+				</td></tr><tr><td class="content" id="description_44">具体实施方式
+  </td></tr><tr><td class="content" id="description_45">为解决现有技术中存在的问题，本发明中提出一种全新的智能卡操作模式，
+    即完整性操作模式：在执行某一事务的过程中，每执行完一个关键节点，则将
+    该关键节点对应的执行结果进行备份，并通过对预先设定的更新标志位进行设
+    置，来记录该事务的执行进程，即当前执行到哪个关键节点，所述关键节点为
+    从完成该事务所需的所有操作中预先选定的一个以上重要操作；这样，如果在
+    执行该事务的过程中发生中断，则当中断恢复后，通过查询更新标志位，即可
+    确定出下一步将要执行的操作，并可依据备份的信息执行所述确定出的操作。
+    
+				</td></tr><tr><td class="content" id="description_46">为使本发明的目的、技术方案及优点更加清楚明白，以下参照附图并举实
+    施例，对本发明作进一步地详细说明。
+    
+				</td></tr><tr><td class="content" id="description_47">图1为本发明方法实施例的流程图。如图1所示，包括以下步骤：
+    
+				</td></tr><tr><td class="content" id="description_48">步骤101：将预先设置的更新标志位进行置位。
+    
+				</td></tr><tr><td class="content" id="description_49">本实施例中，当需要开始执行某一事务时，首先将预先设置的更新标志位
+    进行置位，即将更新标志位设置为0。
+    
+				</td></tr><tr><td class="content" id="description_50">步骤102：在执行事务的过程中，每执行完一个关键节点，则将该关键节
+    点对应的执行结果进行备份，并通过对更新标志位进行设置，来记录该事务的
+    执行进程。
+    
+				</td></tr><tr><td class="content" id="description_51">这里所提到的关键节点，是指从完成该事务所需的所有操作中预先选定的
+    一个以上重要操作。
+    
+				</td></tr><tr><td class="content" id="description_52">本步骤中，每执行完一个关键节点后，除了要将该关键节点对应的执行结
+    果进行备份外，还需要对更新标志位进行设置，以记录事务的执行进程。本实
+    施例中，可预先设定好不同的关键节点分别对应的不同的更新标志位设置方式，
+    这样，后续过程中通过查询该更新标志位，即可获知已经执行完了哪个关键节
+    点。比如，当执行完第一个关键节点后，可将更新标志位设置为1；当执行完
+    第二个关键节点后，将更新标志位设置为2，依次类推。
+    
+				</td></tr><tr><td class="content" id="description_53">步骤103：判断在执行该事务的过程中是否发生中断，如果是，则执行步
+    
+					骤104；否则，返回执行步骤102。
+    
+				</td></tr><tr><td class="content" id="description_54">步骤104：当中断恢复后，通过查询更新标志位，确定出下一步将要执行
+    的操作，并依据备份的信息执行该确定出的操作。
+    
+				</td></tr><tr><td class="content" id="description_55">如果在执行事务的过程，由于各种可能的原因出现意外中断，则当中断恢
+    复后，通过查询更新标志位，即可获知下一步将要执行的是什么操作，然后，
+    根据所作备份，即发生中断前所执行的关键节点的执行结果，执行该确定出的
+    下一步将要执行的操作。
+    
+				</td></tr><tr><td class="content" id="description_56">举例说明：假设某一事务共包括三个关键节点，分别为关键节点1、关键
+    节点2和关键节点3；为便于描述，假设完成该事务总共只需要这三个操作。
+    那么，如果在执行完关键节点1，但还未执行完关键节点2时发生中断，则在
+    中断恢复后，从关键节点2开始执行；如果在执行完关键节点2，但还未执行
+    完关键节点3时发生中断，则在中断恢复后，从关键节点3开始执行；当然，
+    如果在还未执行完关键节点1时即发生中断，则在中断恢复后，从关键节点1
+    开始执行即可。
+    
+				</td></tr><tr><td class="content" id="description_57">后续过程中，重复步骤102～104所示过程，直至执行完该事务的所有操作。
+    
+				</td></tr><tr><td class="content" id="description_58">步骤105：当执行完该事务的所有操作后，将更新标志位清零，结束流程。
+    
+				</td></tr><tr><td class="content" id="description_59">需要说明的是，本发明中所提到的事务可以是指智能卡内部的事务，也可
+    以是指需要智能卡与终端之间进行信息交互的事务。下面即针对这两种情况，
+    分别通过具体的示例对本发明所述方案作进一步地详细说明。
+    
+				</td></tr><tr><td class="content" id="description_60">示例一：
+    
+				</td></tr><tr><td class="content" id="description_61">假设智能卡为条件接收卡(CA)，事务为CA卡按照用户观看节目的时长
+    进行收费。如图2所示，该事务的执行过程包括以下步骤：
+    
+				</td></tr><tr><td class="content" id="description_62">步骤201：接收终端发来的APDU指令，开启事务保护功能。
+    
+				</td></tr><tr><td class="content" id="description_63">当用户观看完节目后，用户所使用的终端会向CA卡发送包含节目信息，
+    如观看时长、节目收费方式以及价格等信息的APDU指令。CA卡接收到该
+    APDU指令后，开启自身的事务保护功能，即将更新标志位置位。
+    
+				</td></tr><tr><td class="content" id="description_64">步骤202：统计用户的观看时长。
+    
+				</td></tr><tr><td class="content" id="description_65">步骤203：查看节目收费方式以及价格，计算用户所需缴纳的费用。
+    
+				</td></tr><tr><td class="content" id="description_66">步骤204：判断卡内余额是否充足，如果是，则执行步骤205；否则，进行
+    错误处理。
+    
+				</td></tr><tr><td class="content" id="description_67">如何进行错误处理与本发明无关，不作介绍。
+    
+				</td></tr><tr><td class="content" id="description_68">步骤205：执行扣费操作。
+    
+				</td></tr><tr><td class="content" id="description_69">步骤206：记录交易明细。
+    
+				</td></tr><tr><td class="content" id="description_70">上述步骤202～206的具体实现均与现有技术中相同，不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_71">步骤207：关闭事务保护功能，结束流程。
+    
+				</td></tr><tr><td class="content" id="description_72">即将更新标志位清零。
+    
+				</td></tr><tr><td class="content" id="description_73">如果在执行图2所示事务的过程意外发生中断，比如，在计算完用户所需
+    缴纳的费用后，还没来得及扣费就发生断电，那么，如果按照现有方式进行处
+    理，则相当于用户观看了电视节目却没有交钱，从而使运营商的利益受到损害；
+    而采用本发明所述方案后，即可较好地解决这一问题。
+    
+				</td></tr><tr><td class="content" id="description_74">假设上述步骤202、203、204、205和206均为关键节点，则在执行图2
+    所示事务的过程中，每执行完一个关键节点后，均需要进行数据的备份和更新
+    标志位的设置。这样，如果在执行步骤203时发生中断，那么，通过查询更新
+    标志位，即可获知中断前已经执行完了步骤202，并且，由于已经备份了步骤
+    202的执行结果，所以可根据该执行结果执行步骤203；其它情况依此类推。特
+    别地，对于在执行步骤202时即发生中断这种情况，可通过查询更新标志位，
+    由于其此时设置为0，所以可知道还未执行任何关键节点，后续中断恢复后直
+    接执行步骤202即可。
+    
+				</td></tr><tr><td class="content" id="description_75">示例二：
+    
+				</td></tr><tr><td class="content" id="description_76">假设智能卡为CA卡，事务同样为CA卡按照用户观看节目的时长进行收
+    费，但与图2所示不同的是，该示例中，终端不会直接将用户的观看节目时长
+    发送给CA卡，而是需要CA卡通过不断地与终端进行信息交互，来获取用户
+    观看节目的起始及结束时间，进而计算出用户的观看节目时长；而且，后续的
+    收费过程中，CA卡也需要与终端之间进行信息交互。如图3所示，该事务的
+    
+					执行过程包括以下步骤：
+    
+				</td></tr><tr><td class="content" id="description_77">步骤301：用户打开终端应用软件，同时CA卡进行初始化复位。
+    
+				</td></tr><tr><td class="content" id="description_78">步骤302：终端向CA卡发送选择应用的APDU1指令。
+    
+				</td></tr><tr><td class="content" id="description_79">本步骤中，终端向CA卡发送APDU1指令，以通知CA卡自身所选择的应
+    用为付费电视所对应的应用。
+    
+				</td></tr><tr><td class="content" id="description_80">步骤303：终端选择要观看的节目，接收所选节目的数据流和授权控制消
+    息(ECM)，并向CA卡发送包含ECM信息的APDU2指令。
+    
+				</td></tr><tr><td class="content" id="description_81">CA卡接收到来自终端的APDU1指令后，会向终端回送一个响应消息；终
+    端接收到该响应消息后，即执行本步骤所述过程。
+    
+				</td></tr><tr><td class="content" id="description_82">步骤304：CA卡接收到APDU2指令后，根据其中的ECM信息中携带的
+    当前时间信息，获取并记录用户开始观看节目的起始时间，同时解析出控制字
+    (CW)返回给终端。
+    
+				</td></tr><tr><td class="content" id="description_83">步骤305：终端利用接收到的CW字解析加扰的数据流。
+    
+				</td></tr><tr><td class="content" id="description_84">步骤306：当用户观看节目结束时，终端向CA卡发送携带有观看节目结
+    束时间的APDU3指令。
+    
+				</td></tr><tr><td class="content" id="description_85">步骤307：CA卡统计用户的观看时长，并计算出用户需要缴纳的费用返回
+    给终端。
+    
+				</td></tr><tr><td class="content" id="description_86">步骤308：终端向CA卡发送确定缴费的APDU4指令。
+    
+				</td></tr><tr><td class="content" id="description_87">步骤309：CA卡进行扣费操作。
+    
+				</td></tr><tr><td class="content" id="description_88">步骤310：扣费成功后，CA卡记录交易明细，结束流程。
+    
+				</td></tr><tr><td class="content" id="description_89">图3所示流程的具体实现与现有技术中相同，不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_90">假设图3所示事务共有四个关键节点，分别为步骤303～306、步骤307、
+    步骤309以及步骤310。每执行完一个关键节点后，均需要进行数据的备份和
+    更新标志位的设置。这样，在执行该事务的过程中，如果在执行步骤303～306，
+    或者执行步骤307的过程中发生中断，则当中断恢复后，直接执行步骤307(如
+    果发生中断时CA卡还未接收到来自终端的观看节目结束时间，则以发生中断
+    时的时间作为观看节目结束时间)；如果在执行309时发生中断，则在中断恢复
+    
+					后，直接执行步骤309；如果在执行步骤310时发生中断，则在中断恢复后，
+    直接执行步骤310。可见，采用上述处理方式后，避免了由于意外中断所造成
+    的数据丢失，从而使得缴费操作可以在中断恢复后继续进行，维护了运营商的
+    利益。
+    
+				</td></tr><tr><td class="content" id="description_91">另外，本发明所述方案中还提供了操作模式选择机制，即支持智能卡对完
+    整性操作和原子性操作两种模式的选择，也就是说，支持对数据回滚和操作中
+    断后的继续执行两种模式的选择。当然，如果还有其它操作模式，同样可纳入
+    选择范围。通常，对于实时性要求不高的事务，可选择原子性操作，而对于实
+    时性要求较高的事务，则可选择完整性操作。具体选择方式可以是：智能卡接
+    收来自终端的通知指令，根据该通知指令来确定执行当前事务所需采用的操作
+    模式，或者，智能卡也可根据自身预先保存(人工进行设置)的不同事务分别
+    对应的操作模式信息，来确定执行当前事务所需采用的操作模式。其中，对于
+    前一种方式，所述通知指令通常是指APDU指令，在开始某一事务时，终端可
+    利用向智能卡发送的首个APUD指令，比如图2所示步骤201中的APDU指令
+    和图3所示步骤302中的APDU1指令，通过在其中设置的一个操作模式标志
+    位，来将该事务所需采用的操作模式通知给智能卡。
+    
+				</td></tr><tr><td class="content" id="description_92">再有，本发明所述方案中还提供了一种操作恢复保护机制，即为了防止恶
+    意攻击，保证数据操作的安全性，预先设置一个最大中断次数阈值，这样，当
+    某一事务被中断的次数超过该最大中断次数阈值时，则锁定该事务对应的应用；
+    如果需要继续该事务，则必须通过身份认证将该应用解锁，然后才能继续之后
+    的处理流程。
+    
+				</td></tr><tr><td class="content" id="description_93">图4为本发明实施例中的操作恢复保护机制的实现流程图。如图4所示，
+    包括以下步骤：
+    
+				</td></tr><tr><td class="content" id="description_94">步骤401：中断恢复，查看统计出的事务被中断次数。
+    
+				</td></tr><tr><td class="content" id="description_95">在智能卡执行某一事务的过程中，当中断恢复后，继续执行后续操作之前，
+    首先查看已经统计出的事务被中断的次数。在实际应用中，可通过智能卡中的
+    计数器来实现统计事务被中断次数这一功能。
+    
+				</td></tr><tr><td class="content" id="description_96">步骤402：判断被中断次数是否大于预先设定的最大中断次数阈值，如果
+    是，则执行步骤403；否则，执行步骤405。
+    
+				</td></tr><tr><td class="content" id="description_97">步骤403：进行非对称加密认证。
+    
+				</td></tr><tr><td class="content" id="description_98">即由智能卡对与其进行信息交互的终端进行非对称加密认证。当然，也可
+    以采用其它的认证方式，此处仅为举例说明。如何认证为现有技术，不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_99">步骤404：判断认证是否通过，如果是，则执行步骤405；否则，返回执行
+    步骤403。
+    
+				</td></tr><tr><td class="content" id="description_100">步骤405：将统计出的被中断次数加一。
+    
+				</td></tr><tr><td class="content" id="description_101">步骤406：按照备份数据和更新标志位继续之后的操作。
+    
+				</td></tr><tr><td class="content" id="description_102">步骤407：判断是否再次发生中断，如果是，则返回执行步骤401；否则，
+    执行步骤408。
+    
+				</td></tr><tr><td class="content" id="description_103">步骤408：继续执行后续操作，并在操作结束后，将统计的被中断次数归
+    零，结束流程。
+    
+				</td></tr><tr><td class="content" id="description_104">基于上述方法，图5为本发明装置(即智能卡)实施例的组成结构示意图。
+    如图5所示，包括：
+    
+				</td></tr><tr><td class="content" id="description_105">备份单元51，用于在执行一事务的过程中，每执行完一个关键节点，则将
+    该关键节点对应的执行结果进行备份，并通过对预先设定的更新标志位进行设
+    置，来记录该事务的执行进程；所述关键节点为从完成该事务所需的所有操作
+    中预先选定的一个以上重要操作；
+    
+				</td></tr><tr><td class="content" id="description_106">执行单元52，用于当执行事务的过程中出现的中断恢复后，通过查询更新
+    标志位，确定出下一步将要执行的操作，并依据备份的信息执行该确定出的操
+    作。
+    
+				</td></tr><tr><td class="content" id="description_107">此外，图5所示智能卡中还可进一步包括：
+    
+				</td></tr><tr><td class="content" id="description_108">模式选择单元53，用于接收来自终端的通知指令，根据该通知指令确定执
+    行当前事务所需采用的操作模式，如果确定出的操作模式为完整性操作，则通
+    知备份单元51执行自身功能；或者，用于根据预先保存的不同事务分别对应的
+    操作模式信息，确定执行当前事务所需采用的操作模式，如果确定出的操作模
+    
+					式为完整性操作，则通知备份单元51执行自身功能。
+    
+				</td></tr><tr><td class="content" id="description_109">该模式选择单元53还可进一步用于，如果确定出的操作模式为原子性操
+    作，则在执行当前事务的过程中，当发生中断后，将该事务的状态将回滚到该
+    事务开始执行之前的状态。
+    
+				</td></tr><tr><td class="content" id="description_110">上述事务可以是指智能卡内部的事务，也可以是指需要智能卡与终端之间
+    进行信息交互的事务。
+    
+				</td></tr><tr><td class="content" id="description_111">其中，执行单元52中可具体包括：确定子单元521以及执行子单元522；
+    
+				</td></tr><tr><td class="content" id="description_112">确定子单元521，用于当执行事务的过程中出现的中断恢复后，通过查询
+    更新标志位，确定出下一步将要执行的操作；
+    
+				</td></tr><tr><td class="content" id="description_113">执行子单元522，用于依据备份的信息执行确定出的操作。
+    
+				</td></tr><tr><td class="content" id="description_114">此外，该执行单元52中还可进一步包括：
+    
+				</td></tr><tr><td class="content" id="description_115">计数子单元523，用于统计当前执行的事务被中断的次数；
+    
+				</td></tr><tr><td class="content" id="description_116">判断子单元524，用于判断所述被中断次数是否已经达到预先设定的最大
+    中断次数阈值，如果不是，则通知执行子单元522执行自身功能；如果是，则
+    进行身份认证，并在认证通过后，通知执行子单元522执行自身功能。
+    
+				</td></tr><tr><td class="content" id="description_117">图5所示智能卡实施例的具体工作流程请参照图1所示方法实施例中的相
+    应说明，此处不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_118">总之，采用本发明的技术方案，智能卡在执行某一事务的过程中，每执行
+    完一个关键节点后，即将该关键节点对应的执行结果进行备份，并通过设置更
+    新标志位来记录事务的执行进程，这样，一旦在执行该事务的过程中发生中断，
+    待中断恢复后，则可根据更新标志位来确定出下一步将要执行的操作，并可根
+    据备份的信息执行该确定出的操作。与现有原子性操作模式相比，本发明所提
+    供的这种操作模式不会因为中断而造成数据丢失，所以能够满足实时以及非实
+    时等各种业务的需求。另外，本发明所述方案还提供了一种操作模式选择机制
+    以及一种操作恢复保护机制，保证了智能卡操作的灵活性和安全性。
+    
+				</td></tr><tr><td class="content" id="description_119">综上所述，以上仅为本发明的较佳实施例而已，并非用于限定本发明的
+    保护范围。凡在本发明的精神和原则之内，所作的任何修改、等同替换、改
+    
+					进等，均应包含在本发明的保护范围之内。
+    
+				</td></tr></table></div></body></html>

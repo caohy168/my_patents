@@ -1,0 +1,661 @@
+<html><head><title>全文文本(Fulltext)</title><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><style>div.fullText table {width: 100%;text-indent: 1px;} 
+ div.fullText table td.header {font-weight: bold;text-align: center;font-family: '宋体';font-size: 16px;line-height:20px;color: #000000;padding: 5px;}div.fullText table td.content {padding: 1px;text-align: left;vertical-align: top;width: 100%;font-family: '宋体';font-size: 14px;line-height:20px;color: #000000;}</style></head><body><?xml version="1.0" encoding="UTF-8"?><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table class="fullText"><tr><td id="claim_title" class="header">权利要求书</td></tr><tr><td class="content" id="claim_1">1.一种存储卡，其特征在于，所述存储卡包括：存储卡控制单元(100)、
+      <br/>条件接收单元(101)、存储单元(102)，以及存储卡接口(103)，其中，
+      <br/>
+				</td></tr><tr><td class="content" id="claim_2">存储卡控制单元(100)，用于控制存储卡接口(103)进行数据收发并进
+      <br/>行协议解析，对存储单元(102)进行管理，以及存储卡中各单元的协调工作；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_3">存储卡接口(103)，用于接收来自外部的数据，并在存储卡控制单元(100)
+      <br/>的控制下存储到存储单元(102)中；所述外部的数据包括第一信息流、第二信
+      <br/>息流和加扰信息；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_4">条件接收单元(101)，在存储卡控制单元(100)的控制下，获取第一信息
+      <br/>流、第二信息流和加扰信息，并根据第二信息流判断出所属移动终端具有对加
+      <br/>扰信息的业务使用权限，根据第二信息流获取对应的业务密钥，利用该业务密
+      <br/>钥对第一信息流中的密文控制字解密并获得明文控制字；在控制字的控制下，
+      <br/>对加扰信息进行解扰以获得移动终端用户所需的业务数据流。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_5">2.根据权利要求1所述的存储卡，其特征在于，所述条件接收单元(101)
+      <br/>包括：权限控制模块(1011)、业务密钥提取模块(1012)、控制字提取模块(1013)、
+      <br/>解扰模块(1014)、文件管理模块(1015)和密钥管理模块(1016)，其中，
+      <br/>
+				</td></tr><tr><td class="content" id="claim_6">权限控制模块(1011)，在接收到的第二信息流中的业务标识与文件管理模
+      <br/>块(1015)中预先存储的用户终端支持的条件接收业务所对应的业务标识相同
+      <br/>时，向业务密钥提取模块(1012)发送鉴权成功通知，并将第二信息流发送给
+      <br/>业务密钥提取模块(1012)；在接收到的业务标识与存储的不相同时，退出当前
+      <br/>触发的条件接收业务；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_7">业务密钥提取模块(1012)，接收鉴权成功通知，并根据接收到的第二信息
+      <br/>流中的密钥种子ID号，在密钥管理模块(1017)中存有该密钥种子ID号对应
+      <br/>的业务密钥时，根据该密钥种子ID号从密钥管理模块(1016)中提取对应的业
+      <br/>务密钥，并将提取的业务密钥发送给控制字提取模块(1013)；当第二信息流中
+      <br/>的密钥种子ID号改变时，更新存储卡内对应的业务密钥ID号；
+      <br/>
+					
+				</td></tr><tr><td class="content" id="claim_8">控制字提取模块(1013)，从权限控制模块(1011)获取第一信息流，并从
+      <br/>第一信息流中获取密文控制字，利用来自业务密钥提取模块(1012)的业务密
+      <br/>钥对该密文控制字进行解密，得到明文控制字，并发送给解扰模块(1015)；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_9">解扰模块(1014)，用于在存储卡控制单元(100)的控制下，从存储单元
+      <br/>(102)中获取加扰数据，并利用来自控制字提取模块(1013)的明文控制字，
+      <br/>对加扰数据进行解扰，将解扰后的数据通过存储卡接口(105)发送给终端。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_10">3.根据权利要求1或2所述的存储卡，其特征在于，所述存储卡接口(103)
+      <br/>的协议为数字安全存储卡或MMC通用接口标准协议。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_11">4.根据权利要求1或2所述的存储卡，其特征在于，所述存储卡控制单元
+      <br/>(100)与条件接收单元(101)之间通过数据线，请求发送数据信号、准备好
+      <br/>接收/发送数据信号、请求接收数据信号和数据锁存时钟信号连接。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_12">5.根据权利要求2所述的存储卡，其特征在于，所述解扰模块(1014)
+      <br/>为独立于存储卡之外的模块。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_13">6.根据权利要求5所述的存储卡，其特征在于，所述解扰模块(1014)
+      <br/>位于安全算法芯片内。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_14">7.一种存储卡实现条件接收的方法，其特征在于，触发条件接收业务，该
+      <br/>方法包括以下步骤：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_15">A.根据条件接收业务数据判断是否具有使用当前触发的条件接收业务的
+      <br/>权限，如有进入步骤B；否则退出本流程；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_16">B.判断是否有当前触发的条件接收业务对应的业务密钥，如果有，进入步
+      <br/>骤C；否则退出本流程；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_17">C.利用对应的业务密钥对密文控制字进行解密获得明文控制字，并利用获
+      <br/>得的明文控制字对加扰信息进行解扰以获得条件接收业务数据。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_18">8.根据权利要求7所述的方法，其特征在于，所述步骤A中判断的方法
+      <br/>为：若所述条件接收业务数据中的第二信息流中携带的业务标识与存储卡中存
+      <br/>储的相同，则所述存储卡有权限使用当前触发的条件接收业务。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_19">9.根据权利要求7所述的方法，其特征在于，所述步骤B中的判断方法
+      <br/>
+					为：利用所述条件接收业务数据中的第二信息流中的密钥种子ID号，查询存储
+      <br/>卡中是否存有该密钥种子ID号对应的业务密钥。
+      <br/>
+					
+				</td></tr></table></div><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table><tr><td id="description_title" class="header">说明书</td></tr><tr><td class="content" id="description_invention_title">一种存储卡及其实现条件接收的方法
+  </td></tr><tr><td class="content" id="description_1">技术领域
+  </td></tr><tr><td class="content" id="description_2">本发明涉及存储卡技术，尤指一种存储卡及其实现条件接收的方法。
+    
+				</td></tr><tr><td class="content" id="description_3">背景技术
+  </td></tr><tr><td class="content" id="description_4">目前，实现移动终端(如手机或其它终端)数字电视业务条件接收的方式
+    主要有两种：
+    
+				</td></tr><tr><td class="content" id="description_5">一种方式通过移动通信网络来实现，通常是采用流媒体方式，利用移动运
+    营商能控制的SIM卡来进行鉴权和条件接收，中国移动和中国联通已经利用这
+    种方式推出了手机数字电视业务，但是这种方式具有成本高，用户难以接受的
+    问题；
+    
+				</td></tr><tr><td class="content" id="description_6">另一种方式通过卫星或地面广播来实现，这种方式需要在移动终端中内置
+    一颗芯片或外置条件接收卡来实现条件接收和解扰，这种方式最大的好处是传
+    输成本低，可以预见，这种方式是数字电视运营商和用户的一种新的选择。但
+    是，由于数字电视运营商通常希望采用多CA厂家，以避免被某家CA厂家垄断。
+    而这种做法对移动终端生产厂家来说是非常不利的，使得移动终端生产厂家必
+    须生产多种主板，而且生产量少、种类多，成本大大提高，而且各个数字电视
+    运营商采用的标准不同，使得移动终端生产厂家要提供不同标准接口的条件接
+    收卡来满足相应要求。这样，电视运营商、移动终端生产厂家的成本也提高了，
+    无疑会直接损害终端用户的利益。综上所述，这种方式一个明显弊端是无法实
+    现机卡分离，从而带来一系列问题。
+    
+				</td></tr><tr><td class="content" id="description_7">目前，我国基于采用在移动终端中内置一颗芯片或外置条件接收卡实现条
+    件接收的方式的相应技术研究和产品开发正处于积极研制阶段，具体实现方案
+    还没有。
+    
+				</td></tr><tr><td class="content" id="description_8">发明内容
+  </td></tr><tr><td class="content" id="description_9">有鉴于此，本发明实施例的目的在于提供一种存储卡，能够实现移动终
+    端数字电视业务，实现机卡分离，节约成本。
+    
+				</td></tr><tr><td class="content" id="description_10">本发明实施例的另一目的在于提供一种存储卡实现条件接收的方法，能
+    够实现移动终端数字电视业务，节约成本。
+    
+				</td></tr><tr><td class="content" id="description_11">为达到上述目的，本发明实施例的技术方案具体是这样实现的：
+    
+				</td></tr><tr><td class="content" id="description_12">一种存储卡，所述存储卡包括：存储卡控制单元、条件接收单元、存储单
+    元，以及存储卡接口，其中，
+    
+				</td></tr><tr><td class="content" id="description_13">存储卡控制单元，用于控制存储卡接口进行数据收发并进行协议解析，对
+    存储单元进行管理，以及存储卡中各单元的协调工作；
+    
+				</td></tr><tr><td class="content" id="description_14">存储卡接口，用于接收来自外部的数据，并在存储卡控制单元的控制下存
+    储到存储单元中；所述外部的数据包括第一信息流、第二信息流和加扰信息；
+    
+				</td></tr><tr><td class="content" id="description_15">条件接收单元，在存储卡控制单元的控制下，获取第一信息流、第二信息
+    流和加扰信息，并根据第二信息流判断出所属移动终端具有对加扰信息的业务
+    使用权限，根据第二信息流获取对应的业务密钥，利用该业务密钥对第一信息
+    流中的密文控制字解密并获得明文控制字；在控制字的控制下，对加扰信息进
+    行解扰以获得移动终端用户所需的业务数据流。
+    
+				</td></tr><tr><td class="content" id="description_16">所述条件接收单元包括：权限控制模块、业务密钥提取模块、控制字提取
+    模块、解扰模块、文件管理模块和密钥管理模块，其中，
+    
+				</td></tr><tr><td class="content" id="description_17">权限控制模块，在接收到的第二信息流中的业务标识与文件管理模块中预
+    先存储的用户终端支持的条件接收业务所对应的业务标识相同时，向业务密钥
+    提取模块发送鉴权成功通知，并将第二信息流发送给业务密钥提取模块；在接
+    收到的业务标识与存储的不相同时，退出当前触发的条件接收业务；
+    
+				</td></tr><tr><td class="content" id="description_18">业务密钥提取模块，接收鉴权成功通知，并根据接收到的第二信息流中的
+    密钥种子ID号，在密钥管理模块中存有该密钥种子ID号对应的业务密钥时，
+    根据该密钥种子ID号从密钥管理模块中提取对应的业务密钥，并将提取的业务
+    
+					密钥发送给控制字提取模块；当第二信息流中的密钥种子ID号改变时，更新存
+    储卡内对应的业务密钥ID号；
+    
+				</td></tr><tr><td class="content" id="description_19">控制字提取模块，从权限控制模块获取第一信息流，并从第一信息流中获
+    取密文控制字，利用来自业务密钥提取模块的业务密钥对该密文控制字进行解
+    密，得到明文控制字，并发送给解扰模块；
+    
+				</td></tr><tr><td class="content" id="description_20">解扰模块，用于在存储卡控制单元的控制下，从存储单元中获取加扰数据，
+    并利用来自控制字提取模块的明文控制字，对加扰数据进行解扰，将解扰后的
+    数据通过存储卡接口发送给终端。
+    
+				</td></tr><tr><td class="content" id="description_21">所述存储卡接口的协议为数字安全存储卡或MMC通用接口标准协议。
+    
+				</td></tr><tr><td class="content" id="description_22">所述存储卡控制单元与条件接收单元之间通过数据线，请求发送数据信号、
+    准备好接收/发送数据信号、请求接收数据信号和数据锁存时钟信号连接。
+    
+				</td></tr><tr><td class="content" id="description_23">所述解扰模块为独立于存储卡之外的模块。
+    
+				</td></tr><tr><td class="content" id="description_24">所述解扰模块位于安全算法芯片内。
+    
+				</td></tr><tr><td class="content" id="description_25">一种存储卡实现条件接收的方法，触发条件接收业务，该方法包括以下步
+    骤：
+    
+				</td></tr><tr><td class="content" id="description_26">A.根据条件接收业务数据判断是否具有使用当前触发的条件接收业务的
+    权限，如有进入步骤B；否则退出本流程；
+    
+				</td></tr><tr><td class="content" id="description_27">B.判断是否有当前触发的条件接收业务对应的业务密钥，如果有，进入步
+    骤C；否则退出本流程；
+    
+				</td></tr><tr><td class="content" id="description_28">C.利用对应的业务密钥对密文控制字进行解密获得明文控制字，并利用获
+    得的明文控制字对加扰信息进行解扰以获得条件接收业务数据。
+    
+				</td></tr><tr><td class="content" id="description_29">所述步骤A中判断的方法为：若所述条件接收业务数据中的第二信息流中
+    携带的业务标识与存储卡中存储的相同，则所述存储卡有权限使用当前触发的
+    条件接收业务。
+    
+				</td></tr><tr><td class="content" id="description_30">所述步骤B中的判断方法为：利用所述条件接收业务数据中的第二信息流
+    中的密钥种子ID号，查询存储卡中是否存有该密钥种子ID号对应的业务密钥。
+    
+				</td></tr><tr><td class="content" id="description_31">由上述技术方案可见，本发明实施例通过将条件接收单元作为存储卡的
+    
+					一个组成部分，实现了在移动终端通过SD/MMC等通用存储卡接口完成条件接
+    收，达到了移动终端数字电视业务进行机卡分离的条件接收，方便了移动终端
+    数字电视业务的开展，大大降低了移动终端如手机的改造成本。
+    
+				</td></tr><tr><td class="content" id="description_32">附图说明
+  </td></tr><tr><td class="content" id="description_33">图1是本发明存储卡的组成结构示意图；
+    
+				</td></tr><tr><td class="content" id="description_34">图2是本发明条件接收单元的组成结构示意图；
+    
+				</td></tr><tr><td class="content" id="description_35">图3是本发明实现条件接收的流程图；
+    
+				</td></tr><tr><td class="content" id="description_36">图4是本发明条件接口单元与存储卡接口单元连接实施例示意图；
+    
+				</td></tr><tr><td class="content" id="description_37">图5a是本发明存储卡控制单元向条件接收单元发送数据的时序图；
+    
+				</td></tr><tr><td class="content" id="description_38">图5b是存储卡控制单元接收来自条件接收单元的数据的时序图。
+    
+				</td></tr><tr><td class="content" id="description_39">具体实施方式
+  </td></tr><tr><td class="content" id="description_40">为使本发明的目的、技术方案及优点更加清楚明白，以下参照附图并举
+    较佳实施例，对本发明进一步详细说明。
+    
+				</td></tr><tr><td class="content" id="description_41">图1是本发明存储卡的组成结构示意图，如图1所示，本发明存储卡主
+    要包括：存储卡控制单元100、条件接收单元101、存储单元102，以及存
+    储卡接口103。其中，
+    
+				</td></tr><tr><td class="content" id="description_42">存储卡控制单元100，用于控制存储卡接口103进行数据收发并进行协议解
+    析，对存储单元102进行管理，以及存储卡中各单元的协调工作。
+    
+				</td></tr><tr><td class="content" id="description_43">存储卡接口103：用于接收来自外部的数据，比如用户需要存储的数据，与
+    音视频等数字流如数字电视信号有关的第一信息流、第二信息流和加扰信息等，
+    并在存储卡控制单元100的控制下，存储到存储单元102中。存储卡接口103的协
+    议可以是数字安全存储卡(SD卡)/MMC等通用接口标准协议，但不限于任何
+    接口方式。
+    
+				</td></tr><tr><td class="content" id="description_44">其中，第一信息流主要包括授权控制信息(Entitlement Control Messages)：
+    如密文控制字、时间信息等；
+    
+				</td></tr><tr><td class="content" id="description_45">第二信息流主要包括授权管理信息(Entitlement Management Messages)：
+    如业务标识、密钥种子ID号、时间信息等；
+    
+				</td></tr><tr><td class="content" id="description_46">加扰信息就是被加扰过的视音频信号如数字电视信号。
+    
+				</td></tr><tr><td class="content" id="description_47">存储单元102：用于存储发送给存储卡的数据，可以是FLASH、EEPROM、
+    ROM等。
+    
+				</td></tr><tr><td class="content" id="description_48">条件接收单元101：用于对加扰信息如音视频等数据流进行解扰，以及用
+    户管理，其中用户管理包括权限控制和密钥管理等功能。在存储卡控制单元100
+    的控制下，获取第一信息流、第二信息流和加扰信息，并根据第二信息流判断
+    出所属移动终端具有对加扰信息的业务使用权限后，再根据第二信息流获取对
+    应的业务密钥，利用该业务密钥对第一信息流中的密文控制字解密并获得明文
+    控制字，最后在控制字的控制下，对加扰信息进行解扰以获得移动终端用户所
+    需的业务数据流。
+    
+				</td></tr><tr><td class="content" id="description_49">是否需要进行条件接收，是由用户通过终端选取的，当用户做出选择后，
+    会触发存储卡控制单元100对条件接收的处理。关于条件接收的选取以及触发
+    存储卡控制单元100对条件接收的处理属于现有公知技术，这里不再赘述。本
+    发明强调的是，将条件接收单元作为存储卡的一个组成部分，这样，在移动终
+    端通过SD/MMC等通用存储卡接口实现了条件接收，实现了移动终端数字电视
+    业务进行机卡分离的条件接收，方便了移动终端数字电视业务的开展，大大降
+    低了移动终端如手机的改造成本。
+    
+				</td></tr><tr><td class="content" id="description_50">需要说明的是，图1所示的存储卡组成结构仅涉及与条件接收相关的单元，
+    其它现有已存在的单元没有在图1中显示。
+    
+				</td></tr><tr><td class="content" id="description_51">图2是本发明条件接收单元的组成结构示意图，下面具体描述条件接收单
+    元的工作原理。如图2所示，条件接收单元101包括：权限控制模块1011、业
+    务密钥提取模块1012、控制字提取模块1013、解扰模块1014、文件管理模块
+    1015和密钥管理模块1016。当用户触发了条件接收业务后，条件接收单元中各
+    组成模块的工作包括：
+    
+				</td></tr><tr><td class="content" id="description_52">权限控制模块1011，用于获取第一信息流、第二信息流，并根据第二信息
+    
+					流中的业务标识，以及文件管理模块1015中预先存储的用户终端支持的条件接
+    收业务所对应的业务标识，判断该存储卡是否具有使用当前触发的条件接收业
+    务的权限，如果接收到的业务标识与存储的相同，则向业务密钥提取模块1012
+    发送鉴权成功通知，并将第二信息流发送给业务密钥提取模块1012；如果接收
+    到的业务标识与存储的不相同，则退出当前触发的条件接收业务，如通过终端
+    给用户显示无权限使用当前业务等。
+    
+				</td></tr><tr><td class="content" id="description_53">这里，第一信息流，第二信息流的获取是在存储卡控制单元100的控制下，
+    从存储单元102中获取后传送给权限控制模块1011的，具体获取的方法很多，
+    属于本领域技术人员惯用技术手段，这里不再详述。
+    
+				</td></tr><tr><td class="content" id="description_54">业务密钥提取模块1012，接收鉴权成功通知，并根据接收到的第二信息流
+    中的密钥种子ID号，查询密钥管理模块1017中是否存有该密钥种子ID号对
+    应的业务密钥，若存在，则根据该密钥种子ID号从密钥管理模块1016中提取
+    对应的业务密钥，并将提取的业务密钥发送给控制字提取模块1013。当第二信
+    息流中的密钥种子ID号改变时，更新存储卡内对应的业务密钥ID号。这里说
+    明，在存储卡中将密钥种子ID号称为业务密钥ID号。
+    
+				</td></tr><tr><td class="content" id="description_55">需要说明的是，在密钥管理模块1016中预先存储有密钥种子ID号与业务
+    密钥的一一对应关系。
+    
+				</td></tr><tr><td class="content" id="description_56">控制字提取模块1013，从权限控制模块1011获取第一信息流，并从第一
+    信息流中获取密文控制字，利用来自业务密钥提取模块1012的业务密钥对该密
+    文控制字进行解密，得到明文控制字，并发送给解扰模块1015。
+    
+				</td></tr><tr><td class="content" id="description_57">解扰模块1014，在存储卡控制单元100的控制下，从存储单元102中获取
+    加扰数据，并利用来自控制字提取模块1013的明文控制字，对加扰数据进行解
+    扰，最后将解扰后的数据通过存储卡接口105发送给终端。解扰的具体实现属
+    于本领域技术人员公知技术，不是本发明的重点，这里不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_58">需要说明的是，解扰模块1014可以是存储卡的一个组成部分，如图2所示，
+    由于解扰在存储卡内完成，所有密钥都不出存储卡，提高了条件接收系统的安
+    全性，同时降低了移动终端的性能开销；
+    
+				</td></tr><tr><td class="content" id="description_59">解扰模块1014也可以是独立于存储卡之外，如在安全算法芯片内，因为在
+    安全算法芯片中有CPU，所以可以进一步提高终端的解扰速度。当解扰模块
+    1014设置在安全算法芯片中时，在存储卡控制单元100的控制下，从存储单元
+    102中获取加扰数据，从控制字提取模块1013获取明文控制字，并通过存储卡
+    接口105将加扰数据和明文控制字发送给安全算法芯片。
+    
+				</td></tr><tr><td class="content" id="description_60">解扰模块收到数据后进行解扰处理，解扰后的数据通过存储卡接口105发
+    送给终端。解扰算法可以采用前端处理器的反加密算法来实现，属于现有技术，
+    这里不再详述。
+    
+				</td></tr><tr><td class="content" id="description_61">图3是本发明实现条件接收的流程图，当用户通过终端选取选择条件接
+    收业务后，触发存储卡对条件接收进行处理，主要包括以下步骤：
+    
+				</td></tr><tr><td class="content" id="description_62">步骤300：判断是否具有使用当前触发的条件接收业务的权限，如有进
+    入步骤301；否则进入步骤304。
+    
+				</td></tr><tr><td class="content" id="description_63">用户通过终端选择条件接收业务后，存储卡会接收来自外部的条件接收
+    业务数据，比如用户需要存储的数据，与音视频等数字流如数字电视信号有关
+    的第一信息流、第二信息流和加扰信息等，其中，第一信息流主要包括授权控
+    制信息：如密文控制字、时间信息等；第二信息流主要包括授权管理信息：如
+    业务标识、密钥种子ID号、时间信息等；加扰信息就是被加扰过的视音频信号
+    如数字电视信号。
+    
+				</td></tr><tr><td class="content" id="description_64">如果接收到的第二信息流中携带的业务标识与存储卡中存储的相同，则
+    表明该存储卡有权限使用当前触发的条件接收业务。
+    
+				</td></tr><tr><td class="content" id="description_65">步骤301：判断是否有当前触发的条件接收业务对应的业务密钥，如果
+    有，进入步骤302；否则进入步骤304。
+    
+				</td></tr><tr><td class="content" id="description_66">根据接收到的第二信息流中的密钥种子ID号，查询存储卡中是否存有
+    该密钥种子ID号对于的业务密钥，若有则判定具有当前触发的条件接收业
+    务对应的业务密钥。当第二信息流中的密钥种子ID号改变时，更新存储卡
+    内对应的业务密钥ID号。
+    
+				</td></tr><tr><td class="content" id="description_67">步骤302：利用对应的业务密钥对密文控制字进行解密获得明文控制字。
+    
+				</td></tr><tr><td class="content" id="description_68">所述密文控制字携带在第一信息流中。本步骤中解密的方法很多，如现
+    有的AES CTR和AES ECB等，这里不再详述。
+    
+				</td></tr><tr><td class="content" id="description_69">步骤303：利用获得的明文控制字对加扰信息进行解扰以获得条件接收
+    业务数据。
+    
+				</td></tr><tr><td class="content" id="description_70">解扰的具体实现属于本领域技术人员公知技术，不是本发明的重点，这
+    里不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_71">步骤304：退出本流程。
+    
+				</td></tr><tr><td class="content" id="description_72">退出当前触发的条件接收业务方法很多，如通过终端给用户显示无权限
+    使用当前业务等。
+    
+				</td></tr><tr><td class="content" id="description_73">图4是本发明条件接口单元与存储卡接口单元连接实施例示意图，如图
+    4所示，条件接口单元与存储卡接口单元之间通过8根数据线(DB0～DB8)，
+    以及四根控制信号即请求发送数据信号(nInIntQ)、准备好接收/发送数据
+    信号(nInReady/nOutReady)、请求接收数据信号(nOutIntQ)和数据锁存
+    时钟信号(nLE)。从条件接收单元来看各控制信号的功能如表1所示：
+    
+				</td></tr><tr><td class="content" id="description_74">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 控制信号
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  输入/输出
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  功能说明
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 使用方法
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+ 准备好接收信号
+    
+											
+ (nInReady)
+    
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+  输出
+    
+											
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  条件接收单元内输入缓
+    
+  冲器状态标志位；与
+    
+											
+  nInIntQ构成一对握手
+    
+											
+  信号
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+ nInReady＝1时，输入缓冲器忙，不接收
+    
+ 数据；nInReady＝0时，输入缓冲器可以
+    
+											
+ 接收数据。
+    
+											
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+ 请求发送数据信
+    
+											
+ 号(nInIntQ)
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+  输入
+    
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  向条件接收单元输入数
+    
+  据请求信号；与
+    
+											
+  nInReady构成一对握手
+    
+  信号
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+ 如设置为低电平有效
+    
+											
+											
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+ 准备好发送数据
+    
+											
+ 信号(nOutReady)
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+  输出
+    
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  条件接收单元内输出缓
+    
+  冲器状态标志位；与
+    
+											
+  nOutIntQ构成一对握手
+    
+  信号
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+ nOutReady＝1时，输出缓冲器中无数据
+    
+ 可以输出；nOutReady＝0时，输出缓冲
+    
+ 器中有数据可以输出。
+    
+											
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 请求接收数据信
+    
+											
+ 号(nOutIntQ)
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 
+    
+  输入
+    
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  从条件接收单元输出数
+    
+  据信号；与nOutReady
+    
+											
+  构成一对握手信号
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 
+    
+ 如设置为低电平有效
+    
+											
+											
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_75">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+  数据锁存时钟信
+    
+											
+  号(nLE)
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+  输入
+    
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+  输入/输出数据锁存时
+    
+											
+  钟
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+nInReady＝0，nInIntQ＝0且nLE＝0时，
+    
+DB0～DB8数据被条件接收单元锁存；
+    
+											
+nOutReady＝0，nOutIntQ＝0且nLE＝0时，
+    
+DB0～DB8输出数据。
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+  DB&lt;7:0&gt;
+    
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+  双向
+    
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+  双向数据总线
+    
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+nInReady＝0，nInIntQ＝0且nLE＝0时，
+    
+DB0～DB8为输入状态；
+    
+											
+nOutReady＝0，nOutIntQ＝0且nLE＝0时，
+    
+DB0～DB8为输出状态；其它为高阻态
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_76">下面具体描述条件接收单元与存储控制单元之间进行数据交互的过程。
+    
+				</td></tr><tr><td class="content" id="description_77">图5a是本发明存储卡控制单元向条件接收单元发送数据的时序图，发
+    送过程大致如下：
+    
+				</td></tr><tr><td class="content" id="description_78">存储卡控制单元上电自检后，向条件接收单元发送nInIntQ低脉冲信号，
+    请求发送数据；条件接收单元准备好后，向存储卡控制单元返回nInReady低脉
+    冲信号，双方握手成功；存储卡控制单元产生发送数据的时序即nLE信号给条
+    件接收单元，并按此时序发送数据给条件接收单元。
+    
+				</td></tr><tr><td class="content" id="description_79">在条件接收单元接收数据的过程中，只要nInReady＝0，即可写入数据，无
+    需等待；nLE的脉宽不小于2ns，nLE上升沿之前1ns，DB0～DB8上的数据必
+    须稳定。nLE上升沿后，DB0～DB8上的数据至少保留1ns。
+    
+				</td></tr><tr><td class="content" id="description_80">图5b是存储卡控制单元接收来自条件接收单元的数据的时序图，接收
+    过程大致如下：
+    
+				</td></tr><tr><td class="content" id="description_81">存储卡控制单元发送nOutIntQ低脉冲，等待接收条件接收单元处理后的数
+    据；条件接收单元准备好后，向存储卡控制单元返回nOutReady低脉冲信号，
+    双方握手成功；存储卡控制单元产生接收数据的时序即nLE信号给条件接收单
+    元，并按此时序接收数据。
+    
+				</td></tr><tr><td class="content" id="description_82">在条件接收单元发送数据的过程中，只要nOutReady＝0，即可读入数据无
+    需等待；nLE的脉宽不小于2ns，nLE下降沿后1ns之内，DB0～DB8上的数据
+    即可稳定有效，而nLE上升沿后1ns之内，DB0～DB8为三态。
+    
+				</td></tr><tr><td class="content" id="description_83">图5a和图5b是存储卡控制单元与条件接收单元实现数据传输的一种总线
+    
+					方式的实施例，也可以采用现有的总线，如I2C、SPI等进行传输，这里不做限
+    制。
+    
+				</td></tr><tr><td class="content" id="description_84">以上所述，仅为本发明的较佳实施例而已，并非用于限定本发明的保护
+    范围，凡在本发明的精神和原则之内所做的任何修改、等同替换、改进等，
+    均应包含在本发明的保护范围之内。
+    
+				</td></tr></table></div></body></html>

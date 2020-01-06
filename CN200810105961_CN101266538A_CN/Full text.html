@@ -1,0 +1,403 @@
+<html><head><title>全文文本(Fulltext)</title><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><style>div.fullText table {width: 100%;text-indent: 1px;} 
+ div.fullText table td.header {font-weight: bold;text-align: center;font-family: '宋体';font-size: 16px;line-height:20px;color: #000000;padding: 5px;}div.fullText table td.content {padding: 1px;text-align: left;vertical-align: top;width: 100%;font-family: '宋体';font-size: 14px;line-height:20px;color: #000000;}</style></head><body><?xml version="1.0" encoding="UTF-8"?><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table class="fullText"><tr><td id="claim_title" class="header">权利要求书</td></tr><tr><td class="content" id="claim_1">1、一种智能存储卡的接口访问控制方法，其特征在于，所述智能存储卡中
+      <br/>包括存储卡控制器、以及与所述存储卡控制器相连的物理存储介质和扩展应用
+      <br/>芯片，且所述扩展应用芯片的地址映射为所述物理存储介质中的预设地址，
+      <br/>
+				</td></tr><tr><td class="content" id="claim_2">该方法包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_3">存储卡控制器判断来自应用程序的命令中的访问地址是否为所述预设
+      <br/>地址；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_4">如果是，则将接口协议程序转至对所述扩展应用芯片操作的入口程序；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_5">否则，将接口协议程序转至对所述物理存储介质操作的入口程序。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_6">2、如权利要求1所述的方法，其特征在于，接收到的访问地址为所述
+      <br/>预设地址的命令为写命令，所述判断接收到的命令中的访问地址是否为所述
+      <br/>预设地址之后，该方法进一步包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_7">判断该写命令中是否包含表示有权访问所述扩展应用芯片的预设权限
+      <br/>标识；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_8">如果是，则记录所述权限标识，并执行所述将接口协议程序转至所述对
+      <br/>扩展应用芯片操作的入口程序；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_9">否则，执行所述将接口协议程序转至对所述物理存储介质的入口程序。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_10">3、如权利要求2所述的方法，其特征在于，所述写命令中包括用于请
+      <br/>求所述扩展应用芯片执行对应操作的操作信息；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_11">所述将接口协议程序转至对所述扩展应用芯片操作的入口程序之后，该
+      <br/>方法进一步包括：将所述写命令中的操作信息传送至所述扩展应用芯片。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_12">4、如权利要求3所述的方法，其特征在于，所述将所述写命令中的操
+      <br/>作信息传送至所述扩展应用芯片之后，该方法进一步包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_13">接收并缓存所述扩展应用芯片根据所述操作信息执行对应操作后返回
+      <br/>的应答信息。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_14">5、如权利要求4所述的方法，其特征在于，接收到访问地址为所述预
+      <br/>
+					设地址的命令为读命令，所述将接口协议程序转至对所述扩展应用芯片操作
+      <br/>的入口程序之后，该方法进一步包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_15">判断是否记录有所述权限标识，如果是，则存储卡控制器读取已缓存的
+      <br/>应答信息，并在所述应答信息中携带所述权限标识、用于表示该应答信息为
+      <br/>来自所述扩展应用芯片。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_16">6、如权利要求2至5中任意一项所述的方法，其特征在于，所述写命
+      <br/>令中携带有校验信息，在判断出写命令中包含权限标识之后、将接口协议程
+      <br/>序转至对所述扩展应用芯片操作的入口程序之前，该方法进一步包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_17">利用所述校验信息对所述权限标识是否有效进行校验，
+      <br/>
+				</td></tr><tr><td class="content" id="claim_18">如果校验通过，则执行所述将接口协议程序转至对所述扩展应用芯片操
+      <br/>作的入口程序；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_19">否则，执行所述将接口协议程序转至对所述物理存储介质操作的入口程
+      <br/>序。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_20">7、如权利要求1至5中任意一项所述的方法，其特征在于，所述扩展
+      <br/>应用芯片为多个；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_21">所述将接口协议程序转至对所述扩展应用芯片操作的入口程序包括：根
+      <br/>据所述命令中的扩展应用类型标识，将接口协议程序转至对所述扩展应用类
+      <br/>型标识对应的扩展应用芯片操作的入口程序。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_22">8、如权利要求1至5中任意一项所述的方法，其特征在于，所述物理
+      <br/>存储介质为闪存FLASH、或随机存储器RAM、或非易失性只读存储器
+      <br/>E<sup>2</sup>PROM。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_23">9、如权利要求1至5中任意一项所述的方法，其特征在于，所述判断
+      <br/>之前，该方法进一步包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_24">设置对应于所述预设地址的接口文件；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_25">应用程序通过所述接口文件与所述存储卡控制器交互。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_26">10、如权利要求9所述的方法，其特征在于，所述交互包括：写入在所
+      <br/>述接口文件的命令的访问地址被设置为所述预设地址后，通过所述接口文件
+      <br/>
+					传送至所述存储卡控制器。
+      <br/>
+					
+				</td></tr></table></div><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table><tr><td id="description_title" class="header">说明书</td></tr><tr><td class="content" id="description_invention_title">一种智能存储卡的接口访问控制方法
+  </td></tr><tr><td class="content" id="description_1">技术领域
+  </td></tr><tr><td class="content" id="description_2">本发明涉及接口访问控制技术，特别涉及一种智能存储卡的接口访问控
+    制方法。
+    
+				</td></tr><tr><td class="content" id="description_3">背景技术
+  </td></tr><tr><td class="content" id="description_4">随着智能手机、数码相机等终端设备的普及，存储卡得到了越来越广泛
+    的应用。图1为现有存储卡的结构示意图。如图1所示，现有存储卡至少包
+    括：物理接口、存储卡控制器、以及物理存储介质。
+    
+				</td></tr><tr><td class="content" id="description_5">当存储卡插接于终端设备时，应用程序通过集成于终端的接口协议程序
+    向存储卡发送命令(包括读命令或写命令)，该命令经由物理接口传送至存
+    储卡控制器，由存储卡控制器将接口协议程序连接至对物理存储介质操作的
+    入口程序，从而实现对存储卡中物理存储介质的访问。
+    
+				</td></tr><tr><td class="content" id="description_6">然而，在现有存储卡中，存储卡控制器仅能够支持应用程序对物理存储
+    介质的访问，从而使得存储卡仅限于数据的存储，而无法实现其他功能的扩
+    展。
+    
+				</td></tr><tr><td class="content" id="description_7">发明内容
+  </td></tr><tr><td class="content" id="description_8">有鉴于此，本发明提供了一种智能存储卡的接口访问控制方法，能够支
+    持存储卡的功能扩展。
+    
+				</td></tr><tr><td class="content" id="description_9">本发明提供的一种智能存储卡的接口访问控制方法，所述智能存储卡中
+    包括存储卡控制器、以及与所述存储卡控制器相连的物理存储介质和扩展应
+    用芯片，且所述扩展应用芯片的地址映射为所述物理存储介质中的预设地
+    址，
+    
+				</td></tr><tr><td class="content" id="description_10">该方法包括：
+    
+				</td></tr><tr><td class="content" id="description_11">存储卡控制器判断来自应用程序的命令中的访问地址是否为所述预设
+    地址；
+    
+				</td></tr><tr><td class="content" id="description_12">如果是，则将接口协议程序转至对所述扩展应用芯片操作的入口程序；
+    
+				</td></tr><tr><td class="content" id="description_13">否则，将接口协议程序转至对所述物理存储介质操作的入口程序。
+    
+				</td></tr><tr><td class="content" id="description_14">接收到的访问地址为所述预设地址的命令为写命令，所述判断接收到的
+    命令中的访问地址是否为所述预设地址之后，该方法进一步包括：
+    
+				</td></tr><tr><td class="content" id="description_15">判断该写命令中是否包含表示有权访问所述扩展应用芯片的预设权限
+    标识；
+    
+				</td></tr><tr><td class="content" id="description_16">如果是，则记录所述权限标识，并执行所述将接口协议程序转至所述对
+    扩展应用芯片操作的入口程序；
+    
+				</td></tr><tr><td class="content" id="description_17">否则，执行所述将接口协议程序转至对所述物理存储介质的入口程序。
+    
+				</td></tr><tr><td class="content" id="description_18">所述写命令中包括用于请求所述扩展应用芯片执行对应操作的操作信
+    息；
+    
+				</td></tr><tr><td class="content" id="description_19">所述将接口协议程序转至对所述扩展应用芯片操作的入口程序之后，该
+    方法进一步包括：将所述写命令中的操作信息传送至所述扩展应用芯片。
+    
+				</td></tr><tr><td class="content" id="description_20">所述将所述写命令中的操作信息传送至所述扩展应用芯片之后，该方法
+    进一步包括：
+    
+				</td></tr><tr><td class="content" id="description_21">接收并缓存所述扩展应用芯片根据所述操作信息执行对应操作后返回
+    的应答信息。
+    
+				</td></tr><tr><td class="content" id="description_22">接收到访问地址为所述预设地址的命令为读命令，所述将接口协议程序
+    转至对所述扩展应用芯片操作的入口程序之后，该方法进一步包括：
+    
+				</td></tr><tr><td class="content" id="description_23">判断是否记录有所述权限标识，如果是，则存储卡控制器读取已缓存的
+    应答信息，并在所述应答信息中携带所述权限标识、用于表示该应答信息为
+    来自所述扩展应用芯片。
+    
+				</td></tr><tr><td class="content" id="description_24">所述写命令中携带有校验信息，在判断出写命令中包含权限标识之后、
+    将接口协议程序转至对所述扩展应用芯片操作的入口程序之前，该方法进一
+    步包括：
+    
+				</td></tr><tr><td class="content" id="description_25">利用所述校验信息对所述权限标识是否有效进行校验，
+    
+				</td></tr><tr><td class="content" id="description_26">如果校验通过，则执行所述将接口协议程序转至对所述扩展应用芯片操
+    作的入口程序；
+    
+				</td></tr><tr><td class="content" id="description_27">否则，执行所述将接口协议程序转至对所述物理存储介质操作的入口程
+    序。
+    
+				</td></tr><tr><td class="content" id="description_28">所述扩展应用芯片为多个；
+    
+				</td></tr><tr><td class="content" id="description_29">所述将接口协议程序转至对所述扩展应用芯片操作的入口程序包括：根
+    据所述命令中的扩展应用类型标识，将接口协议程序转至对所述扩展应用类
+    型标识对应的扩展应用芯片操作的入口程序。
+    
+				</td></tr><tr><td class="content" id="description_30">所述物理存储介质为闪存FLASH、或随机存储器RAM、或非易失性只
+    读存储器E<sup>2</sup>PROM。
+    
+				</td></tr><tr><td class="content" id="description_31">所述判断之前，该方法进一步包括：
+    
+				</td></tr><tr><td class="content" id="description_32">设置对应于所述预设地址的接口文件；
+    
+				</td></tr><tr><td class="content" id="description_33">应用程序通过所述接口文件与所述存储卡控制器交互。
+    
+				</td></tr><tr><td class="content" id="description_34">所述交互包括：写入在所述接口文件的命令的访问地址被设置为所述预
+    设地址后，通过所述接口文件传送至所述存储卡控制器。
+    
+				</td></tr><tr><td class="content" id="description_35">由上述技术方案可见，本发明将用于实现功能扩展的扩展应用芯片映射
+    在物理存储介质的预设地址，使得存储卡控制器能够根据访问地址实现对扩
+    展应用芯片的定位，保证了应用程序对扩展应用芯片的访问，从而能够支持
+    存储卡的功能扩展，且开发难度低、开发成本低、开发周期短。
+    
+				</td></tr><tr><td class="content" id="description_36">而且，除了对扩展应用芯片的定位，本发明还可以判断应用程序是否有
+    权限访问扩展应用芯片，从而提高了对扩展应用芯片访问的安全性。此外，
+    当访问地址为映射了扩展应用芯片地址的预设地址、但应用程序不具有访问
+    权限时，仍允许应用程序访问物理存储介质中对应该预设地址的存储空间。
+    这样，不会由于预设地址上映射了扩展应用芯片的地址而使得物理存储介质
+    中对应该预设地址的存储空间不可用，从而提高了物理存储介质的利用率、
+    并节省了硬件资源。
+    
+				</td></tr><tr><td class="content" id="description_37">进一步地，本发明可以缓存扩展应用芯片返回的应答信息。这样，当应
+    用程序希望得到该应答信息时，只需发送读命令从缓存中读取即可，而无须
+    再与扩展应用芯片交互，从而提高了访问效率。
+    
+				</td></tr><tr><td class="content" id="description_38">再进一步地，本发明中可以通过接口文件实现对扩展应用芯片的访问，
+    从而为终端提供了统一的访问智能存储卡扩展应用芯片的接口。
+    
+				</td></tr><tr><td class="content" id="description_39">附图说明
+  </td></tr><tr><td class="content" id="description_40">图1为现有存储卡的结构示意图。
+    
+				</td></tr><tr><td class="content" id="description_41">图2为本发明实施例中接口访问控制方法的示例性流程图。
+    
+				</td></tr><tr><td class="content" id="description_42">图3为本发明实施例中存储卡控制器的内部软件结构示意图。
+    
+				</td></tr><tr><td class="content" id="description_43">图4为本发明实施例中接口文件与地址映射关系的示意图。
+    
+				</td></tr><tr><td class="content" id="description_44">具体实施方式
+  </td></tr><tr><td class="content" id="description_45">为使本发明的目的、技术方案及优点更加清楚明白，以下参照附图并举
+    实施例，对本发明进一步详细说明。
+    
+				</td></tr><tr><td class="content" id="description_46">首先需要说明的是，如果对存储卡实现功能扩展，则需要在存储卡中设
+    置能够承载各种应用程序的扩展应用芯片，以下，将包括了扩展应用芯片的
+    存储卡称为智能存储卡。在扩展应用芯片中承载用于实现不同功能的应用程
+    序，即可使得智能存储卡能够实现相应的扩展功能，并可广泛兼容于手机、
+    PDA、MP3等各种终端设备。
+    
+				</td></tr><tr><td class="content" id="description_47">但由于现有的存储卡控制器只能够控制接口协议程序连接至物理存储
+    介质的接口，因此，如果仅在存储卡中设置扩展应用芯片而不作其他改进，
+    则应用程序无法访问扩展应用芯片，从而仍无法实现智能存储卡的功能扩
+    展。
+    
+				</td></tr><tr><td class="content" id="description_48">开发驱动程序和使用存储卡扩展协议是保证应用程序访问扩展应用芯
+    片两种可行方案，但这两种可行方案却存在如下缺陷：
+    
+				</td></tr><tr><td class="content" id="description_49">1、驱动程序的开发需要针对不同的终端设备和不同的操作系统，随着
+    
+					终端设备种类的增多，每种终端使用的操作系统各有不同，对驱动程序就必
+    然不同，因而会增大开发难度、延长开发周期、降低智能存储卡的可移植性；
+    
+				</td></tr><tr><td class="content" id="description_50">2、以现有SD协议为例，如果使用存储卡扩展协议来保证应用程序对
+    扩展应用芯片的访问，则在修改存储卡控制器中卡内协议的同时，还必须修
+    改终端设备的接口协议程序，因而会提高开发成本高、延长开发周期。
+    
+				</td></tr><tr><td class="content" id="description_51">因此，本发明针对应用程序如何访问扩展应用芯片、并避免上述两种可
+    行方案的缺陷，提出了如下文所述的实施例。
+    
+				</td></tr><tr><td class="content" id="description_52">在本实施例中，智能存储卡中不但包括如图1所示的物理接口、存储卡
+    控制器、以及与存储卡控制器相连的物理存储介质，还包括与存储卡控制器
+    相连的扩展应用芯片。而且，本实施例将扩展应用芯片的地址映射为物理存
+    储介质中的预设地址，以便应用程序需要访问扩展应用芯片时，存储卡控制
+    器能够定位扩展应用芯片的地址。
+    
+				</td></tr><tr><td class="content" id="description_53">为了方便叙述，以下称物理存储介质中映射扩展应用芯片地址的预设地
+    址为特殊地址、其余地址为普通地址，相应地，称物理存储介质中对应特殊
+    地址的存储空间为特殊区域、对应普通地址的存储空间为普通区域。
+    
+				</td></tr><tr><td class="content" id="description_54">图2为本发明实施例中接口访问控制方法的示例性流程图。如图2所示，
+    该方法包括：
+    
+				</td></tr><tr><td class="content" id="description_55">步骤200，接收应用程序通过集成于终端的接口协议程序发送的命令。
+    
+				</td></tr><tr><td class="content" id="description_56">步骤201，存储卡控制器判断接收到的命令中的访问地址是否为特殊地
+    址，如果是，则执行步骤202，否则执行步骤203。
+    
+				</td></tr><tr><td class="content" id="description_57">步骤202，将接口协议程序转至对扩展应用芯片操作的入口程序，以便
+    应用程序访问扩展应用芯片，并结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_58">步骤203，将接口协议程序转至对物理存储介质操作的入口程序，以便
+    应用程序访问物理存储介质、对其进行数据读写操作，并结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_59">具体来说，由于物理存储介质中特殊区域对应的特殊地址已被映射为扩
+    展应用芯片的地址，因此，在本步骤中，将接口协议程序转至对物理存储介
+    质的特殊区域操作的入口程序，以便应用程序访问物理存储介质中特殊区
+    
+					域、对其进行数据读写操作。
+    
+				</td></tr><tr><td class="content" id="description_60">至此，本流程结束。
+    
+				</td></tr><tr><td class="content" id="description_61">由上述流程可见，本实施例将用于实现功能扩展的扩展应用芯片映射在
+    物理存储介质的预设地址，使得存储卡控制器能够根据访问地址实现对扩展
+    应用芯片的定位，保证了应用程序对扩展应用芯片的访问，从而能够支持存
+    储卡的功能扩展，且能够避免开发驱动程序和使用存储卡扩展协议这两种方
+    案所产生的缺陷。
+    
+				</td></tr><tr><td class="content" id="description_62">在本实施例中，对于写命令，判断接收到的写命令中的访问地址为特殊
+    地址之后、在执行步骤202之前，还可以进行如下处理：
+    
+				</td></tr><tr><td class="content" id="description_63">a、判断该命令中是否包含表示有权访问扩展应用芯片的预设权限标识，
+    如果是，则表示应用程序有权访问扩展应用芯片并执行步骤202，否则表示
+    应用程序无权访问扩展应用芯片并执行步骤b。
+    
+				</td></tr><tr><td class="content" id="description_64">步骤a中，为了防止访问普通区域的命令中携带有权限标识而造成对扩
+    展应用芯片的误操作，可以先利用命令中携带的校验信息对该命令携带的权
+    限标识是否有效进行校验，如果校验通过，再执行步骤202，否则，将接口
+    协议程序转至对物理存储介质的普通区域操作的入口程序。
+    
+				</td></tr><tr><td class="content" id="description_65">b，将接口协议程序转至对物理存储介质的特殊区域操作的入口程序，
+    以便应用程序访问物理存储介质中特殊区域、对其进行数据读写操作，并结
+    束如图2所示的流程。
+    
+				</td></tr><tr><td class="content" id="description_66">可见，除了对扩展应用芯片的定位，本实施例还判断应用程序是否有权
+    限访问扩展应用芯片，从而提高了对扩展应用芯片访问的安全性。此外，当
+    访问地址为特殊地址、但应用程序不具有访问权限时，仍允许应用程序访问
+    物理存储介质中的特殊区域。这样，特殊区域不会由于其地址映射了扩展应
+    用芯片的地址而不可用，从而提高了物理存储介质的利用率、并节省了硬件
+    资源。
+    
+				</td></tr><tr><td class="content" id="description_67">当然，由于判断应用程序是否有权限访问扩展应用芯片产生的只是提高
+    访问安全性等附加效果，不执行该判断过程也能够保证应用程序对扩展应用
+    
+					芯片的访问。
+    
+				</td></tr><tr><td class="content" id="description_68">为了实现如图2所示的流程，需要对现有存储卡控制器的软件部分进行
+    改进。图3为本发明实施例中存储卡控制器的内部软件结构示意图。如图3
+    所示，以安全数据(Secure Digital，SD)卡控制器、物理存储介质为闪存
+    (FLASH)为例，本实施例中的存储卡控制器中包括：增强型SD固件程序
+    (Enhance SD Firmware)、扩展应用核心固件程序(Increment Application
+    Core Firmware)。
+    
+				</td></tr><tr><td class="content" id="description_69">其中，Enhance SD Firmware通过SD接口与物理接口相连，通过FLASH
+    接口与FLASH相连，通过增值应用接口与Increment Application Core
+    Firmware相连；Increment Application Core Firmware通过FLASH接口与
+    FLASH相连，通过扩展应用芯片匹配的接口、例如ISO7816接口与扩展应
+    用芯片接口相连。而且，在Enhance SD Firmware与Increment Application
+    Core Firmware之间，还具有一缓存(Buffer)。
+    
+				</td></tr><tr><td class="content" id="description_70">以下，先以接收到的命令为写命令、且写命令中包括用于请求扩展应用
+    芯片执行对应操作的操作信息为例。
+    
+				</td></tr><tr><td class="content" id="description_71">Enhance SD Firmware判断该写命令的访问地址是否为特殊地址、且该
+    写命令中是否包含表示有权访问扩展应用芯片的标识。
+    
+				</td></tr><tr><td class="content" id="description_72">如果访问地址为特殊地址、且包含了表示有权访问扩展应用芯片的标
+    识，则Enhance SD Firmware将该写命令传送至Increment Application Core
+    Firmware，由Increment Application Core Firmware根据写命令中的预设扩展
+    应用类型标识，将接口协议程序转至对扩展应用类型标识对应的扩展应用芯
+    片操作的入口程序，并将该写命令传送至对应的扩展应用芯片，以便操作对
+    应的扩展应用芯片。由于Increment Application Core Firmware能够选择扩展
+    应用芯片，因而能够使得智能存储卡支持多个扩展应用芯片。
+    
+				</td></tr><tr><td class="content" id="description_73">其中，预设扩展应用类型标识还可表示FLASH中的隐藏区域，这种情
+    况下，Increment Application Core Firmware将接口协议程序转至对FLASH
+    操作的入口程序，将该写命令中的写数据写入至隐藏区域。
+    
+				</td></tr><tr><td class="content" id="description_74">如果访问地址为普通地址、和/或未包含表示有权访问扩展应用芯片的
+    标识，则Enhance SD Firmware将接口协议程序转至FLASH接口，并将该
+    写命令中的写数据写入至普通区域，即实现应用程序对普通区域的访问。
+    
+				</td></tr><tr><td class="content" id="description_75">下面，再以接收到的命令为读命令为例。
+    
+				</td></tr><tr><td class="content" id="description_76">Enhance SD Firmware判断该读命令的访问地址是否为特殊地址、且存
+    储卡控制器内是否记录有之前写命令中携带的表示有权访问扩展应用芯片
+    的权限标识。
+    
+				</td></tr><tr><td class="content" id="description_77">如果访问地址为特殊地址、且存储卡控制器内记录了表示有权访问扩展
+    应用芯片的权限标识，则表示应用程序可以读取之前写命令中携带的操作信
+    息所对应的应答信息。由于扩展应用芯片在执行了操作信息对应的相应操作
+    后，均会向Increment Application Core Firmware返回例如操作成功或失败的
+    应答信息，且Increment Application Core Firmware会将应答信息缓存于
+    Buffer中，因此，Enhance SD Firmware从Buffer中读取应答信息返回给应
+    用程序，并在所应答信息中携带所述权限标识、用于表示该应答信息为来自
+    所述扩展应用芯片。
+    
+				</td></tr><tr><td class="content" id="description_78">如果访问地址为普通地址、和/或存储卡控制器内未记录表示有权访问
+    扩展应用芯片的权限标识，则Enhance SD Firmware将接口协议程序转至对
+    FLASH操作的入口程序，并根据该读命令读取普通区域中存储的数据，即
+    实现应用程序对普通区域的访问。
+    
+				</td></tr><tr><td class="content" id="description_79">以上均是针对本实施例中存储卡控制器的详细说明。而本实施例中还提
+    供了一种接口文件，用于应用程序与存储卡控制器的交互。
+    
+				</td></tr><tr><td class="content" id="description_80">本实施例中的接口文件映射于特殊地址。图4为本发明实施例中接口文
+    件与地址映射关系的示意图。如图4所示，FLASH中偏移量为00043200的
+    地址为特殊地址，而接口文件SSC映射于00043200这一特殊地址。
+    
+				</td></tr><tr><td class="content" id="description_81">这样，当应用程序需要发送访问扩展应用芯片的命令时，只需将该命令
+    写入在接口文件中，而写入在接口文件中的命令的访问地址即可被认为特殊
+    地址，然后通过接口协议程序传送至存储卡控制器。
+    
+				</td></tr><tr><td class="content" id="description_82">如果读接口文件，存储卡控制器根据是否记录有表示有权访问扩展应用
+    芯片的权限标识，来确定是否将缓存内存储的来自扩展应用芯片的应答信息
+    返回至接口文件。应用程序根据接收到的应答信息中是否包含表示有权访问
+    扩展应用芯片的权限标识来判断是否为扩展应用芯片的应答信息，如果不
+    是，可以再次发送读命令，直至读到扩展应用芯片的应答信息为止。
+    
+				</td></tr><tr><td class="content" id="description_83">可见，本实施例中可以通过接口文件实现对扩展应用芯片的访问，从而
+    能够为终端提供统一的访问智能存储卡扩展应用芯片的接口。
+    
+				</td></tr><tr><td class="content" id="description_84">在本实施例中，接口文件存储于FLASH中，且遵从文件系统原理。文
+    件系统按簇来分配磁盘空间，因此，接口文件占用磁盘空间的基本单位不是
+    字节而是簇，即使某个接口文件只有一个字节，也会分配到一个最小单元、
+    即一个簇。
+    
+				</td></tr><tr><td class="content" id="description_85">这样，在FLASH中的所有存储空间范围内寻找一些空置的簇地址，将
+    这些簇地址设置为固定地址，即可利用文件系统在这些簇地址上生成接口文
+    件。其中，这里所述的簇地址可以是一个簇的地址，也可以是多个簇的地址，
+    一个簇对应一个文件。
+    
+				</td></tr><tr><td class="content" id="description_86">在多个簇地址的时候，可以定义多个接口文件。这样就生成了上层应用
+    程序与扩展应用芯片之间的接口文件。但接口文件与扩展应用芯片并不一定
+    一一对应。
+    
+				</td></tr><tr><td class="content" id="description_87">当然，物理存储介质也可以为随机存储器(RAM)、非易失性只读存
+    储器(E2PROM)等。
+    
+				</td></tr><tr><td class="content" id="description_88">以上所述仅为本发明的较佳实施例而已，并非用于限定本发明的保护范
+    围。凡在本发明的精神和原则之内，所作的任何修改、等同替换以及改进等，
+    均应包含在本发明的保护范围之内。
+    
+				</td></tr></table></div></body></html>

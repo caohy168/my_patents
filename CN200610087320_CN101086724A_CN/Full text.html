@@ -1,0 +1,1886 @@
+<html><head><title>全文文本(Fulltext)</title><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><style>div.fullText table {width: 100%;text-indent: 1px;} 
+ div.fullText table td.header {font-weight: bold;text-align: center;font-family: '宋体';font-size: 16px;line-height:20px;color: #000000;padding: 5px;}div.fullText table td.content {padding: 1px;text-align: left;vertical-align: top;width: 100%;font-family: '宋体';font-size: 14px;line-height:20px;color: #000000;}</style></head><body><?xml version="1.0" encoding="UTF-8"?><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table class="fullText"><tr><td id="claim_title" class="header">权利要求书</td></tr><tr><td class="content" id="claim_1">1、一种存储卡可变长多块数据传输方法，该方法包括如下步骤：读卡设备使存储卡进入
+                <br/>到旁置状态；当存储卡进入旁置状态后读卡设备通过向存储卡发送命令使存储卡进入传送状
+                <br/>态；在传送状态中读卡设备通过命令设置多块数据传输的块数量；其特征在于，该方法还包
+                <br/>括如下步骤：
+                <br/>
+				</td></tr><tr><td class="content" id="claim_2">在存储卡传输命令列表中添加可变长多块数据读命令和可变长多块数据写命令，当多块
+                <br/>数据传输的块数量设置完毕后，通过上述添加的命令完成存储卡可变长多块数据的读写。
+                <br/>
+				</td></tr><tr><td class="content" id="claim_3">2、如权利要求1所述的存储卡可变长多块数据传输方法，其特征在于，可变长多块数据
+                <br/>读命令和可变长多块数据写命令的命令格式如下表：
+                <br/>
+				</td></tr><tr><td class="content" id="claim_4">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                          CMD
+                                              索引
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											 类型
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											参数
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											    响应
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											 缩写
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											命令描述
+                                            
+											
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											  CMD21
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											 adtc
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											[31:0]数据
+                                            地址
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											    R1
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											 READ_MULTIPLE_NO_LIMI
+                                             TED_BLOCK
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        从给定地址开始，从卡中
+                                            读出多个可变长度的数
+                                            据块
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											  CMD22
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											 adtc
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											[31:0]数据
+                                            地址
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											    R1
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											 WRITE_MULTIPLE_NO_LIM
+                                             ITED_BLOCK
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        从给定地址开始，向卡中
+                                            写入多个可变长度的数
+                                            据块
+                                            
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="claim_5">3、如权利要求1或2所述的存储卡可变长多块数据传输方法，其特征在于，在存储卡可
+                <br/>变长多块数据读操作过程中，在读数据部分前面加入数据长度字段，这样，每块读数据分成
+                <br/>数据长度和数据内容两个部分，其中数据长度表示该数据块的数据内容长度，数据内容表示
+                <br/>该数据块实际传输的数据内容。
+                <br/>
+				</td></tr><tr><td class="content" id="claim_6">4、如权利要求3所述的存储卡可变长多块数据传输方法，其特征在于，在1线传输模式，
+                <br/>数据长度字段为32bit；在4线传输模式，数据长度字段为8bit；在8线传输模式，数据长
+                <br/>度字段为4bit；其中，1、4、8线传输模式是指在传输数据时所用的不同的总线宽度。
+                <br/>
+				</td></tr><tr><td class="content" id="claim_7">5、如权利要求4所述的存储卡可变长多块数据传输方法，其特征在于，如果读出的数据
+                <br/>块个数达到了设置的多块数据的块数量或读卡设备发出停止命令，存储卡可变长多块数据读
+                <br/>操作结束。
+                <br/>
+				</td></tr><tr><td class="content" id="claim_8">6、如权利要求1或2所述的存储卡可变长多块数据传输方法，其特征在于，在存储卡可
+                <br/>变长多块数据写操作过程中，在写数据部分前面加入数据长度字段，这样，每块写数据分成
+                <br/>数据长度、数据内容和循环冗余码三个部分，其中数据长度表示该数据块的数据内容长度，
+                <br/>数据内容表示该数据块实际传输的数据内容，循环冗余码部分表示对该块数据进行循环冗余
+                <br/>
+					码校验的值。
+                <br/>
+				</td></tr><tr><td class="content" id="claim_9">7、如权利要求6所述的存储卡可变长多块数据传输方法，其特征在于，在1线传输模式，
+                <br/>数据长度字段为32bit；在4线传输模式，数据长度字段为8bit；在8线传输模式，数据长
+                <br/>度字段为4bit；其中，1、4、8线传输模式是指在传输数据时所用的不同的总线宽度。
+                <br/>
+				</td></tr><tr><td class="content" id="claim_10">8、如权利要求7所述的存储卡可变长多块数据传输方法，其特征在于，存储卡通过循环
+                <br/>冗余码校验向读卡设备确认数据传输的正确性，存储卡将返回循环冗余码校验结果作为每条
+                <br/>数据线上的循环冗余码状态令牌，如果发生传输错误，存储卡将返回一个负的循环冗余码状
+                <br/>态‘101’；如果没有传输错误，存储卡将返回一个正的循环冗余码状态‘010’。
+                <br/>
+				</td></tr><tr><td class="content" id="claim_11">9、如权利要求7或8所述的存储卡可变长多块数据传输方法，其特征在于，如果某个数
+                <br/>据块的循环冗余码校验错误，存储卡可变长多块数据写操作结束。
+                <br/>
+				</td></tr><tr><td class="content" id="claim_12">10、如权利要求9所述的存储卡可变长多块数据传输方法，其特征在于，当某个数据块
+                <br/>的循环冗余码校验完毕后，如果写入的数据块个数达到了设置的多块数据的块数量或读卡设
+                <br/>备发出停止命令，存储卡可变长多块数据写操作结束。
+                <br/>
+				</td></tr></table></div><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table><tr><td id="description_title" class="header">说明书</td></tr><tr><td class="content" id="description_invention_title">存储卡可变长多块数据传输方法</td></tr><tr><td class="content" id="description_1">技术领域
+                
+				</td></tr><tr><td class="content" id="description_2">本发明涉及一种存储卡数据传输方法，尤其涉及一种存储卡可变长多块数据传输方法。
+                
+				</td></tr><tr><td class="content" id="description_3">背景技术
+                
+				</td></tr><tr><td class="content" id="description_4">普通的存储卡如MMC/SD卡在与读卡设备间传输大量数据时，读卡设备和存储卡之间可以
+                通过多块数据传输操作来完成，该数据传输操作包括多块数据读和多块数据写，其过程状态
+                转换图如图1所示。如果读卡设备想要和存储卡完成大量的数据传输，可使存储卡进入到旁
+                置状态110，当存储卡进入旁置状态110时读卡设备通过向存储卡发出CMD7命令120使存储
+                卡进入传送状态130，在传送状态130中读卡设备可以通过CMD16命令140设置数据块长度，
+                通过CMD23命令设置多块数据传输的数量，然后分别通过CMD18命令150和CMD25命令160
+                完成多块数据读写操作。从上面的过程可以看出一旦通过CMD16命令140设定了数据块长度，
+                在后续的多块传输过程中就只能以该数据长度来完成后续的数据传输。也就是说，普通的存
+                储卡与读卡设备间传输大量数据只支持定长的多块数据传输。但是在具体的应用中(如网络
+                应用)，根据业务和应用的不同，在数据传输的过程中数据包的包长可能会有很大的变化，从
+                应用层向数据链路层逐级将这些数据包写入存储卡中或从存储卡中读出需要事先将这些数据
+                包拆分成等长的数据包，这样要读卡设备将这些数据拆分成等长的数据包需要完成大量的冗
+                余操作，所以在对这些数据进行拆分和组装的过程中会降低读卡设备对数据的处理速度，同
+                时操作也不是很灵活。
+                
+				</td></tr><tr><td class="content" id="description_5">举例说明如下，如果要完成两个数据包传输，其中一个是64Byte长的小包，另一个是
+                1514Byte长的大包，要将这两个数据包传输到存储卡中可按如下步骤进行：1)可使存储卡
+                进入到旁置状态110；2)在传送状态130中读卡设备可以通过CMD16命令140设置数据块长
+                度为512Byte；3)通过CMD23命令设置多块数据传输的数量为4；4)然后通过CMD25命令
+                
+					160完成多块数据写操作。如果将步骤2)中数据块长度定为1514Byte长的话，虽然可以通
+                过两次块传输来完成数据的传送，但是每个数据块的长度都是1514Byte长，这样在整个数据
+                传输的过程中浪费了(1514-64)*8＝11600个时钟周期。从上面的过程中我们可以看出，读
+                卡设备要想将一个64Byte长的小包和一个1514Byte长的大包传给存储卡，需要事先将这两
+                个数据包拆分成4个512Byte的数据块，然后才能进行传输；同理，再回传的过程中也要经
+                历同样的过程，所以在对这些数据进行拆分和组装的过程中会降低对数据的处理速度；如果
+                将块长度设置得较大又会因为浪费了传输的时钟周期而导致传输的速度大大下降。
+                
+				</td></tr><tr><td class="content" id="description_6">发明内容
+                
+				</td></tr><tr><td class="content" id="description_7">因此本发明所要解决的技术问题是提供一种存储卡可变长多块数据传输方法，该方法对
+                数据的传输操作既灵活方便又提高了传输的效率。
+                
+				</td></tr><tr><td class="content" id="description_8">本发明具体是这样实现的：
+                
+				</td></tr><tr><td class="content" id="description_9">一种存储卡可变长多块数据传输方法，该方法包括如下步骤：读卡设备使存储卡进入到
+                旁置状态；当存储卡进入旁置状态后读卡设备通过向存储卡发送命令使存储卡进入传送状态；
+                在传送状态中读卡设备通过命令设置多块数据传输的块数量；其特征在于，该方法还包括如
+                下步骤：在存储卡传输命令列表中添加可变长多块数据读命令和可变长多块数据写命令，当
+                多块数据传输的块数量设置完毕后，通过上述添加的命令完成存储卡可变长多块数据的读写。
+                
+				</td></tr><tr><td class="content" id="description_10">按上述方案，可变长多块数据读命令和可变长多块数据写命令的命令格式如下表：
+                
+				</td></tr><tr><td class="content" id="description_11">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                          CMD
+                                              索引
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											 类型
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											   参数
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											响应
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											    缩写
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											    命令描述
+                                            
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											  CMD21
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											 adtc
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											[31:0]数据
+                                            地址
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											    R1
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											 READ_MULTIPLE_NO_LIMI
+                                             TED_BLOCK
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        从给定地址开始，从卡中
+                                            读出多个可变长度的数
+                                            据块
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											  CMD22
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											 adtc
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											[31:0]数据
+                                            地址
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											    R1
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											 WRITE_MULTIPLE_NO_LIM
+                                             ITED_BLOCK
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        从给定地址开始，向卡中
+                                            写入多个可变长度的数
+                                            据块
+                                            
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_12">按上述方案，在存储卡可变长多块数据读操作过程中，在读数据部分前面加入数据长度
+                字段，这样，每块读数据分成数据长度和数据内容两个部分，其中数据长度表示该数据块的
+                数据内容长度，数据内容表示该数据块实际传输的数据内容。
+                
+				</td></tr><tr><td class="content" id="description_13">按上述方案，在1线传输模式，数据长度字段为32bit；在4线传输模式，数据长度字
+                
+					段为8bit；在8线传输模式，数据长度字段为4bit；其中，1、4、8线传输模式是指在传输
+                数据时所用的不同的总线宽度。
+                
+				</td></tr><tr><td class="content" id="description_14">按上述方案，如果读出的数据块个数达到了设置的多块数据的块数量或读卡设备发出停
+                止命令，存储卡可变长多块数据读操作结束。
+                
+				</td></tr><tr><td class="content" id="description_15">按上述方案，在存储卡可变长多块数据写操作过程中，在写数据部分前面加入数据长度
+                字段，这样，每块写数据分成数据长度、数据内容和循环冗余码三个部分，其中数据长度表
+                示该数据块的数据内容长度，数据内容表示该数据块实际传输的数据内容，循环冗余码部分
+                表示对该块数据进行循环冗余码校验的值。
+                
+				</td></tr><tr><td class="content" id="description_16">按上述方案，在1线传输模式，数据长度字段为32bit；在4线传输模式，数据长度字
+                段为8bit；在8线传输模式，数据长度字段为4bit；其中，1、4、8线传输模式是指在传输
+                数据时所用的不同的总线宽度。
+                
+				</td></tr><tr><td class="content" id="description_17">按上述方案，存储卡通过循环冗余码校验向读卡设备确认数据传输的正确性，存储卡将
+                返回循环冗余码校验结果作为每条数据线上的循环冗余码状态令牌，如果发生传输错误，存
+                储卡将返回一个负的循环冗余码状态‘101’；如果没有传输错误，存储卡将返回一个正的循
+                环冗余码状态‘010’。
+                
+				</td></tr><tr><td class="content" id="description_18">按上述方案，如果某个数据块的循环冗余码校验错误，存储卡可变长多块数据写操作结
+                束。
+                
+				</td></tr><tr><td class="content" id="description_19">按上述方案，当某个数据块的循环冗余码校验完毕后，如果写入的数据块个数达到了设
+                置的多块数据的块数量或读卡设备发出停止命令，存储卡可变长多块数据写操作结束。
+                
+				</td></tr><tr><td class="content" id="description_20">由于采用了上述处理步骤，本发明与现有技术相比，具有以下优点：
+                
+				</td></tr><tr><td class="content" id="description_21">普通的存储卡与读卡设备间传输大量数据只支持定长的多块数据传输，针对这种实际情
+                况，本发明在多块数据传输前不进行数据块长度的设置，而是在每块数据前面的固定字段中
+                加入该数据块的长度信息，实现了可变长多块数据传输，这样对数据的传输操作既灵活方便
+                又提高了传输的效率。
+                
+				</td></tr><tr><td class="content" id="description_22">对比背景技术中的例子举例说明如下，如果要完成两个数据包传输，其中一个是64Byte
+                
+					长的小包，另一个是1514Byte长的大包，根据本发明，要将这两个数据包传输到存储卡中可
+                按如下步骤进行：1)可使存储卡进入到旁置状态；2)然后通过CMD22命令完成可变长多块
+                数据写操作。因为可变长多块数据写操作的块长度在数据块的开始部分且是可变的，所以我
+                们选择第一个数据块长度为64Byte，第二数据块长度为1514Byte，并将这两个块长度分别在
+                每块的数据字段前进行标识，这样对数据的传输操作变得灵活方便，同时也提高了传输的效
+                率。
+                
+				</td></tr><tr><td class="content" id="description_23">附图说明
+                
+				</td></tr><tr><td class="content" id="description_24">图1为普通MMC存储卡与读卡设备数据传输过程状态转换图；
+                
+				</td></tr><tr><td class="content" id="description_25">图2为本发明的存储卡与读卡设备数据传输过程状态转换图；
+                
+				</td></tr><tr><td class="content" id="description_26">图3是本发明的可变长多块数据读操作时序图；
+                
+				</td></tr><tr><td class="content" id="description_27">图4是普通MMC存储卡的多块数据读操作时序图；
+                
+				</td></tr><tr><td class="content" id="description_28">图5是本发明的可变长多块数据读操作停止时序图；
+                
+				</td></tr><tr><td class="content" id="description_29">图6是本发明的可变长多块数据写操作时序图；
+                
+				</td></tr><tr><td class="content" id="description_30">图7是普通MMC存储卡的多块数据写操作时序图；
+                
+				</td></tr><tr><td class="content" id="description_31">图8是本发明的可变长多块数据写操作停止时序图；
+                
+				</td></tr><tr><td class="content" id="description_32">图9是本发明的可变长多块数据读操作流程图；
+                
+				</td></tr><tr><td class="content" id="description_33">图10是本发明的可变长多块数据写操作流程图。
+                
+				</td></tr><tr><td class="content" id="description_34">具体实施方式
+                
+				</td></tr><tr><td class="content" id="description_35">以下结合附图对本发明的具体实施过程作进一步的说明：
+                
+				</td></tr><tr><td class="content" id="description_36">本发明的设计构思：本发明针对现有技术中存在的技术问题，为存储卡与读卡设备间传
+                输大量数据，增加可变长的多块数据传输方式，即在多块数据传输前不进行数据块长度的设
+                置，而是在每块数据前面的固定字段中加入该数据块的长度信息，表明该数据块的数据长度，
+                以实现可变长多块数据传输。
+                
+				</td></tr><tr><td class="content" id="description_37">为了实现上述设计构思，本发明在技术上作了一系列的改进，下面以MMC存储卡为一个
+                具体的实施例(但不限于MMC卡的具体命令、命令格式、响应、响应格式、状态指示和寄存
+                器标志或MMC卡本身，也可以是MMC其它未用到的或已用到的采取复用方式的命令、命令格
+                
+					式、响应、响应格式、状态指示和寄存器标志或SD卡来实现)对本发明的技术要点进行描述：
+                
+				</td></tr><tr><td class="content" id="description_38">1.在存储卡传输命令列表中添加CMD21(可变长多块数据读)和CMD22(可变长多块数
+                据写)命令，具体的命令格式如表1：
+                
+				</td></tr><tr><td class="content" id="description_39">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            CMD
+                                                索引
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											类型
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											    参数
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											响应
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											    缩写
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											    命令描述
+                                            
+											
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+											  CMD20
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+											 adtc
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											[31:0]数据
+                                            地址
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+											    R1
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											 WRITE_DAT_UNTIL_STOP
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        从给定地址开始，向读卡
+                                            设备写入数据流，直至收
+                                            到STOP_TRANSMISSION命
+                                            令
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											  CMD21
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											 adtc
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											[31:0]数据
+                                            地址
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											    R1
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											 READ_MULTIPLE_NO_LIMI
+                                             TED_BLOCK
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        从给定地址开始，从卡中
+                                            读出多个可变长度的数
+                                            据块
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											  CMD22
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											 adtc
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											[31:0]数据
+                                            地址
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											    R1
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											 WRITE_MULTIPLE_NO_LIM
+                                             ITED_BLOCK
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        从给定地址开始，向卡中
+                                            写入多个可变长度的数
+                                            据块
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_40">表1
+                
+				</td></tr><tr><td class="content" id="description_41">2.存储卡与读卡设备数据传输过程状态转换：
+                
+				</td></tr><tr><td class="content" id="description_42">如图2所示，步骤一：读卡设备使存储卡进入到旁置状态230；步骤二：读卡设备通过
+                发送CMD7命令250使存储卡进入传送状态260；步骤三：在传送状态260中读卡设备可以通
+                过CMD23命令240来设置多块数据传输的块数量；步骤四：通过CMD21命令210和CMD22命
+                令220来完成存储卡可变长多块数据的读写。
+                
+				</td></tr><tr><td class="content" id="description_43">3.可变长多块数据读写过程时序：
+                
+				</td></tr><tr><td class="content" id="description_44">如图3所示为存储卡可变长多块数据读操作时序，如图5所示为存储卡可变长多块数据
+                读操作停止时序。从图中可以看出，可变长多块数据读操作时序是在普通MMC卡的多块数据
+                读操作时序(如图4所示)的基础上进行了改进，具体过程是在普通MMC卡的多块数据读操
+                作时序的读数据部分410前面加入数据长度310字段，这样，本发明的可变长多块数据读操
+                作时序的读数据部分分成两个部分：数据长度310和数据内容320，其中数据长度字段表示
+                该数据块的数据内容长度，数据内容表示该数据块实际传输的数据内容；在读数据的过程中，
+                读卡设备如果发送CMD12停止命令510(如图5所示)，之后存储卡必须停止向读卡设备发送
+                数据，并且作出响应520。
+                
+				</td></tr><tr><td class="content" id="description_45">在1线传输模式，数据长度字段为32bit；在4线传输模式，数据长度字段为8bit；在
+                8线传输模式，数据长度字段为4bit。其中，1、4、8线传输模式是指在传输数据时所用的
+                不同的总线宽度。数据长度字段用32bit表示，所以在1线传输模式，数据长度字段为32bit*1；
+                
+					数据长度字段用8bit表示，所以在4线传输模式，数据长度字段为8bit*4；数据长度字段
+                用4bit表示，所以在8线传输模式：数据长度字段为4bit*8。以下举例说明数据总线宽度
+                与本发明实现的关系：
+                
+				</td></tr><tr><td class="content" id="description_46">比如：1)读卡设备从存储卡读64bit长的数据包，其数据内容为：
+                01010101_01010101_01010101_01010101_01010101_01010101_01010101_01010101。
+                
+				</td></tr><tr><td class="content" id="description_47">在1线传输模式下，其数据长度与数据内容的关系如表2：
+                
+				</td></tr><tr><td class="content" id="description_48">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            数据长度
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            数据内容
+                                            
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											DAT0
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											 00000000000000000000000001000000
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         01010101_01010101_01010101_01010101
+                                             01010101_01010101_01010101_01010101
+                                            
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_49">表2
+                
+				</td></tr><tr><td class="content" id="description_50">在4线传输模式下，其数据长度与数据内容的关系如表3：
+                
+				</td></tr><tr><td class="content" id="description_51">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            数据长度
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            数据内容
+                                            
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        DAT3
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         00000000
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         0000000000000000
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        DAT2
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         00000010
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         1111111111111111
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        DAT1
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         00000000
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         0000000000000000
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        DAT0
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         00000000
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         1111111111111111
+                                            
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_52">表3
+                
+				</td></tr><tr><td class="content" id="description_53">在8线传输模式下，其数据长度与数据内容的关系如表4：
+                
+				</td></tr><tr><td class="content" id="description_54">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            数据长度
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            数据内容
+                                            
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT7
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         0000
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         00000000
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT6
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         0001
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         11111111
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT5
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         0000
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         00000000
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT4
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         0000
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         11111111
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT3
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         0000
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         00000000
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT2
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         0000
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         11111111
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT1
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         0000
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         00000000
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT0
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         0000
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         11111111
+                                            
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_55">表4
+                
+				</td></tr><tr><td class="content" id="description_56">2)读卡设备从存储卡读32bit长的数据包，其数据内容为：
+                10101010_10101010_10101010_10101010。
+                
+				</td></tr><tr><td class="content" id="description_57">在1线传输模式下，其数据长度与数据内容的关系如表5：
+                
+				</td></tr><tr><td class="content" id="description_58">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            数据长度
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            数据内容
+                                            
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        DAT0
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         00000000000000000000000000100000
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         10101010_10101010_10101010_10101010
+                                            
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_59">表5
+                
+				</td></tr><tr><td class="content" id="description_60">在4线传输模式下，其数据长度与数据内容的关系如表6：
+                
+				</td></tr><tr><td class="content" id="description_61">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            数据长度
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            数据内容
+                                            
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT3
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         00000000
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         11111111
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT2
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         00000000
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         00000000
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT1
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         00000010
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         11111111
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT0
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         00000000
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         00000000
+                                            
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_62">表6
+                
+				</td></tr><tr><td class="content" id="description_63">在8线传输模式下，其数据长度与数据内容的关系如表7：
+                
+				</td></tr><tr><td class="content" id="description_64">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            数据长度
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            数据内容
+                                            
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT7
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         0000
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         1111
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT6
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         0000
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         0000
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT5
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         0001
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         1111
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT4
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         0000
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         0000
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT3
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         0000
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         1111
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT2
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         0000
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         0000
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT1
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         0000
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         1111
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT0
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         0000
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         0000
+                                            
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_65">表7
+                
+				</td></tr><tr><td class="content" id="description_66">如图6所示为存储卡可变长多块数据写操作时序，如图8所示为存储卡可变长多块数据
+                写操作停止时序。从图中可以看出，可变长多块数据写操作时序是在普通MMC卡的多块数据
+                写操作时序(如图7所示)的基础上进行了改进，具体过程是在普通MMC卡的多块数据写操
+                作时序的写数据部分710前面加入数据长度610字段，这样，本发明的可变长多块数据写操
+                
+					作时序的写数据部分分成三个部分：数据长度610、数据内容620和CRC(Cyclic Redundancy
+                Code，循环冗余码)630，其中数据长度表示该数据块的数据内容长度，数据内容表示该数据
+                块实际传输的数据内容，CRC部分表示对该块数据进行CRC校验的值，存储卡通过CRC校验
+                向读卡设备确认数据传输的正确性。数据内容后紧接着是CRC校验比特，存储卡将返回CRC
+                校验结果640作为每条数据线上的CRC状态令牌。如果发生传输错误，存储卡将返回一个负
+                的CRC状态‘101’；如果没有传输错误，存储卡将返回一个正的CRC状态‘010’；在写数
+                据的过程中，读卡设备如果发送CMD12停止命令810(如图8所示)，之后读卡设备必须停止
+                向存储卡写数据，且存储卡要作出响应820。
+                
+				</td></tr><tr><td class="content" id="description_67">在1线传输模式，数据长度字段为32bit；在4线传输模式，数据长度字段为8bit；在
+                8线传输模式，数据长度字段为4bit。其中，1、4、8线传输模式是指在传输数据时所用的
+                不同的总线宽度。数据长度字段用32bit表示，所以在1线传输模式，数据长度字段为32bit*1；
+                数据长度字段用8bit表示，所以在4线传输模式，数据长度字段为8bit*4；数据长度字段
+                用4bit表示，所以在8线传输模式：数据长度字段为4bit*8。
+                
+				</td></tr><tr><td class="content" id="description_68">以下是完成存储卡可变长多块数据读写操作的详细流程：
+                
+				</td></tr><tr><td class="content" id="description_69">1.存储卡可变长多块数据读操作
+                
+				</td></tr><tr><td class="content" id="description_70">如图9所示，步骤一：通过CMD23命令设置数据块个数910；步骤二：发送可变长多块数据
+                读CMD21命令920；步骤三：按可变长多块数据读操作时序(如图3)读取数据930；步骤四：
+                判断可变长多块数据读操作是否结束940，其结束条件为：读出的数据块个数达到了设置的数
+                据块个数或读卡设备发出CMD12停止命令(如图5)，如果操作未结束返回步骤三，否则结束
+                后返回。
+                
+				</td></tr><tr><td class="content" id="description_71">2.存储卡可变长多块数据写操作
+                
+				</td></tr><tr><td class="content" id="description_72">如图10所示，步骤一：通过CMD23命令设置数据块个数1010；步骤二：发送可变长多块数
+                据写CMD22命令1020；步骤三：按可变长多块数据写操作时序(如图6)写入数据1030；步骤
+                四：判断该数据块的CRC校验是否正确1040，如果正确进行步骤五，否则结束；步骤五：判断
+                可变长多块数据写操作是否结束1050，其结束条件为：写入的数据块个数达到了设置的数据块
+                
+					个数或读卡设备发出CMD12停止命令(如图8)，如果操作未结束返回步骤三，否则结束后返
+                回。
+                
+				</td></tr><tr><td class="content" id="description_73">注1：本发明时序图中用到的时序值如表8：
+                
+				</td></tr><tr><td class="content" id="description_74">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            符号
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            最小
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         最大
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            单位
+                                            
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            NCR
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            2
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         64
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            时钟周期
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            NAC
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            2
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         10*(TAAC*FOP+100*NSAC)1
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            时钟周期
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            NWR
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            2
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         -
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            时钟周期
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            NST
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            2
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         2
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            时钟周期
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            NBL
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            2
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         5
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            时钟周期
+                                            
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_75">表8
+                
+				</td></tr><tr><td class="content" id="description_76">其中，F<sub>OP</sub>是读卡设备用于读操作的存储卡时钟频率。下面是一个计算的例子：
+                
+				</td></tr><tr><td class="content" id="description_77">TAAC的CSD(特定卡数据寄存器，提供了有关如何存取卡内容的信息)值为0×26，等
+                于1.5mSec；NSAC的CSD值为0；主机频率F<sub>OP</sub>为10MHz；则：
+                
+				</td></tr><tr><td class="content" id="description_78">N<sub>AC</sub>＝10×(1.5×10<sup>-3</sup>×10×10<sup>6</sup>+0)＝150,000时钟周期。
+                
+				</td></tr><tr><td class="content" id="description_79">本发明时序图中的缩写形式如表9：
+                
+				</td></tr><tr><td class="content" id="description_80">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            S
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        起始比特(＝‘0’)
+                                            
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            T
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        传送比特(主机＝‘1’，卡＝‘0’)
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            P
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        一个周期上拉(＝‘1’)
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            E
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        结束比特(＝‘1’)
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            Z
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        高阻抗状态
+                                            
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_81">表9
+                
+				</td></tr><tr><td class="content" id="description_82">注2：本发明为了叙述上的方便引用了《多媒体卡体统规范4.1版》中相应的CMD7、CMD12、
+                CMD16、CMD18、CMD23、CMD25命令，其命令的基本格式如表10所示，其命令的表述如表11所
+                示，其他细节请参阅《多媒体卡体统规范4.1版》。
+                
+				</td></tr><tr><td class="content" id="description_83">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        比特位置
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        47
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        46
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        [45:40]
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                           [39:8]
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            [7:1]
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                          0
+                                            
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        宽度(比特)
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        1
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        1
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        6
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                           32
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            7
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                          1
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        值
+                                            描述
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        ‘0’
+                                            起始比特
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        ‘1’
+                                            传输比特
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        X
+                                            命令索引
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                           X
+                                               参数
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            X
+                                                CRC7
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                          ‘1’
+                                              结束比特
+                                            
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_84">表10
+                
+				</td></tr><tr><td class="content" id="description_85">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                          CMD
+                                              索引
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											类型
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											    参数
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											响应
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											    缩写
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											    命令描述
+                                            
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+											
+											
+											  CMD7
+                                            
+											
+											
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+											
+											
+											 ac
+                                            
+											
+											
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+											[31:16]RCA
+                                            [15:0]填充
+                                            比特
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+											
+											
+											R1b1
+											
+											
+											
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+											
+											SELECT/
+                                            DESELECT_CARD
+                                            
+											
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        在旁置和传输状态之间或者
+                                            编程和断开连接状态之间锁
+                                            定卡的命令。在这两种情况
+                                            下卡被自己的相对地址被选
+                                            中，任何其它地址可取消选
+                                            定，地址0可取消选定。
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											  CMD12
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											 ac
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        [31:0]填充
+                                            比特
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											R1b
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											STOP_TRANSMISSION
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											强制卡停止传输
+                                            
+											
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											  CMD16
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											 ac
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											[31:0]块长
+                                            度
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											R1
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											SET_BLOCKLEN
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        为以后的块命令(读和写)设
+                                            置块长度(以字节为单位)，
+                                            默认的块长度在CSD中指定。
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											  CMD18
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											 adtc
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        [31:0]数据
+                                            地址
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											R1
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											READ_MULTIPLE_
+                                            BLOCK
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        从卡到主机连续传送数据块
+                                            直至收到停止命令或者所请
+                                            求的数据块传送完毕。
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+											
+											  CMD23
+                                            
+											
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+											
+											 ac
+                                            
+											
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											[31:16]置
+                                            为0
+                                            [15:0]块数
+                                            量
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+											
+											R1
+                                            
+											
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+											
+											SET_BLOCK_COUNT
+                                            
+											
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        定义了即将执行的多个块的
+                                            读或写命令中所要传送的块
+                                            的数量。
+                                            如果参数全为0，则接下来的
+                                            读/写操作是无限制的
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											  CMD25
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											 adtc
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											[31:0]
+                                            数据地址
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											R1
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											WRITE_MULTIPLE
+                                            _BLOCK
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        连续写入数据块直至收到
+                                            STOP_TRANSMISSION命令或
+                                            所请求的数据块全部接收到
+                                            
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_86">表11
+                
+				</td></tr></table></div></body></html>

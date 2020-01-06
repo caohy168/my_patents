@@ -1,0 +1,534 @@
+<html><head><title>全文文本(Fulltext)</title><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><style>div.fullText table {width: 100%;text-indent: 1px;} 
+ div.fullText table td.header {font-weight: bold;text-align: center;font-family: '宋体';font-size: 16px;line-height:20px;color: #000000;padding: 5px;}div.fullText table td.content {padding: 1px;text-align: left;vertical-align: top;width: 100%;font-family: '宋体';font-size: 14px;line-height:20px;color: #000000;}</style></head><body><?xml version="1.0" encoding="UTF-8"?><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table class="fullText"><tr><td id="claim_title" class="header">权利要求书</td></tr><tr><td class="content" id="claim_1">1、一种具有高速高兼容性的闪存卡，其特征在于，所述闪存卡的卡体
+      <br/>上具有可连接多媒体存储卡MMC/安全数据记忆卡SD接口槽的第一接口，
+      <br/>以及可连接通用串行总线USB接口槽的第二接口，所述第一接口和第二接
+      <br/>口的信号线可支持16位的MMC/SD接口数据传输。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_2">2、根据权利要求1所述的闪存卡，其特征在于，所述第一接口包括与
+      <br/>现有MMC/SD接口兼容的触点A1至A13，其中，
+      <br/>
+				</td></tr><tr><td class="content" id="claim_3">触点A1、A7至A13用于传输数据信号；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_4">触点A2用于传输命令/响应信号；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_5">触点A3和A6为电源地引线；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_6">触点A4为电源引线；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_7">触点A5用于传输时钟信号。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_8">3、根据权利要求1所述的闪存卡，其特征在于，所述第一接口进一步
+      <br/>包括触点A14和A15，所述A14和A15均用于传输数据信号。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_9">4、根据权利要求3所述的闪存卡，所述第二接口包括与现有USB接口
+      <br/>槽兼容的触点A20至A23，其中，
+      <br/>
+				</td></tr><tr><td class="content" id="claim_10">触点A20为电源引线，触点A23为电源地引线，触点A21和A22用于
+      <br/>传输数据信号。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_11">5、根据权利要求4所述的闪存卡，其特征在于，所述第二接口进一步
+      <br/>包括触点A16至A19，所述触点A16至A19均用于传输数据信号。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_12">6、根据权利要求5所述的闪存卡，其特征在于，所述触点A1、A7至
+      <br/>A13、A14至A19用于共同传输基于MMC/SD接口协议的16位数据信号。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_13">7、根据权利要求1至6任一项所述的闪存卡，其特征在于，所述第一
+      <br/>接口的触点与所述第二接口的触点位于所述闪存卡的卡体的同侧或异侧。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_14">8、根据权利要求1至6任一项所述的闪存卡，其特征在于，所述闪存
+      <br/>卡的卡体内进一步包括卡控制器和存储器；所述卡控制器用于控制第一接口
+      <br/>
+					和/或第二接口对存储器的访问；所述存储器用于存储数据。
+      <br/>
+					
+				</td></tr></table></div><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table><tr><td id="description_title" class="header">说明书</td></tr><tr><td class="content" id="description_invention_title">一种具有高速高兼容性的闪存卡
+  </td></tr><tr><td class="content" id="description_1">技术领域
+  </td></tr><tr><td class="content" id="description_2">本实用新型涉及移动存储技术领域，特别涉及一种具有高速高兼容性的
+    闪存卡。
+    
+				</td></tr><tr><td class="content" id="description_3">背景技术
+  </td></tr><tr><td class="content" id="description_4">移动存储器可以方便地与计算机或其它设备交换并存储数据，并且方便
+    携带，日益成为人们生活和工作中不可或缺的IT产品。移动存储器结构上
+    主要包括接口、控制器和存储器。其中，接口用于与计算机或其它设备的接
+    口槽连接，控制器控制移动存储器与计算机或其它设备之间的数据传输，而
+    存储器则用于存储数据。目前常见的移动存储器主要包括闪存卡和U盘，
+    主流的闪存卡包括多媒体存储卡(Multi-Media Card，MMC)和安全数字
+    记忆卡(Secure Digital Memory Card，SD)。MMC/SD通过MMC/SD接口
+    与计算机或者其它主机设备相连。U盘通过通用串行总线(universal serial
+    bus，USB)接口与其它设备相连，必须插入USB接口槽才能使用。
+    
+				</td></tr><tr><td class="content" id="description_5">现有技术存在的问题是：移动存储器具有各自的接口标准，只能接入相
+    应的接口槽中才能使用，给用户带来一定的不便。而且，现有的MMC/SD
+    接口的数据总线宽度最高为8位，越来越难以满足高速数据传输的需求。
+    
+				</td></tr><tr><td class="content" id="description_6">实用新型内容
+    
+				</td></tr><tr><td class="content" id="description_7">有鉴于此，本实用新型的目的在于，提出一种具有高速高兼容性的闪存
+    卡。
+    
+				</td></tr><tr><td class="content" id="description_8">本实用新型提出的具有高速高兼容性的闪存卡，所述闪存卡的卡体上具
+    有可连接多媒体存储卡MMC/安全数据记忆卡SD接口槽的第一接口，以及
+    
+					可连接通用串行总线USB接口槽的第二接口，所述第一接口和第二接口的
+    信号线可支持16位的MMC/SD接口数据传输。
+    
+				</td></tr><tr><td class="content" id="description_9">从以上技术方案可以看出，本实用新型提出的闪存卡具有可兼容
+    MMC/SD接口的第一接口，以及可兼容USB接口的第二接口，极大提高了
+    闪存卡的兼容性；同时支持16位MMC/SD接口的数据传输，提高了通信速
+    度。
+    
+				</td></tr><tr><td class="content" id="description_10">附图说明
+  </td></tr><tr><td class="content" id="description_11">图1为本实用新型的闪存卡的外观示意图；
+    
+				</td></tr><tr><td class="content" id="description_12">图2为本实用新型闪存卡的内部结构示意图。
+    
+				</td></tr><tr><td class="content" id="description_13">具体实施方式
+  </td></tr><tr><td class="content" id="description_14">为使本实用新型的目的、技术方案和优点更加清楚，下面结合附图对本
+    实用新型作进一步的详细阐述。
+    
+				</td></tr><tr><td class="content" id="description_15">图1示出了本实用新型的闪存卡的外观图。该闪存卡的卡体101上具有
+    第一接口102和第二接口103。第一接口102中，与现有的MMC/SD接口
+    兼容的触点为A1至A13，触点A14和A15为本实用新型的闪存卡新增的触
+    点。第二接口103中，与现有USB接口兼容的触点包括A20、A21、A22和
+    A23。A16、A17、A18和A19为本实用新型闪存卡新增的触点。
+    
+				</td></tr><tr><td class="content" id="description_16">其中，除触点A8和触点A9外，其它触点的形状均为规则的矩形，触
+    点A8和触点A9为特异形状，具体如图1所示，这样设计的考虑是为了与
+    现有的MMC/SD接口兼容。通过上述扩展，既兼容了现有接口，又可实现
+    16位数据传输，满足高速数据传输的需求。上述各个触点对应的引脚信号
+    定义如表1所示：
+    
+				</td></tr><tr><td class="content" id="description_17">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+序号
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+定义
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+信号含义
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+序号
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+定义
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+信号含义
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+A1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+DAT3
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+数据
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+A13
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+DAT7
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+数据
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+A2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+CMD
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+命令/响应
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+A14
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+DAT8
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+数据
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+A3
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+VSS1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+电源地
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+A15
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+DAT9
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+数据
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_18">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+A4
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ VDD
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+电源
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+A16
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ DAT10
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+数据
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+A5
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ CLK
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+时钟
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+A17
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ DAT11
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+数据
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+A6
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ VSS2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+电源地
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+A18
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ DAT12
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+数据
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+A7
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ DAT0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+数据
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+A19
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ DAT13
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+数据
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+A8
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ DAT1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+数据
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+A20
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ VDD
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+电源
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+A9
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ DAT2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+数据
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+A21
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ DAT14
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+数据
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+A10
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ DAT4
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+数据
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+A22
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ DAT15
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+数据
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+A11
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ DAT5
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+数据
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+A23
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ VSS
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+电源地
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+A12
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ DAT6
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+数据
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_19">表1
+    
+				</td></tr><tr><td class="content" id="description_20">CMD是一个用于闪存卡初始化和传输指令的双向指令通道。指令从多
+    媒体卡的主总线发送到闪存卡，响应从闪存卡发送到主机。VDD是电源线，
+    VSS、VSS1、VSS2是电源地线，用于对闪存卡供电。CLK是总线的时钟信
+    号，在时钟信号的每个周期内，在命令总线和数据总线上只传输一个比特数
+    据，时钟频率可以在0到最大时钟频率之间改变。触点A1至A13可以兼容
+    现有的MMC/SD接口，DAT0至DAT7用于传输基于现有MMC/SD接口
+    协议的数据信号；触点A20至A23兼容现有的USB接口，DAT14和DAT15
+    可用于传输基于现有USB接口协议的数据信号。另外，DAT0至DAT15还
+    可以同时用于传输基于MMC/SD接口协议的16位数据信号，从而实现高速
+    传输。图1中示出的第一接口的触点与第二接口的触点位于卡体的同侧，当
+    然二者也可以分布于卡体的异侧。
+    
+				</td></tr><tr><td class="content" id="description_21">本实用新型原则上没有对闪存卡的外观尺寸进行限定。现有的MMC/SD
+    卡的尺寸规格有如下两种：宽×长×厚分别为24mm×32mm×1.4mm和
+    24mm×18mm×1.4mm。为了更好的与现有MMC/SD接口槽兼容，作为本
+    实用新型的较佳实施例，闪存卡的外观尺寸可以作如下规定：
+    
+				</td></tr><tr><td class="content" id="description_22">如图1所示，宽1与厚分别为24mm和1.4mm，，宽2为15.7mm，长
+    为32mm。
+    
+				</td></tr><tr><td class="content" id="description_23">图2所示为本实用新型的闪存卡的内部基本结构示意图。可以看出，所
+    述闪存卡包括第一接口201、卡控制器202、第二接口203和存储器204四
+    个部分。其中，第一接口201和第二接口103的各个触点位于卡体上，分布
+    如图1所示，各个触点的信号引脚定义如表1所示。卡控制器202和存储器
+    204位于闪存卡内部。
+    
+				</td></tr><tr><td class="content" id="description_24">所述卡控制器202用于控制第一接口201和/或第二接口203对存储器
+    204的读/写访问操作。卡控制器202进一步包括第一接口控制器205、第二
+    接口控制器206和存储器接口控制器207。
+    
+				</td></tr><tr><td class="content" id="description_25">当第一接口201插入主机设备上现有的MMC/SD接口槽，闪存卡可以
+    与主机设备实现基于MMC/SD接口协议的通讯，此时卡控制器202用于控
+    制第一接口201对存储器204的读/写访问操作。具体地说，第一接口控制
+    器205收到来自第一接口201的读/写控制命令，将所述读/写控制命令发送
+    至存储器接口控制器207。所述存储器接口控制器207根据所述读/写控制命
+    令执行对存储器204执行相应的读/写操作，若是读操作，则获取存储器204
+    中的相应数据，将所述数据通过第一接口控制器205发送到第一接口201；
+    若是写操作，则第一接口控制器205接收来自第一接口201的数据以及写控
+    制信息，将其发送至存储器接口控制器207，存储器接口控制器207根据所
+    述写控制信息，将数据写入存储器204。
+    
+				</td></tr><tr><td class="content" id="description_26">当第二接口203插入主机设备上现有的USB接口槽，闪存卡与主机设
+    备实现基于USB接口协议的通讯，此时卡控制器202用于控制第二接口203
+    对存储器204的读/写访问操作。具体地说，第二接口控制器206收到来自
+    第二接口202的读/写控制命令，将所述读/写控制命令发送至存储器接口控
+    制器207。所述存储器接口控制器207根据所述读/写控制命令执行对存储器
+    204执行相应的读/写操作，若是读操作，则获取存储器204中的相应数据，
+    将所述数据通过第二接口控制器206发送到第二接口202；若是写操作，则
+    第二接口控制器206接收来自第二接口202的数据以及写控制信息，将其发
+    送至存储器接口控制器207，存储器接口控制器207根据所述写控制信息，
+    
+					将数据写入存储器204。
+    
+				</td></tr><tr><td class="content" id="description_27">若第一接口201和第二接口203同时插入主机设备上与本实用新型闪存
+    卡配套的接口槽，则闪存卡的卡控制器202控制第一接口201和第二接口
+    203实现16位数据传输。
+    
+				</td></tr><tr><td class="content" id="description_28">所述存储器204用于存储来自第一接口201和/或第二接口203的数据，
+    或将所存储的数据提供给第一接口201和/或第二接口203。
+    
+				</td></tr><tr><td class="content" id="description_29">本实用新型闪存卡可以兼容现有的MMC/SD接口和现有的USB接口。
+    当然，由于现有MMC/SD接口槽最多支持8位数据的传输，因此本实用新
+    型闪存卡如果插入到现有的MMC/SD接口槽或USB接口槽，也能进行1/4/8
+    位数据的传输，扩展的触点处于悬空状态。以上所述仅为本实用新型的较佳
+    实施例而已，并不用以限制本实用新型，凡在本实用新型的精神和原则之内
+    所作的任何修改、等同替换和改进等，均应包含在本实用新型的保护范围之
+    内。
+    
+				</td></tr></table></div></body></html>

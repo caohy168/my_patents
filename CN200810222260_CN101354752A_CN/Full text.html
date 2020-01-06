@@ -1,0 +1,717 @@
+<html><head><title>全文文本(Fulltext)</title><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><style>div.fullText table {width: 100%;text-indent: 1px;} 
+ div.fullText table td.header {font-weight: bold;text-align: center;font-family: '宋体';font-size: 16px;line-height:20px;color: #000000;padding: 5px;}div.fullText table td.content {padding: 1px;text-align: left;vertical-align: top;width: 100%;font-family: '宋体';font-size: 14px;line-height:20px;color: #000000;}</style></head><body><?xml version="1.0" encoding="UTF-8"?><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table class="fullText"><tr><td id="claim_title" class="header">权利要求书</td></tr><tr><td class="content" id="claim_1">1、一种智能卡模块传输信息的方法，其特征在于，预先在智能卡模块上设
+      <br/>置高速数据传输总线，该方法还包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_2">根据接收到的来自外部控制器模块发送的命令信息，如果确定出接收到的
+      <br/>命令信息来自高速数据传输总线，或者，接收到的命令信息中携带有高速数据
+      <br/>传输的标识信息，通过设置的高速数据传输总线传输命令响应信息。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_3">2、如权利要求1所述的方法，其特征在于，所述根据接收到的来自外部控
+      <br/>制器模块发送的命令信息，确定出接收到的命令信息来自高速数据传输总线具
+      <br/>体包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_4">在智能卡模块与控制器模块之间设置控制线；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_5">控制器模块判断当前命令信息是否需要进行高速数据传输，如果需要，设
+      <br/>置控制线状态为有效；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_6">控制器模块通过高速数据传输总线发送命令信息；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_7">智能卡模块监测到控制线状态为有效，从高速数据传输总线接收命令信息。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_8">3、如权利要求2所述的方法，其特征在于，所述通过设置的高速数据传输
+      <br/>总线传输命令响应信息的步骤具体包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_9">智能卡模块向控制器模块返回命令响应信息；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_10">在返回命令响应信息后，控制器模块判断下一命令信息是否需要进行高速
+      <br/>数据传输，如果需要，则继续通过高速数据传输总线发送所述下一命令信息；
+      <br/>智能卡模块接收所述下一命令信息，通过高速数据传输总线传输下一命令信息
+      <br/>对应的命令响应信息。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_11">4、如权利要求3所述的方法，其特征在于，所述方法进一步包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_12">控制器模块确定不需要进行高速数据传输，更新控制线状态，设置控制线
+      <br/>状态为无效。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_13">5、如权利要求1所述的方法，其特征在于，所述根据接收到的来自外部控
+      <br/>制器模块发送的命令信息，确定出接收到的命令信息来自高速数据传输总线具
+      <br/>
+					体包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_14">在智能卡模块中设置标识智能卡模块接口传输方式的工作模式寄存器；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_15">控制器模块判断是否需要进行高速数据传输，如果需要，设置智能卡模块
+      <br/>的工作模式寄存器中标识为采用高速数据传输总线进行传输；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_16">控制器模块通过高速数据传输总线向智能卡模块发送命令信息；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_17">智能卡模块读取工作模式寄存器中标识，确定标识为采用高速数据传输总
+      <br/>线进行传输，通过高速数据传输总线接收命令信息，并通过高速数据传输总线
+      <br/>返回命令响应信息。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_18">6、如权利要求5所述的方法，其特征在于，所述方法进一步包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_19">控制器模块确定不需要进行高速数据传输，设置智能卡模块的工作模式寄
+      <br/>存器中标识为采用智能卡传输协议总线进行传输。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_20">7、如权利要求1所述的方法，其特征在于，所述根据接收到的来自外部控
+      <br/>制器模块发送的命令信息，确定出接收到的命令信息中携带有高速数据传输的
+      <br/>标识信息具体包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_21">在智能卡传输协议定义的命令中，增加使用高速数据传输总线的命令并设
+      <br/>置智能卡模块的默认传输总线；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_22">控制器模块判断是否需要进行高速数据传输，如果需要，通过默认传输总
+      <br/>线向智能卡模块发送包含高速数据传输标识信息的命令信息；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_23">智能卡模块接收包含高速数据传输标识信息的命令信息，切换到高速数据
+      <br/>传输总线。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_24">8、如权利要求1所述的方法，其特征在于，所述高速数据传输总线包括并
+      <br/>行总线、通用异步收发器总线、串行扩展集成电路总线、串行外围设备接口总
+      <br/>线和控制器局域网络总线中的一种或任意组合。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_25">9、一种智能卡模块传输信息的系统，包括控制器模块和智能卡模块，控制
+      <br/>器模块和智能卡模块通过智能卡传输协议总线相连，其特征在于，所述控制器
+      <br/>模块和智能卡模块还通过高速数据传输总线相连，
+      <br/>
+				</td></tr><tr><td class="content" id="claim_26">控制器模块，用于确定命令信息需要进行高速数据传输，通过高速数据总
+      <br/>
+					线向智能卡模块发送命令信息，或者，在命令信息中携带高速数据传输的标识
+      <br/>信息；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_27">智能卡模块，用于根据接收到的命令信息，如果确定出接收到的命令信息
+      <br/>来自高速数据传输总线，或者，接收到的命令信息中携带有高速数据传输的标
+      <br/>识信息，通过高速数据传输总线传输命令响应信息。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_28">10、如权利要求9所述的系统，其特征在于，所述控制器模块和智能卡模
+      <br/>块进一步通过控制线相连，
+      <br/>
+				</td></tr><tr><td class="content" id="claim_29">控制器模块，用于判断当前命令信息是否需要进行高速数据传输，如果需
+      <br/>要，设置控制线状态为有效后通过高速数据传输总线向所述智能卡模块发送命
+      <br/>令信息；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_30">智能卡模块，用于监测到控制线状态为有效，从高速数据传输总线接收命
+      <br/>令信息。
+      <br/>
+					
+				</td></tr></table></div><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table><tr><td id="description_title" class="header">说明书</td></tr><tr><td class="content" id="description_invention_title">一种智能卡模块传输信息的方法及系统
+  </td></tr><tr><td class="content" id="description_1">技术领域
+  </td></tr><tr><td class="content" id="description_2">本发明涉及通信信息传输技术，特别涉及一种智能卡模块传输信息的方
+    法及系统。
+    
+				</td></tr><tr><td class="content" id="description_3">背景技术
+  </td></tr><tr><td class="content" id="description_4">智能存储卡(SSC，Smart Storage Chip)是新一代融合了系统芯片(SOC，
+    System-On-Chip)、中央处理器(CPU，Center Process Unit)、片上操作系
+    统、数据存储、安全认证、射频识别(RFID，Radio Frequency Identification)、
+    移动支付等技术的产品，具有大容量数据存储、数据加解密、用户身份认证、
+    远程支付以及现场刷卡等多种功能，广泛应用于金融移动支付、邮电通讯、
+    电信增值业务、广电移动数字电视、医疗、保险等领域。
+    
+				</td></tr><tr><td class="content" id="description_5">智能卡模块是智能存储卡的重要组成部分，通过设置在智能卡模块上
+    的、符合智能卡传输协议规范的智能卡接口与外部如单片机、专用控制器等
+    的控制器模块连接，实现信息(命令和数据)交互。分为接触式智能卡模块
+    和非接触式智能卡模块，其中，非接触式智能卡模块不属于本发明讨论范畴，
+    在此不再赘述。接触式智能卡模块通过符合智能卡接触式传输协议，例如，
+    国际标准化组织(ISO，International Standard Organization)/国际电工委员
+    会(IEC，International Electrotechnics Committee)7816规范的智能卡接口
+    与外部的控制器模块连接。
+    
+				</td></tr><tr><td class="content" id="description_6">图1为智能卡接触式传输协议规范定义的智能卡接口结构示意图，接触
+    式智能卡模块上的智能卡接口包括八个触点，分别为C1～C8触点，C1～C8
+    触点的功能如表1所示，参见图1和表1，其中，
+    
+				</td></tr><tr><td class="content" id="description_7">C1触点，为电源电压(V<sub>cc</sub>)信号触点，向智能卡模块提供工作电源；
+    
+				</td></tr><tr><td class="content" id="description_8">C2触点，为复位(RST，Reset)信号触点，RST复位信号由外部的控
+    制模块提供有效时序；
+    
+				</td></tr><tr><td class="content" id="description_9">C3触点，为时钟(CLK，Clock)信号触点，CLK时钟信号由晶振或设
+    置的软件提供，晶振可以由控制模块的软件或硬件提供；
+    
+				</td></tr><tr><td class="content" id="description_10">C5触点，为接地(GND，Ground)信号触点，用于接地；
+    
+				</td></tr><tr><td class="content" id="description_11">C6触点，为编程电压(V<sub>pp</sub>)信号触点；
+    
+				</td></tr><tr><td class="content" id="description_12">C7触点，为输入/输出(I/O，Input/Output)数据信号触点，与控制器
+    模块实现信息传输，即进行命令传输和数据交换；
+    
+				</td></tr><tr><td class="content" id="description_13">C4、C8触点，为保留(N.C)信号触点。
+    
+				</td></tr><tr><td class="content" id="description_14">表1
+    
+				</td></tr><tr><td class="content" id="description_15">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  触点编号
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  功能
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  触点编号
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  功能
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  C1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  Vcc(电源电压)
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  C5
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  GND(地)
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  C2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  RST(复位信号)
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  C6
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  Vpp(编程电压)
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  C3
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  CLK(时钟)
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  C7
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  I/O(数据)
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  C4
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  保留
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  C8
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  保留
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_16">接触式智能卡模块上的智能卡接口遵循的智能卡接触式传输协议规范
+    为串行异步传输协议，数据在I/O信号线上传输的速率取决于CLK的值，
+    协议定义的典型的I/O信号线上传输速率值为CLK/372比特每秒(bps，bit per
+    second)，最大可以达到CLK/8bps。
+    
+				</td></tr><tr><td class="content" id="description_17">由上述接触式智能卡模块可见，使用符合智能卡传输协议规范的智能卡
+    模块信号线，由于协议本身的限制，信号线的传输速率低。
+    
+				</td></tr><tr><td class="content" id="description_18">以串行异步传输协议为例，设置的CLK信号频率为3.57MHz～4MHz，
+    协议定义的I/O信号线上传输1比特所需的时间为372个CLK周期～8个
+    CLK周期。
+    
+				</td></tr><tr><td class="content" id="description_19">如果CLK信号频率为3.57MHz，传输1比特所需的时间为372个CLK
+    周期，则传输速率值为CLK/372bps，即9600bps；如果CLK信号频率为
+    
+					4MHz，传输1比特所需的时调整到8个CLK周期，则传输速率最大可以为
+    CLK/8bps，即500Kbps。因而，如果用户通过智能存储卡模块应用高速大数
+    据量业务时，无论是传输速率为9600bps还是500Kbps，均不能满足用户日
+    益增长的高速大数据量业务的需求，低下的传输速率不利于用户使用和新移
+    动业务的扩展。
+    
+				</td></tr><tr><td class="content" id="description_20">发明内容
+  </td></tr><tr><td class="content" id="description_21">有鉴于此，本发明的一个主要目的在于提供一种智能卡模块传输信息的
+    方法及系统，提高智能卡模块传输速率、方便用户应用高速大数据量业务。
+    
+				</td></tr><tr><td class="content" id="description_22">为达到上述目的，本发明提供了一种智能卡模块传输信息的方法，预先
+    在智能卡模块上设置高速数据传输总线，该方法还包括：
+    
+				</td></tr><tr><td class="content" id="description_23">根据接收到的来自外部控制器模块发送的命令信息，如果确定出接收到的
+    命令信息来自高速数据传输总线，或者，接收到的命令信息中携带有高速数据
+    传输的标识信息，通过设置的高速数据传输总线传输命令响应信息。
+    
+				</td></tr><tr><td class="content" id="description_24">所述根据接收到的来自外部控制器模块发送的命令信息，确定出接收到的
+    命令信息来自高速数据传输总线具体包括：
+    
+				</td></tr><tr><td class="content" id="description_25">在智能卡模块与控制器模块之间设置控制线；
+    
+				</td></tr><tr><td class="content" id="description_26">控制器模块判断当前命令信息是否需要进行高速数据传输，如果需要，设
+    置控制线状态为有效；
+    
+				</td></tr><tr><td class="content" id="description_27">控制器模块通过高速数据传输总线发送命令信息；
+    
+				</td></tr><tr><td class="content" id="description_28">智能卡模块监测到控制线状态为有效，从高速数据传输总线接收命令信息。
+    
+				</td></tr><tr><td class="content" id="description_29">所述通过设置的高速数据传输总线传输命令响应信息的步骤具体包括：
+    
+				</td></tr><tr><td class="content" id="description_30">智能卡模块向控制器模块返回命令响应信息；
+    
+				</td></tr><tr><td class="content" id="description_31">在返回命令响应信息后，控制器模块判断下一命令信息是否需要进行高速
+    数据传输，如果需要，则继续通过高速数据传输总线发送所述下一命令信息；
+    智能卡模块接收所述下一命令信息，通过高速数据传输总线传输下一命令信息
+    对应的命令响应信息。
+    
+				</td></tr><tr><td class="content" id="description_32">所述方法进一步包括：
+    
+				</td></tr><tr><td class="content" id="description_33">控制器模块确定不需要进行高速数据传输，更新控制线状态，设置控制线
+    状态为无效。
+    
+				</td></tr><tr><td class="content" id="description_34">所述根据接收到的来自外部控制器模块发送的命令信息，确定出接收到的
+    命令信息来自高速数据传输总线具体包括：
+    
+				</td></tr><tr><td class="content" id="description_35">在智能卡模块中设置标识智能卡模块接口传输方式的工作模式寄存器；
+    
+				</td></tr><tr><td class="content" id="description_36">控制器模块判断是否需要进行高速数据传输，如果需要，设置智能卡模块
+    的工作模式寄存器中标识为采用高速数据传输总线进行传输；
+    
+				</td></tr><tr><td class="content" id="description_37">控制器模块通过高速数据传输总线向智能卡模块发送命令信息；
+    
+				</td></tr><tr><td class="content" id="description_38">智能卡模块读取工作模式寄存器中标识，确定标识为采用高速数据传输总
+    线进行传输，通过高速数据传输总线接收命令信息，并通过高速数据传输总线
+    返回命令响应信息。
+    
+				</td></tr><tr><td class="content" id="description_39">所述方法进一步包括：
+    
+				</td></tr><tr><td class="content" id="description_40">控制器模块确定不需要进行高速数据传输，设置智能卡模块的工作模式寄
+    存器中标识为采用智能卡传输协议总线进行传输。
+    
+				</td></tr><tr><td class="content" id="description_41">所述根据接收到的来自外部控制器模块发送的命令信息，确定出接收到的
+    命令信息中携带有高速数据传输的标识信息具体包括：
+    
+				</td></tr><tr><td class="content" id="description_42">在智能卡传输协议定义的命令中，增加使用高速数据传输总线的命令并设
+    置智能卡模块的默认传输总线；
+    
+				</td></tr><tr><td class="content" id="description_43">控制器模块判断是否需要进行高速数据传输，如果需要，通过默认传输总
+    线向智能卡模块发送包含高速数据传输标识信息的命令信息；
+    
+				</td></tr><tr><td class="content" id="description_44">智能卡模块接收包含高速数据传输标识信息的命令信息，切换到高速数据
+    传输总线。
+    
+				</td></tr><tr><td class="content" id="description_45">所述高速数据传输总线包括并行总线、通用异步收发器总线、串行扩展集
+    成电路总线、串行外围设备接口总线和控制器局域网络总线中的一种或任意组
+    合。
+    
+				</td></tr><tr><td class="content" id="description_46">一种智能卡模块传输信息的系统，包括控制器模块和智能卡模块，控制器
+    
+					模块和智能卡模块通过智能卡传输协议总线相连，所述控制器模块和智能卡模
+    块还通过高速数据传输总线相连，
+    
+				</td></tr><tr><td class="content" id="description_47">控制器模块，用于确定命令信息需要进行高速数据传输，通过高速数据总
+    线向智能卡模块发送命令信息，或者，在命令信息中携带高速数据传输的标识
+    信息；
+    
+				</td></tr><tr><td class="content" id="description_48">智能卡模块，用于根据接收到的命令信息，如果确定出接收到的命令信息
+    来自高速数据传输总线，或者，接收到的命令信息中携带有高速数据传输的标
+    识信息，通过高速数据传输总线传输命令响应信息。
+    
+				</td></tr><tr><td class="content" id="description_49">所述控制器模块和智能卡模块进一步通过控制线相连，
+    
+				</td></tr><tr><td class="content" id="description_50">控制器模块，用于判断当前命令信息是否需要进行高速数据传输，如果需
+    要，设置控制线状态为有效后通过高速数据传输总线向所述智能卡模块发送命
+    令信息；
+    
+				</td></tr><tr><td class="content" id="description_51">智能卡模块，用于监测到控制线状态为有效，从高速数据传输总线接收命
+    令信息。
+    
+				</td></tr><tr><td class="content" id="description_52">由上述的技术方案可见，本发明提供的一种智能卡模块传输信息的方法
+    及系统，通过在智能卡模块上设置高速数据传输总线以扩展智能卡模块接
+    口，智能卡模块接收到来自外部控制器模块发送的命令信息，如果确定从高
+    速数据传输总线接收命令信息或命令信息包含高速数据传输的标识信息，通
+    过设置的高速数据传输总线传输命令响应信息，从而提高了智能卡模块传输
+    速率，方便了用户应用高速大数据量业务，有利于用户使用和新业务的扩展，
+    同时也扩展了智能卡模块的应用领域。进一步地，控制器模块可以控制信息
+    传输在智能卡传输协议总线和高速数据传输总线之间进行切换，适应了用户
+    不同需求。
+    
+				</td></tr><tr><td class="content" id="description_53">附图说明
+  </td></tr><tr><td class="content" id="description_54">图1为智能卡接触式传输协议规范定义的智能卡接口结构示意图；
+    
+				</td></tr><tr><td class="content" id="description_55">图2为本发明智能卡模块传输信息的方法流程示意图；
+    
+				</td></tr><tr><td class="content" id="description_56">图3为本发明硬件控制信号指示切换方式流程示意图；
+    
+				</td></tr><tr><td class="content" id="description_57">图4为本发明工作模式寄存器标识切换方式流程示意图；
+    
+				</td></tr><tr><td class="content" id="description_58">图5为本发明命令控制切换方式流程示意图；
+    
+				</td></tr><tr><td class="content" id="description_59">图6为本发明使用并口总线传输智能卡模块信息的流程示意图；
+    
+				</td></tr><tr><td class="content" id="description_60">图7为本发明智能卡模块传输信息的系统结构示意图。
+    
+				</td></tr><tr><td class="content" id="description_61">具体实施方式
+  </td></tr><tr><td class="content" id="description_62">为使本发明的目的、技术方案和优点更加清楚，下面将结合附图及具体
+    实施例对本发明作进一步地详细描述。
+    
+				</td></tr><tr><td class="content" id="description_63">本发明提供的智能卡模块传输信息的方法及系统，通过在智能卡模块上
+    增加高速数据传输总线，控制器模块通过高速数据传输总线控制智能卡模块
+    的操作，使得智能卡模块上命令响应信息的传输速率达到控制器模块可支持
+    的最大值，从而提高了智能卡模块传输速率。
+    
+				</td></tr><tr><td class="content" id="description_64">由于在现有的智能存储卡内部，智能卡模块以裸片(die)的形式存在，
+    对外部的控制器模块没有定义固定接口，因而，可以通过扩展对控制器模块
+    的接口实现高速传输。即在将智能卡模块封装为智能存储卡的形态前，增加
+    高速数据传输总线接口，通过高速数据传输总线以与控制器模块连接。
+    
+				</td></tr><tr><td class="content" id="description_65">高速数据传输总线可以为：并行总线、通用异步收发器(UART，Universal
+    Asynchronous Receiver Transmitter)总线、串行扩展集成电路(I<sup>2</sup>C，
+    Inter-Integrated circuit)总线、串行外围设备接口(SPI，Serial Peripheral
+    Interface)总线、控制器局域网络(CAN，Controller Area Network)总线等，
+    具体采用何种类型的高速数据传输总线取决于与智能卡模块相连接的控制
+    器模块。举例来说，如果控制器模块支持UART总线，则采用UART总线
+    接口连接控制器模块和智能卡模块；如果控制器模块支持SPI总线和并行总
+    线，则采用SPI总线或并行总线接口连接控制器模块和智能卡模块。
+    
+				</td></tr><tr><td class="content" id="description_66">图2为本发明智能卡模块传输信息的方法流程示意图，参见图2，该流
+    程包括：
+    
+				</td></tr><tr><td class="content" id="description_67">步骤201，预先在智能卡模块上设置高速数据传输总线；
+    
+				</td></tr><tr><td class="content" id="description_68">本步骤中，预先扩展智能卡模块接口：通过设置的高速数据传输总线在
+    连接智能卡模块接口和控制器模块，扩展的智能卡模块接口遵循高速数据传
+    输协议，可以是通过改动现有的智能卡传输协议规范来实现，也可以是直接
+    使用高速数据传输协议来实现。
+    
+				</td></tr><tr><td class="content" id="description_69">步骤202，根据接收到的来自外部控制器模块发送的命令信息，如果确
+    定出接收到的命令信息来自高速数据传输总线，或者，接收到的命令信息中
+    携带有高速数据传输的标识信息，通过设置的高速数据传输总线传输命令响
+    应信息。
+    
+				</td></tr><tr><td class="content" id="description_70">本步骤中，由控制器模块根据业务对传输速率的要求确定是否采用高速
+    数据传输总线传输信息，对于传输速率要求不高、小数据量的业务，可以采
+    用智能卡传输协议总线传输信息，而对于传输速率要求高、大数据量的业务，
+    则采用高速数据传输总线传输信息，控制器模块确定采用高速数据传输总线
+    传输信息后，通过切换总线的方式，使智能卡模块通过高速数据传输总线传
+    输命令响应信息。智能卡模块接收到命令信息，确定从高速数据传输总线接
+    收命令信息或命令信息包含高速数据传输的标识信息，由应用程序进行处
+    理，再由传输层在相应总线上与控制器模块进行信息传输。信息传输的流程
+    与现有智能卡模块的操作流程相类似，在此不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_71">至此，该流程结束。
+    
+				</td></tr><tr><td class="content" id="description_72">在智能卡模块设置高速数据传输总线后，在智能卡模块与控制器模块之
+    间，存在智能卡传输协议总线和高速数据传输总线，在通信的过程中，对于
+    传输速率要求不高的业务，可以采用智能卡传输协议总线传输信息，而对于
+    传输速率要求高的业务，则采用高速数据传输总线传输信息，因而，需要涉
+    及到信息传输在智能卡传输协议总线和高速数据传输总线之间切换，本发明
+    提出了三种切换方式：硬件控制信号指示切换方式、工作模式寄存器标识切
+    换方式、以及命令控制切换方式。
+    
+				</td></tr><tr><td class="content" id="description_73">图3为本发明硬件控制信号指示切换方式流程示意图，参见图3，该流
+    
+					程包括：
+    
+				</td></tr><tr><td class="content" id="description_74">步骤301，预先扩展智能卡模块接口，在扩展的智能卡模块接口与控制
+    器模块之间设置高速数据传输总线和控制线；
+    
+				</td></tr><tr><td class="content" id="description_75">本步骤中，扩展的智能卡模块接口遵循高速数据传输协议，控制线连接
+    控制器模块和智能卡模块，控制线的信号由控制器模块控制，采用单向传输
+    模式，由控制器模块输出至智能卡模块，智能卡模块在接收端监测控制线状
+    态。
+    
+				</td></tr><tr><td class="content" id="description_76">设置的高速数据传输总线可以是并行总线、UART总线、I<sup>2</sup>C总线、SPI
+    总线、CAN总线等，具体采用何种类型的高速数据传输总线取决于与智能
+    卡模块相连接的控制器模块所支持的总线类型。
+    
+				</td></tr><tr><td class="content" id="description_77">步骤302，控制器模块判断是否需要进行高速数据传输，如果需要，设
+    置控制线状态为有效；
+    
+				</td></tr><tr><td class="content" id="description_78">本步骤中，预先设置的控制线状态为无效，智能卡模块与控制器模块之
+    间采用现有的智能卡传输协议总线进行信息传输。控制器模块根据业务对传
+    输速率的要求确定是否采用高速数据传输总线传输信息，对于传输速率要求
+    不高、小数据量的业务，确定采用智能卡传输协议总线传输信息，则设置控
+    制线状态为无效，控制器模块与智能卡模块按照现有流程通过智能卡传输协
+    议总线进行信息的传输；对于传输速率要求高、大数据量的业务，则确定采
+    用高速数据传输总线传输信息，设置控制线状态为有效。
+    
+				</td></tr><tr><td class="content" id="description_79">实际应用中，设置控制线的状态可以是通过设置控制线的高、低电平信
+    号来实现，当不需要进行高速数据传输时，设置控制线上信号电平为低电平，
+    标识无效；而当需要进行高速数据传输时，设置控制线上信号电平为高电平，
+    标识有效。当然，也可以是通过其它方式来实现，例如，设置低电平标识控
+    制线状态为有效、高电平标识控制线状态为无效。
+    
+				</td></tr><tr><td class="content" id="description_80">本实施例中，控制器模块也可以设置默认的控制线状态为有效，即不管
+    是否需要进行高速数据传输，都采用高速数据传输总线传输信息，设置控制
+    线状态为有效，以提高传输速率，减少传输时间。
+    
+				</td></tr><tr><td class="content" id="description_81">步骤303，控制器模块通过高速数据传输总线或智能卡传输协议总线发
+    送命令信息；
+    
+				</td></tr><tr><td class="content" id="description_82">本步骤中，控制器模块确定采用采用何种类型的数据传输总线进行信息
+    传输，则在相应的数据传输总线上发送命令信息。
+    
+				</td></tr><tr><td class="content" id="description_83">步骤304，智能卡模块监测到控制线状态为有效或者无效，从相应数据
+    传输总线接收命令信息，按照命令信息执行相应的处理；
+    
+				</td></tr><tr><td class="content" id="description_84">本步骤中，智能卡模块监测控制线电平信号，如果控制线状态为无效，
+    按照现有流程通过智能卡传输协议总线传输命令响应信息；如果控制线状态
+    为有效，则从高速数据传输总线或智能卡传输协议总线接收命令信息，并通
+    过该高速数据传输总线向控制器模块返回命令响应信息。
+    
+				</td></tr><tr><td class="content" id="description_85">实际应用中，智能卡模块在返回命令响应信息之前，进一步判断控制线
+    保持标识高速数据传输总线有效时，通过选择的高速数据传输总线返回命令
+    响应信息给控制器模块。
+    
+				</td></tr><tr><td class="content" id="description_86">步骤305，控制器模块完成跟智能卡模块的交互后，更新控制线状态。
+    
+				</td></tr><tr><td class="content" id="description_87">本步骤中，控制器模块接收智能卡发送的命令响应信息，控制器模块判
+    断如果还需要后续的数据交互操作，则继续用选择的总线进行数据交互，直
+    至交互完成。即，如果确定下一命令信息还需要进行高速数据传输，则继续
+    保持控制线状态为有效，执行高速数据传输，通过高速数据传输总线发送下
+    一命令信息；智能卡模块接收下一命令信息，通过高速数据传输总线传输下
+    一命令信息对应的命令响应信息；如果确定下一命令信息不需要进行高速数
+    据传输，设置控制线状态为无效，控制器模块将控制线状态设置为无效后，
+    控制器模块与智能卡模块通过智能卡传输协议总线进行信息的传输，该传输
+    流程与现有流程相类似，在此不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_88">图4为本发明工作模式寄存器标识切换方式流程示意图，参见图4，该
+    流程包括：
+    
+				</td></tr><tr><td class="content" id="description_89">步骤401，预先扩展智能卡模块接口，在扩展的智能卡模块接口与控制
+    器模块之间设置高速数据传输总线并在智能卡模块中设置标识智能卡模块
+    
+					接口传输方式的工作模式寄存器；
+    
+				</td></tr><tr><td class="content" id="description_90">本步骤中，工作模式寄存器存储智能卡模块传输方式标识，即智能卡模
+    块是采用智能卡传输协议总线进行信息传输的标识还是采用高速数据传输
+    总线进行信息传输的标识，可以默认智能卡模块采用智能卡传输协议总线进
+    行信息传输。
+    
+				</td></tr><tr><td class="content" id="description_91">步骤402，控制器模块判断是否需要进行高速数据传输，如果需要，设
+    置工作模式寄存器中标识为采用高速数据传输总线进行传输；
+    
+				</td></tr><tr><td class="content" id="description_92">本步骤中，控制器模块根据业务对传输速率的要求以及业务数据量确定
+    是否采用高速数据传输总线传输信息，如果传输速率要求不高、业务数据量
+    较小，则按现有流程进行处理；如果传输速率要求高、业务数据量大，则通
+    过高速数据传输总线或智能卡传输协议总线向智能卡模块发送设置工作模
+    式寄存器中标识为采用高速数据传输总线进行信息传输的设置信息，智能卡
+    模块接收并设置工作模式寄存器中标识，向控制器模块返回设置响应信息。
+    
+				</td></tr><tr><td class="content" id="description_93">如果设置响应信息包括设置成功信息，则后续中，控制器模块采用高速
+    数据传输总线进行信息传输。
+    
+				</td></tr><tr><td class="content" id="description_94">如果设置响应信息包括设置失败信息，则后续中，控制器模块采用智能
+    卡传输协议总线进行信息传输。
+    
+				</td></tr><tr><td class="content" id="description_95">实际应用中，可以用一个比特标识智能卡模块传输方式，例如，用“0”
+    标识采用智能卡传输协议总线进行信息传输；用“1”标识采用高速数据传
+    输总线进行信息传输。当然，对于可以采用多种高速数据传输总线进行信息
+    传输的智能卡模块，可以通过增加工作模式寄存器比特位进行相应标识。
+    
+				</td></tr><tr><td class="content" id="description_96">步骤403，控制器模块向智能卡模块发送命令信息；
+    
+				</td></tr><tr><td class="content" id="description_97">本步骤中，控制器模块可以通过高速数据传输总线或智能卡传输协议总
+    线发送命令信息。
+    
+				</td></tr><tr><td class="content" id="description_98">步骤404，智能卡模块读取工作模式寄存器中标识，确定标识为采用高
+    速数据传输总线进行传输，通过高速数据传输总线接收命令信息，并通过高
+    速数据传输总线返回命令响应信息，执行数据传输；
+    
+				</td></tr><tr><td class="content" id="description_99">本步骤中，控制器模块接收完智能卡的应答后，如果还需要后续的数据
+    交互操作，则继续用选择的总线进行数据交互，直至交互完成。
+    
+				</td></tr><tr><td class="content" id="description_100">步骤405，控制器模块完成跟智能卡模块的交互后，更新智能卡模块工
+    作模式寄存器中标识。
+    
+				</td></tr><tr><td class="content" id="description_101">本步骤中，控制器模块接收智能卡模块发送的命令响应信息，判断下一
+    命令信息是否需要进行高速数据传输，如果下一次需要传输的数据需要采用
+    高速数据传输总线进行传输，则重新执行步骤403；如果下一次需要传输的
+    数据不需要采用高速数据传输总线进行传输，或，没有数据需要进行传输，
+    则通过与智能卡模块的交互设置智能卡模块工作模式寄存器中标识为采用
+    智能卡传输协议总线进行信息传输。
+    
+				</td></tr><tr><td class="content" id="description_102">图5为本发明命令控制切换方式流程示意图，参见图5，该流程包括：
+    
+				</td></tr><tr><td class="content" id="description_103">步骤501，预先扩展智能卡模块接口：在扩展的智能卡模块接口与控制
+    器模块之间设置高速数据传输总线，并在智能卡传输协议定义的命令中，增
+    加使用高速数据传输总线的命令并设置智能卡模块的默认传输总线；
+    
+				</td></tr><tr><td class="content" id="description_104">本步骤中，设置的智能卡模块默认传输总线可以是智能卡传输协议总
+    线，也可以是高速数据传输总线。本实施例中，设置的智能卡模块默认传输
+    总线为智能卡传输协议总线。
+    
+				</td></tr><tr><td class="content" id="description_105">步骤502，控制器模块判断是否需要进行高速数据传输，如果需要，向
+    智能卡模块发送包含高速数据传输标识信息的命令信息；
+    
+				</td></tr><tr><td class="content" id="description_106">本步骤中，控制器模块判断是否需要进行高速数据传输，如果不需要，
+    通过智能卡传输协议总线进行信息传输；如果需要，控制器模块可以通过默
+    认数据传输总线发送包含高速数据传输标识信息的命令信息。本实施例中，
+    控制器模块通过智能卡传输协议总线发送包含高速数据传输标识信息的命
+    令信息。
+    
+				</td></tr><tr><td class="content" id="description_107">步骤503，智能卡模块接收包含高速数据传输标识信息的命令信息，通
+    过高速数据传输总线返回命令响应信息，执行数据传输；
+    
+				</td></tr><tr><td class="content" id="description_108">本步骤与步骤404相类似。
+    
+				</td></tr><tr><td class="content" id="description_109">步骤504，控制器模块完成跟智能卡模块的交互后，通过命令更新智能
+    卡模块传输模式。
+    
+				</td></tr><tr><td class="content" id="description_110">本步骤中，控制器模块完成跟智能卡模块的交互后，判断下一次需要传
+    输的数据，如果需要采用高速数据传输总线进行传输，则继续通过高速数据
+    传输总线执行数据传输；如果下一次需要传输的数据不需要采用高速数据传
+    输总线进行传输，或，不需要进行数据传输，则通过高速数据传输总线向智
+    能卡模块发送返回智能卡模块默认传输总线命令，智能卡模块接收返回智能
+    卡模块默认传输总线命令，重新使用智能卡模块默认传输总线进行数据传
+    输。
+    
+				</td></tr><tr><td class="content" id="description_111">上述实例中，是以数据阶段性处理为单位来描述切换过程，当然也可以
+    以命令和响应为单位或单独以命令或响应为单位来描述切换过程，以硬件控
+    制信号指示切换方式为例，控制线的设置可以在一次数据处理前设置，在整
+    个数据处理过程中不再切换；也可以在每个命令-应答对的前后切换；还可
+    以在每次命令、应答的发送前后切换。工作模式寄存器标识切换方式和命令
+    控制切换方式与此相类似。在此不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_112">实际应用中，可以是将硬件控制信号指示切换方式、工作模式寄存器标
+    识切换方式、以及命令控制切换方式以任意方式组合应用。
+    
+				</td></tr><tr><td class="content" id="description_113">以下以与安全数字卡(SD，Secure Digital Card)接口的条件接收卡相
+    连接的智能卡模块为例，对本发明智能卡模块传输信息的方法及系统作进一
+    步的说明。
+    
+				</td></tr><tr><td class="content" id="description_114">智能卡模块以die的形式封装于智能存储卡片内，将扩展的智能卡模块
+    接口设置的并行总线分别与SD控制器模块带有的8根普通I/O线相连接，
+    并设置状态信号线用于切换智能卡模块传输总线。
+    
+				</td></tr><tr><td class="content" id="description_115">图6为本发明使用并口总线传输智能卡模块信息的流程示意图，参见图
+    6，该流程包括：
+    
+				</td></tr><tr><td class="content" id="description_116">步骤601，预先扩展智能卡模块接口：在扩展的智能卡模块接口与控制
+    器模块之间设置高速数据传输总线，并在智能卡传输协议定义的命令中，增
+    
+					加使用高速数据传输总线的命令并设置智能卡模块的默认传输总线；
+    
+				</td></tr><tr><td class="content" id="description_117">本步骤中，在ISO/IEC7816-4协议中增加使用高速数据传输总线的命
+    令。
+    
+				</td></tr><tr><td class="content" id="description_118">步骤602，在智能卡模块和控制器模块之间设置状态信号线；
+    
+				</td></tr><tr><td class="content" id="description_119">本步骤中，状态信号线包括四种信号，这四种信号分别为：Int_IN信号、
+    IN_Ready信号、Int_OUT信号、以及OUT_Ready信号，用于在切换到并行
+    总线的时候控制命令和数据的收发。并将I/O数据线的低2位做为
+    ISO/IEC7816定义的卡的I/O(CIO，Card I/O)信号线和卡的复位(CRST，
+    Card Reset)信号线，其它I/O数据线模拟UART总线或I<sup>2</sup>C总线，CLK信
+    号线传输的CLK保留ISO/IEC7816定义的时钟。正常使用时，控制器模块
+    与智能卡模块通过ISO/IEC7816-3协议通信。
+    
+				</td></tr><tr><td class="content" id="description_120">步骤603，控制器模块判断是否需要进行高速数据传输，如果需要，向
+    智能卡模块发送命令信息，智能卡模块返回命令响应信息；
+    
+				</td></tr><tr><td class="content" id="description_121">本步骤中，当智能卡模块应用于数字电视条件接收卡时，控制器模块判
+    断数据是否需要控制字(CW，Control Word)控制，或，是否存在解扰的大
+    容量数据，如果是，向智能卡模块发送包含使用高速数据传输总线的命令信
+    息。
+    
+				</td></tr><tr><td class="content" id="description_122">向智能卡模块发送命令信息，智能卡模块返回命令响应信息具体包括：
+    控制器模块发送状态信号线Int_IN信号有效信息，通知智能卡模块有命令信
+    息发送；智能卡模块监测到状态信号线Int_IN信号有效信息，则响应
+    IN_Ready信号信息；控制器模块通过I/O数据线向智能卡模块发送命令信
+    息，如果控制器模块需要智能卡模块返回命令响应信息，发送Int_OUT信号
+    有效信息；智能卡模块接收到命令信息和Int_OUT信号有效信息，进行相应
+    处理，准备好返回命令响应信息，则向控制器模块发送OUT_Ready信号有
+    效信息，同时通过I/O数据线向控制器发送命令响应信息。
+    
+				</td></tr><tr><td class="content" id="description_123">步骤604，智能卡模块与控制器模块通过并行总线执行数据传输；
+    
+				</td></tr><tr><td class="content" id="description_124">本步骤中，并行总线为除ISO/IEC7816定义的CIO信号线和CRST信
+    
+					号线外的其它I/O数据线。
+    
+				</td></tr><tr><td class="content" id="description_125">步骤605，数据传输完毕后，控制器模块恢复对ISO/IEC7816总线的使
+    用权，即通过默认的智能卡传输协议总线进行后续数据传输。
+    
+				</td></tr><tr><td class="content" id="description_126">本实施例中，由于采用并行总线传输数据，其中并行总线一次可以传输
+    8bit或者16bit，其传输速率可达10Mbps，大大高于智能卡传输协议
+    (ISO/IEC7816-3协议)定义的CIO的速率，极大地提高了智能卡模块传输
+    速率，方便了用户应用高速大数据量业务，本实施例已在数字电视领域条件
+    接收卡中取得了良好的效果。
+    
+				</td></tr><tr><td class="content" id="description_127">图7为本发明智能卡模块传输信息的系统结构示意图，参见图7，该系
+    统包括控制器模块701和智能卡模块702，控制器模块701和智能卡模块702
+    通过智能卡传输协议总线相连，控制器模块701和智能卡模块702还通过高
+    速数据传输总线相连，
+    
+				</td></tr><tr><td class="content" id="description_128">控制器模块701，用于确定命令信息需要进行高速数据传输，通过高速数
+    据总线向智能卡模块702发送命令信息，或者，在命令信息中携带高速数据传
+    输的标识信息；
+    
+				</td></tr><tr><td class="content" id="description_129">智能卡模块702，用于根据接收到的命令信息，如果确定出接收到的命令
+    信息来自高速数据传输总线，或者，接收到的命令信息中携带有高速数据传输
+    的标识信息，通过高速数据传输总线传输命令响应信息。
+    
+				</td></tr><tr><td class="content" id="description_130">实际应用中，控制器模块701和智能卡模块702进一步通过控制线相连，
+    
+				</td></tr><tr><td class="content" id="description_131">控制器模块701，用于判断当前命令信息是否需要进行高速数据传输，如
+    果需要，设置控制线状态为有效后通过高速数据传输总线向智能卡模块702发
+    送命令信息；
+    
+				</td></tr><tr><td class="content" id="description_132">智能卡模块702，用于监测到控制线状态为有效，从高速数据传输总线
+    接收命令信息。
+    
+				</td></tr><tr><td class="content" id="description_133">实际应用中，也可以在智能卡模块中设置标识智能卡模块接口传输方式
+    的工作模式寄存器、以及在智能卡传输协议定义的命令中，增加使用高速数
+    据传输总线的命令并设置智能卡模块的默认传输总线，在此不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_134">由上述实施例可见，本发明提供的一种智能卡模块传输信息的方法及系
+    统，通过在智能卡模块上设置高速数据传输总线以扩展智能卡模块接口，控
+    制器模块根据业务对传输速率的要求确定采用高速数据传输总线传输信息
+    时，通过设置的高速数据传输总线控制智能卡模块的操作，使得智能卡模块
+    上命令或者数据的传输速率达到控制器模块可支持的最大值，从而提高了智
+    能卡模块传输速率，方便了用户应用高速大数据量业务，有利于用户使用和
+    新业务的扩展，同时也扩展了智能卡模块的应用领域。进一步地，控制器模
+    块可以根据业务传输速率要求以及业务数据量大小，控制信息传输在智能卡
+    传输协议总线和高速数据传输总线之间进行切换，适应了用户不同需求。
+    
+				</td></tr><tr><td class="content" id="description_135">以上举较佳实施例，对本发明的目的、技术方案和优点进行了进一步详
+    细说明，所应理解的是，以上所述仅为本发明的较佳实施例而已，并不用以
+    限制本发明，凡在本发明的精神和原则之内，所作的任何修改、等同替换、
+    改进等，均应包含在本发明的保护范围之内。
+    
+				</td></tr></table></div></body></html>

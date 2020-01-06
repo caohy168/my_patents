@@ -1,0 +1,366 @@
+<html><head><title>全文文本(Fulltext)</title><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><style>div.fullText table {width: 100%;text-indent: 1px;} 
+ div.fullText table td.header {font-weight: bold;text-align: center;font-family: '宋体';font-size: 16px;line-height:20px;color: #000000;padding: 5px;}div.fullText table td.content {padding: 1px;text-align: left;vertical-align: top;width: 100%;font-family: '宋体';font-size: 14px;line-height:20px;color: #000000;}</style></head><body><?xml version="1.0" encoding="UTF-8"?><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table class="fullText"><tr><td id="claim_title" class="header">权利要求书</td></tr><tr><td class="content" id="claim_1">1、一种存储卡总线操作方法，其特征在于，该方法包括以下步骤：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_2">通过命令总线发送当前传输命令消息之后，开始在数据总线传输当前传输
+      <br/>命令消息对应的数据；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_3">如果确定当前传输命令消息对应的数据所需传输时间大于预设命令消息传
+      <br/>输时间，则在数据总线传输当前传输命令消息对应的数据的过程中，通过命令
+      <br/>总线发送下一传输命令消息；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_4">在当前传输命令消息对应的数据传输完毕后，传输下一传输命令消息对应
+      <br/>的数据。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_5">2、如权利要求1所述的方法，其特征在于，所述当前传输命令消息对应的
+      <br/>数据传输完毕包括：通过命令总线向存储卡发送停止命令消息；所述存储卡接
+      <br/>收停止命令消息，停止当前传输命令消息对应的数据的传送；所述存储卡通过
+      <br/>命令总线返回所述停止命令消息的响应；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_6">所述命令消息所需传输时间包括：传输命令消息所需的传输时间、以及停
+      <br/>止命令消息所需的传输时间。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_7">3、如权利要求1或2所述的方法，其特征在于，所述下一传输命令消息为
+      <br/>读操作命令消息，所述传输下一传输命令消息对应的数据包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_8">在所述存储卡返回所述读操作命令消息的响应预设的时间后，所述存储卡
+      <br/>通过数据总线传输所述读操作命令消息对应的数据。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_9">4、如权利要求1或2所述的方法，其特征在于，所述下一传输命令消息为
+      <br/>写操作命令消息，所述传输下一传输命令消息对应的数据包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_10">在接收到所述存储卡返回的所述写操作命令消息的响应后，通过数据总线
+      <br/>向所述存储卡传输所述写操作命令消息对应的数据。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_11">5、如权利要求1或2所述的方法，其特征在于，所述传输的数据为数据流
+      <br/>或数据块。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_12">6、如权利要求1或2所述的方法，其特征在于，所述确定当前传输命令消
+      <br/>
+					息对应的数据所需传输时间大于命令消息所需传输时间为：确定当前传输命令
+      <br/>消息对应的数据的长度大于命令消息长度。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_13">7、如权利要求1或2所述的方法，其特征在于，所述开始在数据总线传输
+      <br/>当前传输命令消息对应的数据之前包括：存储卡返回所述当前传输命令消息的
+      <br/>响应。
+      <br/>
+					
+				</td></tr></table></div><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table><tr><td id="description_title" class="header">说明书</td></tr><tr><td class="content" id="description_invention_title">一种存储卡总线操作方法
+  </td></tr><tr><td class="content" id="description_1">技术领域
+  </td></tr><tr><td class="content" id="description_2">本发明涉及总线操作技术，特别涉及一种存储卡总线操作方法。
+    
+				</td></tr><tr><td class="content" id="description_3">背景技术
+  </td></tr><tr><td class="content" id="description_4">随着信息技术的发展，存储卡已广泛地应用于电脑、摄像机、数码相机、
+    自动柜员机等各种信息设备上。
+    
+				</td></tr><tr><td class="content" id="description_5">图1为现有技术中存储卡的结构示意图。参见图1，该存储卡包括存储
+    卡接口、存储卡控制器、存储区域及寄存器文件表，其中，
+    
+				</td></tr><tr><td class="content" id="description_6">存储卡接口，为存储卡规范所规定的卡物理接口，如安全数字卡(SD，
+    Secure Digital Card)接口、多媒体卡(MMC，Multi Media Card)接口等，
+    用于通过相应的物理接口与外部设备进行交互；
+    
+				</td></tr><tr><td class="content" id="description_7">存储卡控制器，用于存储卡的卡端协议解析以及存储区域的访问与管
+    理，通过存储区域访问总线与存储区域相连，通过内部总线与寄存器文件表
+    相连，通过存储卡数据总线与存储卡接口相连；
+    
+				</td></tr><tr><td class="content" id="description_8">存储区域，为存储卡存储数据的物理介质，可以根据存储卡的使用环境
+    进行设置，如，可以为闪存(FLASH)、随机只读存储器(ROM，Read Only
+    Memory)等；
+    
+				</td></tr><tr><td class="content" id="description_9">寄存器文件表，用于存储卡认证号、卡相对地址、总线驱动状态、卡操
+    作环境、卡版本信息等内容，存储卡数据总线的规定可参考各存储卡协议
+    (SD协议、MMC协议等)，在此不再赘述；存储区域访问总线根据存储介
+    质的不同而不同，举例来说，如果存储介质为FLASH，则存储区域访问总
+    线为FLASH操作总线；
+    
+				</td></tr><tr><td class="content" id="description_10">存储卡内的存储卡控制器、存储区域及寄存器文件表的电源均由存储卡
+    
+					接口提供。
+    
+				</td></tr><tr><td class="content" id="description_11">图2为现有技术中存储卡处理流程示意图。参见图2，以从存储卡中读
+    取数据为例，该流程包括：
+    
+				</td></tr><tr><td class="content" id="description_12">步骤201，存储卡上电复位，主机对存储卡进行初始化；
+    
+				</td></tr><tr><td class="content" id="description_13">本步骤中，在存储卡上电复位后，主机通过特殊的基于消息的多媒体卡
+    总线协议对存储卡进行初始化。
+    
+				</td></tr><tr><td class="content" id="description_14">步骤202，主机通过命令(CMD，Command)总线向存储卡发送读操作
+    命令消息；
+    
+				</td></tr><tr><td class="content" id="description_15">实际应用中，命令消息是一个操作开始的信号，可以包括传输命令消息、
+    停止命令消息以及其相应的响应中的一个或多个消息，其中，传输命令消息
+    又可分为读操作命令消息、写操作命令消息等。由于本流程是以从存储卡读
+    数据为例，因此本步骤中发送的命令消息为读操作命令消息。
+    
+				</td></tr><tr><td class="content" id="description_16">步骤203，存储卡通过CMD总线向主机返回响应消息；
+    
+				</td></tr><tr><td class="content" id="description_17">本步骤中，响应消息是作为对前面接收到的命令消息的回应，响应消息
+    在CMD总线上采用串行传输。
+    
+				</td></tr><tr><td class="content" id="description_18">步骤204，在存储卡向主机返回响应消息后的规定时间内，存储卡通过
+    数据(DAT，Data)总线向主机传送数据。
+    
+				</td></tr><tr><td class="content" id="description_19">实际应用中，如果是对存储卡进行写操作，则本步骤中应当是由主机通
+    过数据总线向存储卡传输数据。
+    
+				</td></tr><tr><td class="content" id="description_20">至此，本流程结束。
+    
+				</td></tr><tr><td class="content" id="description_21">在现有技术中，用于数据传输的数据总线宽度可以是1bit(DAT0)、
+    4bit(DAT0～DAT3)或者8bit(DAT0～DAT7)；一个数据传输是一次总
+    线操作，包括上述的命令消息、响应消息及数据信号。DAT0～DAT7和CMD
+    总线上的比特和主机时钟同步传输。
+    
+				</td></tr><tr><td class="content" id="description_22">总线操作的数据传输命令有两种类型：串行命令类型和面向块的类型。
+    串行命令类型可以将命令消息开销降到最小，包括串行读操作和串行写操
+    作；面向块的类型又可以包括块读操作和块写操作。其中，只在1bit总线模
+    
+					式中支持串行命令；对于串行命令类型，主机通过停止命令终止数据流的传
+    输。
+    
+				</td></tr><tr><td class="content" id="description_23">图3为现有技术串行读操作的时序结构示意图，参见图3，在存储卡返
+    回响应消息后，存储卡开始在数据总线上向主机发送数据流，主机根据数据
+    流长度或传输时间，控制并确定发送停止命令消息，存储卡接收到停止命令
+    消息后，停止数据传输操作。
+    
+				</td></tr><tr><td class="content" id="description_24">图4为现有技术串行写操作的时序结构示意图，参见图4，与图3不同
+    的是，图4中，需要在主机接收到存储卡返回的响应消息后，才能开始进行
+    数据流的写操作，并在数据总线写操作期间，如果写入存储卡的数据缓存区
+    已满，通过忙信令机制，即将数据线保持低电平，表示数据线处于“忙”状
+    态，不再接收新的数据流。
+    
+				</td></tr><tr><td class="content" id="description_25">对于面向块的类型，主机可以通过停止命令消息终止数据流的传输，也
+    可以在数据流传输完毕后直接发送下一操作命令消息。
+    
+				</td></tr><tr><td class="content" id="description_26">图5为现有技术块读操作的时序结构示意图，参见图5，与串行读操作
+    相类似，不同的是，数据采用数据块的结构形式传输，数据块通过循环冗余
+    校验码(CRC，Cyclic Redundancy Check)位校验来验证是否传送成功。数
+    据块可以在DAT0～DAT7上传输。
+    
+				</td></tr><tr><td class="content" id="description_27">图6为现有技术块写操作的时序结构示意图，参见图6，与串行写操作
+    相类似，不同的是，数据采用数据块的结构形式传输，数据块通过CRC位
+    校验来验证是否传送成功。数据块可以在DAT0～DAT7上传输。
+    
+				</td></tr><tr><td class="content" id="description_28">也就是说，在现有技术中，主机通过命令总线发送当前传输命令消息之
+    后，才能够与存储卡在数据总线传输当前传输命令消息对应的数据；且只有
+    在当前传输命令消息对应的数据传输完毕后，主机才可以向存储卡发送下一
+    个传输命令消息。而在当前传输命令消息对应的数据传输过程中，命令总线
+    则处于空闲状态；在当前传输命令消息的传输过程中，数据总线又处于空闲
+    状态，从而导致存储卡总线利用率低。
+    
+				</td></tr><tr><td class="content" id="description_29">发明内容
+  </td></tr><tr><td class="content" id="description_30">有鉴于此，本发明的一个主要目的在于提供一种存储卡总线操作方法，
+    提高存储卡总线的利用率。
+    
+				</td></tr><tr><td class="content" id="description_31">为达到上述目的，本发明提供了一种存储卡总线操作方法，该方法包括
+    以下步骤：
+    
+				</td></tr><tr><td class="content" id="description_32">一种存储卡总线操作方法，该方法包括以下步骤：
+    
+				</td></tr><tr><td class="content" id="description_33">通过命令总线发送当前传输命令消息之后，开始在数据总线传输当前传输
+    命令消息对应的数据；
+    
+				</td></tr><tr><td class="content" id="description_34">如果确定当前传输命令消息对应的数据所需传输时间大于预设命令消息传
+    输时间，则在数据总线传输当前传输命令消息对应的数据的过程中，通过命令
+    总线发送下一传输命令消息；
+    
+				</td></tr><tr><td class="content" id="description_35">在当前传输命令消息对应的数据传输完毕后，传输下一传输命令消息对应
+    的数据。
+    
+				</td></tr><tr><td class="content" id="description_36">较佳地，所述当前传输命令消息对应的数据传输完毕包括：通过命令总线
+    向存储卡发送停止命令消息；所述存储卡接收停止命令消息，停止当前传输命
+    令消息对应的数据的传送；所述存储卡通过命令总线返回所述停止命令消息的
+    响应；
+    
+				</td></tr><tr><td class="content" id="description_37">所述命令消息所需传输时间包括：传输命令消息所需的传输时间、以及停
+    止命令消息所需的传输时间。
+    
+				</td></tr><tr><td class="content" id="description_38">较佳地，所述下一传输命令消息为读操作命令消息，所述传输下一传输命
+    令消息对应的数据包括：
+    
+				</td></tr><tr><td class="content" id="description_39">在所述存储卡返回所述读操作命令消息的响应预设的时间后，所述存储卡
+    通过数据总线传输所述读操作命令消息对应的数据。
+    
+				</td></tr><tr><td class="content" id="description_40">较佳地，所述下一传输命令消息为写操作命令消息，所述传输下一传输命
+    令消息对应的数据包括：
+    
+				</td></tr><tr><td class="content" id="description_41">在接收到所述存储卡返回的所述写操作命令消息的响应后，通过数据总线
+    
+					向所述存储卡传输所述写操作命令消息对应的数据。
+    
+				</td></tr><tr><td class="content" id="description_42">较佳地，所述传输的数据为数据流或数据块。
+    
+				</td></tr><tr><td class="content" id="description_43">较佳地，所述确定当前传输命令消息对应的数据所需传输时间大于命令消
+    息所需传输时间为：确定当前传输命令消息对应的数据的长度大于命令消息长
+    度。
+    
+				</td></tr><tr><td class="content" id="description_44">较佳地，所述开始在数据总线传输当前传输命令消息对应的数据之前包
+    括：存储卡返回所述当前传输命令消息的响应。
+    
+				</td></tr><tr><td class="content" id="description_45">由上述的技术方案可见，本发明提供的存储卡总线操作方法，通过将存
+    储卡总线操作的各阶段设计为可以分割的，在命令总线空闲的时候插入下一
+    传输命令消息，使得一条命令总线上并发存在着多个传输命令，因而，当数
+    据总线传输完当前传输命令消息对应的数据后，数据总线就可以直接传输下
+    一传输命令消息对应的数据，而无需再进行等待，从而提高了总线的利用率
+    以及存储卡总线的实际性能。
+    
+				</td></tr><tr><td class="content" id="description_46">附图说明
+  </td></tr><tr><td class="content" id="description_47">图1为现有技术中存储卡的结构示意图；
+    
+				</td></tr><tr><td class="content" id="description_48">图2为现有技术中存储卡处理流程示意图；
+    
+				</td></tr><tr><td class="content" id="description_49">图3为现有技术串行读操作的时序结构示意图；
+    
+				</td></tr><tr><td class="content" id="description_50">图4为现有技术串行写操作的时序结构示意图；
+    
+				</td></tr><tr><td class="content" id="description_51">图5为现有技术块读操作的时序结构示意图；
+    
+				</td></tr><tr><td class="content" id="description_52">图6为现有技术块写操作的时序结构示意图；
+    
+				</td></tr><tr><td class="content" id="description_53">图7为本发明存储卡串行读操作的时序结构示意图；
+    
+				</td></tr><tr><td class="content" id="description_54">图8为本发明存储卡串行读操作方法流程示意图；
+    
+				</td></tr><tr><td class="content" id="description_55">图9为本发明存储卡串行写操作的时序结构示意图；
+    
+				</td></tr><tr><td class="content" id="description_56">图10为本发明存储卡串行写操作方法流程示意图；
+    
+				</td></tr><tr><td class="content" id="description_57">图11为本发明存储卡块读操作的时序结构示意图；
+    
+				</td></tr><tr><td class="content" id="description_58">图12为本发明存储卡块读操作方法流程示意图；
+    
+				</td></tr><tr><td class="content" id="description_59">图13为本发明存储卡块写操作的时序结构示意图；
+    
+				</td></tr><tr><td class="content" id="description_60">图14为本发明存储卡块写操作方法流程示意图。
+    
+				</td></tr><tr><td class="content" id="description_61">具体实施方式
+  </td></tr><tr><td class="content" id="description_62">为使本发明的目的、技术方案和优点更加清楚，下面将结合附图及具体
+    实施例对本发明作进一步地详细描述。
+    
+				</td></tr><tr><td class="content" id="description_63">本发明提供的存储卡总线操作方法，通过在命令总线空闲的时候插入下
+    一传输命令消息，使得一条命令总线上并发存在着多个操作，当数据总线传
+    输完当前传输命令消息对应的数据后，数据总线就可以直接传输下一传输命
+    令消息对应的数据。
+    
+				</td></tr><tr><td class="content" id="description_64">现有技术中，只在1bit总线模式中支持串行命令，因此，实际应用中，
+    为了与现有版本兼容，也可以将本发明串行读、写操作方法应用于1bit总线
+    模式中。下面分别进行描述。
+    
+				</td></tr><tr><td class="content" id="description_65">图7为本发明存储卡串行读操作的时序结构示意图。图8为本发明存储
+    卡串行读操作方法流程示意图，如图7和图8所示，以从存储卡中读取数据
+    为例，该方法包括：
+    
+				</td></tr><tr><td class="content" id="description_66">步骤801，存储卡上电复位，主机对存储卡进行初始化；
+    
+				</td></tr><tr><td class="content" id="description_67">本步骤中，在存储卡上电复位后，主机通过特殊的基于消息的多媒体卡
+    总线协议对存储卡进行初始化。
+    
+				</td></tr><tr><td class="content" id="description_68">步骤802，主机向存储卡发送读操作命令消息1；
+    
+				</td></tr><tr><td class="content" id="description_69">本步骤中，如果读操作命令消息1为串行读操作命令消息1，则初始化
+    一个连续的数据流，只有在CMD总线上出现一个停止命令消息时才终止。
+    
+				</td></tr><tr><td class="content" id="description_70">步骤803，存储卡向主机返回读操作命令消息1对应的响应消息1；
+    
+				</td></tr><tr><td class="content" id="description_71">步骤804，存储卡向主机传送读操作命令消息1对应的数据流1；
+    
+				</td></tr><tr><td class="content" id="description_72">本步骤中，在存储卡向主机返回响应消息1后的规定时间内，存储卡通
+    过数据总线向主机传输数据流1。
+    
+				</td></tr><tr><td class="content" id="description_73">步骤805，主机判断出读操作命令消息1对应的数据流1所需的传输时
+    
+					间大于读操作命令消息2与停止命令消息传输时间之和，且此时的命令总线
+    处于空闲状态，因而通过命令总线发送读操作命令消息2；
+    
+				</td></tr><tr><td class="content" id="description_74">本步骤中，主机获取传输的数据流1的长度或传输时间，与现有技术相
+    类似，在此不再赘述。主机判断传输的数据流1的长度或传输时间是否大于
+    相应的下一个传输命令消息(读操作命令消息2)与停止命令消息的长度或
+    传输时间之和，如果大于，表明在数据流传输时，空闲的命令总线上可以插
+    入读操作命令消息2。
+    
+				</td></tr><tr><td class="content" id="description_75">实际应用中，对于面向块的类型，主机可以通过停止命令消息终止数据
+    流的传输，则主机判断传输的数据流1的长度或传输时间是否大于相应的下
+    一个传输命令消息(读操作命令消息2)与停止命令消息的长度或传输时间
+    之和；也可以在数据流传输完毕后直接发送下一操作命令消息，则主机判断
+    传输的数据流1的长度或传输时间是否大于相应的下一个传输命令消息(读
+    操作命令消息2)的长度或传输时间即可。
+    
+				</td></tr><tr><td class="content" id="description_76">实际应用中，步骤805也可以与步骤804同时执行。
+    
+				</td></tr><tr><td class="content" id="description_77">步骤806，主机控制并确定向存储卡发送停止命令消息，存储卡接收停
+    止命令消息，停止数据流1的传送，向主机返回停止命令消息对应的响应消
+    息；
+    
+				</td></tr><tr><td class="content" id="description_78">本步骤中，主机控制并确定向存储卡发送停止命令消息，与现有技术相
+    类似，在此不再赘述。向主机返回的响应消息为对停止命令消息的响应。
+    
+				</td></tr><tr><td class="content" id="description_79">步骤807，存储卡返回读操作命令消息2对应的响应消息2，向主机传
+    输数据流2。
+    
+				</td></tr><tr><td class="content" id="description_80">本步骤中，在存储卡向主机返回响应消息2后的规定时间内，存储卡通
+    过数据总线向主机传输数据流2。在主机传输数据流2的同时或之后，主机
+    根据传输的数据流2的长度或传输时间，判断是否大于相应的下一个传输命
+    令消息(读操作命令消息3)与停止命令消息的长度或传输时间之和，如果
+    大于，在空闲的命令总线上插入读操作命令消息3，后续处理流程与步骤806
+    和步骤807相类似，在此不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_81">图9为本发明存储卡串行写操作的时序结构示意图。
+    
+				</td></tr><tr><td class="content" id="description_82">图10为本发明存储卡串行写操作方法流程示意图，如图9和图10所示，
+    与图7和图8不同的是，图9和图10中，需要在主机接收到存储卡返回的
+    响应消息后，才能开始进行数据流的写操作，并在数据总线写操作期间，如
+    果写入存储卡的数据缓存区已满，通过忙信令机制，将相应数据线保持低电
+    平，表示该数据线处于“忙”状态，不再接收新的数据流。实际应用中，也
+    可以是主机发送停止命令消息后，停止当前传输命令消息对应的数据的传
+    送。
+    
+				</td></tr><tr><td class="content" id="description_83">图11为本发明存储卡块读操作的时序结构示意图。图12为本发明存储
+    卡块读操作方法流程示意图，如图11和图12所示，以从存储卡中读取数据
+    为例，该方法包括：
+    
+				</td></tr><tr><td class="content" id="description_84">步骤1201～步骤1204，同步骤801～步骤804，在此不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_85">步骤1205，主机判断传输的数据块1的长度或传输时间是否大于下一
+    条传输命令消息相应的长度或传输时间，如果大于，且此时的命令总线处于
+    空闲状态，因而通过命令总线发送读操作命令消息2；
+    
+				</td></tr><tr><td class="content" id="description_86">本步骤中，主机也可以通过向存储卡发送停止命令消息来终止数据块传
+    输，在该情况下，主机判断传输的数据块1的长度或传输时间是否大于相应
+    的下一个传输命令消息(读操作命令消息2)与停止命令消息的长度或传输
+    时间之和，如果大于，表明在数据块传输时，空闲的命令总线上可以插入读
+    操作命令消息2。
+    
+				</td></tr><tr><td class="content" id="description_87">数据块1也可以包括多个数据子块，如数据子块1-1，数据子块1-2等。
+    
+				</td></tr><tr><td class="content" id="description_88">实际应用中，当主机插入有新的存储卡设备时，如果新插入的存储卡操
+    作的优先级高于当前执行操作的存储卡的优先级，则主机也可以在空闲的命
+    令总线上插入传输命令消息2，传输命令消息2对应优先级高的存储卡。
+    
+				</td></tr><tr><td class="content" id="description_89">步骤1206～步骤1207，同步骤806～步骤807，在此不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_90">图13为本发明存储卡块写操作的时序结构示意图。
+    
+				</td></tr><tr><td class="content" id="description_91">图14为本发明存储卡块写操作方法流程示意图，如图11和图12所示，
+    
+					相类似地，与图11和图12不同的是，需要在主机接收到存储卡返回的响应
+    消息后，才能开始进行数据块的写操作，并在数据总线写操作期间，如果写
+    入存储卡的数据缓存区已满，通过忙信令机制，将相应数据线保持低电平，
+    表示该数据线处于“忙”状态，不再接收新的数据块。
+    
+				</td></tr><tr><td class="content" id="description_92">由上述实施例可见，本发明提供的存储卡总线操作方法，如果采用串行
+    命令类型进行传输，主机确定待传输数据的长度大于下一个传输命令消息与
+    停止命令的长度之和，则在空闲的命令总线上插入该下一个传输命令消息；
+    如果采用面向块的类型进行传输，主机确定待传输数据的长度大于下一个传
+    输命令消息长度，或下一个传输命令消息与停止命令消息的长度之和，则在
+    空闲的命令总线上插入该下一个传输命令。因而，当数据总线传输完当前传
+    输命令消息对应的数据后，在命令总线上返回该下一个传输命令相应的响
+    应，数据总线就可以直接传输该下一传输命令消息对应的数据，减少了数据
+    总线传输完当前数据后，需要再等待命令总线传输的命令消息，从而减少了
+    等待时间，提高了总线的利用率以及存储卡总线的实际性能。
+    
+				</td></tr><tr><td class="content" id="description_93">以上举较佳实施例，对本发明的目的、技术方案和优点进行了进一步详
+    细说明，所应理解的是，以上所述仅为本发明的较佳实施例而已，并不用以
+    限制本发明，凡在本发明的精神和原则之内，所作的任何修改、等同替换、
+    改进等，均应包含在本发明的保护范围之内。
+    
+				</td></tr></table></div></body></html>

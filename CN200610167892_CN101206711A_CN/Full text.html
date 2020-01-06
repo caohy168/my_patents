@@ -1,0 +1,554 @@
+<html><head><title>全文文本(Fulltext)</title><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><style>div.fullText table {width: 100%;text-indent: 1px;} 
+ div.fullText table td.header {font-weight: bold;text-align: center;font-family: '宋体';font-size: 16px;line-height:20px;color: #000000;padding: 5px;}div.fullText table td.content {padding: 1px;text-align: left;vertical-align: top;width: 100%;font-family: '宋体';font-size: 14px;line-height:20px;color: #000000;}</style></head><body><?xml version="1.0" encoding="UTF-8"?><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table class="fullText"><tr><td id="claim_title" class="header">权利要求书</td></tr><tr><td class="content" id="claim_1">1.一种锁定存储卡的方法，其特征在于，该方法包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_2">为存储卡配置多种锁定方式；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_3">在锁定命令中设置与所述多种锁定方式对应的锁定参数格式；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_4">存储卡根据读卡设备发出的锁定命令进行相应的锁定。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_5">2.根据权利要求1所述的方法，其特征在于，所述锁定方式包括以下一种
+      <br/>或任意组合：存储区域锁定、命令锁定、命令组锁定、模块锁定。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_6">3.根据权利要求2所述的方法，其特征在于，当所述锁定方式为存储区域
+      <br/>锁定时，所述锁定参数包括存储区位、锁定存储区域起始地址字段和锁定存储
+      <br/>区域结束字段，其中，所述存储区位表示是否采用存储区域锁定，所述锁定存
+      <br/>储区域起始地址字段和锁定存储区域结束字段表示被锁定的存储区域。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_7">4.根据权利要求2所述的方法，其特征在于，当所述锁定方式为命令锁定
+      <br/>时，所述锁定参数包括命令位、命令锁定使能位字段，其中，所述命令位表示
+      <br/>是否采用命令锁定，所述命令锁定使能位字段表示被锁定的命令。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_8">5.根据权利要求2所述的方法，其特征在于，当所述锁定方式为命令组锁
+      <br/>定时，所述锁定参数包括命令组位、命令组锁定使能位字段，其中，所述命令
+      <br/>组位表示是否采用命令组锁定，所述命令组锁定使能位字段表示被锁定的命令
+      <br/>组。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_9">6.根据权利要求2所述的方法，其特征在于，当所述锁定方式为模块锁定
+      <br/>时，所述锁定参数包括模块位、存储卡内部模块锁定使能位字段，其中，所述
+      <br/>模块位表示是否采用模块锁定，所述存储卡内部模块锁定使能位字段表示被锁
+      <br/>定的存储卡内部模块。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_10">7.根据权利要求1到6中任意一项所述的方法，其特征在于，读卡设备进
+      <br/>一步设定多个密码规则组，规定存储卡在解析锁定命令时，可以进行解析的参
+      <br/>数字段，用于管理不同用户的密码规则组；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_11">所述锁定参数进一步包括密码规则使能位和密码规则组标识ID号，其中，
+      <br/>
+					所述密码规则使能位表示是否使能密码规则组，所述密码规则组ID号表示使能
+      <br/>的密码规则组；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_12">所述根据锁定命令中携带的锁定参数对应的锁定方式进行相应的操作包
+      <br/>括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_13">判断所述锁定参数中的密码规则使能位是否被置位，若是，则根据密码规
+      <br/>则组ID号字段内容确定的密码规则组，解析锁定方式，并根据所述锁定方式进
+      <br/>行相应的操作；否则，根据默认的密码规则组解析锁定方式，并根据所述锁定
+      <br/>方式进行相应的操作。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_14">8.根据权利要求7所述的方法，其特征在于，所述默认的密码规则组为允
+      <br/>许解析全部参数或不解析任何参数。
+      <br/>
+					
+				</td></tr></table></div><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table><tr><td id="description_title" class="header">说明书</td></tr><tr><td class="content" id="description_invention_title">一种锁定存储卡的方法
+  </td></tr><tr><td class="content" id="description_1">技术领域
+  </td></tr><tr><td class="content" id="description_2">本发明涉及存储卡技术，具体涉及一种锁定存储卡的方法。
+    
+				</td></tr><tr><td class="content" id="description_3">背景技术
+  </td></tr><tr><td class="content" id="description_4">存储卡作为便携移动数据存储设备已经被广泛应用于数码相机、计算
+    机、便携多媒体播器、音响、手机等产品中。SD和MMC协议是目前常用
+    的两种存储卡协议，在这两种协议中，读卡设备对存储卡的操作命令共分
+    12个命令组，56条命令，可以实现对存储卡的各项操作。
+    
+				</td></tr><tr><td class="content" id="description_5">为保证存储卡中数据的安全性，目前符合SD/MMC协议的存储卡均支
+    持密码锁定功能，即通过对密码的支持实现对存储卡的锁定/解锁。具体地，
+    在存储卡中，密码及其长度被分别保存在128位长的密码(PWD)寄存器和
+    8位长的密码长度(PWD_LEN)寄存器中。由于这两个寄存器是非易失的，
+    所以接通和切断电源不会擦除其值。
+    
+				</td></tr><tr><td class="content" id="description_6">目前对存储卡进行锁定的方法包括：
+    
+				</td></tr><tr><td class="content" id="description_7">1、读卡设备向存储卡发送锁定命令。
+    
+				</td></tr><tr><td class="content" id="description_8">读卡设备向存储卡发送的锁定命令与已有的CSD和CID寄存器的写命
+    令类似，只在“传输状态”可用。也就是说，这些命令中不包括地址参数，
+    使用命令前卡已经被选中。
+    
+				</td></tr><tr><td class="content" id="description_9">存储卡的锁定命令的结构和总线处理类型与一般写入一个数据块的命
+    令相同。传输的数据块内容包括命令需要的所有信息(密码设定模式、PWD
+    自身的值、卡已锁/未锁等)。表1描述了命令数据块的格式。
+    
+				</td></tr><tr><td class="content" id="description_10">
+					<img src="/sipopublicsearch/servlet/rm/DownLoadServlet?rid=841958911&amp;blobId=687578073" width="492"/>
+					
+				</td></tr><tr><td class="content" id="description_11">
+					<img src="/sipopublicsearch/servlet/rm/DownLoadServlet?rid=841958917&amp;blobId=688338920" width="492"/>
+					
+				</td></tr><tr><td class="content" id="description_12">表1
+    
+				</td></tr><tr><td class="content" id="description_13">在表1中，“擦除”位为1时代表强制擦除操作(其它所有比特都清零)，
+    只发送CMD字节。
+    
+				</td></tr><tr><td class="content" id="description_14">“加锁_解锁”位为1时，代表进行的操作类型为加锁操作，为0时代
+    表进行的操作类型为解锁操作。该比特和“设置密码”位同时置位是有效的，
+    而和“清除密码”位同时置位是不允许的。
+    
+				</td></tr><tr><td class="content" id="description_15">“清除密码”位为1时代表清空PWD寄存器。
+    
+				</td></tr><tr><td class="content" id="description_16">“设置密码”位为1时代表在PWD中设置新密码。
+    
+				</td></tr><tr><td class="content" id="description_17">“密码长度”字段用来指定以字节为单位的密码长度，有效密码长度为
+    1-16个字节。
+    
+				</td></tr><tr><td class="content" id="description_18">“密码”字段用来指定密码内容，具体该密码为新密码或当前密码根据
+    不同命令决定。
+    
+				</td></tr><tr><td class="content" id="description_19">上述即为目前的命令数据块结构。应用该命令数据块结构可以实现加
+    锁、解锁、设置密码、清除密码和强制擦除等操作。
+    
+				</td></tr><tr><td class="content" id="description_20">2、存储卡接收到锁定命令后，判断命令中携带的密码是否正确，若是，
+    则对存储卡进行相应的操作，否则丢弃该命令。
+    
+				</td></tr><tr><td class="content" id="description_21">当存储卡被锁定后，该存储卡只响应(并执行)“基本”命令组，即命令
+    组0(Class0)和“卡锁定”命令组中的所有命令。读卡设备可以对被锁定
+    的存储卡进行复位、初始化、选中或查询等操作，却不能读写存储卡中的数
+    据。如果密码已经被设置，卡上电后自动锁定。当PWD_LEN寄存器的值不
+    为0时，则认为密码已经被设置。
+    
+				</td></tr><tr><td class="content" id="description_22">至此，便完成了锁定存储卡的方法。
+    
+				</td></tr><tr><td class="content" id="description_23">由上述可见，在目前锁定存储卡的方法中，存储卡验证密码正确后，对
+    存储卡进行锁定。当存储卡被锁定后该存储卡只能和主机以Class0支持的命
+    令(复位、初始化、选择卡、询问卡的状态)进行交流，该密码锁定方法功
+    
+					能单一，不利于实现对存储卡的多用户、多功能锁定。
+    
+				</td></tr><tr><td class="content" id="description_24">发明内容
+  </td></tr><tr><td class="content" id="description_25">有鉴于此，本发明提供一种锁定存储卡的方法，应用该方法，能够实现
+    对存储卡进行多功能的锁定。
+    
+				</td></tr><tr><td class="content" id="description_26">为实现上述目的，本发明采用如下的技术方案：
+    
+				</td></tr><tr><td class="content" id="description_27">一种锁定存储卡的方法，该方法包括：
+    
+				</td></tr><tr><td class="content" id="description_28">为存储卡配置多种锁定方式；
+    
+				</td></tr><tr><td class="content" id="description_29">在锁定命令中设置与所述多种锁定方式对应的锁定参数格式；
+    
+				</td></tr><tr><td class="content" id="description_30">存储卡根据读卡设备发出的锁定命令进行相应的锁定。
+    
+				</td></tr><tr><td class="content" id="description_31">较佳地，所述锁定方式可以包括以下一种或任意组合：存储区域锁定、
+    命令锁定、命令组锁定、模块锁定。
+    
+				</td></tr><tr><td class="content" id="description_32">较佳地，当所述锁定方式为存储区域锁定时，所述锁定参数可以包括存
+    储区位、锁定存储区域起始地址字段和锁定存储区域结束字段，其中，所述
+    存储区位表示是否采用存储区域锁定，所述锁定存储区域起始地址字段和锁
+    定存储区域结束字段表示被锁定的存储区域。
+    
+				</td></tr><tr><td class="content" id="description_33">较佳地，当所述锁定方式为命令锁定时，所述锁定参数可以包括命令位、
+    命令锁定使能位字段，其中，所述命令位表示是否采用命令锁定，所述命令
+    锁定使能位字段表示被锁定的命令。
+    
+				</td></tr><tr><td class="content" id="description_34">较佳地，当所述锁定方式为命令组锁定时，所述锁定参数可以包括命令
+    组位、命令组锁定使能位字段，其中，所述命令组位表示是否采用命令组锁
+    定，所述命令组锁定使能位字段表示被锁定的命令组。
+    
+				</td></tr><tr><td class="content" id="description_35">较佳地，当所述锁定方式为模块锁定时，所述锁定参数可以包括模块位、
+    存储卡内部模块锁定使能位字段，其中，所述模块位表示是否采用模块锁定，
+    所述存储卡内部模块锁定使能位字段表示被锁定的存储卡内部模块。
+    
+				</td></tr><tr><td class="content" id="description_36">较佳地，读卡设备可以进一步设定多个密码规则组，规定存储卡在解析
+    锁定命令时，可以进行解析的参数字段，用于管理不同用户的密码规则组；
+    
+				</td></tr><tr><td class="content" id="description_37">所述锁定参数进一步包括密码规则使能位和密码规则组标识ID号，其
+    中，所述密码规则使能位表示是否使能密码规则组，所述密码规则组ID号
+    表示使能的密码规则组；
+    
+				</td></tr><tr><td class="content" id="description_38">所述根据锁定命令中携带的锁定参数对应的锁定方式进行相应的操作
+    包括：
+    
+				</td></tr><tr><td class="content" id="description_39">判断所述锁定参数中的密码规则使能位是否被置位，若是，则根据密码
+    规则组ID号字段内容确定的密码规则组，解析锁定方式，并根据所述锁定
+    方式进行相应的操作；否则，根据默认的密码规则组解析锁定方式，并根据
+    所述锁定方式进行相应的操作。
+    
+				</td></tr><tr><td class="content" id="description_40">较佳地，所述默认的密码规则组为允许解析全部参数或不解析任何参
+    数。
+    
+				</td></tr><tr><td class="content" id="description_41">由上述技术方案可见，在本发明中，首先为存储卡配置多种锁定方式，
+    并在锁定命令中设置与锁定方式对应的锁定参数格式。读卡设备在锁定命令
+    中依据预先设置的锁定参数格式，具体填写锁定参数，以对应具体锁定方式。
+    然后，存储卡在判断出接收到的锁定命令中携带的密码合法后，根据锁定命
+    令中携带的锁定参数确定具体的锁定方式，进行相应的锁定。这样，就可以
+    实现对存储卡进行多功能的锁定。
+    
+				</td></tr><tr><td class="content" id="description_42">更进一步地，在读卡设备中设定多个密码规则组，以便于对不同用户的
+    密码规则组管理，从而实现对存储卡多用户的锁定。
+    
+				</td></tr><tr><td class="content" id="description_43">附图说明
+  </td></tr><tr><td class="content" id="description_44">图1为本发明的锁定存储卡方法的总体流程图。
+    
+				</td></tr><tr><td class="content" id="description_45">图2为本发明实施例一的锁定存储卡方法的具体流程图。
+    
+				</td></tr><tr><td class="content" id="description_46">具体实施方式
+  </td></tr><tr><td class="content" id="description_47">为使本发明的目的、技术手段和优点更加清楚明白，以下结合附图对本
+    发明作进一步详细描述。
+    
+				</td></tr><tr><td class="content" id="description_48">本发明的基本思想是：为存储卡配置多种锁定方式，并在锁定命令中设
+    置与锁定方式对应的锁定参数格式，从而实现对存储卡的多功能锁定。
+    
+				</td></tr><tr><td class="content" id="description_49">图1为本发明的锁定存储卡方法的总体流程图。如图1所示，该方法包
+    括：
+    
+				</td></tr><tr><td class="content" id="description_50">步骤101，为存储卡配置多种锁定方式。
+    
+				</td></tr><tr><td class="content" id="description_51">步骤102，在锁定命令中设置与步骤101中锁定方式对应的锁定参数格
+    式。
+    
+				</td></tr><tr><td class="content" id="description_52">步骤103，存储卡根据读卡设备发出的锁定命令进行相应的锁定操作。
+    
+				</td></tr><tr><td class="content" id="description_53">依照上述方法，即可以实现对存储卡进行多功能的锁定。存储卡中具体
+    支持的锁定方式，根据步骤101中的配置确定。上述为对本发明的锁定存储
+    卡方法的总体概述，下面的实施例以在SD/MMC协议上实施本发明为例对
+    本发明中锁定存储卡方法的具体实施进行详细介绍。
+    
+				</td></tr><tr><td class="content" id="description_54">实施例一：
+    
+				</td></tr><tr><td class="content" id="description_55">图2为本发明实施例一的锁定存储卡方法的具体流程图。如图2所示，
+    该方法包括：
+    
+				</td></tr><tr><td class="content" id="description_56">步骤201，为存储卡配置多种锁定方式，并在锁定命令中设置与各种锁
+    定方式对应的锁定参数格式。
+    
+				</td></tr><tr><td class="content" id="description_57">本实施例中，为存储卡配置的锁定方式包括：存储区域锁定、命令锁定、
+    命令组锁定和模块锁定。其中，存储区域锁定是指，对存储卡中某段地址标
+    识的存储区域进行锁定，该区域被锁定后，对该存储区域进行的读写操作将
+    被屏蔽；命令锁定是指，对利用命令号标识的指定命令进行锁定，该命令被
+    锁定后，存储卡不会再响应和执行读卡设备发出的该命令；命令组锁定是指，
+    对多个命令构成的命令组进行统一锁定，该命令组被锁定后，存储卡不会再
+    响应和执行该命令组中的命令；模块锁定是指，对存储卡中的某些模块进行，
+    该模块被锁定后，对存储卡中该模块进行的操作将被屏蔽。
+    
+				</td></tr><tr><td class="content" id="description_58">针对为存储卡配置的多种锁定方式，对SD/MMC协议中的命令数据块
+    格式进行修改，增加与锁定方式相对应的锁定参数。具体地，表2描述了本
+    
+					实施例中的锁定命令数据块格式。
+    
+				</td></tr><tr><td class="content" id="description_59">
+					<img src="/sipopublicsearch/servlet/rm/DownLoadServlet?rid=841958944&amp;blobId=687822330" width="492"/>
+					
+				</td></tr><tr><td class="content" id="description_60">表2
+    
+				</td></tr><tr><td class="content" id="description_61">如表2所示，与现有技术相同，当“加锁_解锁”位设置为有效时，表
+    示操作类型是加锁操作，当该位设置为无效时，表示操作类型是解锁操作。
+    
+				</td></tr><tr><td class="content" id="description_62">与存储区域锁定相对应的锁定参数包括：“存储区”位、“锁定存储区
+    域起始地址”和“锁定存储区域结束地址”字段。其中，当“存储区”位设
+    置为有效时，表示启动对存储区域的锁定；在“存储区”位设置为有效后，
+    “锁定存储区域起始地址”和“锁定存储区域结束地址”字段，用于标识具
+    体被锁定的存储区域。在SD/MMC协议中，地址线有32根，因此“锁定存
+    储区域起始地址”和“锁定存储区域结束地址”字段分别占用4个字节，在
+    字段中的每一位分别对应一根地址线的取值。
+    
+				</td></tr><tr><td class="content" id="description_63">与命令锁定相对应的锁定参数包括：“命令”位和“命令锁定使能位”
+    字段。其中，当“命令”位设置为有效时，表示启动对指定命令的锁定；在
+    “命令”位设置为有效后，“命令锁定使能位”字段，用于标识具体被锁定
+    
+					的命令。在SD/MMC协议中，共有56个卡命令，因此“命令锁定使能位”
+    字段占用7个字节，在该字段中的每一位分别对应一个命令，当该位被设置
+    为有效时，代表锁定对应的命令。在设置要锁定的命令时应参照存储卡的状
+    态转化来进行，因为一旦该命令被锁定，将意味着存储卡将不会对该命令进
+    行响应和执行，也将意味着也该命令相关的某些存储卡状态将不会被到达。
+    
+				</td></tr><tr><td class="content" id="description_64">与命令组锁定相对应的锁定参数包括：“命令组”位和“命令组锁定使
+    能位”字段。其中，当“命令组”位设置为有效时，表示启动对指定命令组
+    的统一锁定；在“命令组”位设置为有效后，“命令组锁定使能位”字段用
+    于标识具体被锁定的命令组。在SD/MMC协议中，共有12个卡命令类别，
+    每个卡命令类别对应一个命令组，同时由于命令组0中包含着部分存储卡的
+    基本操作，所以不能对该命令组进行全部锁定，因此“命令组锁定使能位”
+    字段占用11比特，分别对应命令组1-11，当某个比特位被设置为有效时，
+    代表锁定对应命令组中的所有命令。但是这并不意味着不能对存储卡命令组
+    0的某些命令进行锁定，如CMD8就可以通过命令锁定功能进行锁定。在设
+    置要锁定的命令组时同样应参照存储卡的状态转化来进行，因为一旦该命令
+    组被锁定，将意味着存储卡将不会对该命令组内的命令进行响应和执行，也
+    将意味着也该命令组相关的某些存储卡状态将不会被到达。
+    
+				</td></tr><tr><td class="content" id="description_65">与模块锁定相对应的锁定参数包括：“模块”位和“存储卡内部模块锁
+    定使能位”字段。其中，当“模块”位设置为有效时，表示启动对存储卡指
+    定模块的锁定；在“模块”位设置为有效后，“存储卡内部模块锁定使能位”
+    字段用于标识具体被锁定的模块。具体在本实施例中，“存储卡内部模块锁
+    定使能位”字段占用两个字节，该字段内的每一个比特位分别对应一个模块，
+    当某个比特位设置为有效后，代表锁定对应的模块。但是这里需要指出的是
+    负责存储卡通讯协议解释的模块是不能被锁定的，因为一旦该模块被锁定将
+    意味着读卡设备与存储卡的通讯将不能进行。
+    
+				</td></tr><tr><td class="content" id="description_66">上述即为本实施例中具体的命令数据块结构。与SD/MMC协议相比，
+    主要区别在于，将字节0中保留的高4位加以利用，分别标识四种锁定方式
+    
+					中的一种；同时，在命令数据块的末尾增加了20字节的字段内容，标识特
+    定锁定方式下具体的锁定内容。由于本实施例中还包括与SD/MMC协议相
+    同的字段，因此在完成设置密码、清除密码、强制擦除功能时，具体字段内
+    容的设置方式与SD/MMC协议中的相同，这里就不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_67">在本步骤中介绍了四种具体的锁定方式，当然，在实际应用中，锁定方
+    式可以采用上述四种方式中的一种或任意组合。对应地，在设置锁定参数格
+    式时，可以采用与锁定方式相对应的锁定参数格式。具体设置锁定参数格式
+    时，也可以依据不同的应用环境，如地址的宽度、命令的个数、命令组的个
+    数和模块的个数等，设置具体锁定参数占用的字节数。
+    
+				</td></tr><tr><td class="content" id="description_68">步骤202，读卡设备判断存储卡是否支持步骤201中配置的锁定方式，
+    若是，则执行步骤203及其后续步骤，否则结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_69">本实施例中，可以在存储卡的特定寄存器中添加标志位表示存储卡是否
+    支持步骤201中配置的自定义锁定方式。具体地，可以在CSD寄存器中以
+    表3所示的方式添加标志位。
+    
+				</td></tr><tr><td class="content" id="description_70">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  名称
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  字段
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  宽度
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  信元类型
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  CSD-片
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  DSR的实现
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  DSR_IMP
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  R
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  [76:76]
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  自定义功能锁定功能标志位
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  Intelligent_Password
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  R
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  [75]
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  保留
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  -
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  R
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  [74]
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  设备大小
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  C_SIZE
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  12
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  R
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  [73:62]
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_71">表3
+    
+				</td></tr><tr><td class="content" id="description_72">在表3中，Intelligent_Password＝1，表示该存储卡支持步骤201中配置
+    的自定义锁定方式；Intelligent_Password＝0，表示该存储卡不支持步骤201
+    中配置的自定义锁定方式。
+    
+				</td></tr><tr><td class="content" id="description_73">经过上述处理后，读卡设备可以在上电检测时，通过Intelligent_Password
+    字段的取值得知存储卡是否支持自定义锁定方式。
+    
+				</td></tr><tr><td class="content" id="description_74">步骤203，读卡设备向存储卡发送锁定命令。
+    
+				</td></tr><tr><td class="content" id="description_75">本步骤中，如果读卡设备没有预先选定存储卡，则要首先通过命令
+    (CMD)7选中该存储卡。这样做的原因是，在SD/MMC协议中，锁定命
+    令只有存储卡处于传输状态才是有效的。
+    
+				</td></tr><tr><td class="content" id="description_76">在发送锁定命令前要先通过CMD16指定数据块的长度。该长度的具体
+    设定是根据进行的操作类型和锁定参数占用的字节数决定的。当在进行锁定
+    同时要进行设定密码的操作时，数据块的长度要考虑包括新旧两个密码的字
+    节数。
+    
+				</td></tr><tr><td class="content" id="description_77">读卡设备填写锁定命令中各参数的具体取值，包括操作类型、锁定参数
+    和密码等。在本实施例中要进行的是加锁操作，因此在表2所示的“加锁_
+    解锁”位设置为有效，表示操作类型为加锁操作。然后依据表2所示的方式，
+    指明具体的锁定方式和锁定参数的取值。
+    
+				</td></tr><tr><td class="content" id="description_78">具体地，当对存储区域进行锁定时，首先将代表该锁定方式的“存储区”
+    位设置为有效，然后通过在“锁定存储区域起始地址”和“锁定存储区域结
+    束地址”字段中填写具体的地址设置要锁定的具体存储区域。
+    
+				</td></tr><tr><td class="content" id="description_79">当对命令进行锁定时，首先将代表该锁定方式的“命令”位设置为有效，
+    然后在“命令锁定使能位”字段中设置要锁定的具体命令，具体可以为将要
+    锁定命令对应的比特位设置为有效。
+    
+				</td></tr><tr><td class="content" id="description_80">当对命令组进行锁定时，首先将代表该锁定方式的“命令组”位设置为
+    有效，然后在“命令组锁定使能位”字段中设置要锁定的具体命令组，具体
+    可以为将要锁定命令组对应的比特位设置为有效。
+    
+				</td></tr><tr><td class="content" id="description_81">当对模块进行锁定时，首先将代表该锁定方式的“模块”位设置为有效，
+    然后在“存储卡内部模块锁定使能位”字段中设置要锁定的具体模块，具体
+    可以为将要锁定模块对应的比特位设置为有效。
+    
+				</td></tr><tr><td class="content" id="description_82">通过上述方式在锁定命令中标识具体的锁定方式，然后将锁定命令发送
+    给支持步骤201中配置的存储卡。当然，在进行存储卡锁定操作时，还可以
+    同时进行设置密码的操作，则将“设置密码”位设置为有效。
+    
+				</td></tr><tr><td class="content" id="description_83">步骤204，存储卡接收读卡设备发送的命令，并确定进行的操作类型。
+    
+				</td></tr><tr><td class="content" id="description_84">本步骤中，当存储卡接收的命令中“加锁_解锁”位设置为有效时，表
+    示操作类型为加锁操作。本实施例中，以加锁操作为例进行具体实施方式的
+    描述，因此此处判定进行的操作为加锁操作。当然，在实际应用中，由于表
+    
+					2所示的锁定命令中标识设置密码、清除密码和强制擦除的方式与表1所示
+    相同，因此可以按照现有技术的方式实现设置密码、清除密码和强制擦除的
+    功能，这里就不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_85">步骤205，判断在锁定命令中携带的密码是否合法，若是，则执行步骤
+    206，否则结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_86">在SD/MMC协议中，试图锁定一个未设置密码的存储卡是非法的。因
+    此，在本发明实施例中也沿用这一规定。当锁定命令中携带的密码与存储卡
+    PWD寄存器中保存的密码一致，则认为锁定命令中的密码合法，可以进行
+    锁定操作，继续执行步骤205；当锁定命令中携带的密码与存储卡PWD寄
+    存器中保存的密码不一致时，则认为锁定命令中的密码非法，并将状态寄存
+    器的LOCK_UNLOCK_FAILED错误比特置位，不允许进行锁定，直接结束
+    本流程。
+    
+				</td></tr><tr><td class="content" id="description_87">步骤206，存储卡根据锁定命令中携带的操作类型和锁定参数对应的锁
+    定方式，进行相应的操作。
+    
+				</td></tr><tr><td class="content" id="description_88">本步骤中，首先确定进行的操作类型，然后依据步骤201中配置的锁定
+    参数格式，对接收到的锁定命令中的锁定参数进行解析，分析具体的锁定方
+    式，并对存储卡进行相应的操作，同时将状态寄存器中的LOCK位设置为有
+    效。
+    
+				</td></tr><tr><td class="content" id="description_89">在确定锁定方式后，对存储卡进行与操作类型相应的操作。在本实施例
+    中，由于操作类型为加锁操作，则对应进行的操作为按指导的锁定方式进行
+    加锁。对存储卡进行具体加锁时的方式可以采用现有的各种实现方式，如将
+    具体锁定的区域、模块或命令等记载在存储卡的特定存储器中，当接收到被
+    锁定的命令、或接收到的命令对锁定的区域或模块进行操作时，拒绝响应和
+    执行相应的操作。
+    
+				</td></tr><tr><td class="content" id="description_90">需要注意，可能在同一步骤中既设置密码又锁定卡。这种情况下，主机
+    收到新密码命令时应该完成设置密码的所有操作，并将LOCK比特置位。
+    
+				</td></tr><tr><td class="content" id="description_91">至此，本发明的锁定存储卡的方法结束。依据本实施例的方法，就能够
+    
+					依据读卡设备发送的锁定命令中不同锁定参数的设定，实现对存储卡的多功
+    能锁定。
+    
+				</td></tr><tr><td class="content" id="description_92">实施例二：
+    
+				</td></tr><tr><td class="content" id="description_93">本实施例对实施例一中锁定存储卡的方法进行了功能上的增加，从而实
+    现多用户的锁定。具体的实现方式为：
+    
+				</td></tr><tr><td class="content" id="description_94">在步骤203中，配置的命令数据块格式中增加“密码规则使能”位和“密
+    码规则组ID号”字段，具体的位置可以在表2所示的命令数据块结构中保
+    留字段内。其中，“密码规则使能”占用1比特，“密码规则组ID号”占
+    用4比特。
+    
+				</td></tr><tr><td class="content" id="description_95">读卡设备可以设定多个密码规则组，以便于对不同用户的密码规则组管
+    理。在密码规则组中，规定存储卡在解析锁定命令时，可以进行解析的参数
+    字段。不同的密码规则组设定的解析参数字段可能不同。如，密码规则组A
+    表示对锁定命令中的所有参数均进行解析，密码规则组B表示可以对锁定命
+    令中除清除密码字段外的其它参数进行解析。各个密码规则组之间是通过
+    “密码规则组ID号”来进行区分的，通过对“密码规则组ID号”的设置可
+    以让存储卡获知读卡设备是在对哪一个密码存储组进行操作。在本实施例
+    中，由于“密码规则组ID号”占用4比特，因此读卡设备最多可以设定16
+    个密码规则组。当然在实际应用中，可以根据需要在命令数据块中定义“密
+    码规则组ID号”占用的比特数，从而控制读卡设备设定的密码规则组的组
+    数。
+    
+				</td></tr><tr><td class="content" id="description_96">在锁定命令中，“密码规则使能”位，用来表示是否使能密码规则组，
+    当该位被设置为有效后，由“密码规则组ID号”指明具体使能的密码规则
+    组。通过对“密码规则使能”位的控制来实现对密码规则组的使能控制管理，
+    被使能的各个密码规则组对存储卡所行使的锁定管理功能上是并集的关系。
+    
+				</td></tr><tr><td class="content" id="description_97">经过上述设置后，在步骤206中执行如下操作：存储卡判断锁定命令中
+    的“密码规则使能”位是否被设置为有效，若是，则根据“密码规则组ID
+    号”字段中的内容，确定使用的密码规则组，继而根据该密码规则组的规则
+    
+					解析命令数据块中的内容，并参照解析得到的锁定方式，进行相应的操作；
+    否则，按照默认的密码规则组解析命令数据块中的内容，并进行相应的操作。
+    这里，默认的密码规则组可以是任意一种预设的密码规则组，如解析所有的
+    参数，或者也可以是不解析任何参数，直接结束本锁定流程。
+    
+				</td></tr><tr><td class="content" id="description_98">至此，本实施例中锁定存储卡的方法结束。在本实施例的方法中，在配
+    置锁定参数格式时，进一步包括了关于密码规则组的参数，使得读卡设备可
+    以依据应用程序的需要，使能存储卡中的一个或多个密码规则组，从而为多
+    功能锁定提供了更高的灵活性和便捷性，通过对不同用户使能不同的密码规
+    则组，还可以进一步实现多用户的锁定。
+    
+				</td></tr><tr><td class="content" id="description_99">本发明的锁定存储卡的方法不仅能够依照上述过程进行对存储卡的多
+    功能、多用户的加锁，同样也可以对已经加锁的存储卡进行相应的解锁。具
+    体的解锁过程包括：
+    
+				</td></tr><tr><td class="content" id="description_100">读卡设备在锁定命令中填写对应的锁定参数，具体地，将“加锁_解锁”
+    位设置为无效，表示进行解锁操作。依照锁定方式，填写要解锁的锁定参数。
+    具体锁定参数表示的含义与加锁操作中的相同。存储卡接收到锁定命令后，
+    进行密码的判断，若密码正确，则进行相应的解锁操作。
+    
+				</td></tr><tr><td class="content" id="description_101">本发明中，将某个比特位设置为有效，可以用对该比特位置0表示，也
+    可以用置1表示，这并不影响对本发明的具体实施。
+    
+				</td></tr><tr><td class="content" id="description_102">以上仅为本发明的较佳实施例而已，并非用于限定本发明的保护范围。
+    凡在本发明的精神和原则之内，所作的任何修改、等同替换、改进等，均应
+    包含在本发明的保护范围之内。
+    
+				</td></tr></table></div></body></html>

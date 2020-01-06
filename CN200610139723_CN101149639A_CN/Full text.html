@@ -1,0 +1,1819 @@
+<html><head><title>全文文本(Fulltext)</title><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><style>div.fullText table {width: 100%;text-indent: 1px;} 
+ div.fullText table td.header {font-weight: bold;text-align: center;font-family: '宋体';font-size: 16px;line-height:20px;color: #000000;padding: 5px;}div.fullText table td.content {padding: 1px;text-align: left;vertical-align: top;width: 100%;font-family: '宋体';font-size: 14px;line-height:20px;color: #000000;}</style></head><body><?xml version="1.0" encoding="UTF-8"?><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table class="fullText"><tr><td id="claim_title" class="header">权利要求书</td></tr><tr><td class="content" id="claim_1">1.一种存储卡节电方法，其特征在于，该方法基于所述存储卡与能够操
+      <br/>作所述存储卡的数据存取设备之间的通讯而实现，包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_2">A、所述数据存取设备向所述存储卡发送节电管理命令，所述节电管理
+      <br/>命令中包括节电管理对象信息和管理类型信息；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_3">B、所述存储卡接收所述节电管理命令，根据所述存储卡自身状况执行
+      <br/>相应操作，并向所述数据存取设备返回节电管理响应。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_4">2.如权利要求1所述的存储卡节电方法，其特征在于：所述节电管理命
+      <br/>令为时钟节电管理命令。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_5">3.如权利要求2所述的存储卡节电方法，其特征在于：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_6">所述时钟节电管理命令为：所述存储卡的外部时钟关闭命令；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_7">步骤B中所述相应操作为：所述存储卡在将向所述数据存取设备返回
+      <br/>的节电管理响应中设置外部时钟关闭响应特征值；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_8">在所述步骤B之后，进一步包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_9">C1、所述数据存取设备接收所述节电管理响应并获取其中的外部时钟
+      <br/>关闭响应特征值，然后根据该外部时钟关闭响应特征值，判断所述存储卡是
+      <br/>否同意关闭外部时钟，如果存储卡同意，则所述数据存取设备关闭所述存储
+      <br/>卡外部时钟；如果存储卡不同意，则结束流程。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_10">4.如权利要求2所述的存储卡节电方法，其特征在于：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_11">所述时钟节电管理命令为：所述存储卡内部时钟调节命令，该存储卡内
+      <br/>部时钟调节命令中包括需要调节时钟的内部模块信息和适合的时钟信息值；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_12">步骤B中所述相应操作为：所述存储卡从收到的所述存储卡内部时钟
+      <br/>调节命令中获取所述需要调节时钟的内部模块信息和所述适合的时钟信息
+      <br/>值，并根据该需要调节时钟的内部模块信息和所述适合的时钟信息值，对于
+      <br/>所述存储卡内部所述需要调节时钟的内部模块的时钟进行调节。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_13">5.如权利要求2所述的存储卡节电方法，其特征在于：在所述步骤B之
+      <br/>
+					后，包括：在将向所述数据存取设备返回的节电管理响应中设置内部时钟调节
+      <br/>完成响应特征值。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_14">6.如权利要求4所述的存储卡节电方法，其特征在于：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_15">在所述步骤A之前，进一步包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_16">A11、所述数据存取设备向所述存储卡发送内部时钟状态查询命令；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_17">A12、所述存储卡接收所述内部时钟状态查询命令，将包含所述存储卡
+      <br/>自身时钟状况信息的状态查询响应返回所述数据存取设备。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_18">A13、所述数据存取设备接收所述状态查询响应并获取其中的存储卡自
+      <br/>身时钟状况信息，然后根据该存储卡自身时钟状况信息，判断所述存储卡的
+      <br/>设置是否适合，如果适合，则结束流程；如果不适合，则执行步骤A。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_19">7.如权利要求1所述的存储卡节电方法，其特征在于：所述节电管理命
+      <br/>令为电源节电管理命令。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_20">8.如权利要求7所述的存储卡节电方法，其特征在于：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_21">所述电源节电管理命令为：所述存储卡的外部电源关闭命令；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_22">步骤B中所述相应操作为：所述存储卡在将向所述数据存取设备返回
+      <br/>的节电管理响应中设置外部电源关闭响应特征值；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_23">在所述步骤B之后，进一步包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_24">C2、所述数据存取设备接收所述节电管理响应并获取其中的外部电源
+      <br/>关闭响应特征值，然后根据该外部电源关闭响应特征值，判断所述存储卡是
+      <br/>否同意关闭外部电源，如果存储卡同意，则所述数据存取设备关闭所述存储
+      <br/>卡外部电源；如果存储卡不同意，则结束流程。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_25">9.如权利要求7所述的存储卡节电方法，其特征在于：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_26">所述电源节电管理命令为：所述存储卡的内部电源关闭命令，该存储卡
+      <br/>的内部电源关闭命令中包括需要关闭电源的内部模块信息；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_27">步骤B中所述相应操作为：所述存储卡从收到的所述存储卡内部电源
+      <br/>关闭命令中获取所述需要关闭电源的内部模块信息，并关闭该需要关闭电源
+      <br/>的内部模块的电源。
+      <br/>
+					
+				</td></tr><tr><td class="content" id="claim_28">10.如权利要求7所述的存储卡节电方法，其特征在于：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_29">所述电源节电管理命令为：所述存储卡的内部电源打开命令，该存储卡
+      <br/>的内部电源打开命令中包括需要打开电源的内部模块信息；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_30">步骤B中所述相应操作为：所述存储卡从收到的所述存储卡内部电源
+      <br/>打开命令中获取所述需要打开电源的内部模块信息，并打开该需要关闭电源
+      <br/>的内部模块的电源。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_31">11.如权利要求9或10所述的存储卡节电方法，其特征在于：在所述步
+      <br/>骤B之后，包括：在将向所述数据存取设备返回的节电管理响应中设置内部电
+      <br/>源打开完成响应特征值。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_32">12.如权利要求9或10所述的存储卡节电方法，其特征在于：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_33">在所述步骤A之前，进一步包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_34">A21、所述数据存取设备向所述存储卡发送内部电源状态查询命令；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_35">A22、所述存储卡接收所述内部电源状态查询命令，将包含所述存储卡
+      <br/>自身电源状况信息的状态查询响应返回所述数据存取设备。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_36">A13、所述数据存取设备接收所述状态查询响应并获取其中的存储卡自
+      <br/>身电源状况信息，然后根据该存储卡自身电源状况信息，判断所述存储卡中
+      <br/>所述需要打开电源的内部模块的电源是否已打开，如果已打开，则结束流程；
+      <br/>如果未打开，则执行步骤A。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_37">13.如权利要求1所述的存储卡节电方法，其特征在于：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_38">所述节电管理命令为存储卡状态查询命令，该存储卡状态查询命令中包
+      <br/>括所述节电管理对象的信息；所述节电管理响应为存储卡状态查询响应；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_39">所述节电管理对象包括存储卡内部模块的时钟或电源；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_40">步骤B中所述相应操作为：所述存储卡在将向所述数据存取设备返回
+      <br/>的存储卡状态查询响应中设置所述节电管理对象的状态信息。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_41">14.如权利要求1、2、7或13所述的存储卡节电方法，其特征在于：在
+      <br/>步骤A之前，进一步包括：判断所述存储卡是否支持所述节电管理，如果支持，
+      <br/>则执行步骤A；否则，结束流程。
+      <br/>
+					
+				</td></tr><tr><td class="content" id="claim_42">15.如权利要求14所述的存储卡节电方法，其特征在于：所述判断所述
+      <br/>存储卡是否支持所述节电管理，是判断设置在所述存储卡中特定寄存器中的特
+      <br/>征标识的值是否为对应于支持节电管理的值。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_43">16.如权利要求1、2、7或13所述的存储卡节电方法，其特征在于：当
+      <br/>所述存储卡处于旁置状态时执行所述步骤A。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_44">17.如权利要求1所述的存储卡节电方法，其特征在于：所述存储卡为多
+      <br/>媒体卡MMC或安全数字卡SD；所述节电命令为CMD扩展命令。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_45">18.一种存储装置，其特征在于：该存储装置通过与外接读取设备之间的
+      <br/>通讯交互而实现节电，包括：存储主控单元、时钟管理寄存器CCR、时钟控制
+      <br/>单元、电源管理寄存器PCR、电压调控单元和功能执行单元；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_46">所述存储主控单元用于与所述外接读取设备相连，并与所述CCR和所
+      <br/>述PCR分别相连，用于将所述外接读取设备发来的命令进行解析并发送到
+      <br/>所述CCR或PCR中存储，并用于从所述CCR或PCR中读取所述存储装置
+      <br/>内部功能模块信息；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_47">所述CCR分别与所述存储主控单元和所述时钟控制单元相连，用于存
+      <br/>放所述存储装置内部的时钟管理信息；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_48">所述时钟控制单元与所述CCR相连，以接收管理命令和所述CCR中存
+      <br/>储的内部时钟管理信息；所述时钟控制单元还与所述功能执行单元相连，并
+      <br/>根据获取的管理命令和内部时钟管理信息，对所述功能执行单元中相应的一
+      <br/>个或多个功能模块的时钟进行管理；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_49">所述PCR分别与所述存储主控单元和所述电压调控单元相连，用于存
+      <br/>放所述存储装置内部的电源管理信息。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_50">所述电压调控单元与所述PCR相连，以接收管理命令和所述PCR中存
+      <br/>储的内部电源管理信息；所述电压调控单元还与所述功能执行单元相连，并
+      <br/>根据获取的管理命令和内部电源管理信息，对所述功能执行单元中相应的一
+      <br/>个或多个功能模块的电源进行管理。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_51">19.如权利要求18所述的存储装置，其特征在于：包括与所述CCR、所
+      <br/>
+					述PCR和所述电压调控单元分别相连的保值锁存器，用于锁存所述CCR和所
+      <br/>述PCR中的管理信息。
+      <br/>
+					
+				</td></tr></table></div><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table><tr><td id="description_title" class="header">说明书</td></tr><tr><td class="content" id="description_invention_title">一种存储卡节电方法及装置
+  </td></tr><tr><td class="content" id="description_1">技术领域
+  </td></tr><tr><td class="content" id="description_2">本发明涉及存储卡领域，特别是指一种基于通讯模式的存储卡节电方法
+    及装置。
+    
+				</td></tr><tr><td class="content" id="description_3">背景技术
+  </td></tr><tr><td class="content" id="description_4">存储卡多应用于电子移动终端设备中，在这种应用环境下的电子移动终
+    端设备对工作及待机状态时的耗电量非常敏感。
+    
+				</td></tr><tr><td class="content" id="description_5">在现有技术中，对于SD/MMC存储卡，解决节电问题的方法是：当数
+    据存取设备不对存储卡进行操作时，数据存取设备可关闭存储卡的外部时
+    钟，以此来降低存储卡的耗电量。
+    
+				</td></tr><tr><td class="content" id="description_6">这种现有技术的缺点是操作灵活性差，因为如果要对存储卡进行节电操
+    作，则数据存取设备需要关闭存储卡的外部时钟，从而导致存储卡无法工作；
+    此外，该方法也不能解决静态功耗问题，因为即使数据存取设备关闭了存储
+    卡的外部时钟，但是存储卡内部各模块的电源供应仍然存在，因而不能解决
+    集成电路内部因栅极泄漏电流和亚阈值泄漏电流引起的静态功耗问题。
+    
+				</td></tr><tr><td class="content" id="description_7">在现有技术中，对于通用片上系统(SOC)，解决节电问题的方法是：
+    通过总线和指令的方式配置SOC内部的电源管理寄存器，从而完成对SOC
+    内部各模块的时钟及电源的管理，以降低SOC耗电量。
+    
+				</td></tr><tr><td class="content" id="description_8">这种现有技术的缺点是，SOC的节电方法只针对其所在领域；而存储
+    卡通用标准并未给出电源管理寄存器的相应描述及地址空间，而且存储卡的
+    协议是基于应答机制的通讯协议，所以现有SOC的节电方法无法直接应用
+    到存储卡领域。
+    
+				</td></tr><tr><td class="content" id="description_9">发明内容
+  </td></tr><tr><td class="content" id="description_10">有鉴于此，本发明提供一种基于通讯模式的存储卡节电方法及装置，可
+    有效实现存储卡的节电。
+    
+				</td></tr><tr><td class="content" id="description_11">本发明的技术方案具体如下：
+    
+				</td></tr><tr><td class="content" id="description_12">本发明提供一种存储卡节电方法，该方法基于所述存储卡与能够操作所
+    述存储卡的数据存取设备之间的通讯而实现，包括：
+    
+				</td></tr><tr><td class="content" id="description_13">A、所述数据存取设备向所述存储卡发送节电管理命令，所述节电管理
+    命令中包括节电管理对象信息和管理类型信息；
+    
+				</td></tr><tr><td class="content" id="description_14">B、所述存储卡接收所述节电管理命令，根据所述存储卡自身状况执行
+    相应操作，并向所述数据存取设备返回节电管理响应。
+    
+				</td></tr><tr><td class="content" id="description_15">所述节电管理命令可为时钟节电管理命令。
+    
+				</td></tr><tr><td class="content" id="description_16">所述时钟节电管理命令可为：所述存储卡的外部时钟关闭命令；步骤B
+    中所述相应操作为：所述存储卡在将向所述数据存取设备返回的节电管理响
+    应中设置外部时钟关闭响应特征值；在所述步骤B之后，进一步包括：
+    
+				</td></tr><tr><td class="content" id="description_17">C1、所述数据存取设备接收所述节电管理响应并获取其中的外部时钟
+    关闭响应特征值，然后根据该外部时钟关闭响应特征值，判断所述存储卡是
+    否同意关闭外部时钟，如果存储卡同意，则所述数据存取设备关闭所述存储
+    卡外部时钟；如果存储卡不同意，则结束流程。
+    
+				</td></tr><tr><td class="content" id="description_18">所述时钟节电管理命令可为：所述存储卡的内部时钟调节命令，该存储
+    卡内部时钟调节命令中包括需要调节时钟的内部模块信息和适合的时钟信
+    息值；步骤B中所述相应操作为：所述存储卡从收到的所述存储卡内部时钟
+    调节命令中获取所述需要调节时钟的内部模块信息和所述适合的时钟信息
+    值，并根据该需要调节时钟的内部模块信息和所述适合的时钟信息值，对于
+    所述存储卡内部所述需要调节时钟的内部模块的时钟进行调节。在所述步骤
+    B之后，可包括：在将向所述数据存取设备返回的节电管理响应中设置内部
+    时钟调节完成响应特征值。
+    
+				</td></tr><tr><td class="content" id="description_19">在所述步骤A之前，可进一步包括：
+    
+				</td></tr><tr><td class="content" id="description_20">A11、所述数据存取设备向所述存储卡发送内部时钟状态查询命令；
+    
+				</td></tr><tr><td class="content" id="description_21">A12、所述存储卡接收所述内部时钟状态查询命令，将包含所述存储卡
+    自身时钟状况信息的状态查询响应返回所述数据存取设备。
+    
+				</td></tr><tr><td class="content" id="description_22">A13、所述数据存取设备接收所述状态查询响应并获取其中的存储卡自
+    身时钟状况信息，然后根据该存储卡自身时钟状况信息，判断所述存储卡的
+    设置是否适合，如果适合，则结束流程；如果不适合，则执行步骤A。
+    
+				</td></tr><tr><td class="content" id="description_23">所述节电管理命令可为电源节电管理命令。
+    
+				</td></tr><tr><td class="content" id="description_24">所述电源节电管理命令可为：所述存储卡的外部电源关闭命令；步骤B
+    中所述相应操作为：所述存储卡在将向所述数据存取设备返回的节电管理响
+    应中设置外部电源关闭响应特征值；在所述步骤B之后，进一步包括：
+    
+				</td></tr><tr><td class="content" id="description_25">C2、所述数据存取设备接收所述节电管理响应并获取其中的外部电源
+    关闭响应特征值，然后根据该外部电源关闭响应特征值，判断所述存储卡是
+    否同意关闭外部电源，如果存储卡同意，则所述数据存取设备关闭所述存储
+    卡外部电源；如果存储卡不同意，则结束流程。
+    
+				</td></tr><tr><td class="content" id="description_26">所述电源节电管理命令可为：所述存储卡的内部电源关闭命令，该存储
+    卡内部电源关闭命令中包括需要关闭电源的内部模块信息；步骤B中所述相
+    应操作为：所述存储卡从收到的所述存储卡内部电源关闭命令中获取所述需
+    要关闭电源的内部模块信息，并关闭该需要关闭电源的内部模块的电源。
+    
+				</td></tr><tr><td class="content" id="description_27">所述电源节电管理命令可为：所述存储卡的内部电源打开命令，该存储
+    卡内部电源打开命令中包括需要打开电源的内部模块信息；步骤B中所述相
+    应操作为：所述存储卡从收到的所述存储卡内部电源打开命令中获取所述需
+    要打开电源的内部模块信息，并打开该需要关闭电源的内部模块的电源。
+    
+				</td></tr><tr><td class="content" id="description_28">在所述步骤B之后，可包括：在将向所述数据存取设备返回的节电管
+    理响应中设置内部电源打开完成响应特征值。
+    
+				</td></tr><tr><td class="content" id="description_29">在所述步骤A之前，可进一步包括：
+    
+				</td></tr><tr><td class="content" id="description_30">A21、所述数据存取设备向所述存储卡发送内部电源状态查询命令；
+    
+				</td></tr><tr><td class="content" id="description_31">A22、所述存储卡接收所述内部电源状态查询命令，将包含所述存储卡
+    自身电源状况信息的状态查询响应返回所述数据存取设备。
+    
+				</td></tr><tr><td class="content" id="description_32">A13、所述数据存取设备接收所述状态查询响应并获取其中的存储卡自
+    身电源状况信息，然后根据该存储卡自身电源状况信息，判断所述存储卡中
+    所述需要打开电源的内部模块的电源是否已打开，如果已打开，则结束流程；
+    如果未打开，则执行步骤A。
+    
+				</td></tr><tr><td class="content" id="description_33">所述节电管理命令可为存储卡状态查询命令，该存储卡状态查询命令中
+    包括所述节电管理对象的信息；所述节电管理响应为存储卡状态查询响应；
+    所述节电管理对象包括存储卡内部模块的时钟或电源；步骤B中所述相应操
+    作为：所述存储卡在将向所述数据存取设备返回的存储卡状态查询响应中设
+    置所述节电管理对象的状态信息。
+    
+				</td></tr><tr><td class="content" id="description_34">根据本发明，在步骤A之前，可进一步包括：判断所述存储卡是否支
+    持所述节电管理，如果支持，则执行步骤A；否则，结束流程。所述判断所
+    述存储卡是否支持所述节电管理，可为判断设置在所述存储卡中特定寄存器
+    中的特征标识的值是否为对应于支持节电管理的值。
+    
+				</td></tr><tr><td class="content" id="description_35">根据本发明，可当所述存储卡处于旁置状态时执行所述步骤A。
+    
+				</td></tr><tr><td class="content" id="description_36">根据本发明，所述存储卡可为多媒体卡MMC或安全数字卡SD；所述
+    节电命令可为CMD扩展命令。
+    
+				</td></tr><tr><td class="content" id="description_37">本发明还提供一种存储装置，该存储装置通过与外接读取设备之间的通
+    讯交互而实现节电，包括：存储主控单元、时钟管理寄存器CCR、时钟控
+    制单元、电源管理寄存器PCR、电压调控单元和功能执行单元；
+    
+				</td></tr><tr><td class="content" id="description_38">所述存储主控单元用于与所述外接读取设备相连，并与所述CCR和所
+    述PCR分别相连，用于将所述外接读取设备发来的命令进行解析并发送到
+    所述CCR或PCR中存储，并用于从所述CCR或PCR中读取所述存储装置
+    内部功能模块信息；
+    
+				</td></tr><tr><td class="content" id="description_39">所述CCR分别与所述存储主控单元和所述时钟控制单元相连，用于存
+    放所述存储装置内部的时钟管理信息；
+    
+				</td></tr><tr><td class="content" id="description_40">所述时钟控制单元与所述CCR相连，以接收管理命令和所述CCR中存
+    储的内部时钟管理信息；所述时钟控制单元还与所述功能执行单元相连，并
+    根据获取的管理命令和内部时钟管理信息，对所述功能执行单元中相应的一
+    个或多个功能模块的时钟进行管理；
+    
+				</td></tr><tr><td class="content" id="description_41">所述PCR分别与所述存储主控单元和所述电压调控单元相连，用于存
+    放所述存储装置内部的电源管理信息。
+    
+				</td></tr><tr><td class="content" id="description_42">所述电压调控单元与所述PCR相连，以接收管理命令和所述PCR中存
+    储的内部电源管理信息；所述电压调控单元还与所述功能执行单元相连，并
+    根据获取的管理命令和内部电源管理信息，对所述功能执行单元中相应的一
+    个或多个功能模块的电源进行管理。
+    
+				</td></tr><tr><td class="content" id="description_43">所述存储装置，可包括与所述CCR、所述PCR和所述电压调控单元分
+    别相连的保值锁存器，用于锁存所述CCR和所述PCR中的管理信息。
+    
+				</td></tr><tr><td class="content" id="description_44">本发明提供一种基于通讯模式的存储卡节电方法及装置，可有效实现存
+    储卡的节电。本发明通过存储卡的扩展通讯协议命令，对存储卡内部各模块
+    的时钟及电源和存储卡外部时钟及电源进行管理，并可较好解决存储卡不工
+    作时的漏电问题。
+    
+				</td></tr><tr><td class="content" id="description_45">附图说明
+  </td></tr><tr><td class="content" id="description_46">图1为本发明提供的节电管理模式下关闭存储卡外部电源的控制过程
+    实施例流程图；
+    
+				</td></tr><tr><td class="content" id="description_47">图2为本发明提供的节电管理模式下关闭存储卡外部时钟的控制过程
+    实施例流程图；
+    
+				</td></tr><tr><td class="content" id="description_48">图3为本发明提供的节电管理模式下调节存储卡内部模块时钟的控制
+    过程实施例流程图；
+    
+				</td></tr><tr><td class="content" id="description_49">图4为本发明提供的节电管理模式下关闭存储卡内部模块电源的控制
+    过程实施例流程图；
+    
+				</td></tr><tr><td class="content" id="description_50">图5为本发明提供的节电管理模式下打开存储卡内部模块电源的控制
+    
+					过程实施例流程图；
+    
+				</td></tr><tr><td class="content" id="description_51">图6为本发明提供的节电管理模式下读取存储卡中时钟管理寄存器的
+    过程实施例流程图；
+    
+				</td></tr><tr><td class="content" id="description_52">图7为本发明提供的节电管理模式下打开存储卡中电源管理寄存器的
+    过程实施例流程图；
+    
+				</td></tr><tr><td class="content" id="description_53">图8为实现节电模式管理的状态转换图；
+    
+				</td></tr><tr><td class="content" id="description_54">图9为本发明提供的适用于节电模式下内部模块时钟和电源管理的存
+    储装置结构示意图。
+    
+				</td></tr><tr><td class="content" id="description_55">具体实施方式
+  </td></tr><tr><td class="content" id="description_56">为使本发明的目的、技术方案和优点更加清楚，下面结合附图对本发明
+    作进一步的详细描述。
+    
+				</td></tr><tr><td class="content" id="description_57">本发明将要借鉴现有的SOC电源管理方法，并通过一种存储卡的扩展
+    通讯协议命令，对存储卡内部各模块的时钟及电源和存储卡外部时钟及电源
+    进行管理。因此，需要进行以下工作：一是在存储卡的特征寄存器中设置相
+    应的标志位，使数据存取设备，如读卡设备，可以确定存储卡是否支持本发
+    明提供的节电模式的管理方法；二是在现有的通讯协议中设置相应的节电管
+    理命令，使数据存取设备可以通过该命令对存储卡的内外电源及时钟进行管
+    理；三是在存储卡对所述节电管理命令的响应中，包括告知数据存取设备是
+    否已采用该节电措施进行工作的信息；四是在存储寄存器组中设置相应的寄
+    存器，以管理和标识存储卡内部各模块中电源和时钟的工作情况，并标识存
+    储卡是否对关闭外部电源和时钟的操作已做好准备。
+    
+				</td></tr><tr><td class="content" id="description_58">本发明适用于但并不仅限于SD/MMC存储卡，对于其他类型的存储卡，
+    也可采用类似的方法实现。下面以SD/MMC存储卡为例对本发明进行说明。
+    
+				</td></tr><tr><td class="content" id="description_59">1)设置节电模式支持标志位：
+    
+				</td></tr><tr><td class="content" id="description_60">在存储卡的特定寄存器，如卡特定数据(CSD)寄存器中设置节电模式
+    支持标志位SAVE_POWER，如表1所示，其中，SAVE_POWER值为1时
+    
+					表示支持节电模式，值为0时表示不支持节电模式，这样，使得数据存取设
+    备可以在上电检测时获知该存储卡是否支持本发明提供的节电操作方法。
+    
+				</td></tr><tr><td class="content" id="description_61">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  名称
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  字段
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  宽度
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  信元类型
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  CSD-片
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  DSR的实现
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  DSR_IMP
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  R
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  [76:76]
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  节电模式支持标志
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  SAVE_POWER
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  R
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  [75]
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  保留
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  -
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  R
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  [74]
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  设备大小
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  C_SIZE
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  12
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  R
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  [73:62]
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_62">表1
+    
+				</td></tr><tr><td class="content" id="description_63">2)设置节电管理命令：
+    
+				</td></tr><tr><td class="content" id="description_64">为实现节电模式管理控制，在原SD/MMC协议的命令列表中，可增设
+    节电管理命令CMD43-SAVE_POWER_CONTROL，如表2所示。当然，除
+    CMD43以外，也可采用其他可用的扩展命令，如CMD44。
+    
+				</td></tr><tr><td class="content" id="description_65">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  CMD
+    
+  索引
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+  类型
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+  参数
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+  响应
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+  缩写
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+  命令描述
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"> 
+    
+  CMD42
+    
+ 
+    
+ 
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"> 
+    
+  adtc
+    
+ 
+    
+ 
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  [31:0]
+    
+  填充
+    
+  比特
+    
+ 
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"> 
+    
+  R1b
+    
+ 
+    
+ 
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"> 
+    
+  LOCK_UNLOCK
+    
+ 
+    
+ 
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  用于置位/复位密码或加
+    
+  锁/解锁卡。数据块大小
+    
+  由SET_BLOCK_LEN命
+    
+  令设定
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"> 
+    
+  CMD43
+    
+ 
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"> 
+    
+  adtc
+    
+ 
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  [31:0]
+    
+  填充
+    
+  比特
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"> 
+    
+  R6
+    
+ 
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"> 
+    
+  SAVE_POWER_
+    
+  CONTROL
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"> 
+    
+  通过该命令实现对节电
+    
+  模式的控制
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  CMD44
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  保留
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_66">表2
+    
+				</td></tr><tr><td class="content" id="description_67">其中，CMD43(SAVE_POWER_CONTROL)的命令格式描述如表2A
+    和表2B所示。其中，表2A对应于CPS＝1时的命令格式，其中符号A代表
+    模块时钟级别控制字；表2B对应于CPS＝0时的命令格式，其中，符号B代
+    表模块电源开闭控制字。
+    
+				</td></tr><tr><td class="content" id="description_68">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  7
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  6
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  5
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  4
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  3
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  5
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  4
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  CPS＝1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  WR
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  PD
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  CD
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  保留
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">          A
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  3
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  A
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">          A
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  A
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_69">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  A
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  A
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  A
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  A
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  A
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">   A
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">      A
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">               CRC
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_70">表2A
+    
+				</td></tr><tr><td class="content" id="description_71">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  7
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  6
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  5
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  4
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  3
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  5
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  4
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  CPS＝0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  WR
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  PD
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  CD
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  保留
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  B
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  3
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  B
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  B
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  B
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  CRC
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_72">表2B
+    
+				</td></tr><tr><td class="content" id="description_73">如表2A和表2B所示，其中：
+    
+				</td></tr><tr><td class="content" id="description_74">●第5行中，第7位“0”为起始位；第6位“1”表示从数据存取设备向存储
+    卡的数据传输方向；第5-0位“101011”表示命令序号43；
+    
+				</td></tr><tr><td class="content" id="description_75">●第4行中，第7位CPS为命令模块级别功能控制位，CPS为1或0表示对
+    存储卡内各模块的时钟或电源进行设置；第6位WR为读写控制位，WR为
+    1或0表示对存储卡时钟/电源管理寄存器(CCR/PCR)进行写或读操作；
+    
+				</td></tr><tr><td class="content" id="description_76">第5位PD为存储卡外部电源使能控制位，PD为1或0表示向存储卡提供
+    或不提供外部电源，PD默认值为“1”；第4位CD为存储卡外部时钟使能
+    控制位，CD为1或0表示向存储卡提供或不提供外部时钟，CD默认值为
+    “1”；第4行第2位-第1行第0位，其默认值为全“0”，用于对存储卡内
+    部各模块的时钟级别进行控制管理，并进行模块级的电源使能管理，不过，
+    未给出相应的被控制模块，可根据实际情况确定，各模块时钟为系统提供的
+    最高时钟频率，将各模块电源打开。
+    
+				</td></tr><tr><td class="content" id="description_77">●从第0行第7-1位用于7位CRC效验；第0位“1”为结束位。
+    
+				</td></tr><tr><td class="content" id="description_78">3)设置节电管理命令响应：
+    
+				</td></tr><tr><td class="content" id="description_79">在存储卡对所述节电管理命令的响应中，设置响应信息，告知数据存取
+    
+					设备该存储卡是否已采用该节电措施进行工作。其中，表3A和表3B显示
+    CMD43(SAVE_POWER_CONTROL)的命令响应，其中，表3A对应于CPR＝1
+    时的命令格式，其中符号C代表模块时钟级别控制字响应；表3B对应于
+    CPR＝0时的命令格式，其中，符号D代表模块电源开闭控制字响应。
+    
+				</td></tr><tr><td class="content" id="description_80">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  7
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  6
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  5
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  4
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  3
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  5
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  4
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  CPR＝1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  WRR
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  PDR
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  CDR
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  保留
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  C
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  3
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  C
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  C
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  C
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  C
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  C
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  C
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  C
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  C
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  C
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  C
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  CRC
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_81">表3A
+    
+				</td></tr><tr><td class="content" id="description_82">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  7
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  6
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  5
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  4
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  3
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  5
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  4
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  CPR＝0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  WRR
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  PDR
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  CDR
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  保留
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  D
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  3
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  D
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  D
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  D
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  CRC
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+											
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_83">表3B
+    
+				</td></tr><tr><td class="content" id="description_84">如表3A和表3B所示，其中：
+    
+				</td></tr><tr><td class="content" id="description_85">●第5行中，第7位“0”为起始位；第6位“0”表示从存储卡向数据存取设
+    备的数据传输方向；第5-0位“101011”表示命令序号43；
+    
+				</td></tr><tr><td class="content" id="description_86">●第4行中，第7位CPR为模块级别功能控制响应位，CPR为1或0表示存
+    储卡对各模块时钟或电源级别设置命令进行响应；第6位WRR为读写控制
+    响应位，WRR为1或0表示存储卡对写或读操作进行响应；第5位PDR为
+    存储卡外部电源关闭模式响应位，PDR为1或0表示存储卡对外部电源关
+    闭操作已准备好或未准备好，PDR默认值为“0”；第4位CDR为存储卡外
+    部时钟关闭模式响应位，CDR为1或0表示存储卡对外部时钟关闭操作已
+    
+					准备好或未准备好，CDR默认值为“0”；第3位保留；第4行第2位-第1
+    行第0位，其默认数值为全“0”，用于对存储卡内部各模块的时钟级别进行
+    控制管理和模块级的电源使能管理设置进行响应，不过，为给出相应的被控
+    制模块，可根据实际情况来确定，各模块时钟为系统提供的最高时钟频率，
+    将各模块电源打开，同时，如果回传值与预设值相等，表示该模块已按设置
+    值工作，如果回传值与设置前的读取值相等，表示该模块未按设置值工作；
+    
+				</td></tr><tr><td class="content" id="description_87">●从第0行第7-1位用于CRC效验；第0位“1”为结束位；
+    
+				</td></tr><tr><td class="content" id="description_88">4)设置相应的寄存器：
+    
+				</td></tr><tr><td class="content" id="description_89">在存储寄存器组中设置相应的寄存器，如时钟管理寄存器(CCR)和电
+    源管理寄存器(PCR)，以管理和标识存储卡内部各模块中电源和时钟的工
+    作情况，并标识存储卡是否对关闭外部电源和时钟的操作已做好准备。
+    
+				</td></tr><tr><td class="content" id="description_90">存储卡时钟管理寄存器的设置如表4A所示。其中，符号E代表模块时
+    钟级别控制字。
+    
+				</td></tr><tr><td class="content" id="description_91">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  7
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  6
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  5
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  4
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  3
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  3
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  保留
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  CDR
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  保留
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  E
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  E
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  E
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  E
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  E
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  E
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  E
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  E
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  E
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  E
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  E
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_92">表4A
+    
+				</td></tr><tr><td class="content" id="description_93">如表4A所示，其中：
+    
+				</td></tr><tr><td class="content" id="description_94">●第3行第4位CDR为存储卡外部时钟关闭模式指示位，CDR为1或0表示
+    存储卡可以接受或不可接受外部时钟关闭操作，CDR相对于数据存取设备
+    来讲是只读的，但是存储卡可以跟据自身的状态设置CDR，CDR默认值为
+    0；
+    
+				</td></tr><tr><td class="content" id="description_95">●第3行第2位-第0行第0位，其默认值为全“0”，为存储卡内部各模块时
+    钟级别控制，在本实施中未给出具体定义，应依实际情况而定，表示各模块
+    均按系统所能提供的最高频工作；其参考设置如下：000表示系统按照所能
+    
+					提供的最高频工作，001表示系统按照所能提供的最高频的2分频工
+    作，......，111表示系统按照所能提供的最高频的128分频工作。
+    
+				</td></tr><tr><td class="content" id="description_96">存储卡电源管理寄存器的设置如表4B所示。其中，符号F代表模块电
+    源开闭控制字。
+    
+				</td></tr><tr><td class="content" id="description_97">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  7
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  6
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  5
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  4
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  3
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  3
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  保留
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  PDR
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  保留
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  F
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  F
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  F
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">  F
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_98">表4B
+    
+				</td></tr><tr><td class="content" id="description_99">其中：
+    
+				</td></tr><tr><td class="content" id="description_100">●第3行第5位PDR为存储卡外部电源关闭模式指示位，PDR为1或0表示
+    存储卡可以接受或不可接受外部电源关闭操作，PDR相对于数据存取设备
+    来讲是只读的，但是存储卡可以跟据自身的状态设置PDR，PDR默认值为
+    0；
+    
+				</td></tr><tr><td class="content" id="description_101">●第3行第2位-第0行第0位，其默认值为全“0”，为存储卡内部各模块电
+    源级别控制，本实施未给出具体定义，应依实际情况而定，表示各模块的电
+    压值正常供给。
+    
+				</td></tr><tr><td class="content" id="description_102">至此所述，本发明可通过扩展的存储卡通讯协议命令，实现对于存储卡
+    内部各模块的时钟及电源和存储卡外部时钟及电源进行管理。本发明提供的
+    节电模式操作主要包括对存储卡内外时钟和电源的控制过程，以及对相应的
+    寄存器的操作过程。
+    
+				</td></tr><tr><td class="content" id="description_103">为使本发明的目的、技术方案和优点更加清楚，下面结合附图对本发明
+    作进一步的详细描述。
+    
+				</td></tr><tr><td class="content" id="description_104">图1为本发明提供的节电管理模式下关闭存储卡外部电源的控制过程
+    实施例流程图。具体如下：
+    
+				</td></tr><tr><td class="content" id="description_105">步骤101、数据存取设备对存储卡初始化以后，检测并获取该存储卡中
+    
+					的CSD寄存器中的SAVE_P0WER值；
+    
+				</td></tr><tr><td class="content" id="description_106">步骤102、数据存取设备根据步骤101中获取的SAVE_POWER值，判
+    断该存储卡是否支持节电模式，如果支持，即所述SAVE_POWER的值为1，
+    则执行步骤103；如果不支持，即所述SAVE_POWER的值为0，则结束流
+    程；
+    
+				</td></tr><tr><td class="content" id="description_107">步骤103、所述存储卡进入旁置状态，等待命令；
+    
+				</td></tr><tr><td class="content" id="description_108">步骤104、数据存取设备向存储卡发送CMD43命令，其中，CPS＝0，
+    WR＝1，CD＝0，PD＝1，表示数据存取设备将在未来一段时间内关闭存储卡
+    外部电源；
+    
+				</td></tr><tr><td class="content" id="description_109">步骤105、存储卡接收步骤104中所述CMD43命令，根据自身的状态
+    确定是否同意关闭其外部电源，然后在存储卡电源管理寄存器中设置相应的
+    PDR值，并将包含该PDR值的响应消息返回所述数据存取设备；
+    
+				</td></tr><tr><td class="content" id="description_110">步骤106、数据存取设备接收步骤105中所述存储卡返回的响应消息，
+    并获取其中的PDR值；
+    
+				</td></tr><tr><td class="content" id="description_111">步骤107、数据存取设备根据步骤106中所获取的PDR值，判断所述
+    存储卡是否同意关闭其外部电源，如果所述PDR值为1，说明所述存储卡同
+    意关闭其外部电源，则执行步骤108；如果所述PDR值为0，说明所述存储
+    卡不同意关闭其外部电源，则需等待一定时间后返回执行步骤104，即重发
+    CMD43命令；
+    
+				</td></tr><tr><td class="content" id="description_112">步骤108、数据存取设备关闭所述存储卡的外部电源。
+    
+				</td></tr><tr><td class="content" id="description_113">图2为本发明提供的节电管理模式下关闭存储卡外部时钟的控制过程
+    实施例流程图。具体如下：
+    
+				</td></tr><tr><td class="content" id="description_114">步骤201、数据存取设备对存储卡初始化以后，检测并获取该存储卡中
+    的CSD寄存器中的SAVE_POWER值；
+    
+				</td></tr><tr><td class="content" id="description_115">步骤202、数据存取设备根据步骤201中获取的SAVE_POWER值，判
+    断该存储卡是否支持节电模式，如果支持，即所述SAVE_POWER的值为1，
+    则执行步骤203；如果不支持，即所述SAVE_POWER的值为0，则结束流
+    
+					程；
+    
+				</td></tr><tr><td class="content" id="description_116">步骤203、所述存储卡进入旁置状态，等待命令；
+    
+				</td></tr><tr><td class="content" id="description_117">步骤204、数据存取设备向存储卡发送CMD43命令，其中，CPS＝1，
+    WR＝1，CD＝1，PD＝0，表示数据存取设备将在未来一段时间内关闭存储卡
+    外部时钟；
+    
+				</td></tr><tr><td class="content" id="description_118">步骤205、存储卡接收步骤204中所述CMD43命令，根据自身的状态
+    确定是否同意关闭其外部时钟，然后在存储卡时钟管理寄存器中设置相应的
+    CDR值，并将包含该CDR值的响应消息返回所述数据存取设备；
+    
+				</td></tr><tr><td class="content" id="description_119">步骤206、数据存取设备接收步骤205中所述存储卡返回的响应消息，
+    并获取其中的CDR值；
+    
+				</td></tr><tr><td class="content" id="description_120">步骤207、数据存取设备根据步骤206中所获取的CDR值，判断所述
+    存储卡是否同意关闭其外部时钟，如果所述CDR值为1，说明所述存储卡
+    同意关闭其外部时钟，则执行步骤208；如果所述CDR值为0，说明所述存
+    储卡不同意关闭其外部时钟，则需等待一定时间后返回执行步骤204，即重
+    发CMD43命令；
+    
+				</td></tr><tr><td class="content" id="description_121">步骤208、数据存取设备关闭所述存储卡的外部时钟。
+    
+				</td></tr><tr><td class="content" id="description_122">如图2所示，本实施例中关闭存储卡外部时钟的控制过程与如图1所示
+    的关闭存储卡外部电源的控制过程类似，只是其中CMD43中命令的内容及
+    判断参数，即CDR，有所不同。
+    
+				</td></tr><tr><td class="content" id="description_123">图3为本发明提供的节电管理模式下调节存储卡内部模块时钟的控制
+    过程实施例流程图。具体如下：
+    
+				</td></tr><tr><td class="content" id="description_124">步骤301、数据存取设备对存储卡初始化以后，检测并获取该存储卡中
+    的CSD寄存器中的SAVE_POWER值；
+    
+				</td></tr><tr><td class="content" id="description_125">步骤302、数据存取设备根据步骤301中获取的SAVE_POWER值，判
+    断该存储卡是否支持节电模式，如果支持，即所述SAVE_POWER的值为1，
+    则执行步骤303；如果不支持，即所述SAVE_POWER的值为0，则结束流
+    程；
+    
+				</td></tr><tr><td class="content" id="description_126">步骤303、所述存储卡进入旁置状态，等待命令；
+    
+				</td></tr><tr><td class="content" id="description_127">步骤304、数据存取设备向存储卡发送CMD43命令，其中，CPS＝1，
+    WR＝0，CD＝0，PD＝0，表示数据存取设备将读取存储卡时钟管理寄存器中
+    的值，以判断是否需要调节存储卡内部模块时钟；
+    
+				</td></tr><tr><td class="content" id="description_128">步骤305、存储卡接收步骤304中所述CMD43命令，根据自身的状态
+    将存储卡时钟管理寄存器中的时钟相关信息包含在响应消息中返回所述数
+    据存取设备；
+    
+				</td></tr><tr><td class="content" id="description_129">步骤306、数据存取设备接收步骤305中所述存储卡返回的响应消息，
+    并获取其中的时钟相关信息；
+    
+				</td></tr><tr><td class="content" id="description_130">步骤307、数据存取设备根据步骤306中所获取的存储卡内部时钟相关
+    信息，判断是否需要调节存储卡内部模块时钟，如果所述时钟相关信息设置
+    合适，则不需进行调节，结束流程；如果所述时钟相关信息设置不合适，则
+    需要进行调节，执行步骤308；
+    
+				</td></tr><tr><td class="content" id="description_131">步骤308、数据存取设备向存储卡发送CMD43命令，其中，CPS＝1，
+    WR＝1，CD＝0，PD＝0，将存储卡时钟管理寄存器中相应模块的时钟控制位
+    设置为合适值；
+    
+				</td></tr><tr><td class="content" id="description_132">步骤309、存储卡接收步骤308中所述CMD43命令，根据自身的状态
+    同意按照所述CMD43命令调节其内部相应模块的时钟，并在完成调节后向
+    数据存取设备返回内部时钟调节完成响应；
+    
+				</td></tr><tr><td class="content" id="description_133">步骤310、数据存取设备接收步骤309中所述存储卡返回的响应，获知
+    存储卡的内部时钟调节已完成，所述存储卡已按照新的设置进行工作。
+    
+				</td></tr><tr><td class="content" id="description_134">如图3所示，本实施例中关闭存储卡内部模块时钟的控制过程与如图2
+    所示的关闭存储卡外部时钟的控制过程类似。其中，在数据存取设备向存储
+    卡发送内部时钟调节命令以前，先通过一个CMD43命令读取存储卡时钟管
+    理寄存器中的时钟信息，以判断是否需要进行存储卡的内部时钟调节，而当
+    发现所述时钟信息的时钟不合适时，才向存储卡发送内部时钟调节的命令。
+    
+				</td></tr><tr><td class="content" id="description_135">图4为本发明提供的节电管理模式下关闭存储卡内部模块电源的控制
+    
+					过程实施例流程图。具体如下：
+    
+				</td></tr><tr><td class="content" id="description_136">步骤401、数据存取设备对存储卡初始化以后，检测并获取该存储卡中
+    的CSD寄存器中的SAVE_POWER值；
+    
+				</td></tr><tr><td class="content" id="description_137">步骤402、数据存取设备根据步骤401中获取的SAVE_POWER值，判
+    断该存储卡是否支持节电模式，如果支持，即所述SAVE_POWER的值为1，
+    则执行步骤403；如果不支持，即所述SAVE_POWER的值为0，则结束流
+    程；
+    
+				</td></tr><tr><td class="content" id="description_138">步骤403、所述存储卡进入旁置状态，等待命令；
+    
+				</td></tr><tr><td class="content" id="description_139">步骤404、数据存取设备向存储卡发送CMD43命令，其中，CPS＝0，
+    WR＝1，CD＝0，PD＝0，表示将关闭存储卡中相应模块的电源；
+    
+				</td></tr><tr><td class="content" id="description_140">步骤405、存储卡接收步骤404中所述CMD43命令，根据自身的状态
+    确定同意关闭其内部相应模块的电源，并在完成关闭电源操作后向数据存取
+    设备返回内部电源关闭完成响应；
+    
+				</td></tr><tr><td class="content" id="description_141">步骤406、数据存取设备接收步骤406中所述存储卡返回的响应，获知
+    存储卡内部相应模块的电源关闭已完成。
+    
+				</td></tr><tr><td class="content" id="description_142">图5为本发明提供的节电管理模式下打开存储卡内部模块电源的控制
+    过程实施例流程图。具体如下：
+    
+				</td></tr><tr><td class="content" id="description_143">步骤501、数据存取设备对存储卡初始化以后，检测并获取该存储卡中
+    的CSD寄存器中的SAVE_POWER值；
+    
+				</td></tr><tr><td class="content" id="description_144">步骤502、数据存取设备根据步骤501中获取的SAVE_POWER值，判
+    断该存储卡是否支持节电模式，如果支持，即所述SAVE_POWER的值为1，
+    则执行步骤503；如果不支持，即所述SAVE_POWER的值为0，则结束流
+    程；
+    
+				</td></tr><tr><td class="content" id="description_145">步骤503、所述存储卡进入旁置状态，等待命令；
+    
+				</td></tr><tr><td class="content" id="description_146">步骤504、数据存取设备向存储卡发送CMD43命令，其中，CPS＝0，
+    WR＝0，CD＝0，PD＝0，表示数据存取设备将读取存储卡电源管理寄存器中
+    的值，以判断是否需要调节存储卡内部模块电源；
+    
+				</td></tr><tr><td class="content" id="description_147">步骤505、存储卡接收步骤504中所述CMD43命令，根据自身的状态
+    将存储卡电源管理寄存器中的电源相关信息包含在响应消息中返回所述数
+    据存取设备；
+    
+				</td></tr><tr><td class="content" id="description_148">步骤506、数据存取设备接收步骤505中所述存储卡返回的响应消息，
+    并获取其中的电源相关信息；
+    
+				</td></tr><tr><td class="content" id="description_149">步骤507、数据存取设备根据步骤506中所获取的存储卡内部电源相关
+    信息，判断相应模块的电源是否已打开，如果相应模块的电源已打开，则结
+    束流程；如果相应模块的电源未打开，则需要进行调节，执行步骤508；
+    
+				</td></tr><tr><td class="content" id="description_150">步骤508、数据存取设备向存储卡发送CMD43命令，其中，CPS＝1，
+    WR＝1，CD＝0，PD＝0，将存储卡电源管理寄存器中相应模块的电源控制位
+    设置为0；
+    
+				</td></tr><tr><td class="content" id="description_151">步骤509、存储卡接收步骤508中所述CMD43命令，根据自身的状态
+    确定同意打开其内部相应模块的电源，并在完成打开电源操作后向数据存取
+    设备返回内部电源打开完成响应；
+    
+				</td></tr><tr><td class="content" id="description_152">步骤510、数据存取设备接收步骤509中所述存储卡返回的响应，获知
+    存储卡内部相应模块的电源打开已完成。
+    
+				</td></tr><tr><td class="content" id="description_153">如图5所示，本实施例中打开存储卡内部模块电源的控制过程与如图4
+    所示的关闭存储卡内部模块电源的控制过程类似。其中，在数据存取设备向
+    存储卡发送内部模块电源打开命令以前，先通过一个CMD43命令读取存储
+    卡电源管理寄存器中的电源相关信息，以判断是否需要打开存储卡内部模块
+    的电源，而当发现所述存储卡内部模块的电源未打开时，才向存储卡发送打
+    开其内部模块电源的命令。
+    
+				</td></tr><tr><td class="content" id="description_154">图6为本发明提供的节电管理模式下读取存储卡中时钟管理寄存器的
+    过程实施例流程图。如图6所示，步骤601-606实际上与如图3中所示的
+    步骤301-306是完全相同的，在此不再赘述。在如图3所示的实施例中，
+    需要读取存储卡时钟管理寄存器中的信息，并根据该信息判断是否需要对存
+    储卡的时钟设置进行调节。而实际上，有时数据存取设备需要检测存储卡以
+    
+					获知其状态信息，因此数据存取设备只需读取存储卡时钟管理寄存器中的信
+    息，而并不需要进行进一步的操作，即如图6所示。
+    
+				</td></tr><tr><td class="content" id="description_155">图7为本发明提供的节电管理模式下打开存储卡中电源管理寄存器的
+    过程实施例流程图。如图7所示，步骤701-706实际上与如图5中所示的
+    步骤501-506是完全相同的，在此不再赘述。在如图5所示的实施例中，
+    需要读取存储卡电源管理寄存器中的信息，并根据该信息判断是否需要对存
+    储卡的电源进行操作。而实际上，有时数据存取设备需要检测存储卡以获知
+    其状态信息，因此数据存取设备只需读取存储卡电源管理寄存器中的信息，
+    而并不需要进行进一步的操作，即如图7所示。
+    
+				</td></tr><tr><td class="content" id="description_156">图8为实现节电模式管理的状态转换图。如图8所示，数据存取设备要
+    对于存储卡的电源和时钟进行节电管理操作及控制，较佳地，可以在存储卡
+    处于旁置(Standby)状态时进行，以避免对于存储卡工作的不良影响。不
+    过，实际上，数据存取设备也可以在其他状态下向存储卡发出电源和时钟节
+    电管理操作及控制命令。
+    
+				</td></tr><tr><td class="content" id="description_157">在上述的各实施例中，在所采用的CSD寄存器及CMD43扩展命令中，
+    使用1或0对应于具有相应含义的控制字，如支持省电模式或不支持省电模
+    式、时钟操作或电源操作、写操作或读操作等，这些1或0的设置仅用于举
+    例说明，而并非用于限定本发明的使用。
+    
+				</td></tr><tr><td class="content" id="description_158">本发明还提供一种可采用节电模式管理内部模块时钟和电源的存储装
+    置。图9为本发明提供的适用于节电模式下内部模块时钟和电源管理的存储
+    装置结构示意图。如图9所示，所述存储装置包括存储主控单元900、时钟
+    管理寄存器(CCR)901、时钟控制单元902、电源管理寄存器(PCR)903、
+    电压调控单元904和功能执行单元905。其中：
+    
+				</td></tr><tr><td class="content" id="description_159">存储主控单元900可与外部数据存取设备相连，并与CCR 901和PCR
+    902分别相连；存储主控单元900用于接收外接数据存取设备发来的命令并
+    对其进行解析，并将解析出来的对存储卡内部模块时钟或电源管理的信息分
+    别存入到CCR 901或PCR 902中；另一方面，如果外接的数据存取设备要
+    
+					获知存储卡内部的时钟或电源管理情况，可发出相应命令，由存储主控单元
+    900从CCR 901或PCR 902中读取存储卡内部的时钟或电源管理信息。
+    
+				</td></tr><tr><td class="content" id="description_160">CCR 901分别与存储主控单元900和时钟控制单元902相连，用于存放
+    存储卡内部的时钟管理信息。
+    
+				</td></tr><tr><td class="content" id="description_161">时钟控制单元902与CCR 901相连，以接收管理命令和CCR 901中存
+    储的内部时钟管理信息；时钟控制单元902还与功能执行单元905相连，并
+    可根据获取的管理命令和内部时钟管理信息，对功能执行单元905中相应的
+    一个或多个功能模块的时钟进行管理。
+    
+				</td></tr><tr><td class="content" id="description_162">PCR 903分别与存储主控单元900和电压调控单元904相连，用于存放
+    存储卡内部的电源管理信息。
+    
+				</td></tr><tr><td class="content" id="description_163">电压调控单元904与PCR 903相连，以接收管理命令和PCR 903中存
+    储的内部电源管理信息；电压调控单元904还与功能执行单元905相连，并
+    可根据获取的管理命令和内部电源管理信息，对功能执行单元905中相应的
+    一个或多个功能模块的电源进行管理。
+    
+				</td></tr><tr><td class="content" id="description_164">如图9所示的存储装置实施例中，同时包括了时钟控制和调节单元，即
+    CCR 901和时钟控制单元902，与电源控制和调节单元，即PCR 904和电压
+    调控单元904。实际上，也可仅包括其中一类控制和调节单元，即时钟或电
+    源控制和调节单元。
+    
+				</td></tr><tr><td class="content" id="description_165">此外，在不工作的情况下，需要将存储卡内部模块寄存器，如CCR 901
+    或PCR 902的值保留下来。用于保存寄存器值的保值锁存器是一种速度较慢
+    的高阈值单元，但静态功耗低，而且除了通常的D、CLK、Q端以外，还具
+    有SLEEP、WAKE-UP控制信号。所述保值锁存器接两种电压：Vdd和Vsleep，
+    其中Vdd供普通寄存器使用，Vsleep供保值锁存器使用，分别由电压调控
+    单元904提供。所述保值锁存器在活动状态时作为一个低阈值的寄存器使
+    用；其在睡眠状态时处于高阈值以减少静态功耗，同时切断与其他内部单元
+    的工作电压，仅提供Vsleep电压确保其工作；其在唤醒状态时将保存的数
+    据载入到寄存器并输出到驱动Q端。
+    
+				</td></tr><tr><td class="content" id="description_166">综上所述，本发明提供一种基于通讯模式的存储卡节电方法及装置，可
+    有效实现存储卡的节电。本发明通过存储卡的扩展通讯协议命令，对存储卡
+    内部各模块的时钟及电源和存储卡外部时钟及电源进行管理，并可较好解决
+    存储卡不工作时的漏电问题。
+    
+				</td></tr><tr><td class="content" id="description_167">总之，以上所述仅为本发明的较佳实施例而已，并非用于限定本发明的
+    保护范围。
+    
+				</td></tr></table></div></body></html>

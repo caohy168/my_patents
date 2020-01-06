@@ -1,0 +1,773 @@
+<html><head><title>全文文本(Fulltext)</title><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><style>div.fullText table {width: 100%;text-indent: 1px;} 
+ div.fullText table td.header {font-weight: bold;text-align: center;font-family: '宋体';font-size: 16px;line-height:20px;color: #000000;padding: 5px;}div.fullText table td.content {padding: 1px;text-align: left;vertical-align: top;width: 100%;font-family: '宋体';font-size: 14px;line-height:20px;color: #000000;}</style></head><body><?xml version="1.0" encoding="UTF-8"?><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table class="fullText"><tr><td id="claim_title" class="header">权利要求书</td></tr><tr><td class="content" id="claim_1">1、一种闪存卡的数据传输方法，所述闪存卡上具有一组主管脚，读卡设备
+      <br/>的插座上具有对应所述主管脚的接触针；其特征在于，
+      <br/>
+				</td></tr><tr><td class="content" id="claim_2">在所述闪存卡上设置至少一组扩展管脚，在读卡设备的插座上设置对应所
+      <br/>述扩展管脚的扩展接触针；所述闪存卡插入读卡设备的插座后，所述主管脚与
+      <br/>接触针相接触形成主总线传输通路，所述扩展管脚与扩展接触针相接触形成扩
+      <br/>展总线传输通路；该方法还包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_3">读卡设备通过所述主总线传输通路，向闪存卡发送指示命令，指示所述主
+      <br/>总线传输通路与所述扩展总线传输通路的使用方式；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_4">读卡设备和闪存卡按照所述指示命令的指示，通过主总线传输通路和/或扩
+      <br/>展总线传输通路进行数据传输。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_5">2、如权利要求1所述的方法，其特征在于，所述指示命令中包括指示单总
+      <br/>线或双总线工作模式的标志位、以及指示数据宽度的标志位；所述使用方式，
+      <br/>由所述指示数据宽度的标志位取值和指示单总线或双总线模式的标志位取值确
+      <br/>定。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_6">3、如权利要求2所述的方法，其特征在于，所述扩展管脚为一组；所述扩
+      <br/>展总线传输通路与所述主总线传输通路的最大数据宽度相同；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_7">当所述指示单总线或双总线模式的标志位取值指示当前使用双总线模式，
+      <br/>且所述指示数据宽度的标志位取值指示小于等于所述最大数据宽度时，所述使
+      <br/>用方式包括：将所述主总线传输通路和扩展总线传输通路合并为一条总线传输
+      <br/>通路使用，且合并后的总线传输通路的数据位宽为所述指示数据宽度的标志位
+      <br/>指示的数据宽度的2倍；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_8">或者，当所述指示单总线或双总线模式的标志位取值指示当前使用单总线
+      <br/>模式、且所述指示数据宽度的标志位取值指示所述最大数据宽度的2倍时，所
+      <br/>述指示命令指示将所述主总线传输通路和扩展总线传输通路分别作为独立总线
+      <br/>传输通路同时使用，且主总线传输通路和扩展总线传输通路的数据宽度分别为
+      <br/>
+					所述最大数据宽度；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_9">或者，当所述指示单总线或双总线模式的标志位取值指示当前使用单总线
+      <br/>模式、且所述指示数据宽度的标志位取值指示小于所述最大数据宽度时，所述
+      <br/>指示命令指示只使用所述主总线传输通路，且主总线传输通路数据宽度为所述
+      <br/>指示数据宽度的标志位取值指示的数据宽度。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_10">4、如权利要求3所述的方法，其特征在于，所述闪存卡为数字安全SD卡，
+      <br/>所述指示命令为SD卡传输状态的命令ACMD6；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_11">所述指示单总线或双总线模式的标志位，位于所述ACMD6的第3比特位；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_12">所述指示所述数据宽度的标志位，位于所述ACMD6的第0至第2比特位。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_13">5、一种闪存卡，包括一组主管脚、主总线驱动电路和控制器，所述主管脚
+      <br/>与读卡设备上的接触针相接触形成主总线传输通路；其特征在于，该闪存卡还
+      <br/>包括至少一组扩展管脚和对应的扩展总线驱动电路，所述扩展管脚与读卡设备
+      <br/>上的扩展接触针相接触形成扩展总线传输通路；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_14">所述主管脚，用于通过所述主总线传输通路接收读卡设备发送的指示命令、
+      <br/>通过主总线驱动电路传输给控制器，所述指示命令指示所述主总线传输通路与
+      <br/>所述扩展总线传输通路的使用方式；通过所述主总线传输通路与读卡设备进行
+      <br/>数据传输，通过主总线驱动电路与控制器进行数据传输；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_15">所述扩展管脚，用于通过所述扩展总线传输通路与读卡设备进行数据传输；
+      <br/>通过对应的扩展总线驱动电路与控制器进行数据传输；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_16">所述控制器，用于解析所述指示命令，按照所述指示命令的指示，选择主
+      <br/>总线驱动电路和/或扩展总线驱动电路进行数据传输。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_17">6、如权利要求5所述的闪存卡，其特征在于，所述主管脚位于闪存卡的正
+      <br/>面；所述扩展管脚位于闪存卡的背面或者闪存卡正面的冗余位置。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_18">7、如权利要求6所述的闪存卡，其特征在于，所述主管脚包括数据管脚、
+      <br/>命令管脚、时钟管脚和电源供应管脚；所述扩展管脚为一组，包括扩展数据管
+      <br/>脚、扩展命令管脚和扩展时钟管脚；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_19">当所述扩展管脚位于闪存卡的背面时，所述扩展数据管脚、扩展命令管脚
+      <br/>
+					和扩展时钟管脚的位置，分别与正面的数据管脚、命令管脚和时钟管脚的位置
+      <br/>对应。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_20">8、一种基于权利要求5所述闪存卡的读卡设备插座，包括接触针，与闪存
+      <br/>卡上的主管脚相接触形成主总线传输通路；其特征在于，该读卡设备插座还包
+      <br/>括扩展接触针，用于与闪存卡上的扩展管脚相接触形成扩展总线传输通路。
+      <br/>
+					
+				</td></tr></table></div><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table><tr><td id="description_title" class="header">说明书</td></tr><tr><td class="content" id="description_invention_title">一种闪存卡及其读卡设备插座和数据传输方法
+  </td></tr><tr><td class="content" id="description_1">技术领域
+  </td></tr><tr><td class="content" id="description_2">本发明涉及移动存储卡领域，特别涉及一种闪存卡及其读卡设备插座和
+    数据传输方法。
+    
+				</td></tr><tr><td class="content" id="description_3">背景技术
+  </td></tr><tr><td class="content" id="description_4">闪存卡基于其优越的存储性能，目前已经得到了广泛的应用，通常使用
+    的闪存卡包括安全数据闪存卡(SD，Secure Digital Memory Card)、多媒体
+    闪存卡(MMC，Multiple Media Card)等。
+    
+				</td></tr><tr><td class="content" id="description_5">下面以SD卡为例，简要说明现有闪存卡的基本结构。
+    
+				</td></tr><tr><td class="content" id="description_6">图1为一种SD卡的结构示意图，主要包括：接口11、控制器12、寄
+    存器13、存储器14和总线驱动电路15。
+    
+				</td></tr><tr><td class="content" id="description_7">①上述接口11为规范所定义的卡物理接口，SD卡通过该接口11可以
+    和外部读卡设备进行通信。如图1所示，接口11为位于SD卡外壳的9个
+    管脚，具体解释如表1所示，这9个管脚与读卡设备插座中的接触针相接触
+    形成总线传输通路，由于管脚中用于数据传输的一共有4个，因此接口11
+    的数据宽度为4位。数据宽度决定了接口11的数据传输速度，例如在25MHz
+    时钟条件下，数据宽度为4的SD卡接口的最大数据传输速率为12.5MB/秒。
+    
+				</td></tr><tr><td class="content" id="description_8">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  管脚
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  名称
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  类型
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  SD描述
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  CD/DAT3
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  输入输出接口
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  卡检测/数据线第3位
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  CMD
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  输入输出接口
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  命令或响应
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  3
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  VSS1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  电源供应
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  电源接地
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  4
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  VDD
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  电源供应
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  电源供应
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  5
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  CLK
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  输入接口
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  时钟
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_9">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  6
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  VSS2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  电源供应
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  电源接地
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  7
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  DAT0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  输入输出接口
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数据线第0位
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  8
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  DAT1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  输入输出接口
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数据线第1位
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  9
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  DAT2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  输入输出接口
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数据线第2位
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_10">表1
+    
+				</td></tr><tr><td class="content" id="description_11">②在接口11中，CD/DAT3、CMD、CLK、DAT0、DAT1和DAT2通
+    过总线驱动电路15连接控制器12，实现读卡设备与控制器12之间命令信
+    号、时钟信号和数据信号的交互。
+    
+				</td></tr><tr><td class="content" id="description_12">③上述控制器12主要完成SD卡端的命令解析、存储器14的访问与
+    管理以及寄存器13的访问。
+    
+				</td></tr><tr><td class="content" id="description_13">④上述寄存器13中存储着卡认证号、卡相对地址、总线驱动电路15
+    的状态、卡的操作环境、卡版本信息等内容。
+    
+				</td></tr><tr><td class="content" id="description_14">⑤上述存储器14为SD卡中存储数据的物理介质，闪存卡与读卡设备
+    之间的数据传输操作，主要指的就是控制器12从存储器14中读出数据或向
+    存储器14中写入数据。
+    
+				</td></tr><tr><td class="content" id="description_15">通过以上介绍可以看出，目前SD卡的接口的数据宽度最大为4位。其
+    他类型的闪存卡，例如MMC卡与图1所示的基本结构相同，只是在管脚数
+    量和排列上有所区别。
+    
+				</td></tr><tr><td class="content" id="description_16">虽然目前闪存卡总线的数据宽度已扩展了许多，但是闪存卡接口所能提
+    供的最大数据传输速度仍然非常有限，在一些高端应用场合无法满足应用需
+    求，并且由于闪存卡接口只包括一组管脚，所有数据传输均通过这一组管脚
+    形成的总线传输通路进行，使得闪存卡接口的总线传输通路的工作机制也非
+    常单一。
+    
+				</td></tr><tr><td class="content" id="description_17">发明内容
+  </td></tr><tr><td class="content" id="description_18">有鉴于此，本发明的第一个目的在于提供一种闪存卡，该闪存卡接口具
+    有灵活的总线传输通路工作机制，并且相对于常用闪存卡接口来说大幅提高
+    
+					所能提供的最大数据传输速度。
+    
+				</td></tr><tr><td class="content" id="description_19">本发明的第二个目的在于提供一种上述闪存卡的读卡设备插座，使得与
+    上述闪存卡配合使用时，闪存卡接口具有灵活的总线传输通路工作机制，并
+    且相对于常用闪存卡接口来说大幅提高所能提供的最大数据传输速度。
+    
+				</td></tr><tr><td class="content" id="description_20">本发明的第三个目的在于提供一种闪存卡的数据传输方法，使用该方法
+    可以使闪存卡接口具有灵活的总线传输通路工作机制，并且相对于常用闪存
+    卡接口来说大幅提高所能提供的最大数据传输速度。
+    
+				</td></tr><tr><td class="content" id="description_21">本发明的技术方案是这样实现的：
+    
+				</td></tr><tr><td class="content" id="description_22">一种闪存卡的数据传输方法，所述闪存卡上具有一组主管脚，读卡设备的
+    插座上具有对应所述主管脚的接触针；关键在于，
+    
+				</td></tr><tr><td class="content" id="description_23">在所述闪存卡上设置至少一组扩展管脚，在读卡设备的插座上设置对应所
+    述扩展管脚的扩展接触针；所述闪存卡插入读卡设备的插座后，所述主管脚与
+    接触针相接触形成主总线传输通路，所述扩展管脚与扩展接触针相接触形成扩
+    展总线传输通路；该方法还包括：
+    
+				</td></tr><tr><td class="content" id="description_24">读卡设备通过所述主总线传输通路，向闪存卡发送指示命令，指示所述主
+    总线传输通路与所述扩展总线传输通路的使用方式；
+    
+				</td></tr><tr><td class="content" id="description_25">读卡设备和闪存卡按照所述指示命令的指示，通过主总线传输通路和/或扩
+    展总线传输通路进行数据传输。
+    
+				</td></tr><tr><td class="content" id="description_26">较佳地，所述指示命令中包括指示单总线或双总线工作模式的标志位、以
+    及指示数据宽度的标志位；所述使用方式，由所述指示数据宽度的标志位取值
+    和指示单总线或双总线模式的标志位取值确定。
+    
+				</td></tr><tr><td class="content" id="description_27">较佳地，所述扩展管脚为一组；所述扩展总线传输通路与所述主总线传输
+    通路的最大数据宽度相同；
+    
+				</td></tr><tr><td class="content" id="description_28">当所述指示单总线或双总线模式的标志位取值指示当前使用双总线模式，
+    且所述指示数据宽度的标志位取值指示小于等于所述最大数据宽度时，所述使
+    用方式包括：将所述主总线传输通路和扩展总线传输通路合并为一条总线传输
+    通路使用，且合并后的总线传输通路的数据位宽为所述指示数据宽度的标志位
+    
+					指示的数据宽度的2倍；
+    
+				</td></tr><tr><td class="content" id="description_29">或者，当所述指示单总线或双总线模式的标志位取值指示当前使用单总线
+    模式、且所述指示数据宽度的标志位取值指示所述最大数据宽度的2倍时，所
+    述指示命令指示将所述主总线传输通路和扩展总线传输通路分别作为独立总线
+    传输通路同时使用，且主总线传输通路和扩展总线传输通路的数据宽度分别为
+    所述最大数据宽度；
+    
+				</td></tr><tr><td class="content" id="description_30">或者，当所述指示单总线或双总线模式的标志位取值指示当前使用单总线
+    模式、且所述指示数据宽度的标志位取值指示小于所述最大数据宽度时，所述
+    指示命令指示只使用所述主总线传输通路，且主总线传输通路数据宽度为所述
+    指示数据宽度的标志位取值指示的数据宽度。
+    
+				</td></tr><tr><td class="content" id="description_31">较佳地，所述闪存卡为数字安全SD卡，所述指示命令为SD卡传输状态的
+    命令ACMD6；
+    
+				</td></tr><tr><td class="content" id="description_32">所述指示单总线或双总线模式的标志位，位于所述ACMD6的第3比特位；
+    
+				</td></tr><tr><td class="content" id="description_33">所述指示所述数据宽度的标志位，位于所述ACMD6的第0至第2比特位。
+    
+				</td></tr><tr><td class="content" id="description_34">一种闪存卡，包括一组主管脚、主总线驱动电路和控制器，所述主管脚与
+    读卡设备上的接触针相接触形成主总线传输通路；关键在于，该闪存卡还包括
+    至少一组扩展管脚和对应的扩展总线驱动电路，所述扩展管脚与读卡设备上的
+    扩展接触针相接触形成扩展总线传输通路；
+    
+				</td></tr><tr><td class="content" id="description_35">所述主管脚，用于通过所述主总线传输通路接收读卡设备发送的指示命令、
+    通过主总线驱动电路传输给控制器，所述指示命令指示所述主总线传输通路与
+    所述扩展总线传输通路的使用方式；通过所述主总线传输通路与读卡设备进行
+    数据传输，通过主总线驱动电路与控制器进行数据传输；
+    
+				</td></tr><tr><td class="content" id="description_36">所述扩展管脚，用于通过所述扩展总线传输通路与读卡设备进行数据传输；
+    通过对应的扩展总线驱动电路与控制器进行数据传输；
+    
+				</td></tr><tr><td class="content" id="description_37">所述控制器，用于解析所述指示命令，按照所述指示命令的指示，选择主
+    总线驱动电路和/或扩展总线驱动电路进行数据传输。
+    
+				</td></tr><tr><td class="content" id="description_38">较佳地，所述主管脚位于闪存卡的正面；所述扩展管脚位于闪存卡的背面
+    
+					或者闪存卡正面的冗余位置。
+    
+				</td></tr><tr><td class="content" id="description_39">较佳地，所述主管脚包括数据管脚、命令管脚、时钟管脚和电源供应管脚；
+    所述扩展管脚为一组，包括扩展数据管脚、扩展命令管脚和扩展时钟管脚；
+    
+				</td></tr><tr><td class="content" id="description_40">当所述扩展管脚位于闪存卡的背面时，所述扩展数据管脚、扩展命令管脚
+    和扩展时钟管脚的位置，分别与正面的数据管脚、命令管脚和时钟管脚的位置
+    对应。
+    
+				</td></tr><tr><td class="content" id="description_41">一种基于以上所提出的闪存卡的读卡设备插座，包括接触针，与闪存卡
+    上的主管脚相接触形成主总线传输通路；关键在于，该读卡设备插座还包括
+    扩展接触针，用于与闪存卡上的扩展管脚相接触形成扩展总线传输通路。
+    
+				</td></tr><tr><td class="content" id="description_42">从上述技术方案可以看出，本发明提供的闪存卡及其读卡设备插座和数
+    据传输方法，除闪存卡上已有的主管脚之外，在闪存卡中增加了至少一组扩
+    展管脚，主管脚与读卡设备插座的接触针相接触形成主总线传输通路，扩展
+    管脚与读卡设备插座的扩展接触针相接触形成扩展总线传输通路，通过读卡
+    设备发送的指示命令指示上述主总线传输通路与扩展总线传输通路的使用
+    方式，然后读卡器和闪存卡就可以按照该使用方式、通过上述扩展总线传输
+    通路和/或主总线传输通路的组合进行数据传输。因此，闪存卡接口的最大
+    数据宽度成倍增加，从而在一定的时钟条件下，使得该闪存卡接口的最大数
+    据传输速度相对于常用闪存卡接口的最大数据传输速度得到大幅提高，同时
+    由于数据传输按照指示命令的指示通过主总线传输通路和/或扩展总线传输
+    通路进行，多条总线传输通路可以为数据传输提供多种不同的数据传输模
+    式，例如多条总线传输通路可以合并为一条总线传输通路进行同一数据传输
+    操作，也可以将每条总线传输通路作为独立总线传输通路进行并行数据传输
+    操作等，使得闪存卡总线传输的工作机制更加灵活。
+    
+				</td></tr><tr><td class="content" id="description_43">附图说明
+  </td></tr><tr><td class="content" id="description_44">图1为现有技术中一种SD卡的结构示意图；
+    
+				</td></tr><tr><td class="content" id="description_45">图2为本发明实施例中SD卡的正面外形示意图；
+    
+				</td></tr><tr><td class="content" id="description_46">图3为本发明实施例中SD卡的背面外形示意图；
+    
+				</td></tr><tr><td class="content" id="description_47">图4为本发明实施例中读卡设备上的插座与SD卡的对应关系剖视图；
+    
+				</td></tr><tr><td class="content" id="description_48">图5为本发明实施例中读卡设备上的插座中的接触针与SD卡管脚接触
+    的示意图；
+    
+				</td></tr><tr><td class="content" id="description_49">图6为本发明实施例中的SD卡的数据传输流程图。
+    
+				</td></tr><tr><td class="content" id="description_50">具体实施方式
+  </td></tr><tr><td class="content" id="description_51">为使本发明的目的和优点更加清楚，下面结合附图和实施例对本发明作
+    进一步的详细说明。
+    
+				</td></tr><tr><td class="content" id="description_52">本发明提供的闪存卡及其读卡设备插座和数据传输方法，将闪存卡上本
+    身具有的管脚称为主管脚，关键在于在闪存卡中增加了至少一组扩展管脚，
+    主管脚与读卡设备插座的接触针相接触形成主总线传输通路，扩展管脚与读
+    卡设备插座的扩展接触针相接触形成扩展总线传输通路，通过读卡设备发送
+    的指示命令指示上述主总线传输通路与扩展总线传输通路的使用方式，然后
+    读卡器和闪存卡就可以按照该使用方式、通过上述扩展总线传输通路和/或
+    主总线传输通路进行数据传输。
+    
+				</td></tr><tr><td class="content" id="description_53">可见，本发明提供的闪存卡及其读卡设备插座和数据传输方法中，闪存
+    卡接口的最大数据宽度成倍增加，从而在一定的时钟条件下，使得该闪存卡
+    接口的最大数据传输速度相对于常用闪存卡接口的数据传输速度得到大幅
+    提高，例如，还是SD卡为例，常用闪存卡接口在25MHz时钟条件下，接
+    口数据宽度为4的SD卡的最大数据传输速率为12.5MB/秒，而本发明闪存
+    卡接口在25MHz时钟条件下，由于增加了扩展管脚，接口数据宽度将扩展
+    为8，则最大数据传输速率将提高为25MB/秒。
+    
+				</td></tr><tr><td class="content" id="description_54">同时由于数据传输通过主总线传输通路和/或扩展总线传输通路进行，
+    多条总线传输通路可以为数据传输提供多种不同的数据传输模式，例如多条
+    总线传输通路可以合并为一条总线传输通路进行同一数据传输操作，也可以
+    将每条总线传输通路作为独立总线传输通路进行并行数据传输操作等，使得
+    
+					闪存卡总线传输通路的工作机制更加灵活。
+    
+				</td></tr><tr><td class="content" id="description_55">下面以SD卡为例，介绍本发明的一个实施例，以扩展管脚为一组举例，
+    具体对SD卡和读卡设备的插座进行了如下改进：
+    
+				</td></tr><tr><td class="content" id="description_56">第一、对接口、总线驱动电路、控制器和存储器的扩展。
+    
+				</td></tr><tr><td class="content" id="description_57">1)对接口的扩展。
+    
+				</td></tr><tr><td class="content" id="description_58">本实施例在SD卡的背面进行了管脚扩展。如图2所示为本实施例中SD
+    卡的正面主管脚排列框图，有9个主管脚分别为DAT3+、CMD+、VSS1、
+    VDD、CLK+、VSS2、DAT0+、DAT1+、DAT2+。如图3所示为本实施例
+    中SD卡背面的扩展管脚排列框图，有6个扩展管脚分别为DAT3-、CMD-、
+    CLK-、DAT0-、DAT1-、DAT2-，即在SD卡的背面扩展了4个数据管脚、
+    1个命令管脚和1个时钟管脚，其中DAT3+与DAT3-、CMD+与CMD-、CLK+
+    与CLK-、DAT0+与DAT0-、DAT1+与DAT1-及DAT2+与DAT2-的位置对
+    应，当然这只是一种具体的举例，实际也可以使背面的扩展管脚不与正面主
+    管脚的位置对应，而根据实际的需要设置在背面上合适的位置，或将扩展管
+    脚安排在SD卡正面的冗余位置。
+    
+				</td></tr><tr><td class="content" id="description_59">对应本实施例的SD卡管脚扩展，读卡设备上的插座也需要做相应的改
+    进，如图4所示为本实施例中读卡设备上的插座与SD卡的对应关系剖视图，
+    其中4-1为本实施例中读卡设备上的插座中的接触针，4-2为本实施例中读
+    卡设备上的插座，4-3为本实施例中的SD卡，当SD卡插入读卡设备上的插
+    座之后，接触针4-1与SD卡的主管脚和扩展管脚接触(如图5所示，闪存
+    卡的上表面为正面，下表面为背面)分别形成主总线传输通路和扩展总线传
+    输通路。
+    
+				</td></tr><tr><td class="content" id="description_60">在本实施例中，默认由SD卡正面的主管脚形成的主总线传输通路接收
+    读卡设备发送的指示命令。
+    
+				</td></tr><tr><td class="content" id="description_61">2)对总线驱动电路的扩展。
+    
+				</td></tr><tr><td class="content" id="description_62">本实施例中，SD卡内部与主管脚对应的为主总线驱动电路，主管脚
+    DAT3+、CMD+、CLK+、DAT0+、DAT1+、DAT2+通过主总线驱动电路与
+    
+					控制器连接，该主总线驱动电路的结构与本领域公知的相同。在SD卡内部
+    增加与扩展管脚对应的扩展总线驱动电路，扩展管脚DAT3-、CMD-、CLK-、
+    DAT0-、DAT1-、DAT2-通过扩展总线驱动电路与控制器连接，扩展总线驱
+    动电路与主总线驱动电路结构相同。
+    
+				</td></tr><tr><td class="content" id="description_63">本实施例是以一组扩展管脚为例，假如扩展管脚大于一组，则每一组扩
+    展管脚都对应一个总线驱动电路，这些总线驱动电路的结构都可以与主总线
+    驱动电路的结构相同。
+    
+				</td></tr><tr><td class="content" id="description_64">3)对控制器的扩展。
+    
+				</td></tr><tr><td class="content" id="description_65">本实施例中，SD卡内部的控制器包括分别对应于主管脚和扩展管脚的
+    两套控制逻辑。其中在对应主管脚的控制逻辑中，默认情况下接收并解析由
+    读卡设备发送的指示主总线传输通路与扩展总线传输通路使用方式的指示
+    命令(下文中将给出详细介绍)，并且按照指示命令的指示通过主总线驱动
+    电路与主总线传输通路进行数据传输；在对应扩展管脚的控制逻辑中，按照
+    指示命令的指示通过扩展总线驱动电路与扩展总线传输通路进行数据传输，
+    但并不具备接收并解析上述指示命令的能力。
+    
+				</td></tr><tr><td class="content" id="description_66">如果闪存卡中存在两组以上扩展管脚，同样可以在控制器中设置对应的
+    控制逻辑。
+    
+				</td></tr><tr><td class="content" id="description_67">4)对存储器的扩展。
+    
+				</td></tr><tr><td class="content" id="description_68">本实施例中，SD卡内部的存储器包括对应主管脚的主存储器和对应扩
+    展管脚的扩展存储器。之所以对应主管脚和扩展管脚分别设置两个存储器，
+    是为了更好的体现两条总线传输通路在数据传输操作上的并行性，如假设主
+    总线传输通路进行读操作，而扩展总线传输通路进行写操作，则使用两个独
+    立的存储器将使这两种操作可以完全并行进行。针对上述两个独立存储器的
+    具体数据传输操作流程，依据通常的方法就可以实现，这里不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_69">当然，针对一些对并行操作没有过高要求，或只需要使用多条总线传输
+    通路来进行一项数据传输的场合，将SD卡中的主存储器划分为两个存储区
+    域，分别对应主总线传输通路和扩展总线传输通路也是可行的。
+    
+				</td></tr><tr><td class="content" id="description_70">第二、对传输命令的改进。
+    
+				</td></tr><tr><td class="content" id="description_71">本实施例将目前SD卡数据传输状态中的命令ACMD6的功能描述进行
+    了修改，以便在数据传输状态中通过ACMD6实现指示主总线传输通路与扩
+    展总线传输通路的使用方式。具体修改如表2所示。
+    
+				</td></tr><tr><td class="content" id="description_72">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 名称
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  类型
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  分配
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  响
+    
+  应
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  功能
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  命令描述
+    
+											
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ ACMD6
+    
+											
+											
+											
+											
+											
+											
+											
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  ac
+    
+											
+											
+											
+											
+											
+											
+											
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  [31:4]填
+    
+  充字(stuff
+    
+  bits)
+    
+  [3]工作模
+    
+  式
+    
+  [2:0]总线
+    
+  数据宽度
+    
+											
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  R1
+    
+											
+											
+											
+											
+											
+											
+											
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  设置总线宽度和模式
+    
+  (SET_BUS_WIDTH/
+    
+  MODE)
+    
+											
+											
+											
+											
+											
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  定义数据总线的数据宽度
+    
+  (Defines the data bus width)
+    
+  其中’000’标识选择数据宽度
+    
+  1比特，或者’010’标识选择数
+    
+  据宽度4比特，或者’100’标
+    
+  识选择数据宽度8比特
+    
+  定义总线工作模式(Defines
+    
+  the bus work mode)其中’0’
+    
+  标识单总线模式，”1”标识双
+    
+  总线模式
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_73">表2
+    
+				</td></tr><tr><td class="content" id="description_74">如表2所示，在ACMD6命令中，第0～2比特标志位指示数据宽度，第
+    3比特标志位指示单总线或双总线模式，通过上述两种标志位的不同取值就
+    可以指示主总线传输通路与扩展总线传输通路的使用方式。
+    
+				</td></tr><tr><td class="content" id="description_75">以本实施例中的SD卡结构为例，指示主总线传输通路与扩展总线传输
+    通路分别作为独立总线传输通路包括：如果ACMD6命令的第3比特取值为
+    0，第0～2比特取值为100，则表示主总线传输通路与扩展总线传输通路分
+    别作为独立总线传输通路，且两条总线传输通路的数据宽度各为4比特。指
+    示主总线传输通路与扩展总线传输通路合并为一条总线传输通路包括：如果
+    ACMD6命令的第3比特取值为1，第0～2比特取值为010，则表示主总线
+    传输通路与扩展总线传输通路合并为一条总线传输通路，合并后总线传输通
+    路的数据宽度为8比特。
+    
+				</td></tr><tr><td class="content" id="description_76">进一步，还可以利用上述标志位取值灵活指示其他对两条总线传输通路
+    的使用方式。例如，指示主总线传输通路与扩展总线传输通路分别作为独立
+    总线传输通路还可以包括：如果ACMD6命令的第3比特取值为0，第0～2
+    比特取值为000，则表示主总线传输通路与扩展总线传输通路分别作为独立
+    
+					总线传输通路，且当前只使用主总线传输通路，具体为使用SD卡正面管脚
+    对应总线中的DAT0+，即主总线传输通路的数据宽度为1比特；如果ACMD6
+    命令的第3比特取值为0，第0～2比特取值为010，则表示主总线传输通路
+    与扩展总线传输通路分别作为独立总线传输通路，且当前只使用主总线传输
+    通路，具体为使用SD卡正面管脚对应总线中的DAT0+～DAT3+，即主总线
+    传输通路的数据宽度为4比特。指示主总线传输通路与扩展总线传输通路合
+    并为一条总线传输通路还可以包括：如果ACMD6命令的第3比特取值为1，
+    第0～2比特取值为000，则表示主总线传输通路与扩展总线传输通路合并为
+    一条总线传输通路，具体为分别使用正面管脚DAT0+和背面管脚DAT0-，
+    总数据宽度为2比特。
+    
+				</td></tr><tr><td class="content" id="description_77">上述对ACMD6命令功能描述的修改仅为一种具体的举例，还可以应用
+    不同的具体取值来指示总线传输通路的使用方式，并且还可以根据实际需要
+    扩展出新的标志位。
+    
+				</td></tr><tr><td class="content" id="description_78">基于上述对本发明提供的闪存卡及其读卡设备插座的介绍，本发明闪存
+    卡的数据传输方法流程如图6所示，该流程包括：
+    
+				</td></tr><tr><td class="content" id="description_79">步骤601：读卡设备通过所述主总线传输通路，向闪存卡发送指示命令，
+    指示所述主总线传输通路与所述扩展总线的使用方式。
+    
+				</td></tr><tr><td class="content" id="description_80">本步骤中，如果闪存卡为SD卡，则读卡设备发送的指示命令可以如表
+    2所示，即在传输状态中发送命令ACMD6，并通过ACMD6中的标志位取
+    值指示主总线传输通路和扩展总线传输通路分别作为独立总线传输通路或
+    者合并为一条总线传输通路。
+    
+				</td></tr><tr><td class="content" id="description_81">步骤602：读卡设备和闪存卡按照所述使用方式，通过主总线传输通路
+    和/或扩展总线传输通路进行数据传输。
+    
+				</td></tr><tr><td class="content" id="description_82">以上所介绍的本发明提供的闪存卡及其读卡设备插座和数据传输方法，
+    具体实施例都以一组扩展管脚位于SD卡的背面为例，这仅是一种具体的举
+    例，扩展管脚的排列位置可以根据实际需要来具体选择，扩展管脚也可以为
+    两组以上，并不受上述实施例所举情况的限制。
+    
+				</td></tr><tr><td class="content" id="description_83">其他类型的闪存卡，例如MMC卡也可以参照上述实施例给出的扩展以
+    及改进原理，扩展管脚的排列位置、以及改进的传输命令都可以灵活选择，
+    从而实现本发明所述的目的，这里不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_84">综上所述，以上仅为本发明的较佳实施例而已，并非用于限定本发明的
+    保护范围。凡在本发明的精神和原则之内，所作的任何修改、等同替换、改
+    进等，均应包含在本发明的保护范围之内。
+    
+				</td></tr></table></div></body></html>

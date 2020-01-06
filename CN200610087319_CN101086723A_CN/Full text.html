@@ -1,0 +1,1251 @@
+<html><head><title>全文文本(Fulltext)</title><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><style>div.fullText table {width: 100%;text-indent: 1px;} 
+ div.fullText table td.header {font-weight: bold;text-align: center;font-family: '宋体';font-size: 16px;line-height:20px;color: #000000;padding: 5px;}div.fullText table td.content {padding: 1px;text-align: left;vertical-align: top;width: 100%;font-family: '宋体';font-size: 14px;line-height:20px;color: #000000;}</style></head><body><?xml version="1.0" encoding="UTF-8"?><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table class="fullText"><tr><td id="claim_title" class="header">权利要求书</td></tr><tr><td class="content" id="claim_1">1、一种提高存储卡传输速度的方法，该方法执行如下操作：
+                <br/>
+				</td></tr><tr><td class="content" id="claim_2">在普通存储卡的背面进行管脚扩展，通过在普通存储卡背面相应位置添加与正面相同数
+                <br/>目且一一对应的管脚，用于组成差分信号对来传输信号；
+                <br/>
+				</td></tr><tr><td class="content" id="claim_3">在普通存储卡的插槽上也增加相应的接触点，当存储卡插入插槽后，插槽上的接触点与
+                <br/>存储卡上的管脚相接触形成差分传输通路；
+                <br/>
+				</td></tr><tr><td class="content" id="claim_4">在普通存储卡的总线驱动电路中加入差分比较器和高速差分传输通路，在缓冲器和差分
+                <br/>比较器上加入控制信号，并且在控制逻辑中加入新的子集，以实现对高速差分传输模式和普
+                <br/>通传输模式的选择；
+                <br/>
+				</td></tr><tr><td class="content" id="claim_5">在普通存储卡的传输命令列表中加入用来切换存储卡的普通传输模式和高速差分传输模
+                <br/>式的命令；
+                <br/>
+				</td></tr><tr><td class="content" id="claim_6">在普通存储卡的状态寄存器中添加相应比特位，以表示存储卡是工作在普通传输模式还
+                <br/>是高速差分传输模式下；
+                <br/>
+				</td></tr><tr><td class="content" id="claim_7">在普通存储卡的CSD寄存器中增加相应的标志位，以表示存储卡是否支持高速差分传输
+                <br/>模式。
+                <br/>
+				</td></tr><tr><td class="content" id="claim_8">2、如权利要求1所述的提高存储卡传输速度的方法，其特征在于，所述用来切换存储卡
+                <br/>的普通传输模式和高速差分传输模式的命令包括命令本身和命令响应。
+                <br/>
+				</td></tr><tr><td class="content" id="claim_9">3、如权利要求2所述的提高存储卡传输速度的方法，其特征在于，当所述命令本身中表
+                <br/>示传输模式的字段被设置为0时表示切换存储卡到普通传输模式，当所述命令本身中表示传
+                <br/>输模式的字段被设置为1时表示切换存储卡到高速差分传输模式。
+                <br/>
+				</td></tr><tr><td class="content" id="claim_10">4、如权利要求2或3所述的提高存储卡传输速度的方法，其特征在于，所述命令响应的
+                <br/>相应字段中包含的是表示存储卡传输模式的状态值。
+                <br/>
+				</td></tr><tr><td class="content" id="claim_11">5、如权利要求1或2所述的提高存储卡传输速度的方法，其特征在于，所述状态寄存器
+                <br/>中添加的相应比特位的默认值为0，当该比特位为0时表示存储卡工作在普通传输模式，当
+                <br/>该比特位为1时表示存储卡工作在高速差分传输模式。
+                <br/>
+				</td></tr><tr><td class="content" id="claim_12">6、如权利要求1或2所述的提高存储卡传输速度的方法，其特征在于，当所述CSD寄存
+                <br/>器中增加的标志位为0时表示存储卡只支持普通传输模式，当该标志位为1时表示存储卡既
+                <br/>支持普通传输模式又支持高速差分传输模式。
+                <br/>
+				</td></tr><tr><td class="content" id="claim_13">7、如权利要求1或2所述的提高存储卡传输速度的方法，其特征在于，当存储卡工作在
+                <br/>
+					高速差分传输模式时，通过普通存储卡命令将存储卡置于传送状态，并修改EXT_CSD寄存器
+                <br/>中BUS_WIDTH字段的值，从而修改存储卡的数据传输总线宽度。
+                <br/>
+				</td></tr></table></div><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table><tr><td id="description_title" class="header">说明书</td></tr><tr><td class="content" id="description_invention_title">一种提高存储卡传输速度的方法</td></tr><tr><td class="content" id="description_1">技术领域
+                
+				</td></tr><tr><td class="content" id="description_2">本发明涉及一种数据存储卡，尤其涉及一种提高存储卡传输速度的方法。
+                
+				</td></tr><tr><td class="content" id="description_3">背景技术
+                
+				</td></tr><tr><td class="content" id="description_4">单端信号是两个逻辑器件互连最基本的方法，它只需要一条连线来实现逻辑信号传输。
+                单端信号连接的数字逻辑标准主要有TTL、CMOS、LVTTL、LVCMOS、PCI等。
+                
+				</td></tr><tr><td class="content" id="description_5">差分信号是通过一对单端信号线进行传输，两条线上的信号相同，但相位相差为180°。
+                从信号传输原理看，差分信号的电平幅度比单端差分信号更低；此外差分信号接收端
+                VDIFF＝VOH-VOL，这样可以抵消实际传输过程中迭加在两个单端信号上的共模噪声，更好地保
+                持了信号的完整性，降低了信号整体噪声，从而实现更高的带宽。常见的差分逻辑信号标准
+                有LVDS、SSTL、ECL、PECL等。
+                
+				</td></tr><tr><td class="content" id="description_6">现有技术中，存储卡传输数据主要通过以下两种方式来实现：
+                
+				</td></tr><tr><td class="content" id="description_7">1.SD存储卡的实现方法：
+                
+				</td></tr><tr><td class="content" id="description_8">如图1所示为SD卡的外形示意图，有9个管脚。具体解释如表1：
+                
+				</td></tr><tr><td class="content" id="description_9">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        管脚
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                          名称
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                          类型
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            SD描述
+                                            
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            1
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         CD/DAT3
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        输入输出接口
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        卡检测或数据线第3位
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            2
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         CMD
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        输入输出接口
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        命令或响应
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            3
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         VSS1
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        电源供应
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        电源供应地
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            4
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         VDD
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        电源供应
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        电源供应
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            5
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         CLK
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        输入接口
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        时钟
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            6
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         VSS2
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        电源供应
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        电源供应地
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            7
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT0
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        输入输出接口
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        数据线第0位
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            8
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT1
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        输入输出接口
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        数据线第1位
+                                            
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_10">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            9
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT2
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        输入输出接口
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        数据线第2位
+                                            
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_11">表1
+                
+				</td></tr><tr><td class="content" id="description_12">从表1中我们可以看出这些管脚中有4根用于传输数据分别为DAT0、DAT1、DAT2、DAT3，
+                而SD卡可以工作的时钟范围为0到25MHz，所以SD卡总线最高的数据传输速率＝25MHz*4BIT
+                ＝12.5MB/sec，且全部信号用单端信号传输。因此，SD卡的缺点是数据传输速率较低，不能
+                满足存储卡应用环境对存储速度需求日益增长的需要。
+                
+				</td></tr><tr><td class="content" id="description_13">2.MMC存储卡的实现方法：
+                
+				</td></tr><tr><td class="content" id="description_14">如图2所示为MMC卡的管脚排列示意图，有13个管脚。具体解释如表2：
+                
+				</td></tr><tr><td class="content" id="description_15">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        管脚
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            名称
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            类型
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            SD描述
+                                            
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            1
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT3
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        输入输出接口
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        数据线第3位
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            2
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         CMD
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        输入输出接口
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        命令或响应
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            3
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         VSS1
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        电源供应
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        电源供应地
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            4
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         VDD
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        电源供应
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        电源供应
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            5
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         CLK
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        输入接口
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        时钟
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            6
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         VSS2
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        电源供应
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        电源供应地
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            7
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT0
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        输入输出接口
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        数据线第0位
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            8
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT1
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        输入输出接口
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        数据线第1位
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            9
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT2
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        输入输出接口
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        数据线第2位
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            10
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT4
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        输入输出接口
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        数据线第4位
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            11
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT5
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        输入输出接口
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        数据线第5位
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            12
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT6
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        输入输出接口
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        数据线第6位
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            13
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                         DAT7
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        输入输出接口
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        数据线第7位
+                                            
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_16">表2
+                
+				</td></tr><tr><td class="content" id="description_17">从表2中我们可以看出这些管脚中有8根用于传输数据分别为DAT0、DAT1、DAT2、DAT3、
+                DAT4、DAT5、DAT6、DAT7，而SD卡可以工作的时钟范围为0到52MHz，所以MMC卡总线最高
+                
+					的数据传输速率＝52MHz*8BIT＝52MB/sec，且全部信号用单端信号传输。因此，MMC卡的缺
+                点是数据传输速率较低，不能满足存储卡应用环境对存储速度需求日益增长的需要。
+                
+				</td></tr><tr><td class="content" id="description_18">中国专利文献CN1591378A公开了一种使用差动信号来提高多媒体卡传送速率的方法。如
+                图3所示，该方法是在MMC卡规范3.31版本如图4所示的管脚排列基础上多加了一个管脚与
+                原来保留的1个管脚组成差分信号来实现1对差分传输，同时具备是否为具备高速差分传输
+                功能存储卡的识别机制(具体方法是通过读存储卡CSD寄存器中相应的标志位来识别是否为
+                具备高速差分传输功能存储卡，否则按普通存储卡来处理)，该方法采用低压差动信号来传输
+                数据，最高数据传输速率可以达到500Mb/sec。该方法的缺点是：只是在MMC卡规范3.31版
+                本基础上进行扩展实现差分传输，与现有通用存储卡(MMC卡规范4.1版本和SD卡规范1.01
+                版本)在管脚使用上存在冲突；且不具备从普通传输模式(通过单端信号传输信号的模式)
+                到高速差分传输模式(通过差分信号传输信号的模式)和从高速差分传输模式到普通传输模
+                式的切换机制，操作不灵活；同时，其数据传输速率也还比较有限。
+                
+				</td></tr><tr><td class="content" id="description_19">发明内容
+                
+				</td></tr><tr><td class="content" id="description_20">因此本发明所要解决的技术问题是提供一种提高存储卡传输速度的方法，该方法为存储
+                卡提供了足够大的数据传输速度，能够满足存储卡应用环境对存储卡数据传输速度需求日益
+                增长的需要；该方法使存储卡方便的实现了从普通传输模式到高速差分传输模式和从高速差
+                分传输模式到普通传输模式的切换机制。
+                
+				</td></tr><tr><td class="content" id="description_21">本发明具体是这样实现的：
+                
+				</td></tr><tr><td class="content" id="description_22">一种提高存储卡传输速度的方法，该方法执行如下操作：在普通存储卡的背面进行管脚
+                扩展，通过在普通存储卡背面相应位置添加与正面相同数目且一一对应的管脚，用于组成差
+                分信号对来传输信号；在普通存储卡的插槽上也增加相应的接触点，当存储卡插入插槽后，
+                插槽上的接触点与存储卡上的管脚相接触形成差分传输通路；在普通存储卡的总线驱动电路
+                中加入差分比较器和高速差分传输通路，在缓冲器和差分比较器上加入控制信号，并且在控
+                制逻辑中加入新的子集，以实现对高速差分传输模式和普通传输模式的选择；在普通存储卡
+                的传输命令列表中加入用来切换存储卡的普通传输模式和高速差分传输模式的命令；在普通
+                存储卡的状态寄存器中添加相应比特位，以表示存储卡是工作在普通传输模式还是高速差分
+                传输模式下；在普通存储卡的CSD寄存器中增加相应的标志位，以表示存储卡是否支持高速
+                
+					差分传输模式。
+                
+				</td></tr><tr><td class="content" id="description_23">按上述方案，所述用来切换存储卡的普通传输模式和高速差分传输模式的命令包括命令
+                本身和命令响应。
+                
+				</td></tr><tr><td class="content" id="description_24">按上述方案，当所述命令本身中表示传输模式的字段被设置为0时表示切换存储卡到普
+                通传输模式，当所述命令本身中表示传输模式的字段被设置为1时表示切换存储卡到高速差
+                分传输模式。
+                
+				</td></tr><tr><td class="content" id="description_25">按上述方案，所述命令响应的相应字段中包含的是表示存储卡传输模式的状态值。
+                
+				</td></tr><tr><td class="content" id="description_26">按上述方案，所述状态寄存器中添加的相应比特位的默认值为0，当该比特位为0时表
+                示存储卡工作在普通传输模式，当该比特位为1时表示存储卡工作在高速差分传输模式。
+                
+				</td></tr><tr><td class="content" id="description_27">按上述方案，当所述CSD寄存器中增加的标志位为0时表示存储卡只支持普通传输模式，
+                当该标志位为1时表示存储卡既支持普通传输模式又支持高速差分传输模式。
+                
+				</td></tr><tr><td class="content" id="description_28">按上述方案，当存储卡工作在高速差分传输模式时，通过普通存储卡命令将存储卡置于
+                传送状态，并修改EXT_CSD寄存器中BUS_WIDTH字段的值，从而修改存储卡的数据传输总线宽
+                度。
+                
+				</td></tr><tr><td class="content" id="description_29">由于采用了上述处理步骤，本发明与现有技术相比，具有以下优点：
+                
+				</td></tr><tr><td class="content" id="description_30">本发明采用了背面扩展触点的方法，用以实现最多可达8对高速差分信号对的数据传输，
+                可将存储卡的数据传输的时钟频率提高10倍左右，数据传输速率可达500MB/sec，大大提高
+                了传输速率；
+                
+				</td></tr><tr><td class="content" id="description_31">同时，本发明实现了对普通存储卡与具备高速差分传输功能存储卡的识别机制，可以与
+                现有的存储卡很好的兼容；
+                
+				</td></tr><tr><td class="content" id="description_32">同时，本发明实现了从普通传输模式到高速差分传输模式和从高速差分传输模式到普通
+                传输模式的切换机制，操作流程简单可行，兼顾了速度的提高和省电的考虑。
+                
+				</td></tr><tr><td class="content" id="description_33">本发明相对于SD卡和MMC卡的优势在于：不仅可以通过单端信号传输兼容现今流行的普
+                通存储卡(MMC和SD卡各版本的存储卡)的所有操作，而且还在此基础上扩展了差分信号传
+                输模式，其数据传输速率可在500MB/sec以上，是SD卡数据传输速率的40倍，是MMC卡数
+                
+					据传输速率的10倍。
+                
+				</td></tr><tr><td class="content" id="description_34">本发明相对于专利文献CN1591378A中公开的使用差动信号来提高多媒体卡传送速率的
+                方法的优势在于：本发明通过在普通存储卡背面扩展管脚的技术组合成了10对差分信号，数
+                据传输速率为500MB/sec，是该方法所设计的存储卡数据传输速率的8倍；同时，本发明不
+                仅能够实现对普通存储卡和具备高速差分传输功能存储卡的识别功能，还增加了从普通传输
+                模式到高速差分传输模式和高速差分传输模式到普通传输模式的切换机制。之所以引入这种
+                切换机制是因为用差分信号来传输数据较之用普通信号来传输相同的数据功耗会加大，也就
+                是说通过牺牲功耗来提高传输速率：在需要高速数据传输的场合通过差分信号来传输数据，
+                在不需要高速数据传输的场合通过普通信号来传输数据。所以说从普通传输模式到高速差分
+                传输模式和从高速差分传输模式到普通传输模式的切换机制是一种实现高速数据传输和功耗
+                相对较低的很好的手段；同时，本发明可以和现今流行的普通存储卡(MMC卡和SD卡各版本
+                的存储卡)兼容，因为管脚不冲突，而专利文献CN1591378A中公开的使用差动信号来提高多
+                媒体卡传送速率的方法与高版本的存储卡(MMC卡规范4.1版本和SD卡规范1.01版本)的
+                管脚存在冲突问题；同时，本发明相对于专利文献CN1591378A中公开的使用差动信号来提高
+                多媒体卡传送速率的方法的优势还在于用于传输命令和响应的信号、时钟信号也可以通过差
+                分信号对来进行传输，不仅很容易的可以实现500MB/sec的数据传输速率，而且命令和响应
+                的时钟频率也可以提高到500MHz。
+                
+				</td></tr><tr><td class="content" id="description_35">附图说明
+                
+				</td></tr><tr><td class="content" id="description_36">图1是普通SD卡的外形示意图；
+                
+				</td></tr><tr><td class="content" id="description_37">图2是MMC卡的管脚排列示意图；
+                
+				</td></tr><tr><td class="content" id="description_38">图3是专利文献CN1591378A中公开的使用差动信号来提高多媒体卡传送速率的方法中插
+                座外观和各个端子框图；
+                
+				</td></tr><tr><td class="content" id="description_39">图4是MMC卡规范3.31版本中插座外观和各个端子框图；
+                
+				</td></tr><tr><td class="content" id="description_40">图5为普通MMC存储卡的正面管脚排列框图；
+                
+				</td></tr><tr><td class="content" id="description_41">图6为普通MMC存储卡的背面图；
+                
+				</td></tr><tr><td class="content" id="description_42">图7为本发明的存储卡正面管脚排列框图；
+                
+				</td></tr><tr><td class="content" id="description_43">图8为本发明的存储卡背面管脚排列框图；
+                
+				</td></tr><tr><td class="content" id="description_44">图9是普通MMC存储卡触点及其插座接触针的对应关系剖视图；
+                
+				</td></tr><tr><td class="content" id="description_45">图10是普通MMC存储卡的插槽上的接触针与存储卡上的触点相接触示意图；
+                
+				</td></tr><tr><td class="content" id="description_46">图11是本发明的存储卡触点及其插座接触针的对应关系剖视图；
+                
+				</td></tr><tr><td class="content" id="description_47">图12是本发明的存储卡的插槽上的接触针与存储卡上的触点相接触示意图；
+                
+				</td></tr><tr><td class="content" id="description_48">图13是本发明的存储卡的模式选择原理框图；
+                
+				</td></tr><tr><td class="content" id="description_49">图14为普通MMC存储卡的数据传输模式的状态转换图；
+                
+				</td></tr><tr><td class="content" id="description_50">图15为本发明的存储卡的数据传输模式的状态转换图；
+                
+				</td></tr><tr><td class="content" id="description_51">图16是本发明在插入存储卡的开始阶段进行传输模式切换的流程图；
+                
+				</td></tr><tr><td class="content" id="description_52">图17是本发明在传输过程中进行传输模式切换的流程图；
+                
+				</td></tr><tr><td class="content" id="description_53">图18是本发明从高速差分传输模式向普通传输模式进行切换的流程图；
+                
+				</td></tr><tr><td class="content" id="description_54">图19是本发明的数据总线宽度修改流程图。
+                
+				</td></tr><tr><td class="content" id="description_55">具体实施方式
+                
+				</td></tr><tr><td class="content" id="description_56">本发明的设计构思：本发明在现有存储卡系统基础上进行扩展，采用了在普通存储卡背
+                面扩展触点的实现机理以提高存储卡的数据传输速度。
+                
+				</td></tr><tr><td class="content" id="description_57">本发明通过在普通存储卡背面相应位置添加相同数目的管脚来实现由差分信号对传输信
+                号，并在普通存储卡的CSD寄存器(Card Specific Data，该寄存器用于指示、记录完成存储
+                卡的正常操作所需的条件)的相应位置加入标志位以指示读卡设备该存储卡是否支持高速差
+                分传输模式，且在普通存储卡的控制流程中加入了相应的用来切换普通传输模式和高速差分
+                传输模式的命令、响应及状态指示，用以方便的实现了从普通传输模式到高速差分传输模式
+                和从高速差分传输模式到普通传输模式的切换机制。另一方面，本发明通过读卡设备对在原
+                存储卡命令集上扩展的命令的发送和对响应、状态指示的判别，从而实现了从普通传输模式
+                到高速差分传输模式和从高速差分传输模式到普通传输模式的切换机制。
+                
+				</td></tr><tr><td class="content" id="description_58">其具体操作过程包括：对普通存储卡到具备高速差分传输功能存储卡的识别；普通传输
+                模式到高速差分传输模式的切换；从高速差分传输模式到普通传输模式的切换；在高速差分
+                传输模式下数据总线宽度的选择。其实现步骤为，第一步骤：确定读卡设备支持具备高速差
+                分传输模式的存储卡；第二步骤：读卡设备使存储卡进入到旁置状态，通过读取CSD寄存器命
+                令读取CSD寄存器相应的标志位来识别该存储卡为普通存储卡还是具备高速差分传输模式的
+                
+					存储卡；第三步骤：如果存储卡为具备高速差分传输模式的存储卡，且如果读卡设备想将具
+                备高速差分传输模式的存储卡从普通传输模式切换到高速差分传输模式，可通过普通存储卡
+                的命令将具备高速差分传输模式的存储卡置于旁置状态，然后通过本发明中添加的从普通传
+                输模式到高速差分传输模式和从高速差分传输模式到普通传输模式的切换机制切换命令(具
+                体到MMC卡可用CMD5，但不限于此命令)通知读卡设备要将存储卡切换到高速差分传输模式，
+                如果此命令被正确的响应，且在向读卡设备回传的卡状态寄存器(用于表示卡当前的状态、
+                命令执行情况和数据传输情况)中的相应标志指明存储卡已进入高速差分传输模式，那么读
+                卡设备和具备高速差分传输模式的存储卡在后续的操作过程中就应以高速差分传输模式来实
+                现；第四步骤：如果读卡设备和存储卡已处于高速差分传输模式，且如果读卡设备想将具备
+                高速差分传输模式的存储卡从高速差分传输模式切换到普通传输模式，可通过普通存储卡的
+                命令将具备高速差分传输模式的存储卡置于旁置状态，然后通过本发明中添加的从普通传输
+                模式到高速差分传输模式和从高速差分传输模式到普通传输模式的切换机制切换命令(具体
+                到MMC卡可用CMD5，但不限于此命令)通知读卡设备要将存储卡切换到普通传输模式，如果此
+                命令被正确的响应，且在向读卡设备回传的卡状态寄存器(用于表示卡当前的状态、命令执
+                行情况和数据传输情况)中的相应标志指明存储卡已进入普通传输模式，那么读卡设备和具
+                备高速差分传输模式的存储卡在后续的操作过程中就应以普通传输模式来实现；第五步骤：
+                如果读卡设备和存储卡已处于高速差分传输模式，其读卡设备想要改变存储卡的传输线宽，
+                可通过普通存储卡的命令将具备高速差分传输功能的存储卡置于传送状态，然后通过命令
+                CMD6(改变所选择的存储卡的操作模式或修改EXT_CSD寄存器)来改变EXT_CSD(定义了卡的属
+                性和可选择的模式)寄存器中BUS_WIDTH(控制数据传输总线宽度)字段的值，可将其分别设
+                置为0、1、2来分别表示选择通过1、4、8对差分对来完成数据传输，待该命令被正确响应后，
+                那么在后续的数据传输过程中读卡设备和具备高速差分传输功能的存储卡就应以1、4、8对差
+                分对来完成数据传输。
+                
+				</td></tr><tr><td class="content" id="description_59">下面以MMC存储卡为一个具体的实施例(但不限于MMC卡的具体命令、命令格式、响应、
+                响应格式、状态指示和寄存器标志或MMC卡本身，也可以是MMC其它未用到的或已用到的采
+                取复用方式的命令、命令格式、响应、响应格式、状态指示和寄存器标志或SD卡来实现)对
+                
+					本发明的具体实施过程作进一步描述。为了提高存储卡的数据传输速度，本发明对MMC存储
+                卡进行了如下的改进：
+                
+				</td></tr><tr><td class="content" id="description_60">1.本发明在MMC存储卡的背面进行管脚扩展。如图5所示为普通MMC存储卡的正面管脚
+                排列框图，有13个管脚分别为DAT3、CMD、VSS1、VDD、CLK、VSS2、DAT0、DAT1、DAT2、DAT4、
+                DAT5、DAT6、DAT7；图6为普通MMC存储卡的背面图，没有管脚；图7为本发明的存储卡正
+                面管脚排列框图，有13个管脚分别为DAT3/DAT3+、CMD/CMD+、VSS1、VDD、CLK/CLK+、
+                VSS2、DAT0/DAT0+、DAT1/ DAT1+、DAT2/ DAT2+、DAT4/ DAT4+、DAT5/ DAT5+、DAT6/ DAT6+、
+                DAT7/DAT7+；图8为本发明的存储卡背面管脚排列框图，有13个管脚分别为DAT3-、CMD-、
+                VSS1、VDD、CLK-、VSS2、DAT0-、DAT1-、DAT2-、DAT4-、DAT5-、DAT6-、DAT7-。从以二4
+                幅图中可以看出：普通MMC存储卡采用单端信号来完成操作，本发明的存储卡的正面管脚排
+                列与普通MMC存储卡的正面管脚排列相同，但是本发明在存储卡的背面却增加了13个管脚，
+                且与正面管脚一一对应；这样加进来的管脚便和原来的管脚组成了差分信号对用来传输信号，
+                从信号传输原理看，差分信号的电平幅度比单端差分信号更低；此外差分信号接收端
+                VDIFF＝VOH-VOL，这样可以抵消实际传输过程中迭加在两个单端信号上的共模噪声，更好地保
+                持了信号的完整性，降低了信号整体噪声，从而实现更高的传输速度。
+                
+				</td></tr><tr><td class="content" id="description_61">2.同时，本发明在MMC存储卡的插槽上也加上了相应的接触点。如图9所示为普通MMC
+                存储卡触点及其插座接触针的对应关系剖视图，其中9-1为存储卡插座上接往读卡设备的接
+                触针，9-2为存储卡上的接触点，当MMC存储卡插入插槽后插座上的接触针和存储卡上的接
+                触点相接触(如图10所示)形成单端传输通路，MMC存储卡和读卡设备正是通过此通路完成
+                操作和数据传输；图11为本发明的存储卡触点及其插座接触针的对应关系剖视图，其中11-1
+                为本发明存储卡插座上接往读卡设备的接触针，11-2为本发明存储卡插座，11-3为本发明存
+                储卡上的接触点，11-4为本发明存储卡，当存储卡插入插槽后插座上的接触针和存储卡上的
+                接触点相接触(如图12所示)形成差分传输通路，本发明的存储卡和读卡设备正是通过此通
+                路完成操作和数据传输。
+                
+				</td></tr><tr><td class="content" id="description_62">3.本发明中高速差分传输模式和普通传输模式进行选择的过程：
+                
+				</td></tr><tr><td class="content" id="description_63">如图13所示，本发明在普通存储卡总线驱动电路的基础上加入了差分比较器(13-4、
+                
+					13-7、13-8、13-11、13-12)和高速差分传输通路(13-13、13-14、13-15、13-16、13-17)，
+                在缓冲器(13-3、13-5、13-6、13-9、13-10)和差分比较器(13-4、13-7、13-8、13-11、
+                13-12)上加入了控制信号(CLKd_Enable、DATd_Enable、CMDd_Enable、CLK_Enable、
+                DAT_Enable、CMD_Enable)，并且在控制逻辑中加入了新的子集，从而很方便的实现了对高速
+                差分传输模式和普通传输模式进行选择。加入的内容本领域的技术人员通过常规技术就可以
+                实现，以下从原理上对其进行简要说明：
+                
+				</td></tr><tr><td class="content" id="description_64">控制逻辑具有以下功能：完成存储卡和读卡设备各部件之间的协调；对外部的通信流程
+                控制；对内部部件的配置。本发明在控制逻辑中加入了新的子集，实现了对CMD5命令(下面
+                描述)的解析以及对切换电路和控制信号的配置。具体切换过程如下：时钟发生器(13-2)
+                为控制逻辑(13-1)产生工作所需时钟，如果需要工作在高速差分传输模式进行数据传输，
+                控制逻辑将CLKd_Enable、DATd_Enable、CMDd_Enable信号置为有效，同时将CLK_Enable、
+                DAT_Enable、CMD_Enable信号置为无效，这样差分比较器(13-4、13-7、13-8、13-11、13-12)
+                被使能工作，而缓冲器(13-3、13-5、13-6、13-9、13-10)被禁止工作，这样便使能了高速
+                差分传输通路(13-13、13-14、13-15、13-16、13-17)，而普通数据通路(13-18、13-19、
+                13-20、13-21、13-22)被禁止，这样便可以工作在高速差分传输模式；如果需要工作在普通
+                传输模式进行数据传输，控制逻辑将CLK_Enable、DAT_Enable、CMD_Enable信号置为有效，
+                同时将CLKd_Enable、DATd_Enable、CMDd_Enable信号置为无效，这样差分比较器(13-4、
+                13-7、13-8、13-11、13-12)被禁止工作，而缓冲器(13-3、13-5、13-6、13-9、13-10)被
+                使能工作，这样便禁止了高速差分传输通路(13-13、13-14、13-15、13-16、13-17)，而普
+                通数据通路(13-18、13-19、13-20、13-21、13-22)被使能了，这样便可以工作在普通传输
+                模式。
+                
+				</td></tr><tr><td class="content" id="description_65">4.本发明在普通存储卡的传输命令列表中加入命令CMD5用来进行存储卡的高速差分传
+                输模式和普通传输模式的切换。如图14所示为普通MMC存储卡的数据传输模式的状态转换图，
+                图15为本发明的存储卡的数据传输模式的状态转换图。在普通MMC存储卡的状态转换控制过
+                程中的旁置状态(14-1)添加了额外的命令CMD5(15-2)，通过CMD5使支持高速差分传输模
+                
+					式的存储卡可以在普通传输模式与该高速差分传输模式之间进行切换。其具体过程为：如果
+                读卡设备想要将处于普通传输模式的且支持高速差分传输功能的存储卡设置到高速差分传输
+                模式中，须先将该存储卡设置到旁置状态(15-1)，然后向存储卡发送命令CMD5(15-2)并
+                将该命令中的第23位置为1(如表3所示)，通知该存储卡读卡设备想要将存储卡设置成高
+                速差分传输模式。如果该存储卡在对该命令的响应中将相应的第14(TRANSFER_MODE)位置为
+                1(如表4、5所示)，表示该存储卡已准备好以高速差分传输模式宋完成操作，那么在后续的
+                操作中该存储卡和读卡设备之间的操作便可以通过高速差分传输模式来进行。
+                
+				</td></tr><tr><td class="content" id="description_66">CMD5为本发明在普通MMC存储卡的基础上新添加的命令，其响应为R1型。对CMD5命令
+                的格式规定如表3：
+                
+				</td></tr><tr><td class="content" id="description_67">
+					
+						
+					
+					
+				</td></tr><tr><td class="content" id="description_68">表3
+                
+				</td></tr><tr><td class="content" id="description_69">对CMD5命令的响应进行描述如表4：
+                
+				</td></tr><tr><td class="content" id="description_70">
+					
+						
+					
+					
+				</td></tr><tr><td class="content" id="description_71">表4
+                
+				</td></tr><tr><td class="content" id="description_72">5.本发明在普通MMC存储卡的状态寄存器中添加1个比特位(Card_Status[6])，以表示
+                存储卡是工作在普通传输模式还是高速差分传输模式下。对添加的状态寄存器比特位进行描
+                述如表5：
+                
+				</td></tr><tr><td class="content" id="description_73">
+					
+						
+					
+					
+				</td></tr><tr><td class="content" id="description_74">表5
+                
+				</td></tr><tr><td class="content" id="description_75">6.本发明在普通MMC存储卡的CSD寄存器中增加相应的标志位以表示存储卡是否支持高
+                速差分传输模式。CSD寄存器中加入高速存储卡支持检测位如表6：
+                
+				</td></tr><tr><td class="content" id="description_76">
+					
+						
+					
+					
+				</td></tr><tr><td class="content" id="description_77">表6
+                
+				</td></tr><tr><td class="content" id="description_78">当TRANSFER_MDE＝＝1时，表示该存储卡既支持普通传输模式又支持高速差分传输模式；
+                当TRANSFER_MODE＝＝0时，表示该存储卡只支持普通传输模式。如图15所示，读卡设备在旁
+                置状态(15-1)通过命令CMD9(15-5)来读取存储卡的CSD寄存器中的上述标志位来识别该
+                
+					存储卡是普通存储卡还是具备高速差分传输功能的存储卡。
+                
+				</td></tr><tr><td class="content" id="description_79">以下结合附图对本发明用CMD5命令进行传输模式切换的具体过程作进一步的说明：
+                
+				</td></tr><tr><td class="content" id="description_80">1.在插入存储卡的开始阶段进行传输模式切换：
+                
+				</td></tr><tr><td class="content" id="description_81">如图16所示，当存储卡插入存储卡的插槽后，读卡设备对存储卡进行初始化工作，之后
+                进入旁置状态，读卡设备检测存储卡的CSD寄存器的TRANSFER_MODE字段(120)是否为1，
+                如果为1表示存储卡支持高速差分传输模式，如果为0表示存储卡只支持普通传输模式，如
+                果只支持普通传输模式就只能进入普通传输模式进行数据传输。如果存储卡支持高速差分传
+                输模式读卡设备可以用CMD5命令激活存储卡的高速差分传输模式，读卡设备检测存储卡的响
+                应，如果存储卡的响应中高速差分传输模式标志置位(状态寄存器中的Card_Status[6]为1)，
+                表示存储卡已经进入到高速差分传输模式，读卡设备在以后的与存储卡通讯过程中可以通过
+                高速差分传输模式来进行。
+                
+				</td></tr><tr><td class="content" id="description_82">2.在传输过程中进行传输模式切换：
+                
+				</td></tr><tr><td class="content" id="description_83">如图17所示，如果存储卡已经处于工作状态想要切换传输模式，需先进入旁置状态，读
+                卡设备检测存储卡的CSD寄存器的TRANSFER_MODE字段(120)是否为1，如果为1表示存储
+                卡支持高速差分传输模式，如果为0表示存储卡只支持普通传输模式，如果只支持普通传输
+                模式就只能进入普通传输模式进行数据传输。如果存储卡支持高速差分传输模式读卡设备可
+                以用CMD5命令激活存储卡的高速差分传输模式，读卡设备检测存储卡的响应，如果存储卡的
+                响应中高速差分传输模式标志置位(状态寄存器中的Card_Status[6]为1)，表示存储卡已经
+                进入到高速差分传输模式，读卡设备在以后的与存储卡通讯过程中可以通过高速差分传输模
+                式来进行。
+                
+				</td></tr><tr><td class="content" id="description_84">3.从高速差分传输模式向普通传输模式进行切换：
+                
+				</td></tr><tr><td class="content" id="description_85">如图18所示，如果读卡设备和存储卡已经工作在高速差分传输模式，读卡设备可以让存
+                储卡进入旁置状态，然后通过发送CMD5命令让存储卡进入普通传输模式，读卡设备检测存储
+                卡的响应，如果存储卡的响应中普通传输模式标志置位(状态寄存器中的Card_Status[6]为
+                0)，表示存储卡已经进入到普通传输模式，读卡设备在以后的与存储卡通讯过程中可以通过
+                普通传输模式来进行。
+                
+				</td></tr><tr><td class="content" id="description_86">4.对数据总线宽度的修改：
+                
+				</td></tr><tr><td class="content" id="description_87">如图19所示，当读卡设备和具备高速差分传输功能的存储卡工作在高速差分传输模式时，
+                读卡设备要想完成对数据传输总线宽度的修改，须通过命令CMD7将该存储卡置入传送状态
+                (15-3，如图15)，然后通过命令CMD6(15-4，如图15)来修改EXT_CSD寄存器中BUS_WIDTH字
+                段的值，可将其分别设置为0、1、2来分别表示选择通过1、4、8对差分对来完成数据传输，
+                待该命令被正确响应后，那么在后续的数据传输过程中读卡设备和具备高速差分传输功能的
+                存储卡就可以数据传输总线的宽度为1、4、8对差分对模式来完成数据传输。
+                
+				</td></tr><tr><td class="content" id="description_88">以上所述仅为本发明的过程及方法的具体实施例，并不用以限制本发明。因此，凡在本
+                发明的精神和原则之内所做的任何修改、等同替换、改进等，均应包含在本发明的保护范围
+                之内。
+                
+				</td></tr><tr><td class="content" id="description_89">注：本发明为了叙述上的方便引用了《多媒体卡体统规范4.1版》中相应的CMD6、CMD7、
+                CMD9命令，其命令的基本格式如表7所示，其命令的表述如表8所示，其他细节请参阅《多媒
+                体卡体统规范4.1版》。
+                
+				</td></tr><tr><td class="content" id="description_90">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        比特位置
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        47
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        46
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        [45:40]
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                          [39:8]
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                          [7:1]
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                          0
+                                            
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        宽度(比特)
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        1
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        1
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        6
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                          32
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                          7
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                          1
+                                            
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        值
+                                            描述
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        ‘0’
+                                            起始比特
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        ‘1’
+                                            传输比特
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        X
+                                            命令索引
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                          X
+                                              参数
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                          X
+                                              CRC7
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                          ‘1’
+                                              结束比特
+                                            
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_91">表7
+                
+				</td></tr><tr><td class="content" id="description_92">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                          CMD
+                                              索引
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                          类型
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            参数
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        响应
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            缩写
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                            命令描述
+                                            
+											
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+											
+											
+											
+											  CMD6
+                                            
+											
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+											
+											
+											
+											  ac
+                                            
+											
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        [31:26]置为0
+                                            [25:24]访问
+                                            [23:16]索引
+                                            
+											[15:8]值
+                                            [7:3]置为0
+                                            [2:0]Cmd集
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+											
+											
+											
+											R1b
+                                            
+											
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+											
+											
+											
+											  SWITCH
+                                            
+											
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+											
+											  改变所选择的卡的操作模式或
+                                            
+											  修改EXT_CSD寄存器
+                                            
+											
+											
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+											
+											  CMD7
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+											
+											  ac
+                                            
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											[31:16]RCA
+                                            
+											[15:0]填充比特
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											
+											
+											R1b1
+											
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+											  SELECT/
+                                            
+											  DESELECT_CARD
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                          在旁置和传输状态之间或者编
+                                              程和断开连接状态之间锁定卡
+                                            
+											  的命令。在这两种情况下卡被自
+                                              己的相对地址被选中，任何其它
+                                            
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_93">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        地址可取消选定，地址0可取消
+                                            选定。
+                                            
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											  CMD9
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											 ac
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        [31:16]RCA
+                                            [15:0]填充比特
+                                            
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											R2
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											 SEND_CSD
+                                            
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+                                        寻址卡在CMD线上发送特定卡数
+                                            据(CSD)
+                                            
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_94">表8
+                
+				</td></tr></table></div></body></html>

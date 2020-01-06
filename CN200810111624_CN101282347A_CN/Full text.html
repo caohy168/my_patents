@@ -1,0 +1,2840 @@
+<html><head><title>全文文本(Fulltext)</title><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><style>div.fullText table {width: 100%;text-indent: 1px;} 
+ div.fullText table td.header {font-weight: bold;text-align: center;font-family: '宋体';font-size: 16px;line-height:20px;color: #000000;padding: 5px;}div.fullText table td.content {padding: 1px;text-align: left;vertical-align: top;width: 100%;font-family: '宋体';font-size: 14px;line-height:20px;color: #000000;}</style></head><body><?xml version="1.0" encoding="UTF-8"?><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table class="fullText"><tr><td id="claim_title" class="header">权利要求书</td></tr><tr><td class="content" id="claim_1">1、一种智能存储卡的控制方法，所述智能存储卡中包括存储卡控制器和物
+      <br/>理存储介质，其特征在于，所述智能存储卡中还承载有用于实现增值应用的增
+      <br/>值应用模块，该方法包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_2">应用程序发送命令数据包，其中携带有用于确定该应用命令数据包操作
+      <br/>对象的目标类型、用于存储卡控制器获取命令的命令编码信息；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_3">存储卡控制器根据所述目标类型选择物理存储介质或增值应用模块为
+      <br/>操作对象，并对所述命令编码信息解码得到对应的命令，利用解码得到的命
+      <br/>令对选择的操作对象进行相应操作。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_4">2、如权利要求1所述的方法，其特征在于，所述利用解码得到的命令
+      <br/>对选择的操作对象进行相应操作之后，该方法进一步包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_5">存储卡控制器向应用程序发送应答数据包，其中携带有表示所述相应操
+      <br/>作是否成功的应答编码信息。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_6">3、如权利要求2所述的方法，其特征在于，所述命令数据包中进一步
+      <br/>携带有：用于表示命令数据包的数据包类型标识、用于表示该命令数据包所
+      <br/>对应的协议版本号、该命令数据包的序列号、该命令数据包用于携带数据的
+      <br/>数据域、该命令数据包的数据域长度；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_7">所述应答数据包中进一步携带有：用于表示应答数据包的数据包类型标
+      <br/>识、用于表示该应答数据包所对应的协议版本号、该应答数据包的序列号、
+      <br/>该应答数据包的数据域、该应答数据包的数据域长度。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_8">4、如权利要求2或3所述的方法，其特征在于，所述命令分为四类，
+      <br/>按照其使用权限级别由低至高依次为第一类命令、第二类命令、第三类命令、
+      <br/>第四类命令；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_9">利用第二类命令对选择的操作对象进行相应操作之前，该方法进一步包
+      <br/>括：应用程序通过与智能存储卡的第一级认证；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_10">利用第三类命令对选择的操作对象进行相应操作之前，该方法进一步包
+      <br/>
+					括：应用程序通过与智能存储卡的第一级和第二级认证；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_11">利用第四类命令对选择的操作对象进行相应操作之前，该方法进一步包
+      <br/>括：应用程序通过与智能存储卡的第一级、第二级和第三级认证。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_12">5、如权利要求4所述的方法，其特征在于，在所述智能存储卡中设置
+      <br/>用于记录已通过认证等级的权限寄存器；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_13">利用第二类至第四类命令对选择的操作对象进行相应操作之前，该方法
+      <br/>进一步包括：存储卡控制器根据权限寄存器中记录的认证等级判断是否有权
+      <br/>限利用当前命令对选择的操作对象进行相应操作。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_14">6、如权利要求5所述的方法，其特征在于，所述第一类命令包括：对
+      <br/>智能存储卡进行复位的命令、读取智能存储卡版本信息的命令、发送应用协
+      <br/>议数据单元APDU的命令、读物理存储介质中普通区域的命令、写物理存储
+      <br/>介质中普通区域的命令、读物理存储介质中隐藏区域的命令、写物理存储介
+      <br/>质中隐藏区域的命令、以及分别用于认证的认证请求命令。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_15">7、如权利要求6所述的方法，其特征在于，所述智能存储卡版本信息
+      <br/>包括：产品分类号、产品版本号、产品序列号、生产厂家名称的编码信息、
+      <br/>生产厂家名称的长度、生产厂家名称、协议版本号。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_16">8、如权利要求6所述的方法，其特征在于，在所述智能存储卡中设置
+      <br/>控制寄存器，其中记录有物理存储介质是否可读写的使能信息。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_17">9、如权利要求6所述的方法，其特征在于，所述认证请求命令中包括
+      <br/>第一级认证请求命令，所述第一级认证包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_18">应用程序将命令数据包中的编码信息设置为认证请求命令的命令编码
+      <br/>信息，并将包含有用于识别当前使用应用程序的用户身份的特征信息的第一
+      <br/>级认证请求命令，携带于命令数据包的数据域中发送至存储卡控制器；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_19">存储卡控制器对命令数据包中的特征信息与智能存储卡中存储的特征
+      <br/>信息进行匹配，并将包含有匹配结果的认证结果携带于应答数据包的数据域
+      <br/>中返回给应用程序。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_20">10、如权利要求9所述的方法，其特征在于，
+      <br/>
+					
+				</td></tr><tr><td class="content" id="claim_21">所述第一级认证请求命令中进一步包括：第一级认证请求命令的命令标
+      <br/>识、第一级认证请求命令的长度、标识当前第一次认证交互的会话标识、以
+      <br/>及特征信息的类型；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_22">所述第一级认证应答中进一步包括：第一级认证应答的应答标识、认证
+      <br/>结果的长度、标识当前第一级认证交互的会话标识、认证结果为失败时的失
+      <br/>败原因、表示是否进行密钥协商的密钥协商标识。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_23">11、如权利要求6所述的方法，其特征在于，所述认证请求命令中包括
+      <br/>第二级认证请求命令，所述第二级认证包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_24">应用程序将命令数据包中的编码信息设置为认证请求命令的编码信息，
+      <br/>生成第一随机数，并将包含有第一随机数的第二级认证请求命令携带于命令
+      <br/>数据包的数据域中发送至存储卡控制器；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_25">存储卡控制器利用预设的密钥种子对第一随机数进行哈希Hash运算得
+      <br/>到第一Hash运算结果，将包含有第一Hash运算结果的第二级认证应答携带
+      <br/>于应答数据包数据域中返回给应用程序；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_26">应用程序利用与存储卡控制器相同的密钥种子对其生成的第一随机数
+      <br/>进行Hash运算，并将得到的第二Hash运算结果与应答数据包中的第一Hash
+      <br/>运算结果进行比较，如果二者相同，则将表示认证成功的认证结果携带于命
+      <br/>令数据包的数据域发送至存储卡控制器。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_27">12、如权利要求11所述的方法，其特征在于，
+      <br/>
+				</td></tr><tr><td class="content" id="claim_28">所述第二级认证请求命令中进一步包括：第二级认证请求命令的命令标
+      <br/>识、第二级认证请求命令的长度、标识当前第二级认证交互的会话标识、
+      <br/>Hash算法类型标识、Hash算法密钥长度、Hash算法的密钥、密钥种子标识；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_29">所述第二级认证应答中进一步包括：第二级认证应答的应答标识、第二
+      <br/>级认证应答的长度、标识当前第二级认证交互的会话标识、Hash运算错误
+      <br/>时的错误原因、第一Hash运算结果的长度。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_30">13、如权利要求6所述的方法，其特征在于，所述认证请求命令中包括
+      <br/>第三级认证请求命令，所述第三级认证包括：
+      <br/>
+					
+				</td></tr><tr><td class="content" id="claim_31">应用程序将命令数据包中的编码信息设置为认证请求命令的编码信息，
+      <br/>并生成第二随机数与第三级认证请求命令一起携带于命令数据包的数据域
+      <br/>中发送至存储卡控制器；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_32">存储卡控制器生成第三随机数，并对第三随机数与命令数据包中的第二
+      <br/>随机数进行异或运算，然后利用智能存储卡中的预设公钥证书所对应的私钥
+      <br/>对异或预算结果进行数字签名；将包含有所述公钥证书和数字签名的第三级
+      <br/>应答携带于应答数据包数据域中返回给应用程序；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_33">应用程序利用应答数据包中的公钥证书对数字签名进行验证，如果验证
+      <br/>通过，则将表示认证成功的认证结果携带于命令数据包的数据域发送至存储
+      <br/>卡控制器。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_34">14、如权利要求13所述的方法，其特征在于，
+      <br/>
+				</td></tr><tr><td class="content" id="claim_35">所述第三级认证请求命令中进一步包括：第三级认证请求命令的命令标
+      <br/>识、第三级认证请求命令的长度、标识当前第三级认证交互的会话标识；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_36">所述第三级认证应答中进一步包括：第三级认证应答的应答标识、第三
+      <br/>级认证应答的长度、标识当前第三级认证交互的会话标识、异或运算或签名
+      <br/>处理错误时的错误原因、数字签名的算法类型标识、第三随机数、数字签名
+      <br/>长度、公钥证书长度。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_37">15、如权利要求5所述的方法，其特征在于，在所述智能存储卡中设置
+      <br/>用于记录物理存储介质读写使能信息的控制寄存器；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_38">利用解码得到的命令对物理存储介质进行相应操作之前，该方法进一步
+      <br/>包括：存储卡控制器根据控制寄存器中记录的读写使能信息，判断是否允许
+      <br/>利用当前命令对物理存储介质进行读写操作。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_39">16、如权利要求15所述的方法，其特征在于，所述使能信息包括：表
+      <br/>示物理存储介质是否可访问的通用使能信息、表示物理存储介质的普通区域
+      <br/>是否可写的写使能信息、表示物理存储介质的普通区域是否可读的读使能信
+      <br/>息。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_40">17、如权利要求15所述的方法，其特征在于，所述第二类命令包括：
+      <br/>
+					读控制寄存器的命令、写控制寄存器的命令、表示同时发送多个APDU的命
+      <br/>令。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_41">18、如权利要求5所述的方法，其特征在于，在所述智能存储卡中设置
+      <br/>用于记录下载和预个人化使能信息的特殊控制寄存器；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_42">利用解码得到的命令对选择的操作对象进行相应操作之前，该方法进一
+      <br/>步包括：存储卡控制器根据特殊控制寄存器中记录的下载和预个人化使能信
+      <br/>息，判断是否允许下载应用程序和/或是否允许预个人化。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_43">19、如权利要求18所述的方法，其特征在于，所述第三类命令包括：
+      <br/>读特殊控制寄存器的命令、写特殊控制寄存器的命令。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_44">20、如权利要求5所述的方法，其特征在于，所述第四类命令包括：写
+      <br/>智能存储卡版本信息的命令、测试智能存储卡的命令、初始化智能存储卡的
+      <br/>命令、读智能存储卡中密钥的命令、写智能存储卡中密钥的命令。
+      <br/>
+					
+				</td></tr></table></div><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table><tr><td id="description_title" class="header">说明书</td></tr><tr><td class="content" id="description_invention_title">一种智能存储卡的控制方法
+  </td></tr><tr><td class="content" id="description_1">技术领域
+  </td></tr><tr><td class="content" id="description_2">本发明涉及控制技术，特别涉及一种智能存储卡的控制方法。
+    
+				</td></tr><tr><td class="content" id="description_3">背景技术
+  </td></tr><tr><td class="content" id="description_4">现有手机终端的增值应用大多基于SIM卡号，从而使得增值业务运营
+    商受制于移动运营商。如需改变这种局面，则可以在手机终端的存储卡内增
+    设智能卡芯片，并由智能卡芯片实现增值应用，使得增值应用脱离SIM卡
+    号。其中，增设了智能卡芯片的存储卡称为智能存储卡。
+    
+				</td></tr><tr><td class="content" id="description_5">然而，现有技术中仅提供了针对存储卡交互的流程，即应用程序直接向
+    存储卡发送读/写命令，再由存储卡中的存储卡控制器根据该命令对物理存
+    储介质执行对应的读/写操作，而并未提供针对智能存储卡的交互流程。而
+    如果无法利用交互流程实现对智能存储卡的有效控制，例如对智能存储卡中
+    的资源进行管理、对智能存储卡的身份认证和权限授予等，则无法保证智能
+    存储卡的正常工作，因而即便增设了智能卡芯片也无法保证增值应用的有效
+    实现。
+    
+				</td></tr><tr><td class="content" id="description_6">发明内容
+  </td></tr><tr><td class="content" id="description_7">有鉴于此，本发明提供了一种智能存储卡的控制方法，能够基于存储卡
+    实现功能扩展并实现对其管理。
+    
+				</td></tr><tr><td class="content" id="description_8">本发明提供的一种智能存储卡的控制方法，所述智能存储卡中包括存储
+    卡控制器和物理存储介质，所述智能存储卡中还承载有用于实现增值应用的
+    增值应用模块，该方法包括：
+    
+				</td></tr><tr><td class="content" id="description_9">应用程序发送命令数据包，其中携带有用于确定该应用命令数据包操作
+    对象的目标类型、用于存储卡控制器获取命令的命令编码信息；
+    
+				</td></tr><tr><td class="content" id="description_10">存储卡控制器根据所述目标类型选择物理存储介质或增值应用模块为
+    操作对象，并对所述命令编码信息解码得到对应的命令，利用解码得到的命
+    令对选择的操作对象进行相应操作。
+    
+				</td></tr><tr><td class="content" id="description_11">所述利用解码得到的命令对选择的操作对象进行相应操作之后，该方法
+    进一步包括：
+    
+				</td></tr><tr><td class="content" id="description_12">存储卡控制器向应用程序发送应答数据包，其中携带有表示所述相应操
+    作是否成功的应答编码信息。
+    
+				</td></tr><tr><td class="content" id="description_13">所述命令数据包中进一步携带有：用于表示命令数据包的数据包类型标
+    识、用于表示该命令数据包所对应的协议版本号、该命令数据包的序列号、
+    该命令数据包用于携带数据的数据域、该命令数据包的数据域长度；
+    
+				</td></tr><tr><td class="content" id="description_14">所述应答数据包中进一步携带有：用于表示应答数据包的数据包类型标
+    识、用于表示该应答数据包所对应的协议版本号、该应答数据包的序列号、
+    该应答数据包的数据域、该应答数据包的数据域长度。
+    
+				</td></tr><tr><td class="content" id="description_15">所述命令分为四类，按照其使用权限级别由低至高依次为第一类命令、
+    第二类命令、第三类命令、第四类命令；
+    
+				</td></tr><tr><td class="content" id="description_16">利用第二类命令对选择的操作对象进行相应操作之前，该方法进一步包
+    括：应用程序通过与智能存储卡的第一级认证；
+    
+				</td></tr><tr><td class="content" id="description_17">利用第三类命令对选择的操作对象进行相应操作之前，该方法进一步包
+    括：应用程序通过与智能存储卡的第一级和第二级认证；
+    
+				</td></tr><tr><td class="content" id="description_18">利用第四类命令对选择的操作对象进行相应操作之前，该方法进一步包
+    括：应用程序通过与智能存储卡的第一级、第二级和第三级认证。
+    
+				</td></tr><tr><td class="content" id="description_19">在所述智能存储卡中设置用于记录已通过认证等级的权限寄存器；
+    
+				</td></tr><tr><td class="content" id="description_20">利用第二类至第四类命令对选择的操作对象进行相应操作之前，该方法
+    进一步包括：存储卡控制器根据权限寄存器中记录的认证等级判断是否有权
+    限利用当前命令对选择的操作对象进行相应操作。
+    
+				</td></tr><tr><td class="content" id="description_21">所述第一类命令包括：对智能存储卡进行复位的命令、读取智能存储卡
+    版本信息的命令、发送应用协议数据单元APDU的命令、读物理存储介质中
+    
+					普通区域的命令、写物理存储介质中普通区域的命令、读物理存储介质中隐
+    藏区域的命令、写物理存储介质中隐藏区域的命令、以及分别用于认证的认
+    证请求命令。
+    
+				</td></tr><tr><td class="content" id="description_22">所述智能存储卡版本信息包括：产品分类号、产品版本号、产品序列号、
+    生产厂家名称的编码信息、生产厂家名称的长度、生产厂家名称、协议版本
+    号。
+    
+				</td></tr><tr><td class="content" id="description_23">在所述智能存储卡中设置控制寄存器，其中记录有物理存储介质是否可
+    读写的使能信息。
+    
+				</td></tr><tr><td class="content" id="description_24">所述认证请求命令中包括第一级认证请求命令，所述第一级认证包括：
+    
+				</td></tr><tr><td class="content" id="description_25">应用程序将命令数据包中的编码信息设置为认证请求命令的命令编码
+    信息，并将包含有用于识别当前使用应用程序的用户身份的特征信息的第一
+    级认证请求命令，携带于命令数据包的数据域中发送至存储卡控制器；
+    
+				</td></tr><tr><td class="content" id="description_26">存储卡控制器对命令数据包中的特征信息与智能存储卡中存储的特征
+    信息进行匹配，并将包含有匹配结果的认证结果携带于应答数据包的数据域
+    中返回给应用程序。
+    
+				</td></tr><tr><td class="content" id="description_27">所述第一级认证请求命令中进一步包括：第一级认证请求命令的命令标
+    识、第一级认证请求命令的长度、标识当前第一次认证交互的会话标识、以
+    及特征信息的类型；
+    
+				</td></tr><tr><td class="content" id="description_28">所述第一级认证应答中进一步包括：第一级认证应答的应答标识、认证
+    结果的长度、标识当前第一级认证交互的会话标识、认证结果为失败时的失
+    败原因、表示是否进行密钥协商的密钥协商标识。
+    
+				</td></tr><tr><td class="content" id="description_29">所述认证请求命令中包括第二级认证请求命令，所述第二级认证包括：
+    
+				</td></tr><tr><td class="content" id="description_30">应用程序将命令数据包中的编码信息设置为认证请求命令的编码信息，
+    生成第一随机数，并将包含有第一随机数的第二级认证请求命令携带于命令
+    数据包的数据域中发送至存储卡控制器；
+    
+				</td></tr><tr><td class="content" id="description_31">存储卡控制器利用预设的密钥种子对第一随机数进行哈希Hash运算得
+    到第一Hash运算结果，将包含有第一Hash运算结果的第二级认证应答携带
+    
+					于应答数据包数据域中返回给应用程序；
+    
+				</td></tr><tr><td class="content" id="description_32">应用程序利用与存储卡控制器相同的密钥种子对其生成的第一随机数
+    进行Hash运算，并将得到的第二Hash运算结果与应答数据包中的第一Hash
+    运算结果进行比较，如果二者相同，则将表示认证成功的认证结果携带于命
+    令数据包的数据域发送至存储卡控制器。
+    
+				</td></tr><tr><td class="content" id="description_33">所述第二级认证请求命令中进一步包括：第二级认证请求命令的命令标
+    识、第二级认证请求命令的长度、标识当前第二级认证交互的会话标识、
+    Hash算法类型标识、Hash算法密钥长度、Hash算法的密钥、密钥种子标识；
+    
+				</td></tr><tr><td class="content" id="description_34">所述第二级认证应答中进一步包括：第二级认证应答的应答标识、第二
+    级认证应答的长度、标识当前第二级认证交互的会话标识、Hash运算错误
+    时的错误原因、第一Hash运算结果的长度。
+    
+				</td></tr><tr><td class="content" id="description_35">所述认证请求命令中包括第三级认证请求命令，所述第三级认证包括：
+    
+				</td></tr><tr><td class="content" id="description_36">应用程序将命令数据包中的编码信息设置为认证请求命令的编码信息，
+    并生成第二随机数与第三级认证请求命令一起携带于命令数据包的数据域
+    中发送至存储卡控制器；
+    
+				</td></tr><tr><td class="content" id="description_37">存储卡控制器生成第三随机数，并对第三随机数与命令数据包中的第二
+    随机数进行异或运算，然后利用智能存储卡中的预设公钥证书所对应的私钥
+    对异或预算结果进行数字签名；将包含有所述公钥证书和数字签名的第三级
+    应答携带于应答数据包数据域中返回给应用程序；
+    
+				</td></tr><tr><td class="content" id="description_38">应用程序利用应答数据包中的公钥证书对数字签名进行验证，如果验证
+    通过，则将表示认证成功的认证结果携带于命令数据包的数据域发送至存储
+    卡控制器。
+    
+				</td></tr><tr><td class="content" id="description_39">所述第三级认证请求命令中进一步包括：第三级认证请求命令的命令标
+    识、第三级认证请求命令的长度、标识当前第三级认证交互的会话标识；
+    
+				</td></tr><tr><td class="content" id="description_40">所述第三级认证应答中进一步包括：第三级认证应答的应答标识、第三
+    级认证应答的长度、标识当前第三级认证交互的会话标识、异或运算或签名
+    处理错误时的错误原因、数字签名的算法类型标识、第三随机数、数字签名
+    
+					长度、公钥证书长度。
+    
+				</td></tr><tr><td class="content" id="description_41">在所述智能存储卡中设置用于记录物理存储介质读写使能信息的控制
+    寄存器；
+    
+				</td></tr><tr><td class="content" id="description_42">利用解码得到的命令对物理存储介质进行相应操作之前，该方法进一步
+    包括：存储卡控制器根据控制寄存器中记录的读写使能信息，判断是否允许
+    利用当前命令对物理存储介质进行读写操作。
+    
+				</td></tr><tr><td class="content" id="description_43">所述使能信息包括：表示物理存储介质是否可访问的通用使能信息、表
+    示物理存储介质的普通区域是否可写的写使能信息、表示物理存储介质的普
+    通区域是否可读的读使能信息。
+    
+				</td></tr><tr><td class="content" id="description_44">所述第二类命令包括：读控制寄存器的命令、写控制寄存器的命令、表
+    示同时发送多个APDU的命令。
+    
+				</td></tr><tr><td class="content" id="description_45">在所述智能存储卡中设置用于记录下载和预个人化使能信息的特殊控
+    制寄存器；
+    
+				</td></tr><tr><td class="content" id="description_46">利用解码得到的命令对选择的操作对象进行相应操作之前，该方法进一
+    步包括：存储卡控制器根据特殊控制寄存器中记录的下载和预个人化使能信
+    息，判断是否允许下载应用程序和/或是否允许预个人化。
+    
+				</td></tr><tr><td class="content" id="description_47">所述第三类命令包括：读特殊控制寄存器的命令、写特殊控制寄存器的
+    命令。
+    
+				</td></tr><tr><td class="content" id="description_48">所述第四类命令包括：写智能存储卡版本信息的命令、测试智能存储卡
+    的命令、初始化智能存储卡的命令、读智能存储卡中密钥的命令、写智能存
+    储卡中密钥的命令。
+    
+				</td></tr><tr><td class="content" id="description_49">由上述技术方案可见，本发明充分利用了存储卡现有的总线资源，在存
+    储卡中增设包含有增值应用模块因而能够通过增值应用模块实现功能扩展，
+    使得增值应用的实现不再受限于SIM卡，因而便于增值业务运营商的增值
+    业务拓展，且具有较强的兼容性和可升级性。而且，本发明由应用程序通过
+    命令数据包实现对智能存储卡的管理，从而能够保证智能存储卡的正常工
+    作。
+    
+				</td></tr><tr><td class="content" id="description_50">附图说明
+  </td></tr><tr><td class="content" id="description_51">图1为本发明实施例中智能存储卡的结构示意图。
+    
+				</td></tr><tr><td class="content" id="description_52">图2为本发明实施例中智能存储卡系统的协议层结构示意图。
+    
+				</td></tr><tr><td class="content" id="description_53">图3为本发明实施例中智能存储卡的控制方法的示例性流程图。
+    
+				</td></tr><tr><td class="content" id="description_54">图4为本发明实施例中的多级认证流程示意图。
+    
+				</td></tr><tr><td class="content" id="description_55">具体实施方式
+  </td></tr><tr><td class="content" id="description_56">为使本发明的目的、技术方案及优点更加清楚明白，以下参照附图并举
+    实施例，对本发明进一步详细说明。
+    
+				</td></tr><tr><td class="content" id="description_57">图1为本发明实施例中智能存储卡的结构示意图。如图1所示，本实施
+    例中的智能存储卡包括：物理接口、存储卡控制器、物理存储介质、智能卡
+    芯片。其中，物理接口、存储卡控制器、物理存储介质均为现有存储卡中的
+    结构；而智能卡芯片中则承载有用于实现增值应用的增值应用模块，能够脱
+    离SIM卡实现各种增值应用。
+    
+				</td></tr><tr><td class="content" id="description_58">其中，增值应用模块可以按照现有SIM卡的方式，经终端设备的透传
+    与网络侧交互来实现增值应用，SIM与网络侧的交互方式为本领域技术人员
+    所能够实现，且本发明主要针对如何控制管理智能存储卡、而不针对实现增
+    值应用所涉及的交互，因而在本文中不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_59">物理存储介质和智能卡芯片中的增值应用模块均可看作智能存储卡中
+    可访问的资源，而本发明所述的资源管理主要是指对智能卡芯片的管理。
+    
+				</td></tr><tr><td class="content" id="description_60">本实施例可以通过如下方式来实现应用程序对智能卡芯片的访问：
+    
+				</td></tr><tr><td class="content" id="description_61">1、开发驱动程序，以使得应用程序能够访问到物理存储介质之外的地
+    址。如何按照上述要求开发驱动程序为本领域技术人员所能实现，在此不再
+    赘述。
+    
+				</td></tr><tr><td class="content" id="description_62">2、使用存储卡扩展协议定义专用于访问智能卡芯片的命令，且保证存
+    储卡控制器能够识别。如何定义专用命令为本领域技术人员所能实现，在此
+    不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_63">3、将智能卡芯片的地址映射在物理存储介质的预设地址，使得存储卡
+    控制器能够根据访问地址实现对扩展应用芯片的定位，在应用程序需要访问
+    扩展应用芯片时，存储卡控制器能够定位扩展应用芯片的地址。如何实现地
+    址映射以及基于地址映射的定位也为本领域技术人员所能实现，在此不再赘
+    述。
+    
+				</td></tr><tr><td class="content" id="description_64">上述3种方式均能够保证应用程序能够访问到智能卡芯片，但相比之
+    下，开发驱动程序具有较高的开发难度、需要较长的开发周期；使用存储卡
+    扩展协议则需要修改手机终端和存储卡控制器；而地址映射的方式则不具有
+    前两种方式的缺陷。因此，本实施例中较佳地采用地址映射的方式。
+    
+				</td></tr><tr><td class="content" id="description_65">参见图2，访问智能存储卡中的物理存储介质时，应用程序与智能存储
+    卡通过应用接口、驱动程序和终端设备进行交互。
+    
+				</td></tr><tr><td class="content" id="description_66">仍参见图2，以地址映射方式保证应用程序能够访问到智能卡芯片为例，
+    应用程序依次通过预设的接口文件、驱动程序、终端设备向智能存储卡中的
+    智能卡芯片发送命令数据包，以供智能卡芯片中的增值应用模块执行相应的
+    操作。相应地，智能卡芯片中的增值应用模块也会通过反向的路径向应用程
+    序返回应答数据包。
+    
+				</td></tr><tr><td class="content" id="description_67">其中，接口文件映射于物理存储介质中映射有智能卡芯片的预设地址，
+    该接口文件遵从文件系统原理，占用磁盘空间的基本单位不是字节而是簇，
+    即使某个接口文件只有一个字节，也会分配到一个最小单元、即一个簇。
+    
+				</td></tr><tr><td class="content" id="description_68">应用接口需要向智能卡芯片发送命令数据包时，只需将该命令数据包写
+    入在接口文件中，而写入在接口文件中的命令通过命令数据包的方式经由驱
+    动程序、终端设备发送至智能存储卡，且该命令数据包的目标操作对象即可
+    被设置为映射有智能卡芯片的预设地址。
+    
+				</td></tr><tr><td class="content" id="description_69">然后，智能存储卡中的存储卡控制器判断命令数据包的目标操作对象是
+    否为表示扩展应用芯片的预设地址。如果目标操作对象为该预设地址，则将
+    接口协议程序转至对扩展应用类型标识对应的扩展应用芯片操作的入口程
+    序，并将该命令数据包传送至对应的扩展应用芯片。
+    
+				</td></tr><tr><td class="content" id="description_70">以上是对智能存储卡的结构及其基本工作原理的简要说明，下面，再针
+    对智能存储卡的控制方法进行详细说明。
+    
+				</td></tr><tr><td class="content" id="description_71">图3为本发明实施例中智能存储卡的控制方法的示例性流程图。如图3
+    所示，该方法包括：
+    
+				</td></tr><tr><td class="content" id="description_72">步骤301，应用程序向所述智能存储卡发送命令数据包，其中携带有用
+    于确定该应用命令数据包操作对象的目标类型、用于智能存储卡中的存储卡
+    控制器获取命令的命令编码信息。
+    
+				</td></tr><tr><td class="content" id="description_73">步骤302，智能存储卡中的存储卡控制器根据目标类型选择物理存储介
+    质或增值应用模块为操作对象，并对命令编码信息进行解码得到对应的命
+    令，利用解码得到的命令对选择的操作对象进行相应操作。
+    
+				</td></tr><tr><td class="content" id="description_74">在本实施例中，可以将命令分为四类，按照其使用权限级别由低至高依
+    次为第一类命令、第二类命令、第三类命令、第四类命令。
+    
+				</td></tr><tr><td class="content" id="description_75">智能存储卡利用第二类命令对选择的操作对象进行相应操作之前，需要
+    应用程序通过与智能存储卡的第一级认证；
+    
+				</td></tr><tr><td class="content" id="description_76">智能存储卡利用第三类命令对选择的操作对象进行相应操作之前，需要
+    应用程序通过与智能存储卡的第一级和第二级认证；
+    
+				</td></tr><tr><td class="content" id="description_77">智能存储卡利用第四类命令对选择的操作对象进行相应操作之前，需要
+    应用程序通过与智能存储卡的第一级、第二级和第三级认证。
+    
+				</td></tr><tr><td class="content" id="description_78">如果没有通过相应等级的认证，则操作失败。
+    
+				</td></tr><tr><td class="content" id="description_79">为了记录已通过认证等级，可以在所述智能存储卡中设置权限寄存器，
+    该权限寄存器的各标志位可如表1所示。
+    
+				</td></tr><tr><td class="content" id="description_80">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  字节偏移量
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  含义
+    
+											
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  31～4
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  保留
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  3
+    
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  3级权限标志
+    
+  0：允许处理第三类命令
+    
+  1：拒绝处理第三类命令
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2
+    
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2级权限标志
+    
+  0：允许处理第二类命令
+    
+  1：拒绝处理第二类命令
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_81">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  1
+    
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  1级权限标志
+    
+  0：允许处理第一类命令
+    
+  1：拒绝处理第一类命令
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  保留
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_82">表1
+    
+				</td></tr><tr><td class="content" id="description_83">在智能存储卡利用第二类至第四类命令对选择的操作对象进行相应操
+    作之前，智能存储卡中的存储卡控制器可以根据权限寄存器中记录的认证等
+    级判断是否有权限利用当前命令对选择的操作对象进行相应操作。
+    
+				</td></tr><tr><td class="content" id="description_84">步骤303，智能存储卡中的存储卡控制器向应用程序发送应答数据包，
+    其中携带有表示相应操作是否成功的应答编码信息。
+    
+				</td></tr><tr><td class="content" id="description_85">在本步骤中，应答成功是指对成功执行了命令相应的操作；对于表示失
+    败的应答编码信息，按照失败原因还可分为多种，如表2所示。
+    
+				</td></tr><tr><td class="content" id="description_86">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  应答编码
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  含义
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数值码0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  应答成功
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数值码1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  应答失败，失败原因为非法命令
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数值码2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  应答失败，失败原因为超时
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数值码3
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  应答失败，失败原因为智能存储卡
+    
+  锁死
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数值码4
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  应答失败，失败原因为没有权限
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数值码5
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  应答失败，失败原因为其他原因
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数值码6-数值码65535
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  保留
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_87">表2
+    
+				</td></tr><tr><td class="content" id="description_88">步骤304，应用程序对应答编码信息进行解码，获知操作是否成功。
+    
+				</td></tr><tr><td class="content" id="description_89">至此，本流程结束。
+    
+				</td></tr><tr><td class="content" id="description_90">需要说明的是，并不是所有的命令都需要应答，因而上述流程中的步骤
+    303～步骤304为可选的步骤。
+    
+				</td></tr><tr><td class="content" id="description_91">可见，基于如图1所示的结构，只需在存储卡中加入智能卡芯片即可实
+    现功能扩展，且通过如上所述的流程即可实现对智能存储卡的管理控制。例
+    如对智能存储卡中的资源进行管理、对智能存储卡的身份认证和权限授予
+    等。
+    
+				</td></tr><tr><td class="content" id="description_92">在本实施例中，命令数据包和应答数据包的格式如表3所示。
+    
+				</td></tr><tr><td class="content" id="description_93">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  名称
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  含义
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数据字段1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数据包类型标识
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数据字段2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  协议版本号
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数据字段3
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  目标类型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数据字段4
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  命令/应答编码信息
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数据字段5
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数据包序列号
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数据字段6
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数据域的长度
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数据字段7
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数据域
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_94">表3
+    
+				</td></tr><tr><td class="content" id="description_95">在表1中，除了必要的目标类型、以及编码信息之外，命令数据包和应
+    答数据包中还可以包括：数据包类型标识、数据包所对应的协议版本号、数
+    据包的序列号、数据域、数据包的数据域长度。
+    
+				</td></tr><tr><td class="content" id="description_96">数据包类型标识用于表示该应用接口数据包是命令数据包还是应答数
+    据包，例如可用0x53AC表示命令数据包，0xAC53表示应答数据包；
+    
+				</td></tr><tr><td class="content" id="description_97">协议版本号表示应用接口数据包遵循的协议版本号，例如可用0x01表
+    示第一版协议，其余类推；
+    
+				</td></tr><tr><td class="content" id="description_98">目标类型表示应用接口数据包的操作对象，例如可用0x01表示操作对
+    象为片智能卡芯片中的增值应用模块，0x02表示操作对象为物理存储介质，
+    其余保留做扩展对象操作；
+    
+				</td></tr><tr><td class="content" id="description_99">命令/应答类型编码则包括数据域内携带的命令/应答的编码信息，用于
+    对命令/应答解码；例如，命令数据包中的编码信息为0x0，则存储卡控制器
+    即可根据0x0解码得到表示复位的命令；应答数据包中的编码信息为0，则
+    终端应用程序可根据0解码得到表示成功的应答；实际上，上述方式的编码
+    信息也可看作是命令标识，而得到编码信息的一方可以根据预设的编码信息
+    与命令/应答的对应关系，获知对应的命令/应答；
+    
+				</td></tr><tr><td class="content" id="description_100">数据包序列号可占用4个字节，例如可用第一个字节表示数据包的发送
+    月份，从1～12(十进制)，第二个字节表示数据包的发送日期，从1～31(十
+    进制)；后两个字节表示当天发送的序列号，从0x0000～0xFFFF。
+    
+				</td></tr><tr><td class="content" id="description_101">数据域的长度表示数据包内带的数据长度，数据长度最大为500(十进
+    
+					制)，如果没有数据，则为0。如果数据域的长度不为0，则数据域中可携
+    带命令或应答的相关数据。
+    
+				</td></tr><tr><td class="content" id="description_102">以下，再对各种命令及其编码信息进行详细说明。
+    
+				</td></tr><tr><td class="content" id="description_103">如前所述，本实施例中可以按照命令的使用权限将所有命令划分为四个
+    类别。
+    
+				</td></tr><tr><td class="content" id="description_104">其中，第一类命令向普通用户开放；第二类命令用于高级应用、对普通
+    用户受限开放；第三类命令用于智能存储卡厂商内部应用，基于厂商自行开
+    发的软件对开发机构开放；第四类命令用于智能存储卡厂商内部设置，仅限
+    于厂商内部使用。
+    
+				</td></tr><tr><td class="content" id="description_105">这样，本实施例即可针对智能存储卡的生产、开发、以及用户级应用，
+    分别对相应的功能实现控制管理。
+    
+				</td></tr><tr><td class="content" id="description_106">在本实施例中，第一类命令可以包括：对智能存储卡进行复位的命令、
+    读取智能存储卡版本信息的命令、发送应用协议数据单元(APDU)的命令、
+    读物理存储介质中普通区域的命令、写物理存储介质中普通区域的命令、读
+    物理存储介质中隐藏区域的命令、写物理存储介质中隐藏区域的命令、以及
+    分别用于认证的认证请求命令。
+    
+				</td></tr><tr><td class="content" id="description_107">相应地，第一类命令的编码信息可如表4所示。
+    
+				</td></tr><tr><td class="content" id="description_108">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  命令编码(十六进制)
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  名称代号
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  命令含义
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0x0
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  SSC_RESET
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  对智能存储卡
+    
+  进行复位
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0x1
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  SSC_READ_INFO
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  读取智能存储
+    
+  卡版本信息
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0x2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  SSC_APDU
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  发送APDU
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0x3
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  READ_SECTOR
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  读物理存储介
+    
+  质中普通区域
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0x4
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  WRITE_SECTOR
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  写物理存储介
+    
+  质中普通区域
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0x5
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  READ_MULTI_SECTOR
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  读物理存储介
+    
+  质中隐藏区域
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0x6
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  WRITE_MULTI_SECTOR
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  写物理存储介
+    
+  质中隐藏区域
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_109">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0x7
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  AUTHENTICATE
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  身份认证
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0x8-0xFF
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  保留
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  保留
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_110">表4
+    
+				</td></tr><tr><td class="content" id="description_111">对于对智能存储卡进行复位的命令，命令数据包中的数据域长度为0；
+    其对应的应答数据包中，应答编码信息表示复位是否成功，而数据域中则携
+    带有表示复位应答的标识。
+    
+				</td></tr><tr><td class="content" id="description_112">表4中所示的智能存储卡版本信息包括：产品分类号、产品版本号、产
+    品序列号、生产厂家名称的编码信息、生产厂家名称的长度、生产厂家名称、
+    协议版本号，具体参见表5。
+    
+				</td></tr><tr><td class="content" id="description_113">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  字节偏移
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  名称
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  含义
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0～1
+    
+											
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  产品分类号
+    
+											
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+  1：智能存储卡；
+    
+  2：条件接收卡；
+    
+  其他数值：其他用途。
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2～3
+    
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  产品版本号
+    
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  共4个数字，前两个数字为主版本
+    
+  号，后两个数字为次版本号，每个
+    
+  数字采用4位编码
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  4～11
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  产品序列号
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  共16个数字，每个数字采用4位编
+    
+  码
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  12～13
+    
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  生产厂家编
+    
+  码
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0：测试
+    
+  1：生产厂家1
+    
+  2～FFFF：生产厂家2-FFFF
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  14
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  生产厂家名
+    
+  称长度
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  生产厂家名称的信息长度
+    
+											
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  15～78
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  生产厂家名
+    
+  称
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  最多可存储64个字符，即32个汉
+    
+  字
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  79～80
+    
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  协议版本
+    
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  协议版本号，共4个数字，前两个
+    
+  数字为主版本号，后两个数字为次
+    
+  版本号，每个数字采用4位编码
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  81～255
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  保留
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_114">表5
+    
+				</td></tr><tr><td class="content" id="description_115">对于发送APDU的命令，数据域中则携带的数据为APDU。其中，APDU
+    中可携带用于与网络侧交互以实现增值应用的数据。应用程序接收到智能存
+    储卡发送的数据域中携带有APDU的应答数据包后，可将该APDU透传至
+    
+					网络侧；在接收到网络侧的APDU后，可将该APDU携带于编码信息表示
+    发送APDU的命令数据包中发送至智能存储卡。
+    
+				</td></tr><tr><td class="content" id="description_116">如前所述，由于增值应用模块可以按照现有SIM卡的方式，经终端设
+    备的透传与网络侧交互来实现增值应用，且SIM与网络侧的交互方式为本
+    领域技术人员所能够实现，因而APDU中涉及所述交互的相关数据在本文中
+    不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_117">对于读物理存储介质中普通区域和隐藏区域的命令，数据域中则携带有
+    地址编号；对于写物理存储介质中普通区域和隐藏区域的命令，数据域中则
+    携带有地址编号、以及待写入的数据，具体参见表6。
+    
+				</td></tr><tr><td class="content" id="description_118">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  字节偏移量
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  名称
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  含义
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0～3
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  地址
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  地址编号
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  4～509
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数据
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  待写入的数据
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_119">表6
+    
+				</td></tr><tr><td class="content" id="description_120">对于身份认证的命令，可分为第一级认证请求命令、第二级认证请求命
+    令、以及第三级认证请求命令。
+    
+				</td></tr><tr><td class="content" id="description_121">这三种认证请求命令可以如表4所示采用相同的命令编码信息，但分别
+    在数据域中携带不同的命令标识，当然，也可采用不同的命令编码信息，这
+    样就无需在数据域中携带命令标识。
+    
+				</td></tr><tr><td class="content" id="description_122">第一级认证也可称作简单认证，该流程包括：
+    
+				</td></tr><tr><td class="content" id="description_123">1a、应用程序将命令数据包中的编码信息设置为认证请求命令的命令编
+    码信息，并将包含有用于识别当前使用应用程序的用户身份的特征信息的第
+    一级认证请求(SimAuthRequire)命令，携带于命令数据包的数据域中发送
+    至智能存储卡；
+    
+				</td></tr><tr><td class="content" id="description_124">1b、智能存储卡中的存储卡控制器对命令数据包中的特征信息与智能存
+    储卡中存储的特征信息进行匹配，并将包含有匹配结果的认证结果
+    (SimAuthResult)信息携带于应答数据包的数据域中返回给应用程序。当然，
+    本步骤也可以将应答数据包的应答编码信息设置为表示成功的应答编码信
+    
+					息，而不在数据域中携带AuthResult信息。如果智能存储卡中存储的特征信
+    息在物理存储介质中，则携带有SimAuthRequire命令的命令数据包的目标
+    操作对象表示物理存储介质，否则，表示智能卡芯片中的增值应用模块。
+    
+				</td></tr><tr><td class="content" id="description_125">其中，SimAuthRequire的格式如表7所示，其中包括：SimAuthRequire
+    的命令标识、SimAuthRequire的长度、标识当前第一次认证交互的会话标识
+    (SessionID)、特征信息(CharInfo)、以及特征信息的类型(CharInfoCat)。
+    
+				</td></tr><tr><td class="content" id="description_126">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  字段
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  长度
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  类型
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  SimAuthRequire的命令标识
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  SimAuthRequire的长度
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  SessionID
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  保留字段
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  特征信息
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  1字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  特征信息的类型
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  变量
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型/字符串
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_127">表7
+    
+				</td></tr><tr><td class="content" id="description_128">在表7中，特征信息类型至少可以包括：用户名和密码、智能存储卡的
+    唯一标识，分别由0x00和0x01表示。特征信息为应用程序和智能存储卡间
+    共享的信息，长度任意。
+    
+				</td></tr><tr><td class="content" id="description_129">SimAuthResult的格式如表8所示，其中包括：SimAuthResult的应答标
+    识、SimAuthResult的长度、标识当前第一级认证交互的SessionID、认证结
+    果(VerifyResult)为失败时的失败原因、表示是否进行密钥协商的密钥协
+    商标识(KAFlag)。
+    
+				</td></tr><tr><td class="content" id="description_130">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  字段
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  长度
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  类型
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  应答标识
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  第一级认证结果的长度
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  SessionID
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  失败原因
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  认证结果
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  1字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  密钥协商标识
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  1字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  保留字段
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_131">表8
+    
+				</td></tr><tr><td class="content" id="description_132">第二级认证也可称作有限认证，该流程包括：
+    
+				</td></tr><tr><td class="content" id="description_133">2a、应用程序将命令数据包中的编码信息设置为认证请求命令的编码信
+    息，生成64bit的第一随机数，并将包含有第一随机数的第二级认证请求
+    (LimAuthRequire)命令携带于命令数据包的数据域中发送至智能存储卡；
+    
+				</td></tr><tr><td class="content" id="description_134">2b、智能存储卡中的存储卡控制器利用预设的密钥种子对第一随机数进
+    行哈希(Hash)运算得到第一Hash运算结果，将包含有第一Hash运算结果
+    的第二级认证应答(LimAuthResponse)携带于应答数据包数据域中返回给
+    应用程序；如果预设的密钥种子存储于物理存储介质，则携带有
+    LimAuthRequire命令的命令数据包的目标操作对象表示物理存储介质，否则
+    表示智能卡芯片中的增值应用模块；
+    
+				</td></tr><tr><td class="content" id="description_135">2c、应用程序利用与存储卡控制器相同的密钥种子对其生成的第一随机
+    数进行Hash运算，并将得到的第二Hash运算结果与应答数据包中的第一
+    Hash运算结果进行比较，如果二者相同，则将表示认证成功的第二级认证
+    结果(LimAuthResult)携带于命令数据包的数据域发送至智能存储卡。
+    
+				</td></tr><tr><td class="content" id="description_136">其中，LimAuthRequire的格式如表9所示，其中包括：LimAuthRequire
+    的命令标识、LimAuthRequire的长度、标识当前第二级认证交互的
+    SessionID、Hash算法类型标识(HashAlgorithm)、Hash算法密钥长度
+    (HashKeyLen)、Hash算法的密钥(HashKey)、密钥种子标识(SeedID)、
+    第一随机数。
+    
+				</td></tr><tr><td class="content" id="description_137">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  字段
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  长度
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  类型
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  LimAuthRequire的命令标识
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  LimAuthRequire的长度
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  SessionID
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  HashAlgorithm
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  4字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  HashKeyLen
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  HashKey
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  变量
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  SeedID
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  第一随机数
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  8字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  保留字段
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_138">表9
+    
+				</td></tr><tr><td class="content" id="description_139">LimAuthResponse的格式如表10所示，包括：LimAuthResponse的应答
+    
+					标识、LimAuthResponse的长度、标识当前第二级认证交互的SessionID、
+    Hash运算错误时的错误原因、第一Hash运算结果的长度、第一Hash运算
+    结果(HashVal)。
+    
+				</td></tr><tr><td class="content" id="description_140">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 字段
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  长度
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  类型
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ LimAuthResponse的应答标识
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ LimAuthResponse的长度
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ SessionID
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 错误原因
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 第一Hash运算结果的长度
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ HashVal
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  变量
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 保留字段
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_141">表10
+    
+				</td></tr><tr><td class="content" id="description_142">第三级认证也可称作增强认证，该流程包括：
+    
+				</td></tr><tr><td class="content" id="description_143">3a、应用程序将命令数据包中的编码信息设置为认证请求命令的编码信
+    息，并生成第二随机数与第三级认证请求(EnhAuthRequire)命令一起携带
+    于命令数据包的数据域中发送至智能存储卡；
+    
+				</td></tr><tr><td class="content" id="description_144">3b、智能存储卡中的存储卡控制器生成第三随机数，并对第三随机数与
+    命令数据包中的第二随机数进行异或运算，然后利用智能存储卡中的预设公
+    钥证书所对应的私钥对异或预算结果进行数字签名；将包含有公钥证书和数
+    字签名的第三级应答(EnhAuthResponse)携带于应答数据包数据域中返回
+    给应用程序；如果预设的公钥证书及其对应的私钥存储于物理存储介质，则
+    携带有EnhAuthRequire命令的命令数据包的目标操作对象表示物理存储介
+    质，否则表示智能卡芯片中的增值应用模块；
+    
+				</td></tr><tr><td class="content" id="description_145">3c、应用程序利用应答数据包中的公钥证书对数字签名进行验证，如果
+    验证通过，则将表示认证成功的第三级认证结果(EnhAuthResult)携带于命
+    令数据包的数据域发送至智能存储卡。
+    
+				</td></tr><tr><td class="content" id="description_146">其中，EnhAuthRequire的格式如表11所示，包括：EnhAuthRequire的
+    命令标识、EnhAuthRequire的长度、标识当前第三级认证交互的SessionID、
+    第二随机数。
+    
+				</td></tr><tr><td class="content" id="description_147">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  字段
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  长度
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  类型
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  EnhAuthRequire的命令标识
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  EnhAuthRequire的长度
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  SessionID
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  第二随机数
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  8字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  保留字段
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_148">表11
+    
+				</td></tr><tr><td class="content" id="description_149">EnhAuthResponse的格式如表12所示，包括：EnhAuthResponse的应答
+    标识、EnhAuthResponse的长度、标识当前第三级认证交互的SessionID、异
+    或运算或签名处理错误时的错误原因、数字签名的算法类型标识
+    (SignAlgorithm)、第三随机数、数字签名长度(SignLen)、数字签名
+    (Signature)、公钥证书长度(PKCertificateLen)、公钥证书(PKCertificate)。
+    
+				</td></tr><tr><td class="content" id="description_150">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 字段
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  长度
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  类型
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ EnhAuthResponse的应答标识
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ EnhAuthResponse的长度
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ SessionID
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 错误原因
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ SignAlgorithm
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 第三随机数
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  8字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ SignLen
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ Signature
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  变量
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型/字符串
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ PKCertificateLen
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ PKCertificate
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  变量
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型/字符串
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 保留字段
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2字节
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  整型
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_151">表12
+    
+				</td></tr><tr><td class="content" id="description_152">上述各级认证之间的关系可以如图4所示。智能存储卡开始与应用程序
+    交互后，便可以使用第一类命令以实现普通应用；经过第一级认证后可使用
+    第二类命令以实现高级应用，同时可以使用第一类命令以实现普通应用；经
+    过第二级认证后可使用第三类命令以实现厂商内部应用并最终交由发卡商
+    使用，同时可使用第二类命令以实现高级应用，也可以使用第一类命令以实
+    现普通应用；经过第三级认证后可使用第四类命令以实现厂商内部应用并由
+    厂商自己使用，同时可使用第三类命令以实现厂商内部应用并最终交由发卡
+    
+					商使用，也可使用第二类命令以实现高级应用，还可使用第一类命令以实现
+    普通应用。
+    
+				</td></tr><tr><td class="content" id="description_153">上述各级认证所涉及的加解密、Hash运算、以及密钥协商等过程均为
+    本领域技术人员所能够实现，在本文中不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_154">在本实施例中，可以在智能存储卡中设置用于记录物理存储介质读写使
+    能信息的控制寄存器。这样，在利用解码得到的命令对物理存储介质进行相
+    应操作之前，可以根据控制寄存器中记录的读写使能信息，判断是否允许利
+    用当前命令对物理存储介质进行读写操作。
+    
+				</td></tr><tr><td class="content" id="description_155">控制寄存器中表示读写使能信息的各标志位可以如表13所示，包括：
+    表示物理存储介质是否可访问的通用使能信息、表示物理存储介质的普通区
+    域是否可写的写使能信息、表示物理存储介质的普通区域是否可读的读使能
+    信息。
+    
+				</td></tr><tr><td class="content" id="description_156">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  位偏移量
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  名称
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 含义
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  31～3
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  保留
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  通用命令使
+    
+  能
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 0：禁止
+    
+ 1：使能
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  1
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  写使能
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 0：禁止写物理存储介质的普通区域
+    
+ 1：允许写物理存储介质的普通区域
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  读使能
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 0：禁止读物理存储介质的普通区域
+    
+ 1：允许读物理存储介质的普通区域
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_157">表13
+    
+				</td></tr><tr><td class="content" id="description_158">而本实施例中的第二类命令则主要是针对控制寄存器的，具体包括：读
+    控制寄存器的命令、写控制寄存器的命令，第二类命令还可以包括表示同时
+    发送多个APDU的命令。
+    
+				</td></tr><tr><td class="content" id="description_159">第二类命令的命令编码信息参见表14。
+    
+				</td></tr><tr><td class="content" id="description_160">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 命令编码(十六
+    
+ 进制)
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  名称代号
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  含义
+    
+											
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 0x100
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  SSC_READ_REGISTER
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  读智能存储卡控制
+    
+  寄存器
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 0x101
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  SSC_WRITE_REGISTER
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  写智能存储卡控制
+    
+  寄存器
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_161">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0x102
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  MULTI_COMMAND
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  发送多个APDU
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0x103-0x1FF
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  保留
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  保留
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_162">表14
+    
+				</td></tr><tr><td class="content" id="description_163">此外，在本实施例中，还可以在智能存储卡中设置用于记录下载和预个
+    人化使能信息的特殊控制寄存器。这样，在利用解码得到的命令对选择的操
+    作对象进行相应操作之前，可以根据特殊控制寄存器中记录的下载和预个人
+    化使能信息，判断是否允许下载应用程序和/或是否允许预个人化。对于如
+    何实现预个人化为本领域技术人员所能够实现，在此不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_164">特殊控制寄存器中表示读写使能信息的各标志位可以如表15所示。
+    
+				</td></tr><tr><td class="content" id="description_165">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  位偏移量
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  名称
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  含义
+    
+											
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  31～2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  保留
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  1
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  应用程序下载使能
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0：禁止应用下载
+    
+  1：允许应用下载
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  预个人化使能
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0：禁止预个人化
+    
+  1：允许预个人化
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_166">表15
+    
+				</td></tr><tr><td class="content" id="description_167">而本实施例中的第三类命令则主要是针对特殊控制寄存器的，具体包
+    括：读特殊控制寄存器的命令、写特殊控制寄存器的命令。第三类命令的命
+    令编码信息参见表16。
+    
+				</td></tr><tr><td class="content" id="description_168">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  命令编码(十六
+    
+  进制)
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  名称代号
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  含义
+    
+											
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0x200
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  SSC_READ_REGISTER
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  读特殊控制控制寄
+    
+  存器
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0x201
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  SSC_WRITE_REGISTER
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  写特殊控制控制寄
+    
+  存器
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0x201-0x2FF
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  保留
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  保留
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_169">表16
+    
+				</td></tr><tr><td class="content" id="description_170">本实施例中的第四类命令包括：写智能存储卡版本信息的命令、测试智
+    能存储卡的命令、初始化智能存储卡的命令、读智能存储卡中密钥的命令、
+    写智能存储卡中密钥的命令。第四类命令的编码信息参见表17。
+    
+				</td></tr><tr><td class="content" id="description_171">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 命令编码(十六进
+    
+ 制)
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  名称代号
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  含义
+    
+											
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 0x300
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  SSC_WRITE_INFO
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  写智能存储卡版本信
+    
+  息
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 0x301
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  TEST
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  测试智能存储卡
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 0x302
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  INIT
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  初始化智能存储卡
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 0x303
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  READ_KEY
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  读智能存储卡中密钥
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 0x304
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  WIETE_KEY
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  写智能存储卡中密钥
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 0x305-0x3FF
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  保留
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  保留
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_172">表17
+    
+				</td></tr><tr><td class="content" id="description_173">其中，测试智能存储卡的命令可针对不同的测试对象，对应不同对象的
+    测试命令具有不同的测试命令标识，具体参见表18。
+    
+				</td></tr><tr><td class="content" id="description_174">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  测试命令标识
+    
+  (十六进制)
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  名称
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  含义
+    
+											
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  保留
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  1
+    
+											
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  终端设备(例如
+    
+  读卡器)回环测
+    
+  试
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  智能卡读卡接口回环测试
+    
+											
+											
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  智能存储卡回环
+    
+  测试
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  智能卡回环测试
+    
+											
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  3～255
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  保留
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN"><table><tr><td height="30" id="" align=""/></tr></table></td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_175">表18
+    
+				</td></tr><tr><td class="content" id="description_176">对于如何实现回环测试为本领域技术人员所能够实现，在此不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_177">以上所述仅为本发明的较佳实施例而已，并非用于限定本发明的保护范
+    围。凡在本发明的精神和原则之内，所作的任何修改、等同替换以及改进等，
+    均应包含在本发明的保护范围之内。
+    
+				</td></tr></table></div></body></html>

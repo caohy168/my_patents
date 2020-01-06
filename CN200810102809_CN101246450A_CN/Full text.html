@@ -1,0 +1,369 @@
+<html><head><title>全文文本(Fulltext)</title><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><style>div.fullText table {width: 100%;text-indent: 1px;} 
+ div.fullText table td.header {font-weight: bold;text-align: center;font-family: '宋体';font-size: 16px;line-height:20px;color: #000000;padding: 5px;}div.fullText table td.content {padding: 1px;text-align: left;vertical-align: top;width: 100%;font-family: '宋体';font-size: 14px;line-height:20px;color: #000000;}</style></head><body><?xml version="1.0" encoding="UTF-8"?><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table class="fullText"><tr><td id="claim_title" class="header">权利要求书</td></tr><tr><td class="content" id="claim_1">1、一种闪存存储器的存储空间管理方法，所述闪存存储器中包括一个
+      <br/>以上的闪存芯片，每个闪存芯片中包括一个以上的管芯，每个管芯中包括一
+      <br/>个以上的存储体；其特征在于，该方法包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_2">以存储体为单位设置访问队列；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_3">将接收到的访问命令按照地址所属的存储体存入到相应的访问队列中；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_4">按照预先设定的规则选择存储体，并执行所选择的存储体对应的访问队
+      <br/>列中的访问命令。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_5">2、根据权利要求1所述的方法，其特征在于，所述以存储体为单位设
+      <br/>置访问队列包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_6">为每一个存储体设置一个访问队列，并将所设置的各存储体的访问队列
+      <br/>按照所属闪存芯片和管芯进行分类。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_7">3、根据权利要求1所述的方法，其特征在于，所述将接收到的访问命
+      <br/>令按照地址所属的存储体存入到相应的访问队列中包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_8">闪存控制器接收主机中的操作系统发送过来的访问命令，将所述访问命
+      <br/>令按照地址所属的存储体存入到所述闪存存储器相应的访问队列中。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_9">4、根据权利要求3所述的方法，其特征在于，所述按照预先设定的规
+      <br/>则选择存储体包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_10">分别查询各存储体及其对应的访问队列的状态；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_11">当确定其中仅有一存储体满足对应的访问队列不为空，且所述存储体不
+      <br/>忙的条件时，将所述存储体作为所选择的存储体。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_12">5、根据权利要求4所述的方法，其特征在于，当确定出的满足所述条
+      <br/>件的存储体为两个以上时，所述按照预先设定的规则选择存储体进一步包
+      <br/>括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_13">按照闪存芯片、管芯以及存储体三级轮询的方式确定所述满足条件的各
+      <br/>存储体的执行顺序；
+      <br/>
+					
+				</td></tr><tr><td class="content" id="claim_14">或者，由操作系统进行统一管理，根据系统资源的闲置情况确定所述满
+      <br/>足条件的各存储体的执行顺序；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_15">或者，采用分级管理方式，由闪存控制器、闪存芯片、管芯分别对其所
+      <br/>属的存储体进行管理，根据系统资源的闲置情况确定所述满足条件的各存储
+      <br/>体的执行顺序。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_16">6、根据权利要求1～5中任一项所述的方法，其特征在于，所述执行所
+      <br/>选择的存储体对应的访问队列中的访问命令包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_17">按照先进先出的原则执行所选择的存储体对应的访问队列中的访问命
+      <br/>令。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_18">7、一种闪存存储器，所述闪存存储器中包括一个以上的闪存芯片，每
+      <br/>个闪存芯片中包括一个以上的管芯，每个管芯中包括一个以上的存储体；其
+      <br/>特征在于，所述闪存存储器还包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_19">设置单元，用于以存储体为单位设置访问队列；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_20">保存单元，用于将接收到的访问命令按照地址所属的存储体存入到相应
+      <br/>的访问队列中；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_21">执行单元，用于按照预先设定的规则选择存储体，并执行所选择的存储
+      <br/>体对应的访问队列中的访问命令。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_22">8、根据权利要求7所述的设备，其特征在于，所述设置单元中包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_23">设置子单元，用于为每一个存储体设置一个访问队列；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_24">分类子单元，用于将所设置的各存储体的访问队列按照所属闪存芯片和
+      <br/>管芯进行分类。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_25">9、根据权利要求7或8所述的设备，其特征在于，所述保存单元中包
+      <br/>括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_26">接收子单元，用于接收主机中的操作系统通过闪存控制器发送过来的访
+      <br/>问命令；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_27">保存子单元，用于将所述访问命令按照地址所属的存储体存入到相应的
+      <br/>访问队列中。
+      <br/>
+					
+				</td></tr><tr><td class="content" id="claim_28">10、根据权利要求9所述的设备，其特征在于，所述执行单元中包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_29">查询子单元，用于查询并确定各存储体及其对应的访问队列的状态，并
+      <br/>将确定结果通知执行子单元；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_30">所述执行子单元，用于当确定结果为其中仅有一个存储体满足对应的访
+      <br/>问队列不为空，且所述存储体不忙的条件时，将所述存储体作为所选择的存
+      <br/>储体，按照先进先出的原则执行所选择的存储体对应的访问队列中的访问命
+      <br/>令；当确定结果为满足所述对应的访问队列不为空，且所述存储体不忙的条
+      <br/>件的存储体为两个以上时，按照闪存芯片、管芯以及存储体三级轮询的方式
+      <br/>确定所述满足条件的各存储体的执行顺序，并按照先进先出的原则执行各存
+      <br/>储体对应的访问队列中的访问命令；或者，通知所述操作系统进行统一管理，
+      <br/>根据系统资源的闲置情况确定所述满足条件的各存储体的执行顺序，并按照
+      <br/>先进先出的原则执行各存储体对应的访问队列中的访问命令；或者，采用分
+      <br/>级管理方式，通知所述闪存控制器、闪存芯片和管芯分别对其所属的存储体
+      <br/>进行管理，根据系统资源的闲置情况确定所述满足条件的各存储体的执行顺
+      <br/>序，并按照先进先出的原则执行各存储体对应的访问队列中的访问命令。
+      <br/>
+					
+				</td></tr></table></div><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table><tr><td id="description_title" class="header">说明书</td></tr><tr><td class="content" id="description_invention_title">一种闪存存储器及其存储空间管理方法
+  </td></tr><tr><td class="content" id="description_1">技术领域
+  </td></tr><tr><td class="content" id="description_2">本发明涉及闪存(Flash)技术，特别涉及一种Flash存储器及其存储空
+    间管理方法。
+    
+				</td></tr><tr><td class="content" id="description_3">背景技术
+  </td></tr><tr><td class="content" id="description_4">当前，Flash芯片作为一种重要的数据存储介质，由于具有体积小、容量大、
+    读写速度快、可掉电保存数据以及使用方便等特性，已经被广泛地应用于各领
+    域的电子设备中，尤其是数码消费电子设备中。
+    
+				</td></tr><tr><td class="content" id="description_5">现有技术中，在对Flash芯片进行访问操作时，通常，Flash控制器对Flash
+    芯片的访问操作需要经历一个等待时间，即从Flash芯片接收到访问命令到完
+    成与该命令相关的操作所需要的时间，这个时间的长短随访问命令的不同而有
+    所不同。在等待时间内，Flash芯片不能响应除芯片复位以及读芯片状态之外的
+    其它任何访问命令。
+    
+				</td></tr><tr><td class="content" id="description_6">例如，对Flash芯片的写访问操作主要包括两个阶段，第一阶段中，Flash
+    控制器通过Flash接口，将数据写入到Flash芯片的片内缓存中，该操作所需时
+    间通常为纳秒ns级；第二阶段为自动编程阶段，即Flash芯片将缓存的数据编
+    程到片内存储单元中，所需时间通常为毫秒ms级；在自动编程阶段，Flash控
+    制器不能再向Flash芯片发出写命令，后继的写命令只能等待当前自动编程阶
+    段完成后才能发出，否则Flash芯片不会对接收到的写命令做出响应。
+    
+				</td></tr><tr><td class="content" id="description_7">通过上述介绍可以看出，由于等待时间的存在，影响了Flash控制器对Flash
+    芯片的访问性能。
+    
+				</td></tr><tr><td class="content" id="description_8">为解决上述问题，现有技术中通常采用由多个Flash芯片来构成Flash存储
+    器的方式。这样，当一个Flash芯片忙，即处于自动编程阶段时，可以向其它
+    
+					空闲的Flash芯片发送访问命令，从而屏蔽掉等待时间。
+    
+				</td></tr><tr><td class="content" id="description_9">比如：当Flash控制器对Flash存储器进行写访问操作时，首先，将数据写
+    入到第一个Flash芯片的片内缓存中，在第一个Flash芯片进行自动编程，将缓
+    存的数据编程到片内存储单元的同时，将后续数据写入到第二个Flash芯片的
+    片内缓存中，随后，该第二个Flash芯片也进入到自动编程阶段；此后，依次
+    对第三到第m个Flash芯片按照上述方式进行操作，使得当第m个Flash芯片
+    的片内缓存中被写入数据后，第一个Flash芯片的自动编程阶段已经结束。之
+    后重复上述过程，进行第二轮操作，如此循环，直到写完所有数据。
+    
+				</td></tr><tr><td class="content" id="description_10">可见，采用上述方法，通过对m个Flash芯片进行流水操作屏蔽掉了Flash
+    芯片自动编程所需的等待时间，从而提高了对Flash存储器的访问效率。但是，
+    上述处理方法也存在一定的缺陷，那就是需要的Flash芯片数量过多。假设写
+    一组数据(如一个字节)到片内缓存的时间周期为25ns，那么，写一个2k字
+    节的页数据到片内缓存的时间就是50us，假设页编程时间为700us，那么，为
+    了屏蔽掉700us的页编程等待时间，就大概需要14个Flash芯片。这里所提到
+    的页可理解为Flash芯片中的基本存储单元，每一页的容量决定了一次可以写
+    入的数据量。对于数码消费等电子设备而言，14个Flash芯片占用的印刷电路
+    板(PCB，Printed Circuit Board)显然过大了。
+    
+				</td></tr><tr><td class="content" id="description_11">发明内容
+  </td></tr><tr><td class="content" id="description_12">有鉴于此，本发明的主要目的在于提供一种闪存存储器的存储空间管理
+    方法，只需较少的Flash芯片，即可有效提高Flash存储器的访问效率。
+    
+				</td></tr><tr><td class="content" id="description_13">本发明的另一目的在于提供一种闪存存储器，只需较少的Flash芯片，
+    即可有效提高Flash存储器的访问效率。
+    
+				</td></tr><tr><td class="content" id="description_14">为达到上述目的，本发明的技术方案是这样实现的：
+    
+				</td></tr><tr><td class="content" id="description_15">一种闪存存储器的存储空间管理方法，所述闪存存储器中包括一个以上
+    的闪存芯片，每个闪存芯片中包括一个以上的管芯，每个管芯中包括一个以
+    上的存储体；该方法包括：
+    
+				</td></tr><tr><td class="content" id="description_16">以存储体为单位设置访问队列；
+    
+				</td></tr><tr><td class="content" id="description_17">将接收到的访问命令按照地址所属的存储体存入到相应的访问队列中；
+    
+				</td></tr><tr><td class="content" id="description_18">按照预先设定的规则选择存储体，并执行所选择的存储体对应的访问队
+    列中的访问命令。
+    
+				</td></tr><tr><td class="content" id="description_19">一种闪存存储器，所述闪存存储器中包括一个以上的闪存芯片，每个闪
+    存芯片中包括一个以上的管芯，每个管芯中包括一个以上的存储体；所述闪
+    存存储器还包括：
+    
+				</td></tr><tr><td class="content" id="description_20">设置单元，用于以存储体为单位设置访问队列；
+    
+				</td></tr><tr><td class="content" id="description_21">保存单元，用于将接收到的访问命令按照地址所属的存储体存入到相应
+    的访问队列中；
+    
+				</td></tr><tr><td class="content" id="description_22">执行单元，用于按照预先设定的规则选择存储体，并执行所选择的存储
+    体对应的访问队列中的访问命令。
+    
+				</td></tr><tr><td class="content" id="description_23">可见，采用本发明的技术方案，以存储体为单位设置访问队列，将接收
+    到的访问命令按照地址所属的存储体存入到相应的访问队列中，并按照预先
+    设定的规则选择存储体，执行所选择的存储体对应的访问队列中的访问命
+    令。与现有技术相比，本发明所述方案充分利用了新一代Flash芯片多管芯、
+    多存储体的特点，对Flash存储器的管理按照芯片、管芯和存储体三级的方
+    式进行，从而只需较少的Flash芯片，即可有效提高Flash存储器的访问效
+    率。
+    
+				</td></tr><tr><td class="content" id="description_24">附图说明
+  </td></tr><tr><td class="content" id="description_25">图1为本发明所述闪存存储器的存储空间管理方法实施例的流程图。
+    
+				</td></tr><tr><td class="content" id="description_26">图2为本发明方法实施例中按照轮询方式选择存储体的示意图。
+    
+				</td></tr><tr><td class="content" id="description_27">图3为本发明方法实施例中按照统一管理的方式选择存储体的示意图。
+    
+				</td></tr><tr><td class="content" id="description_28">图4为本发明方法实施例中按照分级管理的方式选择存储体的示意图。
+    
+				</td></tr><tr><td class="content" id="description_29">图5为本发明所述闪存存储器实施例的组成结构示意图。
+    
+				</td></tr><tr><td class="content" id="description_30">具体实施方式
+  </td></tr><tr><td class="content" id="description_31">为使本发明的目的、技术方案及优点更加清楚明白，以下参照附图并举实
+    施例，对本发明作进一步地详细说明。
+    
+				</td></tr><tr><td class="content" id="description_32">随着集成电路制造工艺和封装技术的发展，新一代Flash芯片出现了许多
+    新的特征。例如，已有的Flash芯片在一个芯片内部封装了多个管芯(die)，并
+    且每个管芯内部均设计有多个存储体。对于这样的Flash芯片，页的归属可以
+    被划分为三级：第一级为芯片级，第二级为管芯级，第三级为存储体级。而对
+    于属于不同管芯或不同存储体的两个页编程操作是可以流水执行的，也就是说，
+    无需等待一个页编程的结束，即可开始另一个页编程操作。
+    
+				</td></tr><tr><td class="content" id="description_33">针对新一代Flash芯片的上述特征，本发明中提出一种新的Flash存储
+    器存储空间管理方法，即层次式存储空间管理方法：以存储体为单位设置访
+    问队列；将接收到的访问命令按照地址所属的存储体存入到相应的访问队列
+    中；按照预先设定的规则选择存储体，并执行所选择的存储体对应的访问队
+    列中的访问命令。
+    
+				</td></tr><tr><td class="content" id="description_34">具体来说，在该方法中，为每一个存储体设置一个访问队列，并且将所
+    设置的各访问队列按照所属Flash芯片及管芯进行分类；对于Flash存储器
+    中的空闲空间的分配按照Flash芯片、管芯以及存储体三级访问的方式，比
+    如，Flash芯片作为第一级级别最高，管芯作为第二级级别次高，存储体作
+    为第三级级别最低，按照上述方式选择存储体，并按照先进先出的原则执行
+    所选择的存储体对应的访问队列中的访问命令。该方式能够保证对Flash存
+    储器的访问能够被分发到不同的Flash芯片、管芯以及存储体，从而有效减
+    少等待时间。
+    
+				</td></tr><tr><td class="content" id="description_35">下面通过具体的实施例对本发明所述方案作进一步地详细说明：
+    
+				</td></tr><tr><td class="content" id="description_36">图1为本发明所述闪存存储器的存储空间管理方法实施例的流程图。如图
+    1所示，包括以下步骤：
+    
+				</td></tr><tr><td class="content" id="description_37">步骤101：为每一个存储体设置一个访问队列。
+    
+				</td></tr><tr><td class="content" id="description_38">本步骤中，为每一个存储体设置一个与其对应的访问队列，并将设置后的
+    各访问队列按照所属的Flash芯片及管芯进行分类。
+    
+				</td></tr><tr><td class="content" id="description_39">步骤102：将接收到的访问命令按照地址所属的存储体存入到相应的访问
+    队列中。
+    
+				</td></tr><tr><td class="content" id="description_40">本步骤中，Flash控制器接收主机中的操作系统发送过来的访问命令，
+    将该访问命令按照地址所属的存储体存入到Flash存储器中相应的访问队列
+    中。
+    
+				</td></tr><tr><td class="content" id="description_41">步骤103：按照预先设定的规则选择存储体，并执行所选择的存储体对
+    应的访问队列中的访问命令。
+    
+				</td></tr><tr><td class="content" id="description_42">本步骤中，分别查询各存储体及其对应的访问队列的状态，确定各存储
+    体及其对应的访问队列是否满足预先设置的条件，即存储体不忙且其对应的
+    访问队列不为空。通过查询，可确定出一个或多个满足条件的存储体及其访
+    问队列。
+    
+				</td></tr><tr><td class="content" id="description_43">当只有一个存储体及其对应的访问队列满足条件时，该存储体即为所选
+    择的存储体，按照先进先出的原则执行该存储体对应的访问队列中的访问命
+    令，即从该存储体对应的访问队列中取出处于队列头位置的访问命令执行。
+    如果有多个存储体及其对应的访问队列满足上述条件，那么，可按照以下三
+    种方式之一确定各满足条件的存储体的执行顺序，即选择某一时刻需要执行
+    的存储体：
+    
+				</td></tr><tr><td class="content" id="description_44">1)按照Flash芯片、管芯以及存储体三级轮询方式选择存储体：
+    
+				</td></tr><tr><td class="content" id="description_45">图2为本发明方法实施例中按照轮询方式选择存储体的示意图。如图2
+    所示，假设Flash存储器中包括编号从0到N的N+1个Flash芯片，每个Flash
+    芯片中分别包括编号从0到N的N+1个管芯，每个管芯中分别包括编号从
+    0到N的N+1个存储体。
+    
+				</td></tr><tr><td class="content" id="description_46">本实施例中所述的轮询方式是指，首先，对于Flash芯片0中的管芯0
+    中满足条件的存储体，按照存储体编号递增的顺序执行其对应的访问队列中
+    的访问命令；然后，按照上述方式执行Flash芯片0中的管芯1、2、3，......，
+    
+					N中的存储体对应的访问队列中的访问命令；当管芯N也执行完后，按照上
+    述方式执行Flash芯片1，后续具体实现方式不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_47">2)由操作系统进行统一管理，根据系统资源的闲置情况选择存储体：
+    
+				</td></tr><tr><td class="content" id="description_48">图3为本发明方法实施例中按照统一管理的方式选择存储体的示意图。
+    如图3所示，假设Flash存储器中包括编号从0到N的N+1个Flash芯片，
+    每个Flash芯片中分别包括编号从0到N的N+1个管芯，每个管芯中分别包
+    括编号从0到N的N+1个存储体。
+    
+				</td></tr><tr><td class="content" id="description_49">该方式中，将管理权限交给主机中的操作系统，由操作系统根据系统资
+    源的闲置情况进行整体调度，确定满足条件的各存储体对应的访问命令的执
+    行顺序，即首先执行哪个存储体对应的访问队列中的访问命令，然后执行哪
+    个存储体对应的访问队列中的访问命令。统一管理方式的具体实现为本领域
+    公知，不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_50">3)采用分级管理方式，由闪存控制器、Flash芯片、管芯分别对其所
+    属的存储体进行管理，根据系统资源的闲置情况选择存储体：
+    
+				</td></tr><tr><td class="content" id="description_51">图4为本发明方法实施例中按照分级管理的方式选择存储体的示意图。
+    如图4所示，假设Flash存储器中包括编号从0到N的N+1个Flash芯片，
+    每个Flash芯片中分别包括编号从0到N的N+1个管芯，每个管芯中分别包
+    括编号从0到N的N+1个存储体。
+    
+				</td></tr><tr><td class="content" id="description_52">该方式中，按照操作系统管理Flash控制器、Flash控制器管理各个Flash
+    芯片、各Flash芯片分别管理其所属的管芯，以及各管芯分别管理其所属的存
+    储体的方式，根据系统资源的闲置情况选择存储体。分级管理方式的具体实现
+    为本领域公知，不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_53">基于上述方法，图5为本发明所述闪存存储器实施例的组成结构示意
+    图。如果5所示，该闪存存储器包括：
+    
+				</td></tr><tr><td class="content" id="description_54">设置单元501，用于以存储体为单位设置访问队列；
+    
+				</td></tr><tr><td class="content" id="description_55">保存单元502，用于将接收到的访问命令按照地址所属的存储体存入到
+    相应的访问队列中；
+    
+				</td></tr><tr><td class="content" id="description_56">执行单元503，用于按照预先设定的规则选择存储体，并执行所选择的
+    存储体对应的访问队列中的访问命令。
+    
+				</td></tr><tr><td class="content" id="description_57">当然，与现有闪存存储器相同，图5所示闪存存储器中进一步包括一个
+    以上的Flash芯片，每个Flash芯片中包括一个以上的管芯，每个管芯中包
+    括一个以上的存储体。为简化附图，图5中对这些公知的组成部分的具体结
+    构未进行图示，仅以存储单元概括表示。
+    
+				</td></tr><tr><td class="content" id="description_58">其中，设置单元501中包括：
+    
+				</td></tr><tr><td class="content" id="description_59">设置子单元5011，用于为每一个存储体设置一个访问队列；分类子单
+    元5012，用于将所设置的各存储体的访问队列按照所属Flash芯片和管芯进
+    行分类。
+    
+				</td></tr><tr><td class="content" id="description_60">保存单元502中包括：
+    
+				</td></tr><tr><td class="content" id="description_61">接收子单元5021，用于接收主机中的操作系统通过闪存控制器发送过
+    来的访问命令；保存子单元5022，用于将访问命令按照地址所属的存储体
+    存入到相应的访问队列中。
+    
+				</td></tr><tr><td class="content" id="description_62">执行单元503中包括：
+    
+				</td></tr><tr><td class="content" id="description_63">查询子单元5031，用于查询并确定各存储体及其对应的访问队列的状
+    态，并将确定结果通知执行子单元5032；
+    
+				</td></tr><tr><td class="content" id="description_64">执行子单元5032，用于当确定结果为其中一存储体满足对应的访问队
+    列不为空，且所述存储体不忙的条件时，将所述存储体作为所选择的存储体，
+    并按照先进先出的原则执行所选择的存储体对应的访问队列中的访问命令；
+    当确定结果为满足条件的存储体为两个以上时，按照Flash芯片、管芯以及
+    存储体三级轮询的方式确定各满足条件的存储体的执行顺序，并按照先进先
+    出的原则执行各存储体对应的访问队列中的访问命令；或者，通知操作系统
+    进行统一管理，根据系统资源的闲置情况确定各满足条件的存储体的执行顺
+    序，并按照先进先出的原则执行各存储体对应的访问队列中的访问命令；或
+    者，采用分级管理方式，通知闪存控制器、Flash芯片和管芯分别对其所属
+    的存储体进行管理，根据系统资源的闲置情况确定各满足条件的存储体的执
+    
+					行顺序，并按照先进先出的原则执行各存储体对应的访问队列中的访问命
+    令。
+    
+				</td></tr><tr><td class="content" id="description_65">图5所示闪存存储器的具体工作流程请参照图1所示方法实施例中的相关
+    说明，此处不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_66">总之，与现有技术中仅利用芯片级的操作流水性的闪存存储器的存储空间
+    管理方案相比，本发明所述方案中，对存储空间的管理按照芯片、管芯以及存
+    储体三级分配的方式进行，充分利用不同管芯或不同存储体的两个页编程操作
+    可以流水执行的特点，对不同的Flash芯片进行访问操作。这样，通过对单个
+    Flash芯片内部的操作即可屏蔽掉一部分等待时间，从而整体上只需较少的芯片
+    数量，即可有效提高Flash存储器的访问效率/访问性能。
+    
+				</td></tr><tr><td class="content" id="description_67">举例说明，假设写一拍数据到Flash芯片的片内缓存的时间为25ns，页编
+    程时间为700us，那么写一个2K字节的页数据到片内缓存的时间就是50us，为
+    了屏蔽掉700us的页编程等待时间，大概只需5片Flash芯片即可，数目仅为现
+    有方案的1/3。
+    
+				</td></tr><tr><td class="content" id="description_68">而且，采用本发明所述方案后，对Flash存储器的管理更加灵活方便，有
+    利于实现对大容量Flash存储器的复杂管理。
+    
+				</td></tr><tr><td class="content" id="description_69">综上所述，以上仅为本发明的较佳实施例而已，并非用于限定本发明的
+    保护范围。凡在本发明的精神和原则之内，所作的任何修改、等同替换、改
+    进等，均应包含在本发明的保护范围之内。
+    
+				</td></tr></table></div></body></html>

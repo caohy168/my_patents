@@ -1,0 +1,943 @@
+<html><head><title>全文文本(Fulltext)</title><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><style>div.fullText table {width: 100%;text-indent: 1px;} 
+ div.fullText table td.header {font-weight: bold;text-align: center;font-family: '宋体';font-size: 16px;line-height:20px;color: #000000;padding: 5px;}div.fullText table td.content {padding: 1px;text-align: left;vertical-align: top;width: 100%;font-family: '宋体';font-size: 14px;line-height:20px;color: #000000;}</style></head><body><?xml version="1.0" encoding="UTF-8"?><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table class="fullText"><tr><td id="claim_title" class="header">权利要求书</td></tr><tr><td class="content" id="claim_1">1、一种存储卡数据传输方法，其特征在于，该方法基于所述存储卡与能
+      <br/>够操作所述存储卡的数据存取设备之间的通讯而实现，包括：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_2">A、所述数据存取设备向所述存储卡发送数据传输命令，所述数据传输
+      <br/>命令为一个扩展的通讯协议命令，该命令用于同时完成对读写控制位、数据类
+      <br/>型位、数据校验控制位以及数据块个数和数据块长度的设置；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_3">B、所述存储卡接收所述数据传输命令，并将所述存储卡状态信息通过
+      <br/>数据传输响应返回所述数据存取设备；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_4">C、所述数据存取设备接收所述数据传输响应，获取该数据传输响应中
+      <br/>的所述存储卡状态信息，并根据该存储卡状态信息判断是否执行所述数据传
+      <br/>输，如果所述存储卡状态适合，则按照数据传输命令中的设置执行所述数据
+      <br/>传输；否则，结束流程。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_5">2、如权利要求1所述的存储卡数据传输方法，其特征在于：所述数据传
+      <br/>输命令为数据流传输命令，所述数据类型位设置为数据流特征值，所述数据传
+      <br/>输为数据流传输。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_6">3、如权利要求2所述的存储卡数据传输方法，其特征在于：按照数据传
+      <br/>输命令中读写控制位的特征值的设置，所述数据流传输命令为数据流读取命令
+      <br/>或数据流写入命令。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_7">4、如权利要求1所述的存储卡数据传输方法，其特征在于：所述数据传
+      <br/>输命令为数据块传输命令，所述数据类型位设置为数据块特征值，所述数据传
+      <br/>输为数据块传输。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_8">5、如权利要求4所述的存储卡数据传输方法，其特征在于：按照数据传
+      <br/>输命令中读写控制位的特征值的设置，所述数据块传输命令为数据块读取命令
+      <br/>或数据块写入命令。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_9">6、如权利要求4或5所述的存储卡数据传输方法，其特征在于：在所述
+      <br/>数据块传输过程中包括：在传输完每个所述数据块之后，判断是否还有需要传
+      <br/>
+					输的数据块，如果还有需要传输的数据块，则传输下一个数据块；否则，结束
+      <br/>流程。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_10">7、如权利要求6所述的存储卡数据传输方法，其特征在于：在所述传输
+      <br/>完每个所述数据块之后，按照数据传输命令中数据校验控制位的特征值的设置，
+      <br/>对于该数据块进行CRC数据校验，如果CRC校验通过，则进行所述判断是否
+      <br/>还有需要传输的数据块的步骤；否则，结束流程。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_11">8、如权利要求1所述的存储卡数据传输方法，其特征在于：在步骤A之
+      <br/>前，进一步包括：判断所述存储卡是否支持所述数据传输，如果支持，则执行
+      <br/>步骤A；否则，结束流程。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_12">9、如权利要求8所述的存储卡数据传输方法，其特征在于：所述判断所
+      <br/>述存储卡是否支持所述数据传输，是判断设置在所述存储卡中卡特定数据寄存
+      <br/>器中的特征标识的值是否为对应于支持所述数据传输的值。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_13">10、如权利要求1所述的存储卡数据传输方法，其特征在于：在步骤C
+      <br/>中所述执行所述数据传输的过程中，进一步包括：如果收到数据传输终止命令，
+      <br/>则结束流程。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_14">11、如权利要求10所述的存储卡数据传输方法，其特征在于：所述数据
+      <br/>传输终止命令为CMD12命令。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_15">12、如权利要求1、2、4、8或10所述的存储卡数据传输方法，其特征在
+      <br/>于：当所述存储卡处于旁置状态时执行所述步骤A。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_16">13、如权利要求1、2、4、8或10所述的存储卡数据传输方法，其特征在
+      <br/>于：所述存储卡为多媒体卡MMC或安全数字卡SD。
+      <br/>
+					
+				</td></tr></table></div><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table><tr><td id="description_title" class="header">说明书</td></tr><tr><td class="content" id="description_invention_title">一种存储卡数据传输方法
+  </td></tr><tr><td class="content" id="description_1">技术领域
+  </td></tr><tr><td class="content" id="description_2">本发明涉及存储卡领域，特别是指一种基于通讯模式的存储卡数据传输
+    方法。
+    
+				</td></tr><tr><td class="content" id="description_3">背景技术
+  </td></tr><tr><td class="content" id="description_4">随着信息技术的发展，存储卡作为便携移动数据存储装置，已经被广泛
+    应用于各种电子移动终端设备中，而随着存储卡存储容量的不断扩大，对于
+    数据传输速度也提出了更高的要求。
+    
+				</td></tr><tr><td class="content" id="description_5">普通存储卡的读写操作分为数据流操作和数据块操作，二者是类似的，
+    不过，数据流传输不包含CRC校验，因此主机将无法检验数据的有效性，
+    而数据块传输中，每个块的最后要提供CRC保证数据传输的完整性。数据
+    的传输可通过停止传输命令，如CMD12命令STOP_TRANSMISSION进行
+    终止。
+    
+				</td></tr><tr><td class="content" id="description_6">图1A为现有技术中数据流读取操作的时序图示意图，而图1B为现有
+    技术中停止数据流读取操作的时序图示意图。如图1A和图1B所示，存储
+    卡收到数据流读取命令的末比特后，经N<sub>AC</sub>时钟周期后向数据存取设备传送
+    数据。数据流可通过数据流停止命令而终止。
+    
+				</td></tr><tr><td class="content" id="description_7">图2A为现有技术中数据流写入操作的时序图示意图，而图2B为现有
+    技术中停止数据流写入操作的时序图示意图。如图2A和图2B所示，数据
+    流写入命令指示数据存取设备向存储卡写入数据，直到收到数据流停止命令
+    为止。
+    
+				</td></tr><tr><td class="content" id="description_8">图3A为现有技术中数据块读取操作的时序图示意图，而图3B为现有
+    技术中停止数据块读取操作的时序图示意图。如图3A和图3B所示，数据
+    
+					块读取和数据流读取是类似的，而且总线的处理也是相同的，不过每个块的
+    最后要提供CRC校验以保证数据传输的完整性。数据块的个数可设置为预
+    定数也可为无限制，而如何情况下，都可通过发送停止数据传输命令实现在
+    任意时间的中断。
+    
+				</td></tr><tr><td class="content" id="description_9">图4A为现有技术中数据块写入操作的时序图示意图，而图4B为现有
+    技术中停止数据块写入操作的时序图示意图。如图4A和图4B所示，数据
+    块读取和数据流读取是类似的，而且总线的处理也是相同的，不过每个块的
+    最后要提供CRC校验以保证数据传输的完整性。在数据块写入过程中，向
+    存储卡发送的多个数据块中，每个数据块都以CRC校验位结尾，如果CRC
+    校验失败，则存储卡在DAT0总线指示错误，抛弃收到的数据，不执行写入，
+    并可忽略随后传输的数据。数据块的个数可设置为预定数也可为无限制，而
+    如何情况下，都可通过发送停止数据传输命令实现在任意时间的中断。
+    
+				</td></tr><tr><td class="content" id="description_10">对于现有的数据传输方法，数据流操作只能工作在一线模式，即通过一
+    条数据线路来传输数据，因而传输速度慢，在多媒体卡中最高传输速率为
+    52Mb/s；而数据块操作则在传输数据前需要通过多个不同命令对数据块个数
+    和数据块长度进行设置，因而数据传输操作流程复杂而效率较低。
+    
+				</td></tr><tr><td class="content" id="description_11">发明内容
+  </td></tr><tr><td class="content" id="description_12">有鉴于此，本发明提供一种基于通讯模式的存储卡数据传输方法，可提
+    高数据传输效率。
+    
+				</td></tr><tr><td class="content" id="description_13">本发明的技术方案具体如下：
+    
+				</td></tr><tr><td class="content" id="description_14">本发明提供一种存储卡数据传输方法，该方法基于所述存储卡与能够操
+    作所述存储卡的数据存取设备之间的通讯而实现，包括：
+    
+				</td></tr><tr><td class="content" id="description_15">A、所述数据存取设备向所述存储卡发送数据传输命令，所述读写操作
+    数据处理命令为一个扩展的通讯协议命令，该命令用于同时完成对读写控制
+    位、数据类型位、数据校验控制位以及数据块个数和数据块长度的设置；
+    
+				</td></tr><tr><td class="content" id="description_16">B、所述存储卡接收所述数据传输命令，并将所述存储卡状态信息通过
+    数据传输响应返回所述数据存取设备；
+    
+				</td></tr><tr><td class="content" id="description_17">C、所述数据存取设备接收所述数据传输响应，获取该数据传输响应中
+    的所述存储卡状态信息，并根据该存储卡状态信息判断是否执行所述数据传
+    输，如果所述存储卡状态适合，则按照数据传输命令中的设置执行所述数据
+    传输；否则，结束流程。
+    
+				</td></tr><tr><td class="content" id="description_18">所述数据传输命令可为数据流传输命令，所述数据类型位设置为数据流
+    特征值，所述数据传输为数据流传输。而按照数据传输命令中读写控制位的
+    特征值的设置，所述数据流传输命令可为数据流读取命令或数据流写入命
+    令。
+    
+				</td></tr><tr><td class="content" id="description_19">所述数据传输命令可为数据块传输命令，所述数据类型位设置为数据块
+    特征值，所述数据传输为数据块处理。而按照数据传输命令中读写控制位的
+    特征值的设置，所述数据块传输命令可为数据块读取命令或数据块写入命
+    令。
+    
+				</td></tr><tr><td class="content" id="description_20">在所述数据块传输过程中包括：在传输完每个所述数据块之后，判断是
+    否还有需要传输的数据块，如果还有需要传输的数据块，则传输下一个数据
+    块；否则，结束流程。在所述传输完每个所述数据块之后，按照数据传输命
+    令中数据校验控制位的特征值的设置，对于该数据块进行CRC数据校验，
+    如果CRC校验通过，则进行所述判断是否还有需要传输的数据块的步骤；
+    否则，结束流程。
+    
+				</td></tr><tr><td class="content" id="description_21">根据本发明提供的方法，在步骤A之前，可进一步包括：判断所述存
+    储卡是否支持所述数据传输，如果支持，则执行步骤A；否则，结束流程。
+    所述判断所述存储卡是否支持所述数据传输，可为判断设置在所述存储卡中
+    卡特定数据寄存器中的特征标识的值是否为对应于支持所述数据传输的值。
+    
+				</td></tr><tr><td class="content" id="description_22">根据本发明提供的方法，在步骤C中所述执行所述数据传输的过程中，
+    可进一步包括：如果收到数据传输终止命令，则结束流程。所述数据传输终
+    止命令可为CMD12命令。
+    
+				</td></tr><tr><td class="content" id="description_23">根据本发明提供的方法，可当所述存储卡处于旁置状态时执行所述步骤
+    A。
+    
+				</td></tr><tr><td class="content" id="description_24">根据本发明提供的方法，所述存储卡可为多媒体卡MMC或安全数字卡
+    SD。
+    
+				</td></tr><tr><td class="content" id="description_25">本发明提供一种基于通讯模式的存储卡数据传输方法，可有效提高存储
+    卡的数据传输速度。本发明通过存储卡的扩展通讯协议命令，通过一个命令
+    
+					就可实现多项读写操作相关设置，包括对数据块个数和数据块长度的设置。
+    本发明提供的方法扩展了普通存储卡的数据流操作的传输模式，从而提高其
+    数据传输的速度；简化了普通存储卡的数据块操作流程，从而提高其数据传
+    输的效率。这样，通过本发明的方法，在提高了存储卡读写效率的同时，还
+    具有很好的兼容性。
+    
+				</td></tr><tr><td class="content" id="description_26">附图说明
+  </td></tr><tr><td class="content" id="description_27">图1A为现有技术中数据流读取操作的时序图示意图；
+    
+				</td></tr><tr><td class="content" id="description_28">图1B为现有技术中停止数据流读取操作的时序图示意图；
+    
+				</td></tr><tr><td class="content" id="description_29">图2A为现有技术中数据流写入操作的时序图示意图；
+    
+				</td></tr><tr><td class="content" id="description_30">图2B为现有技术中停止数据流写入操作的时序图示意图；
+    
+				</td></tr><tr><td class="content" id="description_31">图3A为现有技术中数据块读取操作的时序图示意图；
+    
+				</td></tr><tr><td class="content" id="description_32">图3B为现有技术中停止数据块读取操作的时序图示意图；
+    
+				</td></tr><tr><td class="content" id="description_33">图4A为现有技术中数据块写入操作的时序图示意图；
+    
+				</td></tr><tr><td class="content" id="description_34">图4B为现有技术中停止数据块写入操作的时序图示意图；
+    
+				</td></tr><tr><td class="content" id="description_35">图5A为本发明提供的数据流读取操作的实施例时序图示意图；
+    
+				</td></tr><tr><td class="content" id="description_36">图5B为本发明提供的停止数据流读取操作的实施例时序图示意图；
+    
+				</td></tr><tr><td class="content" id="description_37">图6A为本发明提供的数据流写入操作的实施例时序图示意图；
+    
+				</td></tr><tr><td class="content" id="description_38">图6B为本发明提供的停止数据流写入操作的实施例时序图示意图；
+    
+				</td></tr><tr><td class="content" id="description_39">图7A为本发明提供的数据块读取操作的实施例时序图示意图；
+    
+				</td></tr><tr><td class="content" id="description_40">图7B为本发明提供的停止数据块读取操作的实施例时序图示意图；
+    
+				</td></tr><tr><td class="content" id="description_41">图8A为本发明提供的数据块写入操作的实施例时序图示意图；
+    
+				</td></tr><tr><td class="content" id="description_42">图8B为本发明提供的停止数据块写入操作的实施例时序图示意图；
+    
+				</td></tr><tr><td class="content" id="description_43">图9A为本发明提供的简化数据块读取操作的实施例时序图示意图；
+    
+				</td></tr><tr><td class="content" id="description_44">图9B为本发明提供的停止简化数据块读取操作的实施例时序图示意图；
+    
+				</td></tr><tr><td class="content" id="description_45">图9C为本发明提供的简化数据块写入操作的实施例时序图示意图；
+    
+				</td></tr><tr><td class="content" id="description_46">图9D为本发明提供的停止简化数据块写入操作的实施例时序图示意图；
+    
+				</td></tr><tr><td class="content" id="description_47">图10A为现有技术中普通SD/MMC存储卡的数据传输模式的状态转换图；
+    
+				</td></tr><tr><td class="content" id="description_48">图10B为本发明提供的存储卡高效数据传输模式的状态转换图；
+    
+				</td></tr><tr><td class="content" id="description_49">图11为本发明提供的扩展的数据流读取操作的控制过程实施例流程图；
+    
+				</td></tr><tr><td class="content" id="description_50">图12为本发明提供的扩展的数据流写入操作的控制过程实施例流程图；
+    
+				</td></tr><tr><td class="content" id="description_51">图13为本发明提供的扩展的数据块读取操作的控制过程实施例流程图；
+    
+				</td></tr><tr><td class="content" id="description_52">图14为本发明提供的扩展的数据块写入操作的控制过程实施例流程图；
+    
+				</td></tr><tr><td class="content" id="description_53">图15为本发明提供的扩展的不进行数据校验的数据块读取操作的控制
+    过程实施例流程图；
+    
+				</td></tr><tr><td class="content" id="description_54">图16为本发明提供的扩展的不进行数据校验的数据块写入操作的控制
+    过程实施例流程图。
+    
+				</td></tr><tr><td class="content" id="description_55">具体实施方式
+  </td></tr><tr><td class="content" id="description_56">为使本发明的目的、技术方案和优点更加清楚，下面结合附图对本发明
+    作进一步的详细描述。
+    
+				</td></tr><tr><td class="content" id="description_57">本发明通过一种存储卡的扩展通讯协议命令，使数据存取设备，如读卡
+    设备可以对存储卡进行高效数据操作，如读写操作。因此，需要进行以下的
+    工作：一是在存储卡的特定数据寄存器中设置相应的特征标志位，使数据存
+    取设备可以确定存储卡是否支持本发明提供的高效数据操作；二是在现有的
+    通讯协议中设置相应的高效数据操作命令，使数据存取设备可以通过该命令
+    实现对存储卡的高效数据操作；三是在存储卡对所述高效数据操作命令的响
+    应中，包括需要告知数据存取设备的存储卡状态相关信息。
+    
+				</td></tr><tr><td class="content" id="description_58">本发明适用于但并不仅限于SD/MMC存储卡，对于其他类型的存储卡，
+    也可采用类似的方法实现。在下面的实施例中，以SD/MMC存储卡为例对
+    本发明进行说明，其中所述存储卡的特定数据寄存器可为卡特定数据寄存器
+    (CSD寄存器)，所述高效数据处理可为对于数据流或数据块的高效读写操
+    作。具体如下：
+    
+				</td></tr><tr><td class="content" id="description_59">1)设置高效读写模式支持标志位：
+    
+				</td></tr><tr><td class="content" id="description_60">在存储卡的CSD寄存器中，设置高效读写操作模式支持标志位
+    High_Efficiency_Transfer(HET)，例如，可如表1所示，当然并不仅限于
+    表中所示的方式。其中，HET值为1时表示支持高效读写模式，HET值为0
+    时表示不支持高效读写模式，这样，使得数据存取设备可以在上电检测时获
+    知该存储卡是否支持本发明提供的高效读写操作方法。
+    
+				</td></tr><tr><td class="content" id="description_61">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  名称
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+字段
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  宽度
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  信元类型
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  CSD-片
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  CSD结构
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+CSD_STRUCTURE
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  R
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  [127:126]
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  系统指定版本
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+SPEC_VERS
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  4
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  R
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  [125:122]
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  保留
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+-
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  R
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  [121]
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											  可配置高效读写操作
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+High_Efficiency_
+    
+Transfer
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+  R
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+  [120]
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数据读取时间1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+TAAC
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  8
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  R
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  [119:112]
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  时钟周期内数据读取
+    
+  时间2(NSAC*100)
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+NSAC
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  8
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  R
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  [111:104]
+    
+											
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_62">表1
+    
+				</td></tr><tr><td class="content" id="description_63">2)设置高效读写命令：
+    
+				</td></tr><tr><td class="content" id="description_64">为实现高效读写模式管理控制，在原SD/MMC协议的命令列表中，可
+    增设高效读写管理命令CMD19-High_Efficiency_Transfer，如表2所示。当
+    然，除CMD 19以外，也可采用其他可用的扩展命令，如CMD44。
+    
+				</td></tr><tr><td class="content" id="description_65">
+					<img src="/sipopublicsearch/servlet/rm/DownLoadServlet?rid=856431890&amp;blobId=692493980" width="492"/>
+					
+				</td></tr><tr><td class="content" id="description_66">表2
+    
+				</td></tr><tr><td class="content" id="description_67">CMD19(High_Efficiency_Transfer)的命令格式描述如表3所示。
+    
+				</td></tr><tr><td class="content" id="description_68">
+					<img src="/sipopublicsearch/servlet/rm/DownLoadServlet?rid=856431909&amp;blobId=692493966" width="492"/>
+					
+				</td></tr><tr><td class="content" id="description_69">表3
+    
+				</td></tr><tr><td class="content" id="description_70">如表3所示，其中：
+    
+				</td></tr><tr><td class="content" id="description_71">●WR为读写控制位，WR为0或1表示对存储卡进行读或写操作；
+    
+				</td></tr><tr><td class="content" id="description_72">●BS代表数据类型，BS为0或1表示进行数据流或数据块操作；
+    
+				</td></tr><tr><td class="content" id="description_73">●CH为数据校验控制位，CH为0或1表示不进行或进行CRC数据校验；
+    
+				</td></tr><tr><td class="content" id="description_74">●其中符号A代表数据块长度，表示在数据块传输中每个数据块的长度，由
+    于16位CRC只能检测到4096位，所以数据块长度为12位，最大支持块长
+    度4096，其中块长度的首选值为512B、1KB、4KB；不过，对于数据流传
+    输模式，符号A占据的字段无效；
+    
+				</td></tr><tr><td class="content" id="description_75">●其中符号B代表数据块个数，表示在数据块传输中需要传输的数据块个数，
+    不过，对于数据流传输模式，符号B占据的字段无效；
+    
+				</td></tr><tr><td class="content" id="description_76">3)设置高效读写命令响应：
+    
+				</td></tr><tr><td class="content" id="description_77">在存储卡对所述高效读写命令的响应可为R1型响应，并可在其中设置
+    响应信息，告知数据存取设备该存储卡是否可采用所述高效读写模式进行工
+    作。表4显示CMD19(High_Efficiency_Transfer)的命令响应，其中，所设
+    置的存储卡状态值，可为存储卡的状态信息(Card Status)。
+    
+				</td></tr><tr><td class="content" id="description_78">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  比特位置
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  47
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  46
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  [45:40]
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  [39:8]
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  [7:1]
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  宽度(比特)
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  1
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  6
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  32
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  7
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  1
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  值
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  ‘0’
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  ‘0’
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  x
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  x
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  x
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  ‘1’
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_79">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+  描述
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  起始
+    
+											
+  比特
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  传输
+    
+											
+  比特
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+  命令索引
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+  存储卡状态
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+  CRC7
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  结束
+    
+											
+  比特
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  CMD19
+    
+											
+  响应数值
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+  0
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+  0
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+  010011
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+  存储卡状态值
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+  CRC7计算值
+    
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+											
+  1
+    
+											
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_80">表4
+    
+				</td></tr><tr><td class="content" id="description_81">至此所述，本发明可通过扩展的存储卡通讯协议命令，实现对于存储卡
+    的高效数据传输，即高效读写。根据如表3所示的扩展命令格式，当需要传
+    输数据流时，可将其中的BS位设为数据流特征值，例如0，这样，当存储
+    卡接收到所述格式的数据流扩展命令时，可知其为扩展的数据流操作，即可
+    根据该数据流扩展命令进行多至8线的数据流传输操作，与现有技术中的仅
+    通过1线传输数据相比，大大提高了数据传输效率；当需要传输数据块时，
+    可将其中的BS位设为数据块特征值，例如1，这样，当存储卡接收到所述
+    格式的数据块扩展命令时，可知其为扩展的数据块操作，而且在该数据块扩
+    展命令中包含了数据块传输操作所需的各参数，如WR、BS、CH等，然后
+    就可根据该数据块扩展命令进行数据块传输操作，在现有技术中，在进行数
+    据块传输前需要发送多条命令用以指示多个不同的相关参数，与此相比，本
+    发明可仅通过一条扩展命令就包含数据块传输操作所需的所有参数，从而可
+    大大简化指令操作，并提高数据传输效率。
+    
+				</td></tr><tr><td class="content" id="description_82">根据本发明提供的方法，对于数据流和数据块的读写操作的时序图可具
+    体如下：
+    
+				</td></tr><tr><td class="content" id="description_83">图5A为本发明提供的数据流读取操作的实施例时序图示意图，而图5B
+    为本发明提供的停止数据流读取操作的实施例时序图示意图。如图5A和图
+    5B所示，与图1A和图1B所示的现有技术中的数据流读取方法相比，数据
+    流读取的数据传输宽度从1线扩展为8线，因而速度提高为原来的8倍。
+    
+				</td></tr><tr><td class="content" id="description_84">图6A为本发明提供的数据流写入操作的实施例时序图示意图，而图6B
+    为本发明提供的停止数据流写入操作的实施例时序图示意图。如图6A和图
+    6B所示，与图2A和图2B所示的现有技术中的数据流写入方法相比，数据
+    
+					流写入的数据传输宽度从1线扩展为8线，因而速度提高为原来的8倍。
+    
+				</td></tr><tr><td class="content" id="description_85">图7A为本发明提供的数据块读取操作的实施例时序图示意图，而图7B
+    为本发明提供的停止数据块读取操作的实施例时序图示意图。与图3A和图
+    3B所示的现有技术中的数据流写入方法相比，如图7A和图7B所示，通过
+    本发明提供的一条协议扩展命令，就可以实现现有技术中通过多条命令才能
+    实现的数据块读取相关操作。
+    
+				</td></tr><tr><td class="content" id="description_86">图8A为本发明提供的数据块写入操作的实施例时序图示意图，而图8B
+    为本发明提供的停止数据块写入操作的实施例时序图示意图。与图4A和图
+    4B所示的现有技术中的数据流写入方法相比，如图8A和图8B所示，通过
+    本发明提供的一条协议扩展命令，就可以实现现有技术中通过多条命令才能
+    实现的数据块读取相关操作。
+    
+				</td></tr><tr><td class="content" id="description_87">进一步地，对于如图8A和图8B所示的本发明提供的数据块读写操作
+    方法，还可以省略其中的CRC数据校验过程，达到简化的目的。图9A为本
+    发明提供的简化数据块读取操作的实施例时序图示意图，而图9B为本发明
+    提供的停止简化数据块读取操作的实施例时序图示意图；图9C为本发明提
+    供的简化数据块写入操作的实施例时序图示意图，而图9D为本发明提供的
+    停止简化数据块写入操作的实施例时序图示意图。
+    
+				</td></tr><tr><td class="content" id="description_88">本发明在普通存储卡的传输命令列表中加入扩展命令，如CMD19，来
+    完成可配置的高效读写操作。图10A为现有技术中普通SD/MMC存储卡的
+    数据传输模式的状态转换图，而图10B为本发明提供的存储卡高效数据传输
+    模式的状态转换图。如图10B所示，数据存取设备要实现对于存储卡的高效
+    读写操作，较佳地，可以在存储卡处于传输状态时进行。当然，数据存取设
+    备也可以在其他状态下向存储卡发出高效读写操作命令。
+    
+				</td></tr><tr><td class="content" id="description_89">本发明提供的高效读写操作主要包括对存储卡的数据流读写和数据块
+    读写操作。为使本发明的目的、技术方案和优点更加清楚，下面结合附图对
+    本发明的高效读写操作控制流程作进一步的详细描述。
+    
+				</td></tr><tr><td class="content" id="description_90">图11为本发明提供的扩展的数据流读取操作的控制过程实施例流程
+    
+					图。具体如下：
+    
+				</td></tr><tr><td class="content" id="description_91">步骤101、数据存取设备对存储卡初始化以后，检测并获取该存储卡中
+    的CSD寄存器中的High_Efficiency_Transfer(HET)值；
+    
+				</td></tr><tr><td class="content" id="description_92">步骤101A、数据存取设备根据步骤101中获取的HET值，判断该存储
+    卡是否支持高效读写模式，如果支持，即所述HET的值为1，则执行步骤
+    102；如果不支持，即所述HET的值为0，则结束流程；
+    
+				</td></tr><tr><td class="content" id="description_93">步骤102、所述存储卡进入传输状态，等待命令；
+    
+				</td></tr><tr><td class="content" id="description_94">步骤103、数据存取设备向存储卡发送CMD19命令，其中，CH＝0，BS＝0，
+    WR＝0，表示数据存取设备将进行不校验CRC的扩展的数据流读取操作；
+    
+				</td></tr><tr><td class="content" id="description_95">步骤104、存储卡接收步骤103中所述CMD19命令，并将自身的状态
+    信息通过响应返回数据存取设备；
+    
+				</td></tr><tr><td class="content" id="description_96">步骤105、数据存取设备接收步骤104中所述存储卡返回的响应消息，
+    并获取其中的存储卡状态信息；
+    
+				</td></tr><tr><td class="content" id="description_97">步骤105A、数据存取设备根据步骤105中所获取的存储卡状态信息，
+    判断是否进行所述不校验CRC的扩展的数据流读取操作，如果所述存储卡
+    状态适合，则执行步骤106；如果所述存储卡状态不适合，则结束流程；
+    
+				</td></tr><tr><td class="content" id="description_98">步骤106、数据存取设备进行所述不校验CRC的扩展的数据流读取操
+    作；
+    
+				</td></tr><tr><td class="content" id="description_99">步骤107、数据存取设备收到数据停止命令，如CMD12命令，则停止
+    数据读取操作，流程结束。
+    
+				</td></tr><tr><td class="content" id="description_100">图12为本发明提供的扩展的数据流写入操作的控制过程实施例流程
+    图。具体如下：
+    
+				</td></tr><tr><td class="content" id="description_101">步骤201、数据存取设备对存储卡初始化以后，检测并获取该存储卡中
+    的CSD寄存器中的HET值；
+    
+				</td></tr><tr><td class="content" id="description_102">步骤201A、数据存取设备根据步骤201中获取的HET值，判断该存储
+    卡是否支持高效读写模式，如果支持，即所述HET的值为1，则执行步骤
+    202；如果不支持，即所述HET的值为0，则结束流程；
+    
+				</td></tr><tr><td class="content" id="description_103">步骤202、所述存储卡进入传输状态，等待命令；
+    
+				</td></tr><tr><td class="content" id="description_104">步骤203、数据存取设备向存储卡发送CMD19命令，其中，CH＝0，BS＝0，
+    WR＝1，表示数据存取设备将进行不校验CRC的扩展的数据流写入操作；
+    
+				</td></tr><tr><td class="content" id="description_105">步骤204、存储卡接收步骤203中所述CMD19命令，并将自身的状态
+    信息通过响应返回数据存取设备；
+    
+				</td></tr><tr><td class="content" id="description_106">步骤205、数据存取设备接收步骤204中所述存储卡返回的响应消息，
+    并获取其中的存储卡状态信息；
+    
+				</td></tr><tr><td class="content" id="description_107">步骤205A、数据存取设备根据步骤205中所获取的存储卡状态信息，
+    判断是否进行所述不校验CRC的扩展的数据流写入操作，如果所述存储卡
+    状态合适，则执行步骤206；如果所述存储卡状态不合适，则结束流程；
+    
+				</td></tr><tr><td class="content" id="description_108">步骤206、数据存取设备进行所述不校验CRC的扩展的数据流写入操
+    作；
+    
+				</td></tr><tr><td class="content" id="description_109">步骤207、数据存取设备收到数据停止命令，如CMD12命令，则停止
+    数据写入操作，流程结束。
+    
+				</td></tr><tr><td class="content" id="description_110">如图12所示，本实施例中扩展的数据流写入操作的控制过程与如图11
+    所示的扩展的数据流读取操作的控制过程类似，其中主要的区别是CMD19
+    命令的内容及判断参数，即WR值，有所不同。
+    
+				</td></tr><tr><td class="content" id="description_111">图13为本发明提供的扩展的数据块读取操作的控制过程实施例流程
+    图。具体如下：
+    
+				</td></tr><tr><td class="content" id="description_112">步骤301、数据存取设备对存储卡初始化以后，检测并获取该存储卡中
+    的CSD寄存器中的HET值；
+    
+				</td></tr><tr><td class="content" id="description_113">步骤301A、数据存取设备根据步骤301中获取的HET值，判断该存储
+    卡是否支持高效读写模式，如果支持，即所述HET的值为1，则执行步骤
+    302；如果不支持，即所述HET的值为0，则结束流程；
+    
+				</td></tr><tr><td class="content" id="description_114">步骤302、所述存储卡进入传输状态，等待命令；
+    
+				</td></tr><tr><td class="content" id="description_115">步骤303、数据存取设备向存储卡发送CMD19命令，其中，CH＝1，BS＝1，
+    WR＝0，表示数据存取设备将进行校验CRC的扩展的数据块读取操作；
+    
+				</td></tr><tr><td class="content" id="description_116">步骤304、存储卡接收步骤303中所述CMD19命令，并将自身的状态
+    信息通过响应返回数据存取设备；
+    
+				</td></tr><tr><td class="content" id="description_117">步骤305、数据存取设备接收步骤304中所述存储卡返回的响应消息，
+    并获取其中的存储卡状态信息；
+    
+				</td></tr><tr><td class="content" id="description_118">步骤305A、数据存取设备根据步骤305中所获取的存储卡状态信息，
+    判断是否进行所述校验CRC的扩展的数据块读取操作，如果所述存储卡状
+    态合适，则执行步骤306；如果所述存储卡状态不合适，则结束流程；
+    
+				</td></tr><tr><td class="content" id="description_119">步骤306、数据存取设备进行所述校验CRC的扩展的数据块读取操作，
+    其中CRC校验在所述数据存储设备端内部进行；
+    
+				</td></tr><tr><td class="content" id="description_120">步骤307、数据存取设备收到数据停止命令，如CMD12命令，则停止
+    数据读取操作，流程结束。
+    
+				</td></tr><tr><td class="content" id="description_121">如图13所示，本实施例中扩展的数据块读取操作的控制过程与如图11
+    所示的扩展的数据流读取操作的控制过程类似，其中主要的区别是CMD19
+    命令的内容及判断参数，即BS值和CH值，有所不同。
+    
+				</td></tr><tr><td class="content" id="description_122">图14为本发明提供的扩展的数据块写入操作的控制过程实施例流程
+    图。具体如下：
+    
+				</td></tr><tr><td class="content" id="description_123">步骤401、数据存取设备对存储卡初始化以后，检测并获取该存储卡中
+    的CSD寄存器中的HET值；
+    
+				</td></tr><tr><td class="content" id="description_124">步骤401A、数据存取设备根据步骤401中获取的HET值，判断该存储
+    卡是否支持高效读写模式，如果支持，即所述HET的值为1，则执行步骤
+    402；如果不支持，即所述HET的值为0，则结束流程；
+    
+				</td></tr><tr><td class="content" id="description_125">步骤402、所述存储卡进入传输状态，等待命令；
+    
+				</td></tr><tr><td class="content" id="description_126">步骤403、数据存取设备向存储卡发送CMD19命令，其中，CH＝1，BS＝1，
+    WR＝1，表示数据存取设备将进行校验CRC的扩展的数据块写入操作；
+    
+				</td></tr><tr><td class="content" id="description_127">步骤404、存储卡接收步骤403中所述CMD 19命令，并将自身的状态
+    信息通过响应返回数据存取设备；
+    
+				</td></tr><tr><td class="content" id="description_128">步骤405、数据存取设备接收步骤404中所述存储卡返回的响应消息，
+    
+					并获取其中的存储卡状态信息；
+    
+				</td></tr><tr><td class="content" id="description_129">步骤405A、数据存取设备根据步骤405中所获取的存储卡状态信息，
+    判断是否进行所述校验CRC的扩展的数据块写入操作，如果所述存储卡状
+    态合适，则执行步骤406；如果所述存储卡状态不合适，则结束流程；
+    
+				</td></tr><tr><td class="content" id="description_130">步骤406、数据存取设备进行所述校验CRC的扩展的数据块写入操作；
+    
+				</td></tr><tr><td class="content" id="description_131">步骤406A、当每次完成一个数据块的写入之后，对该数据块进行CRC
+    校验，如果CRC校验正确，则执行步骤406B；如果CRC校验错误，则结
+    束流程；
+    
+				</td></tr><tr><td class="content" id="description_132">步骤406B、判断所有需要写入的数据块是否已经完成写入，如果已经
+    完成，则执行步骤407；否则，返回执行步骤406，即对下一个数据块进行
+    写入操作；
+    
+				</td></tr><tr><td class="content" id="description_133">步骤407、数据存取设备收到数据停止命令，如CMD12命令，则停止
+    数据写入操作，流程结束。
+    
+				</td></tr><tr><td class="content" id="description_134">如图14所示，本实施例中扩展的数据块写入操作的控制过程与如图12
+    所示的扩展的数据流写入操作的控制过程类似，其中一个主要区别是
+    CMD19命令的内容及判断参数，即BS值和CH值，有所不同；另一个主要
+    区别是在步骤406所示的数据块写入操作之后，还包括了如步骤406A所示
+    的CRC校验步骤和如步骤406B所示的数据块操作完成情况判断步骤。
+    
+				</td></tr><tr><td class="content" id="description_135">对于多个数据块的读写操作，也可以采用一种简化的方式，即在读写过
+    程中不进行CRC数据校验。
+    
+				</td></tr><tr><td class="content" id="description_136">图15为本发明提供的扩展的不进行数据校验的数据块读取操作的控制
+    过程实施例流程图。如图15所示，本实施例的流程与如图13所示的扩展的
+    数据块读取操作的控制过程基本相同，只是其中CMD 19命令的内容及判断
+    参数有所不同，即CH值为0，说明不进行CRC数据校验。
+    
+				</td></tr><tr><td class="content" id="description_137">图16为本发明提供的扩展的不进行数据校验的数据块写入操作的控制
+    过程实施例流程图。如图16所示，本实施例的流程与如图14所示的扩展的
+    数据块写入操作的控制过程基本相同，其中一个主要区别是CMD19命令的
+    
+					内容及判断参数有所不同，即CH值为0，说明不进行CRC数据校验；另一
+    个主要区别是在本实施例中略去了如图14中步骤406A所示的CRC校验步
+    骤。
+    
+				</td></tr><tr><td class="content" id="description_138">在上述的各实施例中，在所采用的CSD寄存器及CMD19扩展命令中，
+    使用0或1对应于具有相应含义的控制字，如不支持高效读写模式或支持高
+    效读写模式、数据流操作操作或数据块操作、读操作或写操作、不进行CRC
+    数据校验或进行CRC数据校验等，这些1或0的设置仅用于举例说明，而
+    并非用于限定本发明的使用。
+    
+				</td></tr><tr><td class="content" id="description_139">综上所述，本发明提供一种基于通讯模式的存储卡数据传输方法，可有
+    效提高存储卡的数据传输速度。本发明通过存储卡的扩展通讯协议命令，通
+    过一个命令就可实现多项读写操作相关设置，包括对数据块个数和数据块长
+    度的设置。本发明提供的方法扩展了普通存储卡的数据流操作的传输模式，
+    从而提高其数据传输的速度；简化了普通存储卡的数据块操作流程，从而提
+    高其数据传输的效率。这样，通过本发明的方法，在提高了存储卡读写效率
+    的同时，还具有很好的兼容性。
+    
+				</td></tr><tr><td class="content" id="description_140">总之，以上所述仅为本发明的较佳实施例而已，并非用于限定本发明的
+    保护范围。
+    
+				</td></tr></table></div></body></html>

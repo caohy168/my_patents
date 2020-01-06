@@ -1,0 +1,668 @@
+<html><head><title>全文文本(Fulltext)</title><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><style>div.fullText table {width: 100%;text-indent: 1px;} 
+ div.fullText table td.header {font-weight: bold;text-align: center;font-family: '宋体';font-size: 16px;line-height:20px;color: #000000;padding: 5px;}div.fullText table td.content {padding: 1px;text-align: left;vertical-align: top;width: 100%;font-family: '宋体';font-size: 14px;line-height:20px;color: #000000;}</style></head><body><?xml version="1.0" encoding="UTF-8"?><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table class="fullText"><tr><td id="claim_title" class="header">权利要求书</td></tr><tr><td class="content" id="claim_1">1、一种移动存储卡访问超时保护方法，其特征在于，该方法包括以下步骤：
+      <br/>
+				</td></tr><tr><td class="content" id="claim_2">预先设定用于移动存储卡超时保护的超时时间；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_3">当接收到移动存储卡中当前传输信息的结束位时，触发计时；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_4">如果计时时间达到所述超时时间仍没有接收到下一传输信息的起始位，则
+      <br/>将移动存储卡置于锁定状态。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_5">2、如权利要求1所述的方法，其特征在于，在无数据操作模式下，所述用
+      <br/>于移动存储卡超时保护的超时时间包括：预先设定的正常等待时间、命令总线
+      <br/>超时时间，
+      <br/>
+				</td></tr><tr><td class="content" id="claim_6">如果计时时间达到预先设定的正常等待时间，则重新开始计时；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_7">如果计时时间达到所述命令总线超时时间仍没有接收到命令总线上的所述
+      <br/>下一传输信息，则将移动存储卡置于锁定状态。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_8">3、如权利要求2所述的方法，其特征在于，
+      <br/>
+				</td></tr><tr><td class="content" id="claim_9">所述当前传输信息为命令信息，所述下一传输信息为响应信息，则所述正
+      <br/>常等待时间为N<sub>CR</sub>周期；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_10">所述当前传输信息为响应信息，所述下一传输信息为命令信息，则所述正
+      <br/>常等待时间为N<sub>RC</sub>周期；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_11">所述当前传输信息为命令信息，所述下一传输信息为命令信息，则所述正
+      <br/>常等待时间为N<sub>CC</sub>周期。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_12">4、如权利要求1所述的方法，其特征在于，在有数据操作模式下，所述移
+      <br/>动存储卡超时保护的超时时间，为预先设定的命令总线超时时间和数据总线超
+      <br/>时时间中最大的一个，
+      <br/>
+				</td></tr><tr><td class="content" id="claim_13">如果计时时间达到设定的命令总线超时保护的超时时间时还没有接收到下
+      <br/>一命令信息，且计时时间达到设定的数据总线超时保护的超时时间时还没有接
+      <br/>收到下一数据信息，则将移动存储卡置于锁定状态。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_14">5、如权利要求1所述的方法，其特征在于，该方法进一步包括：
+      <br/>
+					
+				</td></tr><tr><td class="content" id="claim_15">如果在所述移动存储卡超时保护的超时时间内接收到下一信息的起始位信
+      <br/>息，计时复位，并在接收到所述下一信息的结束位信息时，重新开始计时。
+      <br/>
+					
+				</td></tr></table></div><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table><tr><td id="description_title" class="header">说明书</td></tr><tr><td class="content" id="description_invention_title">一种移动存储卡访问超时保护方法
+  </td></tr><tr><td class="content" id="description_1">技术领域
+  </td></tr><tr><td class="content" id="description_2">本发明涉及移动存储卡技术，特别涉及一种移动存储卡访问超时保护方
+    法。
+    
+				</td></tr><tr><td class="content" id="description_3">背景技术
+  </td></tr><tr><td class="content" id="description_4">随着信息技术的发展，移动存储卡已广泛地应用于电脑、摄像机、数码
+    相机、自动柜员机等各种信息设备上，一些移动存储卡为了防止非法用户访
+    问卡上信息，提供了需要进行用户认证才能访问的安全功能，用户将移动存
+    储卡插入主机后，输入身份认证信息，在身份认证成功后，可以对移动存储
+    卡进行访问，这样就可以保证用户在丢失移动存储卡时，其它用户不能访问
+    该移动存储卡上的信息，保证了用户的合法权益。但这种需要进行用户认证
+    的安全访问的移动存储卡还是存在一定的安全隐患，举例来说，如果合法用
+    户在使用完该移动存储卡后忘记将卡从主机中拔出，由于该移动存储卡的身
+    份认证信息在认证成功后至卡拔出前一直有效，因而，后面的用户无需对该
+    移动存储卡再重新进行身份认证，就可以直接访问该移动存储卡上的信息，
+    从而损害了该卡所属的用户的合法权益。
+    
+				</td></tr><tr><td class="content" id="description_5">发明内容
+  </td></tr><tr><td class="content" id="description_6">有鉴于此，本发明的一个主要目的在于提供一种移动存储卡访问超时保
+    护方法，在用户忘记拔出移动存储卡的情况下，提高移动存储卡的安全访问
+    性，保护用户的合法权益。
+    
+				</td></tr><tr><td class="content" id="description_7">为达到上述目的，本发明提供了一种移动存储卡访问超时保护方法，该
+    方法包括以下步骤：
+    
+				</td></tr><tr><td class="content" id="description_8">预先设定用于移动存储卡超时保护的超时时间；
+    
+				</td></tr><tr><td class="content" id="description_9">当接收到移动存储卡中当前传输信息的结束位时，触发计时；
+    
+				</td></tr><tr><td class="content" id="description_10">如果计时时间达到所述超时时间仍没有接收到下一传输信息的起始位，则
+    将移动存储卡置于锁定状态。
+    
+				</td></tr><tr><td class="content" id="description_11">较佳地，在无数据操作模式下，所述用于移动存储卡超时保护的超时时间
+    包括：预先设定的正常等待时间、命令总线超时时间，
+    
+				</td></tr><tr><td class="content" id="description_12">如果计时时间达到预先设定的正常等待时间，则重新开始计时；
+    
+				</td></tr><tr><td class="content" id="description_13">如果计时时间达到所述命令总线超时时间仍没有接收到命令总线上的所述
+    下一传输信息，则将移动存储卡置于锁定状态。
+    
+				</td></tr><tr><td class="content" id="description_14">较佳地，
+    
+				</td></tr><tr><td class="content" id="description_15">所述当前传输信息为命令信息，所述下一传输信息为响应信息，则所述正
+    常等待时间为N<sub>CR</sub>周期；
+    
+				</td></tr><tr><td class="content" id="description_16">所述当前传输信息为响应信息，所述下一传输信息为命令信息，则所述正
+    常等待时间为N<sub>RC</sub>周期；
+    
+				</td></tr><tr><td class="content" id="description_17">所述当前传输信息为命令信息，所述下一传输信息为命令信息，则所述正
+    常等待时间为N<sub>CC</sub>周期。
+    
+				</td></tr><tr><td class="content" id="description_18">较佳地，在有数据操作模式下，所述移动存储卡超时保护的超时时间，为
+    预先设定的命令总线超时时间和数据总线超时时间中最大的一个，
+    
+				</td></tr><tr><td class="content" id="description_19">如果计时时间达到设定的命令总线超时保护的超时时间时还没有接收到下
+    一命令信息，且计时时间达到设定的数据总线超时保护的超时时间时还没有接
+    收到下一数据信息，则将移动存储卡置于锁定状态。
+    
+				</td></tr><tr><td class="content" id="description_20">较佳地，该方法进一步包括：
+    
+				</td></tr><tr><td class="content" id="description_21">如果在所述移动存储卡超时保护的超时时间内接收到下一信息的起始
+    位信息，计时复位，并在接收到所述下一信息的结束位信息时，重新开始计
+    时。
+    
+				</td></tr><tr><td class="content" id="description_22">由上述的技术方案可见，本发明提供的移动存储卡访问超时保护方法，
+    通过在移动存储卡设定超时保护的超时时间，当判断对移动存储卡无操作的
+    时间超过设定的超时时间时，将该移动存储卡置于锁定状态。从而在用户操
+    
+					作完移动存储卡忘记拔出的情况下，防止了非法用户对该移动存储卡上信息
+    的非法访问，提高了移动存储卡的安全访问性，保护了用户的合法权益。
+    
+				</td></tr><tr><td class="content" id="description_23">附图说明
+  </td></tr><tr><td class="content" id="description_24">图1为本发明移动存储卡访问超时保护方法流程示意图；
+    
+				</td></tr><tr><td class="content" id="description_25">图2为本发明移动存储卡“无响应”和“无数据”操作的流程示意图；
+    
+				</td></tr><tr><td class="content" id="description_26">图3为本发明移动存储卡(多)数据块读操作的流程示意图
+    
+				</td></tr><tr><td class="content" id="description_27">图4为本发明移动存储卡(多)数据块写操作的流程示意图；
+    
+				</td></tr><tr><td class="content" id="description_28">图5为本发明移动存储卡数据传送模式下的命令-响应时序示意框图；
+    
+				</td></tr><tr><td class="content" id="description_29">图6为本发明移动存储卡数据传送模式下的响应-命令时序示意框图；
+    
+				</td></tr><tr><td class="content" id="description_30">图7为本发明移动存储卡数据传送模式下的命令-命令时序示意框图；
+    
+				</td></tr><tr><td class="content" id="description_31">图8为本发明移动存储卡单数据块读取时序示意框图；
+    
+				</td></tr><tr><td class="content" id="description_32">图9为本发明移动存储卡多数据块读取时序示意框图；
+    
+				</td></tr><tr><td class="content" id="description_33">图10为本发明移动存储卡在数据传送模式下的停止传送命令时序示意
+    框图。
+    
+				</td></tr><tr><td class="content" id="description_34">具体实施方式
+  </td></tr><tr><td class="content" id="description_35">为使本发明的目的、技术方案和优点更加清楚，下面将结合附图及具体
+    实施例对本发明作进一步地详细描述。
+    
+				</td></tr><tr><td class="content" id="description_36">本发明提供的移动存储卡访问超时保护方法，通过在移动存储卡设定超
+    时保护的超时时间，当判断对移动存储卡无操作的时间超过设定的超时时间
+    时，将该移动存储卡置于锁定状态。
+    
+				</td></tr><tr><td class="content" id="description_37">以下以符合多媒体卡(MMC，Multi Media Card)标准的移动存储卡为
+    例，详细说明本发明访问超时保护的实现过程。所应理解的是，本发明不仅
+    可用于MMC卡，也可以应用于其他的移动存储卡，如安全数字卡(SD，
+    Secure Digital Card)、紧凑闪存卡(CF，Compact Flash Card)、智能多媒
+    体卡(SM，Smart Media Card)、记忆棒(MS，Memory Stick Card)等。
+    
+				</td></tr><tr><td class="content" id="description_38">图1为本发明移动存储卡访问超时保护方法流程示意图，如图1所示，
+    预先在MMC卡上设置计时器并设定超时保护的超时时间，后续中为了叙述
+    的简便，将超时保护的超时时间称为超时时间。设定的超时时间可以包括针
+    对命令总线无操作的超时时间以及针对数据总线无操作的超时时间。该方法
+    包括：
+    
+				</td></tr><tr><td class="content" id="description_39">步骤101，MMC卡上电，用户通过身份认证访问MMC卡上信息；
+    
+				</td></tr><tr><td class="content" id="description_40">本步骤中，MMC卡有两种总线操作模式，一种是MMC总线模式，另
+    一种是串行外围设备接口(SPI，Serial Peripheral Interface)总线模式。本实
+    施例中，以MMC总线工作模式为例进行介绍。
+    
+				</td></tr><tr><td class="content" id="description_41">在MMC总线上传送的信息主要包括在命令(CMD，Command)总线
+    上传送的命令，或对命令的响应以及数据(DAT，Data)总线上传送的数据，
+    传送的信息由一个起始位(S)表示开始，由一个停止位(E)表示结束。以
+    下进行详细描述。
+    
+				</td></tr><tr><td class="content" id="description_42">图2为本发明移动存储卡“无响应”和“无数据”操作的流程示意图。
+    如图2所示，命令线上的基本传输是命令/响应传输，包括主机向MMC卡发
+    送的命令以及MMC卡向主机返回的响应，命令和响应都通过串行方式进行
+    传输。
+    
+				</td></tr><tr><td class="content" id="description_43">数据线用于传输数据，主机通过CMD线上传输CMD7命令，用于选择
+    MMC卡并将MMC卡置于传输状态。MMC卡接收到CMD7命令，进入传
+    输状态，当准备就绪后，发送响应给主机，在数据线上开始进行数据传输。
+    MMC卡输入或输出的数据均以数据流或数据块进行处理。其中，数据块处
+    理包括单数据块处理和多数据块处理，并通过循环冗余校验码(CRC，Cyclic
+    Redundancy Check)校验来验证是否传送成功。当主机通过CMD线发出停
+    止命令时，则终止数据线上的数据传输。
+    
+				</td></tr><tr><td class="content" id="description_44">图3为本发明移动存储卡(多)数据块读操作的流程示意图。如图3所
+    示，主机通过CMD线向MMC卡发送读取命令，MMC卡接收命令，向主
+    机返回响应，在返回响应后，从MMC卡上读取相应的数据块，每个数据块
+    
+					后都跟着CRC校验。当主机通过CMD线向MMC卡发送停止命令，MMC
+    卡接收命令，向主机返回响应后停止读取数据块。
+    
+				</td></tr><tr><td class="content" id="description_45">图4为本发明移动存储卡(多)数据块写操作的流程示意图。如图4所
+    示，其操作流程与图3相类似，在此不再赘述，不同的是，图4中的多数据
+    块写操作由于会持续一段时间，如果写入MMC卡的数据缓存区已满，数据
+    线DAT0将保持低电平，表示数据线处于“忙”状态，不再接收新的数据块。
+    
+				</td></tr><tr><td class="content" id="description_46">步骤102，判断对MMC卡无操作时，计时器开始计时，如果对MMC
+    卡无操作的时间超过设定的超时时间，锁定MMC卡。
+    
+				</td></tr><tr><td class="content" id="description_47">本步骤中，判断对MMC卡无操作的步骤可以包括对MMC卡上的命令
+    总线无操作的步骤以及对MMC卡上的数据总线无操作的步骤。对命令总线
+    无操作的判断以及对数据总线无操作的判断与现有技术相类似，在此不再赘
+    述。
+    
+				</td></tr><tr><td class="content" id="description_48">在命令总线无操作进行计时的情况下，如果触发的计时器对数据总线空
+    闲时间计时超过设定的数据总线超时时间，锁定MMC卡；
+    
+				</td></tr><tr><td class="content" id="description_49">在数据总线无操作进行计时的情况下，如果触发的计时器对命令总线发
+    送的命令或返回的响应计时超过设定的命令总线超时时间还没有接收到命
+    令总线发送的命令，则锁定MMC卡。
+    
+				</td></tr><tr><td class="content" id="description_50">以下对计时器进行计时进行详细说明。
+    
+				</td></tr><tr><td class="content" id="description_51">1.无数据操作的命令总线的超时保护
+    
+				</td></tr><tr><td class="content" id="description_52">图5为本发明移动存储卡数据传送模式下的命令-响应时序示意框图。
+    如图5所示，该时序示意框图适用于除ACMD41和CMD2之外可以返回响
+    应的主机命令。CMD命令包括起始位(S)及结束位(E)，N<sub>CR</sub>是主机命
+    令和卡响应之间的时延。下面描述中，将命令总线或数据总线上两次操作之
+    间的规定的等待时间称为正常等待时间，响应的与命令格式相类似，在此不
+    再赘述。
+    
+				</td></tr><tr><td class="content" id="description_53">本实施例中，当判断接收到命令中的结束位(E)时，触发计时器开始
+    计时，
+    
+				</td></tr><tr><td class="content" id="description_54">当计时达到N<sub>CR</sub>周期时，计时器清零并重新开始计时，
+    
+				</td></tr><tr><td class="content" id="description_55">如果在计时器计时时间达到正常通信状态下设定的命令总线空闲的超
+    时时间(命令总线超时时间)内接收到响应中的起始位(S)，计时器清零，
+    并在接收到响应中的结束位(E)时，计时器重新开始计时；
+    
+				</td></tr><tr><td class="content" id="description_56">如果计时器计时时间达到正常通信状态下设定的命令总线空闲的超时
+    时间还没有接收到响应中的起始位(S)，则MMC卡自动锁定，同时将计
+    时器清零，并等待下一个循环周期，接收命令或响应的结束位(E)，重新
+    启动计时器计时。
+    
+				</td></tr><tr><td class="content" id="description_57">图6为本发明移动存储卡数据传送模式下的响应-命令时序示意框图。
+    如图6所示，主机接收到MMC卡的响应后，至少需要经过一个N<sub>RC</sub>周期后，
+    主机才可以发送下一条命令，该时序示意框图适用于所有的主机命令。
+    
+				</td></tr><tr><td class="content" id="description_58">本实施例中，计时器接收到响应中的结束位(E)后开始计时，达到N<sub>RC</sub>
+					周期后清零，然后重新开始计时，如果达到超时寄存器中正常通信状态下命
+    令总线空闲的超时时间，则卡自动锁定，同时计时器清零。
+    
+				</td></tr><tr><td class="content" id="description_59">具体来说，当判断接收到响应中的结束位(E)时，触发计时器开始计
+    时，
+    
+				</td></tr><tr><td class="content" id="description_60">当计时达到N<sub>RC</sub>周期时，计时器清零并重新开始计时，
+    
+				</td></tr><tr><td class="content" id="description_61">如果在计时器计时时间达到正常通信状态下设定的命令总线空闲的超
+    时时间内接收到命令中的起始位(S)，计时器清零，并在判断接收到命令
+    中的结束位(E)时，计时器重新开始计时；
+    
+				</td></tr><tr><td class="content" id="description_62">如果计时器计时时间达到正常通信状态下设定的命令总线空闲的超时
+    时间还没有接收到命令中起始位(S)，则MMC卡自动锁定，同时计时器
+    清零并等待下一个循环周期，接收命令或响应的结束位(E)，重新启动计
+    时器计时。
+    
+				</td></tr><tr><td class="content" id="description_63">图7为本发明移动存储卡数据传送模式下的命令-命令时序示意框图。
+    如图7所示，主机向MMC卡发送命令后，至少需要经过一个N<sub>CC</sub>周期后，
+    主机才可以发送下一条命令。
+    
+				</td></tr><tr><td class="content" id="description_64">本实施例中，计时器从接收完主机命令后开始计时，达到N<sub>CC</sub>周期后清
+    零，然后重新开始计时，如果达到超时寄存器中正常通信状态下命令总线空
+    闲的超时时间，则卡自动锁定，同时计时器清零。
+    
+				</td></tr><tr><td class="content" id="description_65">具体来说，当判断接收到命令中的结束位(E)时，触发计时器开始计
+    时，
+    
+				</td></tr><tr><td class="content" id="description_66">当计时达到N<sub>CC</sub>周期时，计时器清零并重新开始计时，
+    
+				</td></tr><tr><td class="content" id="description_67">如果在计时器计时时间达到正常通信状态下设定的命令总线空闲的超
+    时时间内接收到下一个命令中的起始位(S)时，计时器清零，并在判断接
+    收到该下一个命令中的结束位(E)时，计时器重新开始计时；
+    
+				</td></tr><tr><td class="content" id="description_68">如果计时器计时时间达到正常通信状态下设定的命令总线空闲的超时
+    时间还没有接收到下一个命令中的起始位(S)，则MMC卡自动锁定，同
+    时计时器清零并等待下一个循环周期，接收命令或响应的结束位(E)，重
+    新启动计时器计时。
+    
+				</td></tr><tr><td class="content" id="description_69">实际应用中，也可以在判断接收到信息的结束位(E)时，计时器开始
+    计时，并设置计时器计时时间为正常通信状态下设定的命令总线空闲的超时
+    时间与相应的正常等待时间之和，如果计时器计时时间达到正常通信状态下
+    设定的命令总线空闲的超时时间与相应的正常等待时间之和还没有接收到
+    下一个命令起始位，则锁定MMC卡。
+    
+				</td></tr><tr><td class="content" id="description_70">表1为本发明移动存储卡时序框图的符号及其相应含义。参见表1，后
+    续所有的时序框图描述中，使用表1中的缩写形式，后续中不再赘述。其中，
+    主机的传送位(T)用“1”表示，MMC的传送位(T)用“0”表示；而P-
+    位和Z-位的区别在于：P-位是独立于主机输出驱动器而由MMC卡有功驱动
+    到HIGH的，Z-位则是由独立于RDAT的上拉电阻RCMD驱动到(独立保
+    持)HIGH的。
+    
+				</td></tr><tr><td class="content" id="description_71">表1
+    
+				</td></tr><tr><td class="content" id="description_72">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  S
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+起始位(＝‘0’)
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  T
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+传送位(主机＝‘1’，MMC卡＝‘0’)
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_73">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  P
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 一个周期上拉(＝‘1’)
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  E
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 结束位(＝1)
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  Z
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 高阻抗状态(≥1)
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  D
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 数据位
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  X
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 不必关注数据位(MMC卡发出)
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  *
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 重复
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  CRC
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ 循环冗余校验位(7位)
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_74">表2为本发明移动存储卡的时序参数列表。
+    
+				</td></tr><tr><td class="content" id="description_75">表2
+    
+				</td></tr><tr><td class="content" id="description_76">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  符号
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  最小
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  最大
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  单位
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  NCR
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  64
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  时钟周期
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  NAC
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  2
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  10*(TAAC*FOP+100*NSAC)
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  时钟周期
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  NRC
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  8
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  -
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  时钟周期
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  NCC
+											
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  8
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  -
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  时钟周期
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_77">表中，F<sub>OP</sub>是主机用于读操作的多媒体卡时钟频率。
+    
+				</td></tr><tr><td class="content" id="description_78">TAAC：CSD寄存器的参数，定义了数据存取不同步的时间；
+    
+				</td></tr><tr><td class="content" id="description_79">NSAC：CSD寄存器的参数，定义了依赖于时钟的数据存取时间；
+    
+				</td></tr><tr><td class="content" id="description_80">其中，特定卡数据寄存器(CSD，CARD-SPECIFIC DATA)提供了如
+    何存取卡内容的信息。
+    
+				</td></tr><tr><td class="content" id="description_81">2.读、写操作的超时保护
+    
+				</td></tr><tr><td class="content" id="description_82">下面描述中，数据总线可以是1位、4位、8位或16位总线。数据总线
+    上的操作可以分为读操作和写操作，其中，读操作又可分为单数据块读取和
+    多数据块读取操作。
+    
+				</td></tr><tr><td class="content" id="description_83">图8为本发明移动存储卡单数据块读取时序示意框图。如图8所示，对
+    于单数据块读取，主机用CMD7命令选择MMC卡来执行数据块读取操作，
+    并用CMD16来设置数据块传送的有效块长度。序列由单数据块读命令
+    (CMD17)开始，单数据块读命令包括参数字段的起始地址。
+    
+				</td></tr><tr><td class="content" id="description_84">MMC卡接收到CMD17命令后，经过访问时延N<sub>AC</sub>周期后，开始向主
+    机传送数据块，数据块后面跟着CRC校验位，供主机校验传输错误，最后
+    
+					一位为结束位。
+    
+				</td></tr><tr><td class="content" id="description_85">图9为本发明移动存储卡多数据块读取时序示意框图。如图9所示，
+    MMC卡在接收到主机多块读取命令CMD18后，会连续传送数据块，CMD
+    线上发送的停止传送命令(CMD12)可用于终止数据块的传送。
+    
+				</td></tr><tr><td class="content" id="description_86">图10为本发明移动存储卡在数据传送模式下的停止传送命令时序示意
+    框图。如图10所示，数据总线传送数据块，如果命令总线上接收到停止传
+    送命令，则在接收该命令末位的两个时钟周期(N<sub>ST</sub>)后，停止数据块的传
+    输。
+    
+				</td></tr><tr><td class="content" id="description_87">上述示例中，计时器在命令总线和数据总线均空闲的时候进行计时，将
+    超时寄存器中命令总线超时间和数据总线超时间中的较大者作为读操作超
+    时时间。
+    
+				</td></tr><tr><td class="content" id="description_88">具体来说，计时器在命令总线和数据总线均空闲的时候进行计时，如果
+    在读操作超时时间内没有接收到任何信息，MMC卡自动锁定。举例来说，
+    对于图8以及图9所示的数据块读取，当单数据块或多数据块读取完毕时，
+    计时器分别对命令总线和数据总线开始计时，如果数据总线上的计时达到数
+    据总线超时间还没有接收到数据总线传输的信息，且命令总线上的计时达到
+    命令总线超时间也没有接收到命令总线传输的信息，MMC卡自动锁定。
+    
+				</td></tr><tr><td class="content" id="description_89">实际应用中，也可以根据实际应用的需要设定读操作超时时间。
+    
+				</td></tr><tr><td class="content" id="description_90">数据总线上的写操作流程的超时管理机制与读操作流程的超时管理机
+    制相类似，在此不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_91">实际应用中，数据总线上还会存在读、写数据块操作流程本身超时的情
+    况，在该情况下，如果主机发出读、写数据块操作命令后，在设定的超时时
+    间内没有收到任何响应，认为MMC卡没有响应，则根据预先的设置，可以
+    通过重启来尝试恢复。如果出现这种情况，本专利发明的超时计时器还应考
+    虑不同操作情况的超时时间。以读操作为例，如果出现读操作超时的情况，
+    那么上述提及的超时计时器就要从读操作超时时间结束并且命令总线也没
+    有操作时进行计数，超时寄存器中命令总线超时值和数据总线超时值中的较
+    
+					大者作为超时值，如果达到该超时值，则MMC卡进入锁定状态。
+    
+				</td></tr><tr><td class="content" id="description_92">写数据块操作流程本身超时实现访问超时保护的流程与读数据块操作
+    相类似，在此不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_93">本实施例中，可以利用超时寄存器来设置命令总线连续没有操作而认证
+    信息仍然有效的最长时间，即命令总线超时时间，以及数据总线连续没有操
+    作而认证信息仍然有效的最长时间，即数据总线超时时间，可以将超时寄存
+    器设置为16位的寄存器，当然，也可以根据实际需要，设置为32位的寄存
+    器或其它位的寄存器，存储数据总线和命令总线的无操作的超时时间，该超
+    时寄存器是一个可读/写的寄存器。表3为该超时寄存器中位数的分配以及
+    各字段的定义。
+    
+				</td></tr><tr><td class="content" id="description_94">表3
+    
+				</td></tr><tr><td class="content" id="description_95">
+					
+						<table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+							
+								
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  OVR位
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  字段定义
+    
+										</td>
+									</tr>
+								
+								
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  0-3
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数据总线读操作超时时间
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  4-7
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  数据总线写操作超时时间
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  8-11
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  命令总线操作超时时间
+    
+										</td>
+									</tr>
+									<tr valign="" align="">
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  12-15
+    
+										</td>
+										<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  保留
+    
+										</td>
+									</tr>
+								
+							
+						</table>
+					
+				</td></tr><tr><td class="content" id="description_96">在移动存储卡进入锁定状态后，移动存储卡的控制器单元只能接收来自
+    外部主机的复位或开锁命令以解除锁定状态，正常的访问需要重新进行用户
+    身份认证，从而实现了移动存储卡无操作时的超时保护，即使用户操作完后
+    忘记拔出移动存储卡，当无操作的时间大于预先设定的超时时间后，将该移
+    动存储卡锁定，用户需要重新进行身份认证才能访问该移动存储卡上信息，
+    从而减小了忘记拔卡所导致的安全隐患。
+    
+				</td></tr><tr><td class="content" id="description_97">以上举较佳实施例，对本发明的目的、技术方案和优点进行了进一步详
+    细说明，所应理解的是，以上所述仅为本发明的较佳实施例而已，并不用以
+    限制本发明，凡在本发明的精神和原则之内，所作的任何修改、等同替换、
+    改进等，均应包含在本发明的保护范围之内。
+    
+				</td></tr></table></div></body></html>

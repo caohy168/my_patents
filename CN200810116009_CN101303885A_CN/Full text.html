@@ -1,0 +1,609 @@
+<html><head><title>全文文本(Fulltext)</title><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><style>div.fullText table {width: 100%;text-indent: 1px;} 
+ div.fullText table td.header {font-weight: bold;text-align: center;font-family: '宋体';font-size: 16px;line-height:20px;color: #000000;padding: 5px;}div.fullText table td.content {padding: 1px;text-align: left;vertical-align: top;width: 100%;font-family: '宋体';font-size: 14px;line-height:20px;color: #000000;}</style></head><body><?xml version="1.0" encoding="UTF-8"?><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table class="fullText"><tr><td id="claim_title" class="header">权利要求书</td></tr><tr><td class="content" id="claim_1">1、一种多芯片封装MCP存储模块，封装有若干类型的存储器并具有用于
+      <br/>外部主机访问的对外接口，
+      <br/>
+				</td></tr><tr><td class="content" id="claim_2">其特征在于，
+      <br/>
+				</td></tr><tr><td class="content" id="claim_3">所述MCP存储模块中还封装有接口转换控制器和智能卡芯片，其中，
+      <br/>
+				</td></tr><tr><td class="content" id="claim_4">若干类型的存储器分别通过各自对应的总线连接至接口转换控制器；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_5">智能卡芯片通过智能卡芯片总线连接至接口转换控制器；
+      <br/>
+				</td></tr><tr><td class="content" id="claim_6">接口转换控制器则通过对外接口所对应的总线与对外接口相连，用于在
+      <br/>外部主机通过对外接口访问对应类型的存储器或智能卡芯片时，建立外部主
+      <br/>机与对应类型的存储器或智能卡芯片的通信。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_7">2、如权利要求1所述的MCP存储模块，其特征在于，
+      <br/>
+				</td></tr><tr><td class="content" id="claim_8">所述外部接口的数量小于等于若干类型的存储器总数与智能卡芯片数
+      <br/>量之和。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_9">3、如权利要求2所述的MCP存储模块，其特征在于，
+      <br/>
+				</td></tr><tr><td class="content" id="claim_10">所述MCP存储模块仅具有一个外部接口。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_11">4、如权利要求3所述的MCP存储模块，其特征在于，
+      <br/>
+				</td></tr><tr><td class="content" id="claim_12">所述一个外部接口为静态随机存储器SRAM总线接口、或动态随机存
+      <br/>储器DRAM、同步动态随机存储器SDRAM总线接口、或与非闪存NAND
+      <br/>Flash总线接口。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_13">5、如权利要求2所述的MCP存储模块，其特征在于，所述多个外部接
+      <br/>口分别与若干类型的存储器以及智能卡芯片一一对应。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_14">6、如权利要求1至5中任意一项所述的MCP存储模块，其特征在于，
+      <br/>
+				</td></tr><tr><td class="content" id="claim_15">所述若干类型的存储器包括：随机存储器RAM、SRAM、DRAM、
+      <br/>SDRAM、只读存储器ROM、非易失性只读存储器E<sup>2</sup>PROM、或非闪存NOR
+      <br/>FLASH、与非闪存NAND FLASH。
+      <br/>
+				</td></tr><tr><td class="content" id="claim_16">7、如权利要求1至5中任意一项所述的MCP存储模块，其特征在于，
+      <br/>
+					
+				</td></tr><tr><td class="content" id="claim_17">接口转换控制器在建立外部主机与对应类型的存储器的通信之前，进一
+      <br/>步建立外部主机与智能卡芯片通信，以实现外部主机与智能卡芯片的认证交
+      <br/>互。
+      <br/>
+					
+				</td></tr></table></div><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table><tr><td id="description_title" class="header">说明书</td></tr><tr><td class="content" id="description_invention_title">多芯片封装存储模块
+  </td></tr><tr><td class="content" id="description_1">技术领域
+  </td></tr><tr><td class="content" id="description_2">本发明涉及接口访问技术，特别涉及一种多芯片封装(Multi-Chip
+    Package，MCP)存储模块。
+    
+				</td></tr><tr><td class="content" id="description_3">背景技术
+  </td></tr><tr><td class="content" id="description_4">MCP是一种先进的集成电路封装工艺，利用MCP技术将各种类型的存
+    储器管芯(通常也称为裸片)封装在一起，即构成了MCP存储模块。且
+    MCP存储模块对应每一类型的存储器管芯分别具有一一对应的对外接口。
+    
+				</td></tr><tr><td class="content" id="description_5">如图1所示，现有MCP存储模块中封装的各种类型的存储器(为了便
+    于表述，本文后续表述均省略“管芯”二字，而在图1中则用“die”表示
+    管芯)可以包括：静态存储器(SRAM)和与非闪存(NAND Flash)，且该
+    MCP存储模块分别具有对应SRAM且与其相连的SRAM总线对外接口、以
+    及对应NAND Flash且与其相连的NAND Flash总线对外接口。
+    
+				</td></tr><tr><td class="content" id="description_6">这样，外部主机即可通过不同的总线接口访问到对应类型的存储器。
+    
+				</td></tr><tr><td class="content" id="description_7">由于MCP存储模块比各个存储器单独封装占用的面积小，因此它在例
+    如手机等移动设备中得到了广泛应用。
+    
+				</td></tr><tr><td class="content" id="description_8">然而，现有MCP存储模块仅限于存储功能，无法实现功能扩展。
+    
+				</td></tr><tr><td class="content" id="description_9">发明内容
+  </td></tr><tr><td class="content" id="description_10">有鉴于此，本发明提供了一种MCP存储模块，能够实现智能卡安全相
+    关业务。
+    
+				</td></tr><tr><td class="content" id="description_11">本发明提供的一种MCP存储模块，封装有若干类型的存储器并具有用
+    于外部主机访问的对外接口，
+    
+				</td></tr><tr><td class="content" id="description_12">所述MCP存储模块中还封装有接口转换控制器和智能卡芯片，其中，
+    
+				</td></tr><tr><td class="content" id="description_13">若干类型的存储器分别通过各自对应的总线连接至接口转换控制器；
+    
+				</td></tr><tr><td class="content" id="description_14">智能卡芯片通过智能卡芯片总线连接至接口转换控制器；
+    
+				</td></tr><tr><td class="content" id="description_15">接口转换控制器则通过对外接口所对应的总线与对外接口相连，用于在
+    外部主机通过对外接口访问对应类型的存储器或智能卡芯片时，建立外部主
+    机与对应类型的存储器或智能卡芯片的通信。
+    
+				</td></tr><tr><td class="content" id="description_16">所述外部接口的数量小于等于若干类型的存储器总数与智能卡芯片数
+    量之和。
+    
+				</td></tr><tr><td class="content" id="description_17">所述MCP存储模块仅具有一个外部接口。
+    
+				</td></tr><tr><td class="content" id="description_18">所述一个外部接口为静态随机存储器SRAM总线接口、或动态随机存
+    储器DRAM、同步动态随机存储器SDRAM总线接口、或与非闪存NAND
+    Flash总线接口。
+    
+				</td></tr><tr><td class="content" id="description_19">所述多个外部接口分别与若干类型的存储器以及智能卡芯片一一对应。
+    
+				</td></tr><tr><td class="content" id="description_20">所述若干类型的存储器包括：随机存储器RAM、SRAM、DRAM、
+    SDRAM、只读存储器ROM、非易失性只读存储器E<sup>2</sup>PROM、或非闪存NOR
+    FLASH、与非闪存NAND FLASH。
+    
+				</td></tr><tr><td class="content" id="description_21">接口转换控制器在建立外部主机与对应类型的存储器的通信之前，进一
+    步建立外部主机与智能卡芯片通信，以实现外部主机与智能卡芯片的认证交
+    互
+    
+				</td></tr><tr><td class="content" id="description_22">由上述技术方案可见，本发明中的MCP存储模块中不但封装有用于存
+    储的若干类型的存储器，还封装有接口转换控制器和智能卡芯片，其中，智
+    能卡芯片能够实现智能卡安全相关业务，而接口转换控制器则能够实现外部
+    通过对外接口与若干类型的存储器以及智能卡芯片交互时的接口规范转换，
+    使得MCP存储模块不仅限于存储功能，实现了功能扩展。
+    
+				</td></tr><tr><td class="content" id="description_23">而且，由于接口转换控制器能够实现接口规范转换，因此，本发明中的
+    MCP存储模块所具有的对外接口可以不与若干类型的存储器以及智能卡芯
+    片一一对应，较佳地可仅具有一个对外接口，从而可以减少MCP存储模块
+    
+					的对外接口管脚数量。
+    
+				</td></tr><tr><td class="content" id="description_24">进一步地，如果MCP存储模块仅具有一个对外接口，则可以采用SRAM
+    或SDRAM总线接口等传输速度较快的接口，以便提高外部对MCP存储模
+    块的访问效率。
+    
+				</td></tr><tr><td class="content" id="description_25">再进一步地，为了提高对MCP存储模块访问的安全性，还可以由智能
+    卡芯片对所有外部访问进行认证。
+    
+				</td></tr><tr><td class="content" id="description_26">附图说明
+  </td></tr><tr><td class="content" id="description_27">图1为现有一种MCP存储模块的结构示意图。
+    
+				</td></tr><tr><td class="content" id="description_28">图2为本发明中MCP存储模块的示例性结构图。
+    
+				</td></tr><tr><td class="content" id="description_29">图3为本发明实施例一中MCP存储模块的结构示意图。
+    
+				</td></tr><tr><td class="content" id="description_30">图4为本发明实施例一中MCP存储模块的访问方式1的流程示意图。
+    
+				</td></tr><tr><td class="content" id="description_31">图5为本发明实施例一中MCP存储模块的访问方式2的流程示意图。
+    
+				</td></tr><tr><td class="content" id="description_32">图6为本发明实施例二中MCP存储模块的结构示意图。
+    
+				</td></tr><tr><td class="content" id="description_33">图7为本发明实施例二中MCP存储模块的访问方式1的流程示意图。
+    
+				</td></tr><tr><td class="content" id="description_34">图8为本发明实施例二中MCP存储模块的访问方式2的流程示意图。
+    
+				</td></tr><tr><td class="content" id="description_35">图9为本发明实施例三中MCP存储模块的结构示意图。
+    
+				</td></tr><tr><td class="content" id="description_36">图10为本发明实施例三中MCP存储模块的访问方式1的流程示意图。
+    
+				</td></tr><tr><td class="content" id="description_37">图11为本发明实施例三中MCP存储模块的访问方式2的流程示意图。
+    
+				</td></tr><tr><td class="content" id="description_38">图12为本发明实施例四中MCP存储模块的结构示意图。
+    
+				</td></tr><tr><td class="content" id="description_39">图13为本发明实施例四中MCP存储模块的访问方式1的流程示意图。
+    
+				</td></tr><tr><td class="content" id="description_40">图14为本发明实施例四中MCP存储模块的访问方式2的流程示意图。
+    
+				</td></tr><tr><td class="content" id="description_41">具体实施方式
+  </td></tr><tr><td class="content" id="description_42">为使本发明的目的、技术方案及优点更加清楚明白，以下参照附图并举
+    实施例，对本发明进一步详细说明。
+    
+				</td></tr><tr><td class="content" id="description_43">图2为本发明中MCP存储模块的示例性结构图。如图2所示(图2中
+    
+					的“die”表示管芯)，本发明中的MCP存储模块中封装有n种类型的存储
+    器(n为自然数)，且具有用于外部主机访问的对外接口。
+    
+				</td></tr><tr><td class="content" id="description_44">相比于现有的MCP存储模块，如图2所示的MCP存储模块中还封装
+    有接口转换控制器和智能卡芯片。需要说明的是，由于封装在MCP内部的
+    各种元器件均为管芯，因此，此处所述以及下文所述的接口转换控制器和智
+    能卡芯片分别指接口转换控制器管芯和智能卡芯片管芯。
+    
+				</td></tr><tr><td class="content" id="description_45">n种类型的存储器分别通过各自对应的总线连接至接口转换控制器。例
+    如，假设图2中的存储器1为同步动态随机存储器(SDRAM)，则存储器
+    1通过SDRAM总线连接至接口转换控制器。
+    
+				</td></tr><tr><td class="content" id="description_46">智能卡芯片则通过智能卡芯片总线连接至接口转换控制器，用于实现智
+    能卡安全相关业务。
+    
+				</td></tr><tr><td class="content" id="description_47">接口转换控制器通过对外接口所对应的总线与对外接口相连，用于在外
+    部主机通过对外接口访问对应类型的存储器或智能卡芯片时，建立外部主机
+    与对应类型的存储器或智能卡芯片的通信，并对该通信进行接口规范的转
+    换。
+    
+				</td></tr><tr><td class="content" id="description_48">其中，如上所述的建立通信，是指导通外部主机与对应类型的存储器或
+    智能卡芯片之间的逻辑连接，该过程可以通过现有方式来实现，在此不再赘
+    述。
+    
+				</td></tr><tr><td class="content" id="description_49">由此可见，如图2所示的MCP存储模块中不但封装有用于存储的若干
+    类型的存储器，还封装有接口转换控制器和智能卡芯片，其中，智能卡芯片
+    能够实现智能卡安全相关业务，而接口转换控制器则能够实现外部通过对外
+    接口与若干类型的存储器以及智能卡芯片交互时的接口规范转换，使得
+    MCP存储模块不仅限于存储功能，实现了功能扩展。
+    
+				</td></tr><tr><td class="content" id="description_50">在如图2所示的MCP存储模块中，对外接口可以是多个、且与n种类
+    型的存储器以及智能卡芯片一一对应，对外接口也可以不与n种类型的存储
+    器以及智能卡芯片一一对应、甚至可以只有一个。
+    
+				</td></tr><tr><td class="content" id="description_51">对于不同数量的对外接口，MCP存储模块中的接口转换控制器的工作
+    
+					方式也不相同，对于对外接口与MCP中的存储器和智能卡芯片未能一一对
+    应的情况，在建立外部主机与存储器或智能卡芯片的通讯后，还需要对建立
+    的通讯进行接口规范转换。
+    
+				</td></tr><tr><td class="content" id="description_52">其中，接口规范转换是指，不同接口对于每次读/写数据的位宽转换、
+    以及读/写控制方式的转换，该过程可以通过现有方式来实现，在此也不再
+    赘述。
+    
+				</td></tr><tr><td class="content" id="description_53">以下，结合几个实施例具体说明。
+    
+				</td></tr><tr><td class="content" id="description_54">实施例一
+    
+				</td></tr><tr><td class="content" id="description_55">图3为本发明实施例一中MCP存储模块的结构示意图。如图3所示，
+    以SDRAM和NAND Flash两种类型的存储器为例，在图3中(图3中的“die”
+    表示管芯)，MCP存储模块中的SDRAM和NAND Flash分别通过SDRAM
+    总线和NAND Flash总线连接至接口转换控制器，智能卡芯片则通过智能卡
+    芯片总线连接至接口转换控制器。
+    
+				</td></tr><tr><td class="content" id="description_56">如图3所示的MCP存储模块具有3个与SDRAM、NAND Flash、以及
+    智能卡芯片一一对应的对外接口，即与SDRAM对应的SDRAM总线对外接
+    口、与NAND Flash对应的NAND Flash总线对外接口、以及与智能卡芯片
+    对应的智能卡芯片总线对外接口。
+    
+				</td></tr><tr><td class="content" id="description_57">这样，接口转换控制器通过SDRAM总线、NAND Flash总线以及智能
+    卡芯片总线，分别与SDRAM总线对外接口、NAND Flash总线对外接口、
+    以及智能卡芯片总线对外接口相连，用于在外部主机通过对外接口访问对应
+    类型的存储器或智能卡芯片时，建立外部主机与对应类型的存储器或智能卡
+    芯片的通信。
+    
+				</td></tr><tr><td class="content" id="description_58">在本实施例中，接口转换控制器可以依据外部主机通过哪一个对外接口
+    发送访问指令，来判断主机访问的是哪一种类型的存储器或智能卡芯片。接
+    口转换控制器可以在接收到访问指令后，直接进行判断，然后建立外部主机
+    与其访问的存储器或智能卡芯片的通信，该方式称之为访问方式1；接口转
+    换控制器也可以在接收到访问指令后，先与智能卡芯片进行认证交互以判断
+    
+					发送该访问指令的主机是否有权限访问MCP存储模块中的NAND Flash，并
+    在认证通过后再进行判断，然后建立外部主机与其访问的存储器或智能卡芯
+    片的通信，该方式称之为访问方式2。
+    
+				</td></tr><tr><td class="content" id="description_59">需要说明的是，由于SDRAM等随机存储器中通常仅会存储一些中间数
+    据、且经常会被访问，因此，对于访问方式2所涉及的认证交互，通常都不
+    针对例如SDRAM、静态随机存储器(SRAM)、RAM。
+    
+				</td></tr><tr><td class="content" id="description_60">图4为本发明实施例一中MCP存储模块的访问方式1的流程示意图。
+    如图4所示，本实施例中访问方式1的具体处理流程包括如下步骤：
+    
+				</td></tr><tr><td class="content" id="description_61">步骤401，接口转换控制器接收外部主机发送的访问指令。如果本实施
+    例中的MCP存储模块应用于终端等移动设备中，则这里所述的主机可以为
+    该移动设备的CPU。
+    
+				</td></tr><tr><td class="content" id="description_62">步骤402，接口转换控制器判断接收到的访问指令是否来自SDRAM总
+    线对外接口，如果是，则执行步骤403，否则，执行步骤404。
+    
+				</td></tr><tr><td class="content" id="description_63">步骤403，接口转换控制器建立外部主机与SDRAM的通信，以保证外
+    部主机对SDRAM的读/写操作，并结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_64">步骤404，接口转换控制器判断接收到的访问指令是否来自NAND Flash
+    总线对外接口，如果是，则执行步骤405，否则，执行步骤406。
+    
+				</td></tr><tr><td class="content" id="description_65">步骤405，接口转换控制器建立外部主机与NAND Flash的通信，以保
+    证外部主机对NAND Flash的读/写操作，并结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_66">步骤406，接口转换控制器判断接收到的访问指令是否来自智能卡芯片
+    总线对外接口，如果是，则执行步骤407，否则，返回步骤401继续接收外
+    部主机发送的访问指令或结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_67">步骤407，接口转换控制器建立外部主机与智能卡芯片的通信，以保证
+    外部主机基于与智能卡芯片实现智能卡安全相关业务，并结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_68">上述流程中，对于对外接口的判断顺序是SDRAM总线对外接口、NAND
+    Flash总线对外接口、智能卡芯片总线对外接口，实际应用中，也可以根据
+    需要任意调整上述判断顺序。
+    
+				</td></tr><tr><td class="content" id="description_69">图5为本发明实施例一中MCP存储模块的访问方式2的流程示意图。
+    如图5所示，本实施例中访问方式2的具体处理流程包括如下步骤：
+    
+				</td></tr><tr><td class="content" id="description_70">步骤501，接口转换控制器接收外部主机发送的访问指令。如果本实施
+    例中的MCP存储模块应用于终端等移动设备中，则这里所述的主机可以为
+    该移动设备的CPU。
+    
+				</td></tr><tr><td class="content" id="description_71">步骤502，接口转换控制器判断接收到的访问指令是否来自SDRAM总
+    线对外接口，如果是，则执行步骤503，否则，执行步骤504。
+    
+				</td></tr><tr><td class="content" id="description_72">步骤503，接口转换控制器建立外部主机与SDRAM的通信，以保证外
+    部主机对SDRAM的读/写操作，并结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_73">步骤504，接口转换控制器判断接收到的访问指令是否来自NAND Flash
+    总线对外接口，如果是，则执行步骤505，否则，执行步骤508。
+    
+				</td></tr><tr><td class="content" id="description_74">步骤505，接口转换控制器建立外部与智能卡芯片之间的通信，并执行
+    步骤506。
+    
+				</td></tr><tr><td class="content" id="description_75">步骤506，由智能卡芯片与外部主机进行认证交互，判断对该外部主机
+    进行身份认证，如果认证通过，则表示该外部主机有权限访问MCP存储模
+    块，并执行步骤507，如果认证未通过，则表示该外部主机没有权限访问
+    MCP存储模块中的NAND Flash，结束本流程或返回步骤501继续接收外部
+    主机发送的访问指令。
+    
+				</td></tr><tr><td class="content" id="description_76">本步骤中，智能卡芯片与外部主机的认证交互过程，可以采用现有任意
+    一种认证方式来实现，在此不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_77">步骤507，接口转换控制器建立外部主机与NAND Flash的通信，以保
+    证外部主机对NAND Flash的读/写操作，并结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_78">步骤508，接口转换控制器判断接收到的访问指令是否来自智能卡芯片
+    总线对外接口，如果是，则执行步骤509，否则，返回步骤501继续接收外
+    部主机发送的访问指令或结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_79">步骤509，接口转换控制器建立外部主机与智能卡芯片的通信，对建立
+    的通信进行接口规范转换，以保证外部主机基于与智能卡芯片实现智能卡安
+    
+					全相关业务，并结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_80">上述流程中，对于对外接口的判断顺序是先SDRAM总线对外接口、后
+    NAND Flash总线对外接口，实际应用中，也可以根据需要任意调整上述判
+    断顺序，但外部主机对NAND Flash的访问仍需要通过认证。
+    
+				</td></tr><tr><td class="content" id="description_81">实施例二
+    
+				</td></tr><tr><td class="content" id="description_82">图6为本发明实施例二中MCP存储模块的结构示意图。如图6所示，
+    仍以SDRAM和NAND Flash两种类型的存储器为例，在图6中(图6中的
+    “die”表示管芯)，MCP存储模块中的SDRAM和NAND Flash分别通过
+    SDRAM总线和NAND Flash总线连接至接口转换控制器，智能卡芯片则通
+    过智能卡芯片总线连接至接口转换控制器。
+    
+				</td></tr><tr><td class="content" id="description_83">如图6所示的MCP存储模块仅具有1个对外接口，当然，MCP存储模
+    块也可以具有多于1个对外接口、但不与SDRAM、NAND Flash、以及智能
+    卡芯片一一对应。较佳地，由于SDRAM总线传输速率较快，因此，为了提
+    高外部主机对MCP存储模块的访问效率，本实施例中的1个对外接口采用
+    SDRAM总线对外接口。
+    
+				</td></tr><tr><td class="content" id="description_84">这样，接口转换控制器通过SDRAM总线与SDRAM总线对外接口相连，
+    用于在外部主机通过对外接口访问对应类型的存储器或智能卡芯片时，建立
+    外部主机与对应类型的存储器或智能卡芯片的通信，并对该通信进行接口规
+    范的转换。
+    
+				</td></tr><tr><td class="content" id="description_85">在本实施例中，主机发送的访问指令中可以携带访问对象标识，例如“1”
+    表示SDRAM、“2”表示NAND Flash、“3”表示智能卡芯片。实际应用
+    中，访问对象标识可以由外部主机的上层应用程序发送，也可以由外部主机
+    通过在对应对外接口的控制信号线发送的高低电平信号来表示，当然还有其
+    他多种方式，在此不再一一赘述。
+    
+				</td></tr><tr><td class="content" id="description_86">这样，接口转换控制器可以依据外部主机发送的访问指令中的访问对象
+    标识，来判断主机访问的是哪一种类型的存储器或智能卡芯片。接口转换控
+    制器可以在接收到访问指令后，直接进行判断，然后建立外部主机与其访问
+    
+					的存储器或智能卡芯片的通信，该方式称之为访问方式1；接口转换控制器
+    也可以在接收到访问指令后，先与智能卡芯片进行认证交互以判断发送该访
+    问指令的主机是否有权限访问MCP存储模块中的NAND Flash，并在认证通
+    过后再进行判断，然后建立外部主机与其访问的存储器或智能卡芯片的通
+    信，该方式称之为访问方式2。
+    
+				</td></tr><tr><td class="content" id="description_87">当然，本实施例中还可以为SDRAM、NAND Flash和智能卡芯片分配
+    不同的地址，这样，接口转换控制器可以依据外部主机发送的访问指令的访
+    问地址来判断主机访问的是哪一种类型的存储器或智能卡芯片。
+    
+				</td></tr><tr><td class="content" id="description_88">图7为本发明实施例二中MCP存储模块的访问方式1的流程示意图。
+    如图7所示，以依据访问对象标识来判断主机访问哪一种类型的存储器或智
+    能卡芯片为例，本实施例中访问方式1的具体处理流程包括如下步骤：
+    
+				</td></tr><tr><td class="content" id="description_89">步骤701，接口转换控制器接收外部主机发送的访问指令。如果本实施
+    例中的MCP存储模块应用于终端等移动设备中，则这里所述的主机可以为
+    该移动设备的CPU。
+    
+				</td></tr><tr><td class="content" id="description_90">步骤702，接口转换控制器判断接收到的访问指令中的访问对象标识是
+    否表示SDRAM，如果是，则执行步骤703，否则，执行步骤704。
+    
+				</td></tr><tr><td class="content" id="description_91">步骤703，接口转换控制器建立外部主机与SDRAM的通信，以保证外
+    部主机对SDRAM的读/写操作，并结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_92">步骤704，接口转换控制器判断接收到的访问指令中的访问对象标识是
+    否表示NAND Flash，如果是，则执行步骤705，否则，执行步骤706。
+    
+				</td></tr><tr><td class="content" id="description_93">步骤705，接口转换控制器建立外部主机与NAND Flash的通信，对建
+    立的通信进行接口规范转换，以保证外部主机对NAND Flash的读/写操作，
+    并结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_94">步骤706，接口转换控制器判断接收到的访问指令中的访问对象标识是
+    否表示智能卡芯片，如果是，则执行步骤707，否则，返回步骤701继续接
+    收外部主机发送的访问指令或结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_95">步骤707，接口转换控制器建立外部主机与智能卡芯片的通信，对建立
+    
+					的通信进行接口规范转换，以保证外部主机基于与智能卡芯片实现智能卡安
+    全相关业务，并结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_96">上述流程中，对于对外接口的判断顺序是SDRAM总线对外接口、NAND
+    Flash总线对外接口、智能卡芯片总线对外接口，实际应用中，也可以根据
+    需要任意调整上述判断顺序。
+    
+				</td></tr><tr><td class="content" id="description_97">图8为本发明实施例二中MCP存储模块的访问方式2的流程示意图。
+    如图8所示，以依据访问对象标识来判断主机访问哪一种类型的存储器或智
+    能卡芯片为例，本实施例中访问方式2的具体处理流程包括如下步骤：
+    
+				</td></tr><tr><td class="content" id="description_98">步骤801，接口转换控制器接收外部主机发送的访问指令。如果本实施
+    例中的MCP存储模块应用于终端等移动设备中，则这里所述的主机可以为
+    该移动设备的CPU。
+    
+				</td></tr><tr><td class="content" id="description_99">本步骤中，智能卡芯片与外部主机的认证交互过程，可以采用现有任意
+    一种认证方式来实现，在此不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_100">步骤802，接口转换控制器判断接收到的访问指令中的访问对象标识是
+    否表示SDRAM，如果是，则执行步骤803，否则，执行步骤804。
+    
+				</td></tr><tr><td class="content" id="description_101">步骤803，接口转换控制器建立外部主机与SDRAM的通信，以保证外
+    部主机对SDRAM的读/写操作，并结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_102">步骤804，接口转换控制器判断接收到的访问指令中的访问对象标识是
+    否表示NAND Flash，如果是，则执行步骤805，否则，执行步骤808。
+    
+				</td></tr><tr><td class="content" id="description_103">步骤805，接口转换控制器建立外部与智能卡芯片之间的通信，对建立
+    的通信进行接口规范转换，并执行步骤806。
+    
+				</td></tr><tr><td class="content" id="description_104">步骤806，由智能卡芯片与外部主机进行认证交互，判断对该外部主机
+    进行身份认证，如果认证通过，则表示该外部主机有权限访问MCP存储模
+    块中的NAND Flash，并执行步骤807，如果认证未通过，则表示该外部主
+    机没有权限访问MCP存储模块中的NAND Flash，结束本流程或返回步骤
+    801继续接收外部主机发送的访问指令。
+    
+				</td></tr><tr><td class="content" id="description_105">步骤807，接口转换控制器建立外部主机与NAND Flash的通信，对建
+    
+					立的通信进行接口规范转换，以保证外部主机对NAND Flash的读/写操作，
+    并结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_106">步骤808，接口转换控制器判断接收到的访问指令中的访问对象标识是
+    否表示智能卡芯片，如果是，则执行步骤809，否则，返回步骤501继续接
+    收外部主机发送的访问指令或结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_107">步骤809，接口转换控制器建立外部主机与智能卡芯片的通信，对建立
+    的通信进行接口规范转换，以保证外部主机基于与智能卡芯片实现智能卡安
+    全相关业务，并结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_108">上述流程中，对于对外接口的判断顺序是先SDRAM总线对外接口、后
+    NAND Flash总线对外接口，实际应用中，也可以根据需要任意调整上述判
+    断顺序，但外部主机对NAND Flash的访问仍需要通过认证。
+    
+				</td></tr><tr><td class="content" id="description_109">实施例三
+    
+				</td></tr><tr><td class="content" id="description_110">图9为本发明实施例三中MCP存储模块的结构示意图。如图9所示，
+    仍以SDRAM和NAND Flash两种类型的存储器为例，在图9中(图3中的
+    “die”表示管芯)，MCP存储模块中的SDRAM和NAND Flash分别通过
+    SDRAM总线和NAND Flash总线连接至接口转换控制器，智能卡芯片则通
+    过智能卡芯片总线连接至接口转换控制器。
+    
+				</td></tr><tr><td class="content" id="description_111">如图9所示的MCP存储模块具有2个对外接口，即SDRAM总线接口
+    和NAND Flash总线接口。接口转换控制器通过SDRAM总线与SDRAM总
+    线对外接口相连，用于在外部主机通过对外接口访问对应类型的存储器或智
+    能卡芯片时，建立外部主机与对应类型的存储器或智能卡芯片的通信，并对
+    该通信进行接口规范的转换。
+    
+				</td></tr><tr><td class="content" id="description_112">由于如图9所示的MCP存储模块中还封装有智能卡芯片，因此，2个
+    对外接口无法与SDRAM、NAND Flash、以及智能卡芯片一一对应。
+    
+				</td></tr><tr><td class="content" id="description_113">在本实施例中，主机发送的访问指令中可以携带访问对象标识，例如“1”
+    表示SDRAM、“2”表示NAND Flash、“3”表示智能卡芯片。实际应用
+    中，访问对象标识可以由外部主机的上层应用程序发送，也可以由外部主机
+    
+					通过在对应对外接口的控制信号线发送的高低电平信号来表示，当然还有其
+    他多种方式，在此不再一一赘述。
+    
+				</td></tr><tr><td class="content" id="description_114">这样，虽然2个对外接口无法与SDRAM、NAND Flash、以及智能卡芯
+    片一一对应，但接口转换控制器可以依据外部主机发送的访问指令中的访问
+    对象标识，来判断主机访问的是哪一种类型的存储器或智能卡芯片。接口转
+    换控制器可以在接收到访问指令后，直接进行判断，然后接建立外部主机与
+    其访问的存储器或智能卡芯片的通信，该方式称之为访问方式1；接口转换
+    控制器也可以在接收到访问指令后，先与智能卡芯片进行认证交互以判断发
+    送该访问指令的主机是否有权限访问MCP存储模块中的NAND Flash，并在
+    认证通过后再进行判断，然后建立外部主机与其访问的存储器或智能卡芯片
+    的通信，该方式称之为访问方式2。
+    
+				</td></tr><tr><td class="content" id="description_115">当然，本实施例中还可以为SDRAM、NAND Flash和智能卡芯片分配
+    不同的地址，这样，接口转换控制器可以依据外部主机发送的访问指令的访
+    问地址来判断主机访问的是哪一种类型的存储器或智能卡芯片。
+    
+				</td></tr><tr><td class="content" id="description_116">图10为本发明实施例三中MCP存储模块的访问方式1的流程示意图。
+    如图10所示的流程与实施例二中如图7所示的流程处理过程相同，在此不
+    再赘述。
+    
+				</td></tr><tr><td class="content" id="description_117">图11为本发明实施例三中MCP存储模块的访问方式2的流程示意图。
+    如图11所示的流程与实施例二中如图8所示的流程处理过程相同，在此不
+    再赘述。
+    
+				</td></tr><tr><td class="content" id="description_118">上述三个实施例中仅仅是以SDRAM和NAND Flash两种类型的存储器
+    为例，实际应用中，封装于MCP存储模块中的存储器至少可以包括下述之
+    一或任意组合：随机存储器(RAM)、SRAM、动态随机存储器(DRAM)
+    SDRAM、只读存储器(ROM)、非易失性只读存储器(E<sup>2</sup>PROM)、NOR
+    FLASH、NAND FLASH。
+    
+				</td></tr><tr><td class="content" id="description_119">实施例四
+    
+				</td></tr><tr><td class="content" id="description_120">图12为本发明实施例四中MCP存储模块的结构示意图。如图12所示，
+    
+					以SRAM和NOR Flash两种类型的存储器为例，在图12中，MCP存储模块
+    中的SRAM和NOR Flash分别通过SRAM总线和NOR Flash总线连接至接
+    口转换控制器，智能卡芯片则通过智能卡芯片总线连接至接口转换控制器。
+    
+				</td></tr><tr><td class="content" id="description_121">如图12所示的MCP存储模块仅具有1个对外接口，当然，MCP存储
+    模块也可以具有多于1个对外接口、但不与SRAM、NOR Flash、以及智能
+    卡芯片一一对应。较佳地，由于SRAM总线传输速率较快，因此，为了提
+    高外部主机对MCP存储模块的访问效率，本实施例中的1个对外接口采用
+    SRAM总线对外接口。
+    
+				</td></tr><tr><td class="content" id="description_122">这样，接口转换控制器通过SRAM总线与SRAM总线对外接口相连，
+    用于在外部主机通过对外接口访问对应类型的存储器或智能卡芯片时，建立
+    外部主机与对应类型的存储器或智能卡芯片的通信，并对该通信进行接口规
+    范的转换。
+    
+				</td></tr><tr><td class="content" id="description_123">在本实施例中，主机发送的访问指令中可以携带访问对象标识，例如“4”
+    表示SRAM、“5”表示NOR Flash、“3”表示智能卡芯片。实际应用中，
+    访问对象标识可以由外部主机的上层应用程序发送，也可以由外部主机通过
+    在对应对外接口的控制信号线发送的高低电平信号来表示，当然还有其他多
+    种方式，在此不再一一赘述。
+    
+				</td></tr><tr><td class="content" id="description_124">这样，接口转换控制器可以依据外部主机发送的访问指令中的访问对象
+    标识，来判断主机访问的是哪一种类型的存储器或智能卡芯片。接口转换控
+    制器可以在接收到访问指令后，直接进行判断，然后接建立外部主机与其访
+    问的存储器或智能卡芯片的通信，该方式称之为访问方式1；接口转换控制
+    器也可以在接收到访问指令后，先与智能卡芯片进行认证交互以判断发送该
+    访问指令的主机是否有权限访问MCP存储模块中的NOR Flash，并在认证
+    通过后再进行判断，然后建立外部主机与其访问的存储器或智能卡芯片的通
+    信，该方式称之为访问方式2。
+    
+				</td></tr><tr><td class="content" id="description_125">当然，本实施例中还可以为SRAM、NOR Flash和智能卡芯片分配不同
+    的地址，这样，接口转换控制器可以依据外部主机发送的访问指令的访问地
+    
+					址来判断主机访问的是哪一种类型的存储器或智能卡芯片。
+    
+				</td></tr><tr><td class="content" id="description_126">图13为本发明实施例四中MCP存储模块的访问方式1的流程示意图。
+    如图13所示，以依据访问对象标识来判断主机访问哪一种类型的存储器或
+    智能卡芯片为例，本实施例中访问方式1的具体处理流程包括如下步骤：
+    
+				</td></tr><tr><td class="content" id="description_127">步骤1301，接口转换控制器接收外部主机发送的访问指令。如果本实
+    施例中的MCP存储模块应用于终端等移动设备中，则这里所述的主机可以
+    为该移动设备的CPU。
+    
+				</td></tr><tr><td class="content" id="description_128">步骤1302，接口转换控制器判断接收到的访问指令中的访问对象标识
+    是否表示SRAM，如果是，则执行步骤1303，否则，执行步骤1304。
+    
+				</td></tr><tr><td class="content" id="description_129">步骤1303，接口转换控制器建立外部主机与SRAM的通信，以保证外
+    部主机对SRAM的读/写操作，并结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_130">步骤1304，接口转换控制器判断接收到的访问指令中的访问对象标识
+    是否表示NOR Flash，如果是，则执行步骤1305，否则，执行步骤1306。
+    
+				</td></tr><tr><td class="content" id="description_131">步骤1305，接口转换控制器建立外部主机与NOR Flash的通信，对建
+    立的通信进行接口规范转换，以保证外部主机对NOR Flash的读/写操作，
+    并结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_132">步骤1306，接口转换控制器判断接收到的访问指令中的访问对象标识
+    是否表示智能卡芯片，如果是，则执行步骤1307，否则，返回步骤1301继
+    续接收外部主机发送的访问指令或结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_133">步骤1307，接口转换控制器建立外部主机与智能卡芯片的通信，对建
+    立的通信进行接口规范转换，以保证外部主机基于与智能卡芯片实现智能卡
+    安全相关业务，并结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_134">上述流程中，对于对外接口的判断顺序是SRAM总线对外接口、NOR
+    Flash总线对外接口、智能卡芯片总线对外接口，实际应用中，也可以根据
+    需要任意调整上述判断顺序。
+    
+				</td></tr><tr><td class="content" id="description_135">图14为本发明实施例四中MCP存储模块的访问方式2的流程示意图。
+    如图14所示，以依据访问对象标识来判断主机访问哪一种类型的存储器或
+    
+					智能卡芯片为例，本实施例中访问方式2的具体处理流程包括如下步骤：
+    
+				</td></tr><tr><td class="content" id="description_136">步骤1401，接口转换控制器接收外部主机发送的访问指令。如果本实
+    施例中的MCP存储模块应用于终端等移动设备中，则这里所述的主机可以
+    为该移动设备的CPU。
+    
+				</td></tr><tr><td class="content" id="description_137">步骤1402，接口转换控制器判断接收到的访问指令中的访问对象标识
+    是否表示SRAM，如果是，则执行步骤1403，否则，执行步骤1404。
+    
+				</td></tr><tr><td class="content" id="description_138">步骤1403，接口转换控制器建立外部主机与SRAM的通信，以保证外
+    部主机对SRAM的读/写操作，并结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_139">步骤1404，接口转换控制器判断接收到的访问指令中的访问对象标识
+    是否表示NOR Flash，如果是，则执行步骤1405，否则，执行步骤1408。
+    
+				</td></tr><tr><td class="content" id="description_140">步骤1405，接口转换控制器建立外部与智能卡芯片之间的通信，对建
+    立的通信进行接口规范转换，并执行步骤1406。
+    
+				</td></tr><tr><td class="content" id="description_141">步骤1406，由智能卡芯片与外部主机进行认证交互，判断对该外部主
+    机进行身份认证，如果认证通过，则表示该外部主机有权限访问MCP存储
+    模块中的NOR Flash，并执行步骤1407，如果认证未通过，则表示该外部主
+    机没有权限访问MCP存储模块中的NOR Flash，结束本流程或返回步骤1401
+    继续接收外部主机发送的访问指令。
+    
+				</td></tr><tr><td class="content" id="description_142">本步骤中，智能卡芯片与外部主机的认证交互过程，可以采用现有任意
+    一种认证方式来实现，在此不再赘述。
+    
+				</td></tr><tr><td class="content" id="description_143">步骤1407，接口转换控制器建立外部主机与NOR Flash的通信，对建
+    立的通信进行接口规范转换，以保证外部主机对NOR Flash的读/写操作，
+    并结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_144">步骤1408，接口转换控制器判断接收到的访问指令中的访问对象标识
+    是否表示智能卡芯片，如果是，则执行步骤809，否则，返回步骤501继续
+    接收外部主机发送的访问指令或结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_145">步骤1409，接口转换控制器建立外部主机与智能卡芯片的通信，对建
+    立的通信进行接口规范转换，以保证外部主机基于与智能卡芯片实现智能卡
+    
+					安全相关业务，并结束本流程。
+    
+				</td></tr><tr><td class="content" id="description_146">上述流程中，对于对外接口的判断顺序是先SRAM总线对外接口、后
+    NOR Flash总线对外接口，实际应用中，也可以根据需要任意调整上述判断
+    顺序，但外部主机对NOR Flash的访问仍需要通过认证。
+    
+				</td></tr><tr><td class="content" id="description_147">以上所述仅为本发明的较佳实施例而已，并非用于限定本发明的保护范
+    围。凡在本发明的精神和原则之内，所作的任何修改、等同替换以及改进等，
+    均应包含在本发明的保护范围之内。
+    
+				</td></tr></table></div></body></html>

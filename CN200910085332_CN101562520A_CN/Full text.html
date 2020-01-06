@@ -1,0 +1,763 @@
+<html><head><title>全文文本(Fulltext)</title><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><style>div.fullText table {width: 100%;text-indent: 1px;} 
+ div.fullText table td.header {font-weight: bold;text-align: center;font-family: '宋体';font-size: 16px;line-height:20px;color: #000000;padding: 5px;}div.fullText table td.content {padding: 1px;text-align: left;vertical-align: top;width: 100%;font-family: '宋体';font-size: 14px;line-height:20px;color: #000000;}</style></head><body><?xml version="1.0" encoding="UTF-8"?><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table class="fullText"><tr><td id="claim_title" class="header">权利要求书</td></tr><tr><td class="content" id="claim_1">1、一种业务密钥分发方法，适用于多媒体广播业务，其特征在于：
+			<br/>
+				</td></tr><tr><td class="content" id="claim_2">预先针对每一种业务设置与之对应的密钥种子组，并将所述业务与密钥种
+			<br/>子组的对应关系存储于条件接收卡的安全区中；所述密钥种子组中包含至少一
+			<br/>个密钥种子及其对应的密钥种子标识符；
+			<br/>
+				</td></tr><tr><td class="content" id="claim_3">该方法还包括：
+			<br/>
+				</td></tr><tr><td class="content" id="claim_4">A、当需要广播业务信息时，网络侧从对应于所述业务的密钥种子组中选
+			<br/>择一个密钥种子，根据所述选择的密钥种子生成业务密钥，并将所述密钥种子
+			<br/>的密钥种子标识符包含在授权管理信息EMM中通过广播信道下发给终端；
+			<br/>
+				</td></tr><tr><td class="content" id="claim_5">B、终端将接收到的EMM发送给条件接收卡，条件接收卡从EMM中获取
+			<br/>密钥种子标识符，并根据预先存储的业务与密钥种子组的对应关系确定所述密
+			<br/>钥种子标识符所对应的密钥种子，根据所述确定的密钥种子采用与网络侧相同
+			<br/>的方式生成业务密钥。
+			<br/>
+				</td></tr><tr><td class="content" id="claim_6">2、根据权利要求1所述的方法，其特征在于：
+			<br/>
+				</td></tr><tr><td class="content" id="claim_7">当需要广播业务信息时，所述网络侧进一步生成随机数，并进一步将所述
+			<br/>随机数包含在EMM中通过广播信道下发给终端；
+			<br/>
+				</td></tr><tr><td class="content" id="claim_8">步骤A所述根据选择的密钥种子生成业务密钥为：根据所述随机数和所述
+			<br/>选择的密钥种子采用哈希算法生成业务密钥；
+			<br/>
+				</td></tr><tr><td class="content" id="claim_9">所述条件接收卡在获取密钥种子标识符时，进一步从所述EMM中获取所
+			<br/>述随机数；
+			<br/>
+				</td></tr><tr><td class="content" id="claim_10">步骤B所述根据确定的密钥种子生成业务密钥为：根据所述随机数和所述
+			<br/>确定的密钥种子采用哈希算法生成业务密钥。
+			<br/>
+				</td></tr><tr><td class="content" id="claim_11">3、根据权利要求2所述的方法，其特征在于：
+			<br/>
+				</td></tr><tr><td class="content" id="claim_12">步骤A所述将密钥种子标识符和随机数包含在EMM中为：将所述随机数
+			<br/>和所述密钥种子标识符组成业务密钥生成消息，并将所述业务密钥生成消息包
+			<br/>含在EMM中，对所述EMM进行签名；
+			<br/>
+					
+				</td></tr><tr><td class="content" id="claim_13">步骤B中在所述终端将接收到的EMM发送给条件接收卡之后、并在所述
+			<br/>条件接收卡从EMM中获取密钥种子标识符和随机数之前，进一步包括：条件
+			<br/>接收卡验证所述EMM的签名是否有效，在有效时，继续执行所述从EMM中
+			<br/>所包含的业务密钥生成消息中获取密钥种子标识符和随机数的操作。
+			<br/>
+				</td></tr><tr><td class="content" id="claim_14">4、根据权利要求2所述的方法，其特征在于：
+			<br/>
+				</td></tr><tr><td class="content" id="claim_15">步骤A所述将密钥种子标识符和随机数包含在EMM中为：对所述随机数
+			<br/>和密钥种子标识符进行签名，将所述随机数、密钥种子标识符和签名组成业务
+			<br/>密钥生成消息，并将所述业务密钥生成消息包含在EMM中；
+			<br/>
+				</td></tr><tr><td class="content" id="claim_16">步骤B中在所述终端将接收到的EMM发送给条件接收卡之后、并在所述
+			<br/>条件接收卡从EMM中获取密钥种子标识符和随机数之前，进一步包括：条件
+			<br/>接收卡验证所述业务密钥生成消息中的签名是否有效，在有效时，继续执行所
+			<br/>述从EMM中所包含的业务密钥生成消息中获取密钥种子标识符和随机数的操
+			<br/>作。
+			<br/>
+				</td></tr><tr><td class="content" id="claim_17">5、根据权利要求1至4任一项所述的方法，其特征在于：
+			<br/>
+				</td></tr><tr><td class="content" id="claim_18">该方法进一步包括：预先将用户订制的节目权限存储于条件接收卡中；
+			<br/>
+				</td></tr><tr><td class="content" id="claim_19">当接收到用户的加扰节目播放请求时，该方法进一步包括：终端将所述加
+			<br/>扰节目的标识符发送给条件接收卡；
+			<br/>
+				</td></tr><tr><td class="content" id="claim_20">在所述条件接收卡验证签名有效之后，进一步包括：条件接收卡根据所述
+			<br/>加扰节目的标识符和预先存储的节目权限对用户进行权限控制，若拥有所述加
+			<br/>扰节目的播放权限，则继续执行所述从EMM中所包含的业务密钥生成消息中
+			<br/>获取密钥种子标识符和随机数的操作。
+			<br/>
+				</td></tr><tr><td class="content" id="claim_21">6、一种业务密钥分发系统，适用于多媒体广播业务，其特征在于，包括网
+			<br/>络侧和终端侧，其中，终端侧进一步包括：终端和条件接收卡；
+			<br/>
+				</td></tr><tr><td class="content" id="claim_22">所述网络侧，用于存储预先设置的业务与密钥种子组的对应关系，所述密
+			<br/>钥种子组中包含至少一个密钥种子及其对应的密钥种子标识符；在需要广播业
+			<br/>务信息时，用于从对应于所述业务的密钥种子组中选择一个密钥种子，并用于
+			<br/>根据所述选择的密钥种子生成业务密钥，以及用于将所述密钥种子的密钥种子
+			<br/>
+					标识符携带于授权管理信息EMM中通过广播信道下发给终端；
+			<br/>
+				</td></tr><tr><td class="content" id="claim_23">所述终端，用于将接收自网络侧的EMM发送给所述条件接收卡；
+			<br/>
+				</td></tr><tr><td class="content" id="claim_24">所述条件接收卡，用于存储所述预先设置的业务与密钥种子组的对应关系，
+			<br/>并用于从接收自终端的EMM中获取密钥种子标识符，根据预先存储的业务与
+			<br/>密钥种子组的对应关系确定所述密钥种子标识符所对应的密钥种子，以及用于
+			<br/>根据所述确定的密钥种子采用与网络侧相同的方式生成业务密钥。
+			<br/>
+				</td></tr><tr><td class="content" id="claim_25">7、根据权利要求6所述的系统，其特征在于：
+			<br/>
+				</td></tr><tr><td class="content" id="claim_26">所述网络侧，在需要广播业务信息时，进一步用于生成随机数，将所述随
+			<br/>机数携带在EMM中通过广播信道下发给终端，并用于根据所述随机数和所述
+			<br/>选择的密钥种子采用哈希算法生成业务密钥；
+			<br/>
+				</td></tr><tr><td class="content" id="claim_27">所述条件接收卡，进一步用于从所述EMM中获取所述随机数，并用于根
+			<br/>据所述随机数和所述确定的密钥种子采用哈希算法生成业务密钥。
+			<br/>
+				</td></tr><tr><td class="content" id="claim_28">8、根据权利要求7所述的系统，其特征在于：
+			<br/>
+				</td></tr><tr><td class="content" id="claim_29">所述网络侧，还用于将所述随机数和所述密钥种子标识符组成业务密钥生
+			<br/>成消息，将所述业务密钥生成消息携带于EMM中，并用于对所述EMM进行
+			<br/>签名之后发送给所述终端；
+			<br/>
+				</td></tr><tr><td class="content" id="claim_30">所述条件接收卡，还用于验证所述EMM的签名是否有效，在有效时，用
+			<br/>于继续执行所述从EMM中所包含的业务密钥生成消息中获取密钥种子标识符
+			<br/>和随机数的操作。
+			<br/>
+				</td></tr><tr><td class="content" id="claim_31">9、根据权利要求7所述的系统，其特征在于：
+			<br/>
+				</td></tr><tr><td class="content" id="claim_32">所述网络侧，还用于对所述随机数和密钥种子标识符进行签名，并用于将
+			<br/>所述随机数、密钥种子标识符和签名组成业务密钥生成消息携带于EMM中；
+			<br/>
+				</td></tr><tr><td class="content" id="claim_33">所述条件接收卡，还用于验证所述业务密钥生成消息中的签名是否有效，
+			<br/>在有效时，用于继续执行所述从EMM中所包含的业务密钥生成消息中获取密
+			<br/>钥种子标识符和随机数的操作。
+			<br/>
+				</td></tr><tr><td class="content" id="claim_34">10、根据权利要求6至9任一项所述的系统，其特征在于：
+			<br/>
+				</td></tr><tr><td class="content" id="claim_35">所述终端，进一步用于在接收到用户的加扰节目播放请求时，将所述加扰
+			<br/>
+					节目的标识符发送给条件接收卡；
+			<br/>
+				</td></tr><tr><td class="content" id="claim_36">所述条件接收卡，进一步用于预先存储用户订制的节目权限，并用于根据
+			<br/>所述接收自终端的加扰节目的标识符以及所述预先存储的节目权限对用户进行
+			<br/>权限控制，在判定拥有所述加扰节目的播放权限时，用于继续执行所述从EMM
+			<br/>中所包含的业务密钥生成消息中获取密钥种子标识符和随机数的操作。
+			<br/>
+				</td></tr><tr><td class="content" id="claim_37">11、一种密钥分发方法，适用于多媒体广播业务，其特征在于：
+			<br/>
+				</td></tr><tr><td class="content" id="claim_38">预先针对每一种业务设置与之对应的密钥种子组，并将所述业务与密钥种
+			<br/>子组的对应关系存储于条件接收卡的安全区中；所述密钥种子组中包含至少一
+			<br/>个密钥种子及其对应的密钥种子标识符；
+			<br/>
+				</td></tr><tr><td class="content" id="claim_39">A、当需要广播业务信息时，网络侧从对应于所述业务的密钥种子组中选
+			<br/>择一个密钥种子，根据所述选择的密钥种子生成业务密钥，并将密钥种子的密
+			<br/>钥种子标识符包含在授权管理信息EMM中通过广播信道下发给终端；终端将
+			<br/>接收到的EMM发送给条件接收卡，条件接收卡从EMM中获取密钥种子标识
+			<br/>符，并根据预先存储的业务与密钥种子组的对应关系确定所述密钥种子标识符
+			<br/>所对应的密钥种子，根据所述确定的密钥种子采用与网络侧相同的方式生成业
+			<br/>务密钥；
+			<br/>
+				</td></tr><tr><td class="content" id="claim_40">B、网络侧将节目流密钥以业务密钥进行加密之后封装在授权控制信息
+			<br/>ECM中，并将所述ECM通过广播信道下发给终端；终端侧使用所述条件接收
+			<br/>卡生成的业务密钥对接收到的ECM进行解密，得到节目流密钥；
+			<br/>
+				</td></tr><tr><td class="content" id="claim_41">C、网络侧以节目流密钥对节目流进行加扰，并将经加扰后的节目流通过
+			<br/>广播信道下发给终端；终端侧使用所述终端侧解密得到的节目流密钥对加扰后
+			<br/>的节目流进行解扰，得到节目流。
+			<br/>
+					
+				</td></tr></table></div><div xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siposeas="java:com.neusoft.sipo.sipopublicsearch.search.app.view.detailUtils.xsltParser.XsltSeasParser" xmlns:str="http://example.com/namespace" class="fullText"><table><tr><td id="description_title" class="header">说明书</td></tr><tr><td class="content" id="description_invention_title">业务密钥分发方法及系统、密钥分发方法
+	</td></tr><tr><td class="content" id="description_1"><p id="p0001" num="0001">技术领域
+	</p></td></tr><tr><td class="content" id="description_2"><p id="p0002" num="0002">本发明涉及多媒体广播技术，特别涉及一种业务密钥分发方法及系统、
+		<br/>密钥分发方法。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_3"><p id="p0003" num="0003">背景技术
+	</p></td></tr><tr><td class="content" id="description_4"><p id="p0004" num="0004">当前的多媒体广播系统中广泛采用基于分层密钥体系的条件接收方法
+		<br/>进行条件接收，即：采用用户密钥(UK)加密业务密钥(SK)，采用业务
+		<br/>密钥(SK)加密节目流密钥(CW)，并采用节目流密钥CW加密节目流。
+		<br/>图1为现有多媒体广播系统的分层密钥体系的结构示意图。参见图1，该现
+		<br/>有分层密钥体系共分为四层，基于该分层密钥体系实现密钥分发的方案包含
+		<br/>以下四个层次的交互：
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_5"><p id="p0005" num="0005">第一层：认证。通过认证过程使手机电视系统/多媒体广播系统验证用
+		<br/>户的身份与合法性。用户与业务管理系统之间进行相互认证，认证通过后获
+		<br/>得共享密钥。业务管理系统与终端根据此共享密钥各自生成用户密钥。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_6"><p id="p0006" num="0006">第二层：业务密钥分发。业务密钥是与业务相关的密钥，用于加密节目
+		<br/>流密钥。通过业务密钥的管理与分发实现对用户接入业务的控制。业务管理
+		<br/>系统根据用户订购关系将业务密钥通过加密方式传送给用户。业务管理系统
+		<br/>对业务密钥进行加密时将使用用户密钥，终端对业务密钥消息解密将使用本
+		<br/>地生成的用户密钥。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_7"><p id="p0007" num="0007">第三层：节目流密钥分发。节目流密钥用于加密广播网络中的节目流，
+		<br/>节目流密钥定期更新。使用业务密钥加密过的节目流密钥消息在广播网络上
+		<br/>进行广播发送，终端对节目流密钥消息解密时将使用本地存储的业务密钥。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_8"><p id="p0008" num="0008">第四层：节目流分发。使用节目流密钥对节目流进行加密处理，加密后
+		<br/>
+				的节目流通过广播信道进行分发，终端使用通过解密过的节目流密钥进行解
+		<br/>密。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_9"><p id="p0009" num="0009">上述现有密钥分发方案至少存在以下几方面的缺陷：
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_10"><p id="p0010" num="0010">1)当用户的规模数达到一定程度时，需要广播的加密的业务密钥量将
+		<br/>非常庞大，这加重了服务器的负担，浪费了宝贵的信道资源，并加长了用户
+		<br/>等待业务密钥的时延。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_11"><p id="p0011" num="0011">2)该分层密钥体系基于双向通信网络，需要用户上传其用户密钥来验
+		<br/>证用户的合法性，因此，不适用于单向广播网络。对于只具备广播信道的终
+		<br/>端设备上实现移动电视的解决方案中，很多方案依然采取使用用户密钥加密
+		<br/>业务密钥，将业务密钥包含在授权管理消息(EMM)中，由广播前端系统
+		<br/>对用户以单独寻址或者分组寻址的方式发送给特定的终端。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_12"><p id="p0012" num="0012">发明内容
+	</p></td></tr><tr><td class="content" id="description_13"><p id="p0013" num="0013">有鉴于此，本发明的主要目的在于提供一种业务密钥分发方法及系统，
+		<br/>以减少业务密钥的广播量、节约信道资源、并减少用户等待业务密钥的时延。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_14"><p id="p0014" num="0014">本发明的另一个目的在于提供一种密钥分发方法，使得在单向广播网络
+		<br/>的条件下，能够实现对用户的认证以及密钥的分发。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_15"><p id="p0015" num="0015">为达到上述目的，本发明的技术方案具体是这样实现的：
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_16"><p id="p0016" num="0016">一种业务密钥分发方法，适用于多媒体广播业务，包括：
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_17"><p id="p0017" num="0017">预先针对每一种业务设置与之对应的密钥种子组，并将所述业务与密钥
+		<br/>种子组的对应关系存储于条件接收卡的安全区中；所述密钥种子组中包含至
+		<br/>少一个密钥种子及其对应的密钥种子标识符；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_18"><p id="p0018" num="0018">该方法还包括：
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_19"><p id="p0019" num="0019">A、当需要广播业务信息时，网络侧从对应于所述业务的密钥种子组中
+		<br/>选择一个密钥种子，根据所述选择的密钥种子生成业务密钥，并将所述密钥
+		<br/>种子的密钥种子标识符包含在授权管理信息EMM中通过广播信道下发给终
+		<br/>端；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_20"><p id="p0020" num="0020">B、终端将接收到的EMM发送给条件接收卡，条件接收卡从EMM中
+		<br/>获取密钥种子标识符，并根据预先存储的业务与密钥种子组的对应关系确定
+		<br/>所述密钥种子标识符所对应的密钥种子，根据所述确定的密钥种子采用与网
+		<br/>络侧相同的方式生成业务密钥。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_21"><p id="p0021" num="0021">较佳地，当需要广播业务信息时，所述网络侧进一步生成随机数，并进
+		<br/>一步将所述随机数包含在EMM中通过广播信道下发给终端；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_22"><p id="p0022" num="0022">步骤A所述根据选择的密钥种子生成业务密钥为：根据所述随机数和
+		<br/>所述选择的密钥种子采用哈希算法生成业务密钥；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_23"><p id="p0023" num="0023">所述条件接收卡在获取密钥种子标识符时，进一步从所述EMM中获取
+		<br/>所述随机数；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_24"><p id="p0024" num="0024">步骤B所述根据确定的密钥种子生成业务密钥为：根据所述随机数和
+		<br/>所述确定的密钥种子采用哈希算法生成业务密钥。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_25"><p id="p0025" num="0025">较佳地，步骤A所述将密钥种子标识符和随机数包含在EMM中为：将
+		<br/>所述随机数和所述密钥种子标识符组成业务密钥生成消息，并将所述业务密
+		<br/>钥生成消息包含在EMM中，对所述EMM进行签名；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_26"><p id="p0026" num="0026">步骤B中在所述终端将接收到的EMM发送给条件接收卡之后、并在所
+		<br/>述条件接收卡从EMM中获取密钥种子标识符和随机数之前，进一步包括：
+		<br/>条件接收卡验证所述EMM的签名是否有效，在有效时，继续执行所述从
+		<br/>EMM中所包含的业务密钥生成消息中获取密钥种子标识符和随机数的操
+		<br/>作。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_27"><p id="p0027" num="0027">较佳地，步骤A所述将密钥种子标识符和随机数包含在EMM中为：对
+		<br/>所述随机数和密钥种子标识符进行签名，将所述随机数、密钥种子标识符和
+		<br/>签名组成业务密钥生成消息，并将所述业务密钥生成消息包含在EMM中；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_28"><p id="p0028" num="0028">步骤B中在所述终端将接收到的EMM发送给条件接收卡之后、并在所
+		<br/>述条件接收卡从EMM中获取密钥种子标识符和随机数之前，进一步包括：
+		<br/>条件接收卡验证所述业务密钥生成消息中的签名是否有效，在有效时，继续
+		<br/>执行所述从EMM中所包含的业务密钥生成消息中获取密钥种子标识符和随
+		<br/>
+				机数的操作。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_29"><p id="p0029" num="0029">进一步地，该方法可以包括：预先将用户订制的节目权限存储于条件接
+		<br/>收卡中；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_30"><p id="p0030" num="0030">当接收到用户的加扰节目播放请求时，该方法进一步包括：终端将所述
+		<br/>加扰节目的标识符发送给条件接收卡；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_31"><p id="p0031" num="0031">在所述条件接收卡验证签名有效之后，进一步包括：条件接收卡根据所
+		<br/>述加扰节目的标识符和预先存储的节目权限对用户进行权限控制，若拥有所
+		<br/>述加扰节目的播放权限，则继续执行所述从EMM中所包含的业务密钥生成
+		<br/>消息中获取密钥种子标识符和随机数的操作。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_32"><p id="p0032" num="0032">一种业务密钥分发系统，适用于多媒体广播业务，包括网络侧和终端侧，
+		<br/>其中，终端侧进一步包括：终端和条件接收卡；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_33"><p id="p0033" num="0033">所述网络侧，用于存储预先设置的业务与密钥种子组的对应关系，所述
+		<br/>密钥种子组中包含至少一个密钥种子及其对应的密钥种子标识符；在需要广
+		<br/>播业务信息时，用于从对应于所述业务的密钥种子组中选择一个密钥种子，
+		<br/>并用于根据所述选择的密钥种子生成业务密钥，以及用于将所述密钥种子的
+		<br/>密钥种子标识符携带于授权管理信息EMM中通过广播信道下发给终端；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_34"><p id="p0034" num="0034">所述终端，用于将接收自网络侧的EMM发送给所述条件接收卡；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_35"><p id="p0035" num="0035">所述条件接收卡，用于存储所述预先设置的业务与密钥种子组的对应关
+		<br/>系，并用于从接收自终端的EMM中获取密钥种子标识符，根据预先存储的
+		<br/>业务与密钥种子组的对应关系确定所述密钥种子标识符所对应的密钥种子，
+		<br/>以及用于根据所述确定的密钥种子采用与网络侧相同的方式生成业务密钥。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_36"><p id="p0036" num="0036">较佳地，所述网络侧，在需要广播业务信息时，可以进一步用于生成随
+		<br/>机数，将所述随机数携带在EMM中通过广播信道下发给终端，并用于根据
+		<br/>所述随机数和所述选择的密钥种子采用哈希算法生成业务密钥；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_37"><p id="p0037" num="0037">所述条件接收卡，进一步用于从所述EMM中获取所述随机数，并用于
+		<br/>根据所述随机数和所述确定的密钥种子采用哈希算法生成业务密钥。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_38"><p id="p0038" num="0038">较佳地，所述网络侧，还用于将所述随机数和所述密钥种子标识符组成
+		<br/>
+				业务密钥生成消息，将所述业务密钥生成消息携带于EMM中，并用于对所
+		<br/>述EMM进行签名之后发送给所述终端；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_39"><p id="p0039" num="0039">所述条件接收卡，还用于验证所述EMM的签名是否有效，在有效时，
+		<br/>用于继续执行所述从EMM中所包含的业务密钥生成消息中获取密钥种子标
+		<br/>识符和随机数的操作。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_40"><p id="p0040" num="0040">较佳地，所述网络侧，还用于对所述随机数和密钥种子标识符进行签名，
+		<br/>并用于将所述随机数、密钥种子标识符和签名组成业务密钥生成消息携带于
+		<br/>EMM中；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_41"><p id="p0041" num="0041">所述条件接收卡，还用于验证所述业务密钥生成消息中的签名是否有
+		<br/>效，在有效时，用于继续执行所述从EMM中所包含的业务密钥生成消息中
+		<br/>获取密钥种子标识符和随机数的操作。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_42"><p id="p0042" num="0042">较佳地，所述终端，进一步用于在接收到用户的加扰节目播放请求时，
+		<br/>将所述加扰节目的标识符发送给条件接收卡；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_43"><p id="p0043" num="0043">所述条件接收卡，进一步用于预先存储用户订制的节目权限，并用于根
+		<br/>据所述接收自终端的加扰节目的标识符以及所述预先存储的节目权限对用
+		<br/>户进行权限控制，在判定拥有所述加扰节目的播放权限时，用于继续执行所
+		<br/>述从EMM中所包含的业务密钥生成消息中获取密钥种子标识符和随机数的
+		<br/>操作。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_44"><p id="p0044" num="0044">一种密钥分发方法，适用于多媒体广播业务，包括：
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_45"><p id="p0045" num="0045">预先针对每一种业务设置与之对应的密钥种子组，并将所述业务与密钥
+		<br/>种子组的对应关系存储于条件接收卡的安全区中；所述密钥种子组中包含至
+		<br/>少一个密钥种子及其对应的密钥种子标识符；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_46"><p id="p0046" num="0046">A、当需要广播业务信息时，网络侧从对应于所述业务的密钥种子组中
+		<br/>选择一个密钥种子，根据所述选择的密钥种子生成业务密钥，并将密钥种子
+		<br/>的密钥种子标识符包含在授权管理信息EMM中通过广播信道下发给终端；
+		<br/>终端将接收到的EMM发送给条件接收卡，条件接收卡从EMM中获取密钥
+		<br/>种子标识符，并根据预先存储的业务与密钥种子组的对应关系确定所述密钥
+		<br/>
+				种子标识符所对应的密钥种子，根据所述确定的密钥种子采用与网络侧相同
+		<br/>的方式生成业务密钥；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_47"><p id="p0047" num="0047">B、网络侧将节目流密钥以业务密钥进行加密之后封装在授权控制信息
+		<br/>ECM中，并将所述ECM通过广播信道下发给终端；终端侧使用所述条件接
+		<br/>收卡生成的业务密钥对接收到的ECM进行解密，得到节目流密钥；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_48"><p id="p0048" num="0048">C、网络侧以节目流密钥对节目流进行加扰，并将经加扰后的节目流通
+		<br/>过广播信道下发给终端；终端侧使用所述终端侧解密得到的节目流密钥对加
+		<br/>扰后的节目流进行解扰，得到节目流。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_49"><p id="p0049" num="0049">由上述技术方案可见，本发明提出的业务密钥分发方法和系统中，通过
+		<br/>预先针对每一种业务设置与之对应的密钥种子组，并将业务与密钥种子组的
+		<br/>对应关系存储于条件接收卡的安全区中；在需要广播某一业务的业务密钥
+		<br/>时，由网络侧从对应于该业务的密钥种子组中选择一个密钥种子生成业务密
+		<br/>钥，并将该密钥种子的标识符包含在EMM中下发给终端；终端收到EMM
+		<br/>后发送给条件接收卡，由条件接收卡根据其中的密钥种子标识符确定相应的
+		<br/>密钥种子，并据此采用与网络侧相同的方式生成业务密钥，从而实现了业务
+		<br/>密钥的分发。本发明所提出的上述方法和系统中，需要广播的加密业务密钥
+		<br/>量取决于业务的规模数，即：存在多少种业务就需要广播多少个密钥种子标
+		<br/>识符，与用户数无关，从而大大减少了业务密钥的广播量，节约了宝贵的信
+		<br/>道资源，并减少了用户等待业务密钥的时延。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_50"><p id="p0050" num="0050">并且，本发明公开的业务密钥分发方案和密钥分发方案提出了一种新的
+		<br/>分层密钥体系结构，该分层密钥体系结构只包含三层，并且，该方案基于单
+		<br/>向广播网络实现对用户的认证，无需依赖于双向通信网络，因此，该方案降
+		<br/>低了对终端设备的性能要求，且适用范围更广泛。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_51"><p id="p0051" num="0051">此外，本发明中密钥种子标识符不需要利用用户密钥进行加密，可以以
+		<br/>明文带签名的形式下发，既能保证该消息传输的完整性，又能降低对终端侧
+		<br/>处理能力的要求。并且，EMM中不包含业务密钥，只是包含用于生成业务
+		<br/>密钥的密钥种子标识符，必须结合预先存储在条件接收卡中的密钥种子，才
+		<br/>
+				能生成业务密钥，并且，业务密钥在卡内生成，从而使得业务密钥的分发更
+		<br/>安全。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_52"><p id="p0052" num="0052">附图说明
+	</p></td></tr><tr><td class="content" id="description_53"><p id="p0053" num="0053">图1为现有多媒体广播系统的分层密钥体系的结构示意图；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_54"><p id="p0054" num="0054">图2为本发明业务密钥分发方法的流程示意图；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_55"><p id="p0055" num="0055">图3为采用本发明方法的ECM生成流程示意图；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_56"><p id="p0056" num="0056">图4为采用本发明方法的EMM生成流程示意图；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_57"><p id="p0057" num="0057">图5为采用本发明方法的终端侧处理流程示意图；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_58"><p id="p0058" num="0058">图6为本发明分层密钥体系的结构示意图；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_59"><p id="p0059" num="0059">图7为本发明业务密钥分发系统的组成结构示意图。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_60"><p id="p0060" num="0060">具体实施方式
+	</p></td></tr><tr><td class="content" id="description_61"><p id="p0061" num="0061">为使本发明的目的、技术方案及优点更加清楚明白，以下参照附图并举
+		<br/>实施例，对本发明作进一步详细说明。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_62"><p id="p0062" num="0062">本发明的主要思想是：预先针对每一种业务设置与之对应的密钥种子
+		<br/>组，并将业务与密钥种子组的对应关系存储于条件接收卡的安全区中；网络
+		<br/>侧在生成业务密钥时从对应的密钥种子组中随机选择一个密钥种子，并将所
+		<br/>选择的密钥种子的标识符包含在EMM中发送给终端，终端将EMM发送给
+		<br/>条件接收卡，条件接收卡根据预先存储的业务与密钥种子组的对应关系，以
+		<br/>及网络侧生成业务密钥时所选择的密钥种子的标识符确定采用哪个密钥种
+		<br/>子生成业务密钥，从而，网络侧和终端侧拥有了相同的业务密钥，实现了业
+		<br/>务密钥的分发。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_63"><p id="p0063" num="0063">图2为本发明业务密钥分发方法的流程示意图。参见图2，该方法包括：
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_64"><p id="p0064" num="0064">步骤201：预先针对每一种业务设置与之对应的密钥种子组，并将该业
+		<br/>务与密钥种子组的对应关系存储于条件接收卡的安全区中。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_65"><p id="p0065" num="0065">本步骤是预先设置的步骤，其中，密钥种子组中包含至少一个密钥种子
+		<br/>
+				及其对应的密钥种子标识符。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_66"><p id="p0066" num="0066">本步骤中，也可以预先将用户订制的节目权限存储于条件接收卡中，后
+		<br/>续由条件接收卡对用户进行权限控制。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_67"><p id="p0067" num="0067">步骤202：当需要广播业务信息时，网络侧从对应于该业务的密钥种子
+		<br/>组中选择一个密钥种子，根据该选择的密钥种子生成业务密钥，并将该密钥
+		<br/>种子的标识符包含在EMM中通过广播信道下发给终端。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_68"><p id="p0068" num="0068">本步骤中，网络侧可以从对应于该业务的密钥种子组中随机选择一个密
+		<br/>钥种子，也可以采取其它方式进行选择，例如：从第一个密钥种子开始轮流
+		<br/>循环进行选择，或间隔选择等。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_69"><p id="p0069" num="0069">选择了密钥种子之后，可以采取现有技术中存在的各种变换算法生成业
+		<br/>务密钥。较佳地，可以同时产生一个随机数，并根据该随机数和该密钥种子
+		<br/>采用哈希(Hash)算法生成业务密钥。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_70"><p id="p0070" num="0070">为了保证所传输的密钥种子标识符和随机数的完整性，并降低对终端侧
+		<br/>处理能力的要求，可以将密钥种子标识符和随机数签名之后下发。具体而言，
+		<br/>可以采取如下两种方式：
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_71"><p id="p0071" num="0071">第一种方式：将密钥种子标识符和随机数组成业务密钥生成消息，该业
+		<br/>务密钥生成消息的格式如表1所示：
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_72"><p id="p0072" num="0072"><table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+						
+							
+							
+							
+								<tr valign="" align="">
+									<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  密钥种子标识符
+		
+									</td>
+									<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  随机数
+		
+									</td>
+								</tr>
+							
+						
+					</table>
+			</p></td></tr><tr><td class="content" id="description_73"><p id="p0073" num="0073">表1
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_74"><p id="p0074" num="0074">并将表1所示业务密钥生成消息包含在EMM中，对该EMM进行签名，
+		<br/>该EMM的格式如表2所示：
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_75"><p id="p0075" num="0075"><table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+						
+							
+							
+							
+							
+							
+							
+								<tr valign="" align="">
+									<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+ EMM消息标识符
+		
+									</td>
+									<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+......
+		
+									</td>
+									<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+业务密钥生成消息
+		
+									</td>
+									<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+......
+		
+									</td>
+									<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+签名
+		
+									</td>
+								</tr>
+							
+						
+					</table>
+			</p></td></tr><tr><td class="content" id="description_76"><p id="p0076" num="0076">表2
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_77"><p id="p0077" num="0077">表2中，EMM消息包括：EMM消息标识符、业务密钥生成消息及其
+		<br/>它业务授权信息，并带有签名。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_78"><p id="p0078" num="0078">第二种方式：将密钥种子标识符和随机数一起进行签名运算，并将密钥
+		<br/>种子标识符、随机数和签名组成业务密钥生成消息，将该业务密钥生成消息
+		<br/>携带于EMM中。该业务密钥生成消息的格式如表3所示：
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_79"><p id="p0079" num="0079"><table face="仿宋" align="" width="" cellspacing="" border="" frame="">
+						
+							
+							
+							
+							
+								<tr valign="" align="">
+									<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  密钥种子标识符
+		
+									</td>
+									<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  随机数
+		
+									</td>
+									<td id="" valign="" width="" align="" rowspan="1" colspan="NaN">
+  签名
+		
+									</td>
+								</tr>
+							
+						
+					</table>
+			</p></td></tr><tr><td class="content" id="description_80"><p id="p0080" num="0080">表3
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_81"><p id="p0081" num="0081">步骤203：终端将接收到的EMM发送给条件接收卡，条件接收卡从
+		<br/>EMM中获取密钥种子标识符，并根据预先存储的业务与密钥种子组的对应
+		<br/>关系确定该密钥种子标识符所对应的密钥种子，根据所确定的密钥种子采用
+		<br/>与网络侧相同的方式生成业务密钥。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_82"><p id="p0082" num="0082">本步骤中，条件接收卡确定密钥种子之后，可以采取与网络侧相同的算
+		<br/>法由密钥种子生成业务密钥。该算法应当是网络侧与条件接收卡预先约定
+		<br/>的。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_83"><p id="p0083" num="0083">如果网络侧在生成业务密钥时采用了随机数，该随机数将包含在EMM
+		<br/>中下发，此时，条件接收卡可以从EMM中获取该随机数，并根据该随机数
+		<br/>与所确定的密钥种子一起生成业务密钥。例如：根据该随机数和该密钥种子
+		<br/>采用哈希算法生成业务密钥。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_84"><p id="p0084" num="0084">在实际应用中，当终端接收到用户的加扰节目播放请求时，可以将该加
+		<br/>扰节目的标识符发送给条件接收卡，由条件接收卡进行权限控制，并决定是
+		<br/>否响应用户对该节目的播放请求，即：决定是否生成该加扰节目对应的业务
+		<br/>密钥。具体而言：在条件接收卡验证签名有效之后，可以进一步根据该加扰
+		<br/>节目的标识符和预先存储的节目权限对用户进行权限控制，若拥有该加扰节
+		<br/>目的播放权限，则从EMM中获取密钥种子标识符和随机数，并据此生成业
+		<br/>务密钥。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_85"><p id="p0085" num="0085">至此，结束本发明业务密钥分发方法。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_86"><p id="p0086" num="0086">经过上述步骤201～203之后，条件接收卡生成了业务密钥，利用该业
+		<br/>务密钥可以解密授权控制信息(ECM)得到节目流密钥，并利用节目流密钥
+		<br/>
+				对节目流进行解扰。本发明提供了如下两种终端侧解扰处理方案：
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_87"><p id="p0087" num="0087">第一种方案：终端将接收到的ECM发送给条件接收卡，条件接收卡使
+		<br/>用生成的业务密钥解密ECM得到节目流密钥，并将得到的节目流密钥返回
+		<br/>给终端。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_88"><p id="p0088" num="0088">第二种方案：终端将接收到的ECM和节目流发送给条件接收卡，条件
+		<br/>接收卡内部集成解扰模块，条件接收卡生成的业务密钥不出条件接收卡，条
+		<br/>件接收卡用业务密钥解密ECM得到节目流密钥，直接在卡内完成对节目流
+		<br/>的解扰，并将得到的节目流返回给终端。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_89"><p id="p0089" num="0089">基于本发明提出的上述业务密钥分发方法，网络侧的ECM生成流程和
+		<br/>EMM生成流程需要发生相应的改变，以下分别进行简要说明。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_90"><p id="p0090" num="0090">图3为采用本发明方法的ECM生成流程示意图。参见图3，该流程包
+		<br/>括：
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_91"><p id="p0091" num="0091">步骤301：根据业务信息从对应的密钥种子组中选择一个密钥种子。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_92"><p id="p0092" num="0092">步骤302：生成随机数。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_93"><p id="p0093" num="0093">上述步骤301和302的操作次序不分先后，也可以同时进行。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_94"><p id="p0094" num="0094">步骤303：根据密钥种子和随机数生成业务密钥，用该业务密钥加密节
+		<br/>目流密钥，并生成包含该节目流密钥的ECM消息。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_95"><p id="p0095" num="0095">至此，结束ECM生成流程。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_96"><p id="p0096" num="0096">图4为采用本发明方法的EMM生成流程示意图。参见图4，该流程包
+		<br/>括：
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_97"><p id="p0097" num="0097">步骤401：根据业务信息从对应的密钥种子组中选择一个密钥种子。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_98"><p id="p0098" num="0098">步骤402：生成随机数。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_99"><p id="p0099" num="0099">上述步骤401和402的操作次序不分先后，也可以同时进行。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_100"><p id="p0100" num="0100">步骤403：将所述密钥种子的密钥种子标识符和随机数封装在EMM消
+		<br/>息中。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_101"><p id="p0101" num="0101">至此，结束EMM生成流程。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_102"><p id="p0102" num="0102">下面通过一个具体实施例说明采用本发明方法的终端侧处理流程。图5
+		<br/>
+				为采用本发明方法的终端侧处理流程示意图。参见图5，该流程包括：
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_103"><p id="p0103" num="0103">步骤501：用户打开移动电视客户端。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_104"><p id="p0104" num="0104">步骤502：终端接收业务指南，并向条件接收卡请求得到CA初始化信
+		<br/>息。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_105"><p id="p0105" num="0105">步骤503：用户浏览节目信息，选择希望收看的节目，或者进行其他操
+		<br/>作。如果选择播放，继续执行步骤504。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_106"><p id="p0106" num="0106">在用于选择播放的情况下，终端可要求用户输入PIN码。该操作可根据
+		<br/>实际应用的需要进行。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_107"><p id="p0107" num="0107">步骤504：如果用户选择播放某个节目，则终端向条件接收卡请求
+		<br/>CA_System_ID，随后终端根据该标识获取ECM/EMM的索引信息，然后截
+		<br/>获相应的ECM转发给条件接收卡。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_108"><p id="p0108" num="0108">步骤505：条件接收卡根据终端发送的ECM，在卡内的存储空间查找对
+		<br/>应的业务密钥，如果业务密钥存在，表明存在有效的业务密钥，则进入步骤
+		<br/>511；否则条件接收卡返回“业务密钥缺失消息”，进入步骤506。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_109"><p id="p0109" num="0109">步骤506：终端根据CA_System_ID获取ECM/EMM的索引信息。随后
+		<br/>将EMM发送给条件接收卡。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_110"><p id="p0110" num="0110">步骤507：条件接收卡验证EMM的完整性，如果是完整的，则进入步
+		<br/>骤508；否则条件接收卡向终端返回“业务密钥信息非完整消息”，进入步
+		<br/>骤514。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_111"><p id="p0111" num="0111">步骤508：条件接收卡根据终端发送的业务标识，检查用户权限文件，
+		<br/>判断用户是否有权限使用该业务。如果鉴权通过，则进入步骤509；否则根
+		<br/>据鉴权失败结果，条件接收卡向终端返回相应的“业务拒绝消息”，进入步
+		<br/>骤514。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_112"><p id="p0112" num="0112">步骤509：条件接收卡根据EMM中包含的密钥种子标识符及随机数生
+		<br/>成新的业务密钥。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_113"><p id="p0113" num="0113">步骤510：条件接收卡以新生成的业务密钥替换卡内存储空间中原来存
+		<br/>储的业务密钥，进入步骤512。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_114"><p id="p0114" num="0114">步骤511：条件接收卡根据终端发送的业务标识，检查用户权限文件，
+		<br/>判断用户是否有权限使用该业务。如果鉴权通过，则进入步骤512；否则根
+		<br/>据鉴权失败结果，条件接收卡向终端返回相应的“业务拒绝消息”，进入步
+		<br/>骤514。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_115"><p id="p0115" num="0115">步骤512：条件接收卡使用业务密钥对ECM中加密后的CW进行解密，
+		<br/>得到明文CW。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_116"><p id="p0116" num="0116">步骤513：终端侧用CW解扰节目流并播放电视节目。用户在观看节目
+		<br/>过程中可以选择调换内容继续观看还是结束业务，如果选择调换节目，则进
+		<br/>入步骤502；否则进入步骤514。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_117"><p id="p0117" num="0117">步骤514：结束节目播放，关闭终端软件。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_118"><p id="p0118" num="0118">至此，结束本发明终端侧处理流程。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_119"><p id="p0119" num="0119">在上述技术方案的基础上，本发明提出一种分层密钥体系，该分层密钥
+		<br/>体系共分为三层，如图6所示。基于本发明图6所示分层密钥体系实现密钥
+		<br/>分发的方法包含以下三个层次：
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_120"><p id="p0120" num="0120">第一层：业务密钥分发。当需要广播业务信息时，网络侧从对应于该业
+		<br/>务的密钥种子组中选择一个密钥种子，根据所选择的密钥种子生成业务密
+		<br/>钥，并将密钥种子的密钥种子标识符包含在EMM中通过广播信道下发给终
+		<br/>端；终端将接收到的EMM发送给条件接收卡，条件接收卡从EMM中获取
+		<br/>密钥种子标识符，并根据预先存储的业务与密钥种子组的对应关系确定该密
+		<br/>钥种子标识符所对应的密钥种子，根据所确定的密钥种子采用与网络侧相同
+		<br/>的方式生成业务密钥。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_121"><p id="p0121" num="0121">本层中，条件接收卡可以根据存储的密钥种子组、用户的权限文件以及
+		<br/>EMM中携带的信息完成对用户的认证和鉴权，并将所生成的业务密钥进行
+		<br/>存储。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_122"><p id="p0122" num="0122">当然，与本发明图2所示业务密钥分发方法相同的，如果在生成业务密
+		<br/>钥时产生了随机数，网络侧还需要将随机数也发送给终端，在此不再赘述。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_123"><p id="p0123" num="0123">第二层：节目流密钥分发。网络侧将节目流密钥以业务密钥进行加密之
+		<br/>
+				后封装在授权控制信息ECM中，并将所述ECM通过广播信道下发给终端；
+		<br/>终端侧使用所述条件接收卡生成的业务密钥对接收到的ECM进行解密，得
+		<br/>到节目流密钥。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_124"><p id="p0124" num="0124">第三层：节目流分发。网络侧以节目流密钥对节目流进行加扰，并将经
+		<br/>加扰后的节目流通过广播信道下发给终端；终端侧使用所述终端侧解密得到
+		<br/>的节目流密钥对加扰后的节目流进行解扰，得到节目流。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_125"><p id="p0125" num="0125">以上三层均通过单向广播信道完成，无需依赖双向通信网络，因此，该
+		<br/>方案降低了对终端设备的性能要求，且适用范围更广泛。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_126"><p id="p0126" num="0126">对应于上述方法，本发明还提供了一种业务密钥分发系统。图7为本发
+		<br/>明业务密钥分发系统的组成结构示意图。参见图7，该系统包括：网络侧710
+		<br/>和终端侧720，其中，终端侧720进一步包括：终端721和条件接收卡722。
+		<br/>其中：
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_127"><p id="p0127" num="0127">网络侧710，用于存储预先设置的业务与密钥种子组的对应关系，高密
+		<br/>钥种子组中包含至少一个密钥种子及其对应的密钥种子标识符；在需要广播
+		<br/>业务信息时，用于从对应于该业务的密钥种子组中选择一个密钥种子，并用
+		<br/>于根据所选择的密钥种子生成业务密钥，以及用于将该密钥种子的密钥种子
+		<br/>标识符携带于EMM中通过广播信道下发给终端721；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_128"><p id="p0128" num="0128">终端721，用于将接收自网络侧710的EMM发送给条件接收卡722；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_129"><p id="p0129" num="0129">条件接收卡722，用于存储预先设置的业务与密钥种子组的对应关系，
+		<br/>并用于从接收自终端721的EMM中获取密钥种子标识符，根据预先存储的
+		<br/>业务与密钥种子组的对应关系确定该密钥种子标识符所对应的密钥种子，以
+		<br/>及用于根据所确定的密钥种子采用与网络侧相同的方式生成业务密钥。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_130"><p id="p0130" num="0130">图7所示系统中的网络侧710，在需要广播业务信息时，进一步用于生
+		<br/>成随机数，将该随机数携带在EMM中通过广播信道下发给终端721，并用
+		<br/>于根据该随机数和所选择的密钥种子采用哈希算法生成业务密钥；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_131"><p id="p0131" num="0131">相应地，条件接收卡722，进一步用于从该EMM中获取该随机数，并
+		<br/>用于根据该随机数和所确定的密钥种子采用哈希算法生成业务密钥。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_132"><p id="p0132" num="0132">图7所示系统中的网络侧710，还用于将该随机数和该密钥种子标识符
+		<br/>组成业务密钥生成消息，将该业务密钥生成消息携带于EMM中，并用于对
+		<br/>该EMM进行签名之后发送给终端721；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_133"><p id="p0133" num="0133">相应地，条件接收卡722，还用于验证该EMM的签名是否有效，在有
+		<br/>效时，用于继续执行从EMM中所包含的业务密钥生成消息中获取密钥种子
+		<br/>标识符和随机数的操作。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_134"><p id="p0134" num="0134">图7所示系统中的网络侧710，还用于对该随机数和密钥种子标识符进
+		<br/>行签名，并用于将该随机数、密钥种子标识符和签名组成业务密钥生成消息
+		<br/>携带于EMM中；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_135"><p id="p0135" num="0135">相应地，条件接收卡722，还用于验证该业务密钥生成消息中的签名是
+		<br/>否有效，在有效时，用于继续执行从EMM中所包含的业务密钥生成消息中
+		<br/>获取密钥种子标识符和随机数的操作。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_136"><p id="p0136" num="0136">图7所示系统中的网络侧710，进一步用于将ECM发送给所述终端；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_137"><p id="p0137" num="0137">终端721，进一步用于将接收到的ECM发送给条件接收卡722；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_138"><p id="p0138" num="0138">条件接收卡722，进一步用于使用生成的业务密钥解密ECM得到节目
+		<br/>流密钥，并将得到的节目流密钥返回给终端。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_139"><p id="p0139" num="0139">图7所示系统中的网络侧710，进一步用于将ECM和加扰后的节目流
+		<br/>发送给终端721；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_140"><p id="p0140" num="0140">终端721，进一步用于将接收到的ECM和加扰后的节目流发送给条件
+		<br/>接收卡722；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_141"><p id="p0141" num="0141">条件接收卡722，进一步用于使用生成的业务密钥解密ECM得到节目
+		<br/>流密钥，并用于采用节目流密钥对该加扰后的节目流进行解扰，将解扰后的
+		<br/>节目流返回给终端721。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_142"><p id="p0142" num="0142">图7所示系统中的终端721，进一步用于在接收到用户的加扰节目播放
+		<br/>请求时，将该加扰节目的标识符发送给条件接收卡722；
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_143"><p id="p0143" num="0143">相应地，条件接收卡722，进一步用于预先存储用户订制的节目权限，
+		<br/>并用于根据接收自终端721的加扰节目的标识符以及预先存储的节目权限
+		<br/>
+				对用户进行权限控制，在判定拥有该加扰节目的播放权限时，用于继续执行
+		<br/>从EMM中所包含的业务密钥生成消息中获取密钥种子标识符和随机数的操
+		<br/>作。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_144"><p id="p0144" num="0144">由上述实施例可见，本发明提出的业务密钥分发方法和系统中，通过预
+		<br/>先针对每一种业务设置与之对应的密钥种子组，并将业务与密钥种子组的对
+		<br/>应关系存储于条件接收卡的安全区中；在需要广播某一业务的业务密钥时，
+		<br/>由网络侧从对应于该业务的密钥种子组中选择一个密钥种子生成业务密钥，
+		<br/>并将该密钥种子的标识符包含在EMM中下发给终端；终端收到EMM后发
+		<br/>送给条件接收卡，由条件接收卡根据其中的密钥种子标识符确定相应的密钥
+		<br/>种子，并据此生成业务密钥，从而实现了业务密钥的分发。本发明所提出的
+		<br/>上述方法和系统中，需要广播的加密业务密钥量取决于业务的规模数，即：
+		<br/>存在多少种业务就需要广播多少个密钥种子标识符，与用户数无关，从而大
+		<br/>大减少了业务密钥的广播量，节约了宝贵的信道资源，并减少了用户等待业
+		<br/>务密钥的时延。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_145"><p id="p0145" num="0145">并且，本发明公开的业务密钥分发方案和密钥分发方案提出了一种新的
+		<br/>分层密钥体系结构，该分层密钥体系结构只包含三层，并且，该方案基于单
+		<br/>向广播网络实现对用户的认证，无需依赖于双向通信网络，因此，该方案降
+		<br/>低了对终端设备的性能要求，且适用范围更广泛。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_146"><p id="p0146" num="0146">此外，本发明中密钥种子标识符不需要利用用户密钥进行加密，可以以
+		<br/>明文带签名的形式下发，既能保证该消息传输的完整性，又能降低对终端侧
+		<br/>处理能力的要求。并且，EMM中不包含业务密钥，只是包含用于生成业务
+		<br/>密钥的密钥种子标识符，必须结合预先存储在条件接收卡中的密钥种子，才
+		<br/>能生成业务密钥，并且，业务密钥在卡内生成，从而使得业务密钥的分发更
+		<br/>安全。
+		<br/>
+			</p></td></tr><tr><td class="content" id="description_147"><p id="p0147" num="0147">以上所述仅为本发明的较佳实施例而已，并非用于限定本发明的保护范
+		<br/>围。凡在本发明的精神和原则之内所作的任何修改、等同替换、改进等，均
+		<br/>应包含在本发明的保护范围之内。
+		<br/>
+			</p></td></tr></table></div></body></html>
